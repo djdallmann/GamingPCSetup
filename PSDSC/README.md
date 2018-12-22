@@ -4,22 +4,16 @@ The Powershell DSC script focuses on the following:
 - A way of validating your system state before testing after initial Desired State Configuration (DSC) is applied
 - Disabling any unecessary services, it will impact Local Network File Transfers (CIFS/SMB), Printing and Scanning, Bluetooth Device and Communication
 - Disables most if not all Windows 10 features and privacy/tracking settings, interfering Windows Update settings (P2P sharing)
-- Sets Mousespeed to 6/11 (Middle of slider bar in mouse settings)
-- Disables Enhanced Pointer Precision
-- Sets Power Profile to High Performance, Disables Usb Selective Suspend
+- High Performance power profile, USB selective suspend
 - Sets Windows Advanced Settings to 'Adjust for Best Performance', disables desktop visual features
-- Disables Fastboot from inside Windows Power Settings
+- Disables Ease of Access settings impacting keyboard and mouse, also Enhanced Pointer Precision etc
 - Disables GameBar, GameMode, GameDVR, Audio/Game Capture Settings
-- Disables Remote Assistance/Desktop
-- Disables all Ease of Access features that could impact keyboard or mouse interactions
-- Disables Cortana
-- Disables all mouse gestures, hand writing, keyboard spelling and auto correction features
-- Disables automatic sample submission uploads for Windows Defender
 
-See the desired state configuration script for a complete list of changes.
+For a complete list see [DSC Itemized Configuration List](ConfigList.md)
 
 ## Setup
 1. Download the GamingMinimal.ps1 Powershell DSC Script to your desktop
+   - [GamingMinimal.ps1](GamingMinimal.ps1)
 2. Edit GamingMinimal.ps1 script and replace ```$myusername = "ddallmann"``` with your Windows user account name
    - e.g. $myusername = "johndoe"
 3. Save the file

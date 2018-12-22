@@ -72,6 +72,13 @@ Configuration GamingMinimal {
             ValueData   = "10"
             ValueType = "String"
         }
+        Registry DisableScrollInactiveWindow {
+            Ensure = "Present"
+            Key = "HKEY_USERS\${mysid}\Control Panel\Desktop"
+            ValueName   = "MouseWheelRouting"
+            ValueData   = "0"
+            ValueType = "Dword"
+        }
         #Disable Touch Feedback
         Registry DisableMouseTouchFeedback1 {
             Ensure = "Present"
@@ -376,7 +383,7 @@ Configuration GamingMinimal {
             ValueName   = "DisableAutoplay"
             ValueData   = "1"
             ValueType = "Dword"
-        }1
+        }
         Registry DisableGameBar {
             Ensure = "Present"
             Key = "HKEY_USERS\${mysid}\System\GameConfigStore"
@@ -468,7 +475,6 @@ Configuration GamingMinimal {
             ValueData   = "0100000004077640378fd401"
             ValueType = "Binary"
         }
-
         Registry DisablePersonalizationTransparencyEffect {
             Ensure = "Present"
             Key = "HKEY_USERS\${mysid}\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize"

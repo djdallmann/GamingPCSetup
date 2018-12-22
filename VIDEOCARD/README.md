@@ -18,7 +18,7 @@ Download the latest drivers, install and configure your settings for ideal and c
 8. Under **Manage 3D Settings** then **Program Settings**
    - You may want to disable **Shader Cache** for your specific game or globally, this setting can in some cases cause inconsistent experience but after a longer period of time may improve performance when enabled once more information has been cached. Leave this off to start.
    - **Max pre-rendered Frames** this may lower overall latency but may also negatively impact overall performance or experience, leave this at **Use the 3D application setting**
-   - **Power management mode**: Leave this at Optimal Power globally
+   - **Power management mode**: Leave this at **Optimal Power globally** and set this to **Prefer Maximum Performance** for your game.
 9. Avoid adjust any of the color settings initially such as Digital Vibrance, Brightness, or Contrast. Ensure your gaming experience is running smoothly first for a few days or up to a week, then slowly start to add new features to your build.
    - Games may also provide options ingame for improving visual effects, colors or quality, try these first.
 10. Leave all other settings at the NVIDIA recommended high performance defaults.
