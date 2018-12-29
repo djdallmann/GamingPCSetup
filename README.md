@@ -15,3 +15,5 @@ If you do use this or redistribute this in any way, please give due credit.
 [5. Setup Your Video Card](VIDEOCARD/README.md)
 
 [6. Powershell Desired State Configuration (DSC) Setup and Use](PSDSC/README.md)
+
+[7. Configure Your Games](GAMECONFIG/README.md)
