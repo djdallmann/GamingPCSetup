@@ -6,8 +6,6 @@ The following is a list of notable launch options:
       - Uses windows defined mouse **Enhanced Pointer Precision** settings, if disabled in windows will be disabled in-game with this option
    - **-noforcemaccel**
       - Uses windows **mouse threshold settings** for acceleration, determines how acceleration is multiplied
-   - **-gl**
-      - Enforces OpenGL mode vs Software mode, OpenGL will perform better in comparison to software mode when available.
    - **-nomsaa**
       - Disables in-game post processing anti-aliasing, **this is automatically implied when -nofbo is used.**
    - **-stretchaspect**

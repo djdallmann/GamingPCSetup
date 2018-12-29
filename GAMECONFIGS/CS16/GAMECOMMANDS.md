@@ -29,12 +29,6 @@ The following covers a set of commonly used commands and those usually enforced 
    - **cl_dynamiccrosshair** "0"
       - Disables dynamic crosshair
 
-For a 5v5 competitive and legal user configuration see [userconfig.cfg](userconfig.cfg)
-- Download this file, review and edit the settings then place it in your Counter-Strike folder
-   - `C:\Program Files (x86)\Steam\steamapps\common\Half-Life\cstrike`
-- The settings in this file shouldn't be changed except those added by you or the ones in the user preferences section.
-- **This user configuration will be run everytime you start the game and ensure you have the proper settings each time.**
-
 ### Network Settings
    - **rate** - This is how many bytes per seconds the server send to the client.
       - Range: 1000-100000, as of 2013 the **max allowable rate setting is 100000**, previously it was limited to 20000.

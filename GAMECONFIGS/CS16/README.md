@@ -9,3 +9,6 @@ The following section covers the main configuration settings for Counter-Strike 
 
 [3. In-Game Commands](GAMECOMMANDS.md)
     - Provides a summary of in-game commands not exposed by the in-game menu settings
+    
+[4. Setting up your configuration](SETUPCONFIG.md)
+    - Provides a step by step process for creating a competitive and legal configuration

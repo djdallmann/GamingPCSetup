@@ -1,11 +1,16 @@
 ## Dedicated video card drivers and settings
 Download the latest drivers, install and configure your settings for ideal and consistent performance
 
+### Windows 10 GPU Graphics Performance Preference
+1. **Once your videocard drivers are installed** (NVIDIA and/or AMD) follow these steps **for each game you play.**
+2. Right-click the desktop go to **Display Settings**, scroll down to **Graphics settings**.
+3. For Metro/Windows Store Games choose **Universal app** from the drop-down *otherwise* select **Classic app** and then press **Browse**, then navigate to your game executable path. e.g. `C:\Program Files (x86)\Steam\steamapps\common\Half-Life\hl.exe`
+4. Once a game is added to your graphics preference list, left click the game go to **Options** and choose **High performance.**
+
 ### NVIDIA
 1. Go to https://www.geforce.com/drivers and download the latest applicable drivers for your video card
 2. Install the drivers, during the installation choose custom installation, check **Perform a clean install** and **uncheck all of the following**:
    - HD Audio Driver
-   - Physx System Software
    - 3D Vision Driver
    - 3D Vision 
    - NVIDIA Geforce Experience
