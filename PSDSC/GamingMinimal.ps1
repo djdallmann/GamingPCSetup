@@ -279,6 +279,13 @@ Configuration GamingMinimal {
             ValueData   = "Deny"
             ValueType = "String"
         }
+        Registry DisableCommUnpairedDevices {
+            Ensure = "Present"
+            Key = "HKEY_USERS\${mysid}\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\bluetoothSync"
+            ValueName   = "Value"
+            ValueData   = "Deny"
+            ValueType = "String"
+        }
         Registry DisableBackgroundApps1 {
             Ensure = "Present"
             Key = "HKEY_USERS\${mysid}\Software\Microsoft\Windows\CurrentVersion\Search"
