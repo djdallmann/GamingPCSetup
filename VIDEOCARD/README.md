@@ -21,6 +21,7 @@ Download the latest drivers, install and configure your settings for ideal and c
    - A lower value may be fine for desktop use and most games will allow you to override this setting via game launch option. e.g. -freq 144
 7. Go to **Adjust desktop size and position** and choose **Perform Scaling on GPU**, and choose **No Scaling**
 8. Under **Manage 3D Settings** then **Program Settings**
+   - **If your game has an in-game menu option to control vsync**, then set your program's Nvidia setting **Vertical Sync** to **Use the 3D application setting**.
    - You may want to disable **Shader Cache** for your specific game or globally, this setting can in some cases cause inconsistent experience but after a longer period of time may improve performance when enabled once more information has been cached. Leave this off to start.
    - **Max pre-rendered Frames** this may lower overall latency but may also negatively impact overall performance or experience, leave this at **Use the 3D application setting**
    - **Power management mode**: Leave this at **Optimal Power globally** and set this to **Prefer Maximum Performance** for your game.
