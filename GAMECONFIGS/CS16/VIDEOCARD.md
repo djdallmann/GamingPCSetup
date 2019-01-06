@@ -1,0 +1,52 @@
+## NVIDIA
+- **Ambient Occlusion**
+  - *Not supported for this application*
+- **Anisotropic Filtering**
+  - Application Controlled
+    - In-game options are available to control this, **gl_ansio**
+- **Antialiasing - FXAA**
+  - Use global setting (Off)
+- **Gamma Correction**
+  - Off
+- **Antialiasing Mode**
+  - Use global setting (Application-controlled) or use a custom value
+  - Antialiasing can be disabled ingame using the **-nomsaa** launch option, otherwise there is limited control for this feature in the game.
+- **Antialiasing Setting**
+  - Dependant on the previous setting, if set to Application Control it will be greyed out.
+- **Antialiasing Transparency**
+  - Use global setting (Off)
+- **CUDA - GPUs**
+  - If you have one video card leave as Use global setting (All), otherwise choose the GPU you would like to use.
+- **Maximum pre-rendered frames**
+  - Use global setting (Use the 3D application setting)
+  - This can be lowered to slightly reduce buffer latency however it may also cause inconsistency in some games or systems.
+- **Multi-Frame Sampled AA (MFAA)**
+  - Use global setting (Off)
+- **OpenGL rendering GPU**
+  - If you have one video card leave as Use global setting (Auto-select), otherwise choose the GPU you would like to use.
+- **Power management mode**
+  - Prefer maximum performance
+- **Preferred refresh rate**
+  - Use global setting (Application-controlled)
+- **Shader Cache**
+  - Use global setting (On)
+  - You may also try it with off, this feature is intended to improve rendering performance however it will increase disk activity instead of CPU overhead.
+- **Texture Filtering - Anisotropic sample optimization**
+  - Use global setting (On), this setting only applies to DirectX programs, CS 1.6 uses OpenGL.
+- **Texture Filtering - Negative LOD bias**
+  - Use global setting (Allow)
+- **Texture Filtering - Quality**
+  - High performance
+- **Texture Filtering - Triliear optimization**
+  - Use global setting (On), this setting only applies to DirectX programs, CS 1.6 uses OpenGL.
+- **Threaded optimization**
+  - Off, having this on may increase latency but improve fps. As this is an old game it is recommended to leave this off as per the Nvidia control panel suggestion.
+- **Triple buffering**
+  - Use global setting (Off)
+- **Vertical sync**
+  - Use global setting (Use the 3D application setting)
+  - In-game options are available to control this, **gl_vsync**
+- **Virtual Reality pre-rendered frames**
+  - Use global setting (1)
+
+## AMD
