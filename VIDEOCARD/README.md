@@ -27,7 +27,7 @@ Download the latest drivers, install and configure your settings for ideal and c
    - **Power management mode**: Leave this at **Optimal Power globally** and set this to **Prefer Maximum Performance** for your game.
 9. Avoid adjusting any of the color settings initially such as Digital Vibrance, Brightness, or Contrast. Ensure your gaming experience is running smoothly first for a few days or up to a week, then slowly start to add new features to your build.
    - Games may also provide options ingame for improving visual effects, colors or quality, try these first.
-10. Leave all other settings at the NVIDIA defaults. [See Gaming Configurations](GAMECONFIGS/README.md)
+10. Leave all other settings at the NVIDIA defaults. [See Gaming Configurations](../GAMECONFIGS/README.md)
 
 Settings such as Max pre-rendered Frames are controversial, many will recommend changing it but not every PC will behave the same with it at a low value even on high powered PCs. Many gaming professionals use the default setting and still perform at the highest levels.
 
