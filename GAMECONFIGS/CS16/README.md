@@ -12,3 +12,6 @@ The following section covers the main configuration settings for Counter-Strike 
     
 [4. Setting up your configuration](SETUPCONFIG.md)
     - Provides a step by step process for creating a competitive and legal configuration
+
+[5. Video Card Settings](VIDEOCARD.md)
+    - Provides an overview of game specific video card configuration options.
