@@ -18,4 +18,4 @@ If you do use this or redistribute this in any way, please give due credit.
 
 [7. Configure Your Games](GAMECONFIGS/README.md)
 
-[8. Choosing Peripherals (Keyboard/Mice)](PERIPHERALS/README.md)
+[8. Choosing Peripherals (Keyboard/Mice/Monitor)](PERIPHERALS/README.md)
