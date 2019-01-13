@@ -11,7 +11,7 @@ As for performance, most modern mice and even those made in the past 10 years wi
    - Measure the length of your hand in centimeters (cm) or milimeters (mm) starting from the base of your palm to the end of your index finder then measure the width of your palm.
      - Choose a mouse that is **approximately 65% the length of your hand**, and has a **center width** that is roughly **75-80% the size of your palm**.
      - Mice may vary in size from the front to the back of the mouse, the back of the mouse is typically larger than the front.
-   - Choose a mouse that can provide a **polling rate up to 1000hz (1ms) response time**.
+   - Choose a mouse that can provide a **polling rate up to 1000hz (1ms) response time**, use a polling rate of either **500 or 1000hz**.
    - It always recommended to **read both positive and negative reviews** for mice to ensure there are no ongoing or known issues with the peripheral **software, hardware or build quality in general**.
    - **A higher dpi doesn't necessarily mean better**, most FPS professionals play with 400 or 800 dpi. On higher resolution settings there may be some modification to the input signal which could negatively impact the intended outcome of a mouse gesture.
    - Most people tend to lean towards **optical mice** versus laser mice, optical mice tend to give a more raw feeling where as laser feel like the movement is smoothed. Many laser sensors have been known to have **inconsistent acceleration** which can make it difficult to repeat gestures accurately.
