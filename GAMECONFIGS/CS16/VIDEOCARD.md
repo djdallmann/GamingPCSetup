@@ -32,7 +32,7 @@
   - Use global setting (On)
   - You may also try it with off, this feature is intended to improve rendering performance however it will increase disk activity instead of CPU overhead.
 - **Texture Filtering - Anisotropic sample optimization**
-  - Use global setting (On), this setting only applies to DirectX programs, CS 1.6 uses OpenGL.
+  - Use global setting (Off), this setting only applies to DirectX programs, CS 1.6 uses OpenGL.
 - **Texture Filtering - Negative LOD bias**
   - Use global setting (Allow)
 - **Texture Filtering - Quality**
