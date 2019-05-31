@@ -29,3 +29,13 @@ Performance Architect Intel Corporation
 ### Networking
    * Microsoft Windows IT Pro Center - Performance tuning network adapters, Microsoft Docs
       * https://docs.microsoft.com/en-us/windows-server/networking/technologies/network-subsystem/net-sub-performance-tuning-nics
+   * Advanced Settings for Intel® Ethernet Adapters, Intel 2018
+      * https://www.intel.com/content/www/us/en/support/articles/000005593/network-and-i-o/ethernet-products.html
+   * Tuning Throughput Performance for Intel® Ethernet Adapters, Intel 2019
+      * https://www.intel.ca/content/www/ca/en/support/articles/000005811/network-and-i-o/ethernet-products.html
+
+### Latency
+   * Intel Optimizing Computer Applications for Latency: Part 1: Configuring the Hardware, Intel 2017, Evgueny Khartchenko
+      * https://software.intel.com/en-us/articles/optimizing-computer-applications-for-latency-part-1-configuring-the-hardware
+   * Intel Optimizing Computer Applications for Latency: Part 2: Tuning Applications, Intel 2017, Evgueny Khartchenko
+      * https://software.intel.com/en-us/articles/optimizing-computer-applications-for-latency-part-2-tuning-applications
