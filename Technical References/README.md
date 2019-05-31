@@ -33,6 +33,9 @@ Performance Architect Intel Corporation
       * https://www.intel.com/content/www/us/en/support/articles/000005593/network-and-i-o/ethernet-products.html
    * Tuning Throughput Performance for Intel® Ethernet Adapters, Intel 2019
       * https://www.intel.ca/content/www/ca/en/support/articles/000005811/network-and-i-o/ethernet-products.html
+   * Network terminology and technology, tuning and performance, Konstantin Lepikhov, 2018, Geant eduPERT Knowledge Base
+      * https://wiki.geant.org/display/public/EK/Network
+
 
 ### Latency
    * Intel Optimizing Computer Applications for Latency: Part 1: Configuring the Hardware, Intel 2017, Evgueny Khartchenko
