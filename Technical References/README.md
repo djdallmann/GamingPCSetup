@@ -50,3 +50,5 @@ Performance Architect Intel Corporation
       * https://techcommunity.microsoft.com/t5/Microsoft-USB-Blog/Common-issues-in-USB-3-0-devices/ba-p/270760
    * Answering the question "What's wrong with my device?" using USB trace messages, Microsoft USB Blog 2009, Philip Ries
       * https://techcommunity.microsoft.com/t5/Microsoft-USB-Blog/Answering-the-question-quot-What-s-wrong-with-my-device-quot/ba-p/270697
+   * Capturing USB ETW traces with Microsoft Message Analyzer (MMA), Microsoft USB Blog, Andrea Keating & Eliyas Yakub
+      * https://techcommunity.microsoft.com/t5/Microsoft-USB-Blog/Capturing-USB-ETW-traces-with-Microsoft-Message-Analyzer-MMA/ba-p/270811
