@@ -44,9 +44,9 @@ Performance Architect Intel Corporation
       * https://software.intel.com/en-us/articles/optimizing-computer-applications-for-latency-part-2-tuning-applications
 
 ### USB
-   * Demystifying USB Selective Suspend, Microsoft USB Blog 2018, Shyamal Varma
+   * Demystifying USB Selective Suspend, Microsoft USB Blog 2011, Vivek Gupta
       * https://techcommunity.microsoft.com/t5/Microsoft-USB-Blog/Demystifying-USB-Selective-Suspend/ba-p/270736
-   * Common issues in USB 3.0 Devices, Microsoft USB Blog 2012, Shyamal Varma
+   * Common issues in USB 3.0 Devices, Microsoft USB Blog 2012, Vivek Gupta
       * https://techcommunity.microsoft.com/t5/Microsoft-USB-Blog/Common-issues-in-USB-3-0-devices/ba-p/270760
-   * Answering the question "What's wrong with my device?" using USB trace messages, Microsoft USB Blog 2009, Shyamal Varma
+   * Answering the question "What's wrong with my device?" using USB trace messages, Microsoft USB Blog 2009, Philip Ries
       * https://techcommunity.microsoft.com/t5/Microsoft-USB-Blog/Answering-the-question-quot-What-s-wrong-with-my-device-quot/ba-p/270697
