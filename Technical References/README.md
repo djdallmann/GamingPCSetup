@@ -27,6 +27,8 @@ Performance Architect Intel Corporation
       * https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/msg-signaled-interrupts-paper.pdf
       
 ### Networking
+   * Network Subsystem Performance Tuning, Microsoft Windows IT Pro Center 2019
+      * https://docs.microsoft.com/en-us/windows-server/networking/technologies/network-subsystem/net-sub-performance-top
    * Microsoft Windows IT Pro Center - Performance tuning network adapters, Microsoft Docs
       * https://docs.microsoft.com/en-us/windows-server/networking/technologies/network-subsystem/net-sub-performance-tuning-nics
    * Advanced Settings for Intel® Ethernet Adapters, Intel 2018
