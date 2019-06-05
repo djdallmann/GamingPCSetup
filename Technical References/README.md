@@ -52,3 +52,4 @@ Performance Architect Intel Corporation
       * https://techcommunity.microsoft.com/t5/Microsoft-USB-Blog/Answering-the-question-quot-What-s-wrong-with-my-device-quot/ba-p/270697
    * Capturing USB ETW traces with Microsoft Message Analyzer (MMA), Microsoft USB Blog, Andrea Keating & Eliyas Yakub
       * https://techcommunity.microsoft.com/t5/Microsoft-USB-Blog/Capturing-USB-ETW-traces-with-Microsoft-Message-Analyzer-MMA/ba-p/270811
+      * https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/capture-and-view-ing-usb-traces-with-microsoft-message-analyzer-
