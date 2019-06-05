@@ -42,3 +42,7 @@ Performance Architect Intel Corporation
       * https://software.intel.com/en-us/articles/optimizing-computer-applications-for-latency-part-1-configuring-the-hardware
    * Intel Optimizing Computer Applications for Latency: Part 2: Tuning Applications, Intel 2017, Evgueny Khartchenko
       * https://software.intel.com/en-us/articles/optimizing-computer-applications-for-latency-part-2-tuning-applications
+
+### USB
+   * Demystifying USB Selective Suspend, Microsoft USB Blog 2018, Shyamal Varma
+      * https://techcommunity.microsoft.com/t5/Microsoft-USB-Blog/Demystifying-USB-Selective-Suspend/ba-p/270736
