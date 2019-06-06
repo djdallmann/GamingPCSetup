@@ -1,7 +1,9 @@
 ## Electrical
 ### Understanding, Finding & Eliminating Ground Loops
  * ELIMINATING GROUND LOOPS. CEDIA Class EST016. Instructor. Bill Whitlock. President & Chief
-    * https://web.mit.edu/~jhawk/tmp/p/EST016_Ground_Loops_handout.pdf
+   * https://web.mit.edu/~jhawk/tmp/p/EST016_Ground_Loops_handout.pdf
+ * Addressing Electromagnetic Interference With Phidgets, Phidgets Inc. 2017.
+   * https://www.phidgets.com/docs/Addressing_Electromagnetic_Interference_with_Phidgets
     
 ## BIOS Optimizations
   * FUJITSU Server PRIMERGY - BIOS optimizations for Xeon Scalable processors based systems. BIOS settings for performance, low-latency and energy efficiency
