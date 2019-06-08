@@ -4,6 +4,12 @@
    * https://web.mit.edu/~jhawk/tmp/p/EST016_Ground_Loops_handout.pdf
  * Addressing Electromagnetic Interference With Phidgets, Phidgets Inc. 2017.
    * https://www.phidgets.com/docs/Addressing_Electromagnetic_Interference_with_Phidgets
+ * Noise Suppressing Basic Course, Murata Americas
+   * https://www.murata.com/en-us/products/emc/emifil/knowhow/basic
+ * Susceptibility of PC to electromagnetic interference, IEEE, Defence Science and Technology Organisation, Piotrowski, 2009
+   * https://ieeexplore.ieee.org/document/5349776
+ * Trends in EM susceptibility of IT equipment, IEEE, IEEE Transactions on Electromagnetic Compatibility, R. Hoad, N.J. Carter, D. Herke, S.P. Watkins, 2004
+   * https://ieeexplore.ieee.org/document/1325793
     
 ## BIOS Optimizations
   * FUJITSU Server PRIMERGY - BIOS optimizations for Xeon Scalable processors based systems. BIOS settings for performance, low-latency and energy efficiency
