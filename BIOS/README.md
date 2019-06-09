@@ -20,4 +20,4 @@
 13. Enable ErP or EuP Ready
     - Will affect power when the system is shutdown, usb devices and lights will not be powered on when shutdown.
 14. Make sure Platform Power Management is disabled
-15. Set CPU Vcore Loadline Calibration to Standard if set to Auto (Gigabyte)
+15. Disable Legacy USB Support, Port 60/64 Emulation
