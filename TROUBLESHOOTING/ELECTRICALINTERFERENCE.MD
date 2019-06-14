@@ -60,7 +60,7 @@ Reduce interfering near field (EMI) and far field (RFI) interference in some cas
 5. Increase the distances between your cables (AC Power Cables, USB, DVI-D, Diplay Port), if cables must touch they should cross (+) each other at 90 degree angles
    
 
-** Want to learn a LOT more, take a look at the Electrical References section on my github **
+**Want to learn a LOT more, take a look at the Electrical References section on my github**
 https://github.com/djdallmann/GamingPCSetup/tree/master/Technical%20References
 
 ## Credits
