@@ -39,6 +39,7 @@ Reduce interfering near field (EMI) and far field (RFI) interference in some cas
    * Turn off power saving features during testing as these will throttle or change frequencies automatically depending on idle use.
 2. Disconnect any unecessary interconnected grounded systems
    * Do you have a speaker system, or other interconnected component that may be uncessary during testing?
+   * Disconnect any front panel usb and audio interfaces
    * Keep it simple..
 3. Make sure you have clean and stable power supply input
    * Use quality power supply units that provide higher output than your overall draw (power consumption) for the components in your system.
