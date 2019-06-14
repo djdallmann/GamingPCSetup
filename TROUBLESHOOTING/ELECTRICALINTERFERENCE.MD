@@ -59,7 +59,7 @@ Reduce interfering near field (EMI) and far field (RFI) interference in some cas
      * Note: If you followed the steps above you've already determined determine what plugs/outlets are shared on the same electrical breaker circuits.
 5. Increase the distances between your cables (AC Power Cables, USB, DVI-D, Diplay Port), if cables must touch they should cross (+) each other at 90 degree angles
    
-# Other options for Ground Loop issues
+## Other options for Ground Loop issues
 1. Ground Loop Isolators and Transforms
    * Ebtech Humx - https://www.amazon.ca/Ebtech-Hum-X-Exterminator/dp/B0002E4YI8
    * Tripp Lite Isolation Transformer - https://www.amazon.ca/Tripp-Lite-Isolation-Transformer-outlet/dp/B00006HPFH
