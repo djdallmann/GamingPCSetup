@@ -5,6 +5,7 @@ Many people report unusual or unexpected behavior on what appears to be well bui
 I'm not an electrical engineer or subject matter expert, most of what is shared below is based on *translations* of reputable public works and research, see my Electrical section in Technical Reference. 
 Use this guide at your own risk, electricity can be very dangerous please do your due dilegence and research before trying anything you're uncomfortable or unfamiliar with. 
 You are fully responsible for any loss, harm or damages caused by using the information described on this page.
+If you do use this or redistribute this in any way, please give due credit.
 
 ## Why does this happen?
 Computers like many other electronics are particularly sensitive, manufacturers we assume do their best to design products to reduce interference by using isolators/transformers/chokes, or how the traces run on a motherboard, however there is always expected to be some level of noise flowing through the system purely how electronic systems work, we must then do our best to isolate and reduce those issues to where it isn't audible or perceivable. A common issue for noise in systems is ground loops which in itself can make other issues related to noise excacerbated.
