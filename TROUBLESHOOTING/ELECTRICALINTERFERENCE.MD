@@ -1,4 +1,4 @@
-# Troubleshooting: Electrical Interference and Grounding Issues
+# Troubleshooting: Electrical Interference
 Many people report unusual or unexpected behavior on what appears to be well built stable computers sytems, the cause of this is most likely a high level of electrical noise or interference.
 
 # Disclaimer 
