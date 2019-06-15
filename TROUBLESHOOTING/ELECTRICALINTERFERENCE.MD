@@ -81,5 +81,9 @@ It is also written and inspired by the dedication, work, tests and observations 
 
 **Timecard aka TC!** - http://steamcommunity.com/id/tcard
 
+**Melody** - https://steamcommunity.com/profiles/76561198036418430/
+
+**Haze** - https://steamcommunity.com/profiles/76561197986101135
+
 **Some history**
 https://docs.google.com/document/d/1Ihak2mMEogNm3IkoJxizY1YN7vXjuNr_NfEdAnjTAII/
