@@ -18,11 +18,15 @@
     * https://www.intel.ca/content/www/ca/en/support/articles/000005672/boards-and-kits/desktop-boards.html
     * Note the shortcut for Intel® Management Engine BIOS Extension (Intel® MEBX)
   
-### C-States, P-States
+### C-States, P-States, PC-States
    * C-states, C-states and even more C-states (Part 1)
-      * https://software.intel.com/en-us/blogs/2008/03/27/update-c-states-c-states-and-even-more-c-states/
+     * https://software.intel.com/en-us/blogs/2008/03/27/update-c-states-c-states-and-even-more-c-states/
    * There's got to be a catch (Part 2)
-      * https://software.intel.com/en-us/blogs/2008/04/29/theres-got-to-be-a-catch
+     * https://software.intel.com/en-us/blogs/2008/04/29/theres-got-to-be-a-catch
+   * The Importance of UEFI Settings and Hardware C-States, Lenovo, LenovoPress 2017
+     * https://lenovopress.com/lp0632-uefi-settings-and-hardware-c-states
+   * Understanding P-State Control on Intel Xeon Scalable Processors to Maximize Energy Efficiency, Lenovo, LenovoPress 2019
+     * https://lenovopress.com/lp0870-understanding-pstate-control-to-maximize-energy-efficiency
 
 ## Microsoft Windows 
 ### Interrupt Service Routines (ISR), Deferred Procedure Calls (DPC), Message-Signaled Interrupts (MSI)
