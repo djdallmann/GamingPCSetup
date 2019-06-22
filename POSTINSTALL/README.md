@@ -33,7 +33,9 @@ Get-AppxPackage *yourphone* | Remove-AppxPackage
    - Check Windows Device Manager for clues as to which drivers may not be present or working, devices under System generally refer to Chipset or Management Systems (Intel Management Engine)
    - It is often recommended to use the drivers provided by your motherboard manufacturer since they may include additional optimizations for your specific hardware.
    - For the most part you may not need to install the latest audio or network drivers unless you notice issues with them in the future. The drivers that windows installs automatically are generally well tested or approved.
-8. Don't install any additional software unless absolutely required (Don't install 7zip/Winzip, Google Chrome, Firefox, Adobe, Java, Game Comms etc.)
-   - This is primarily recommended if you are trying to isolate the cause of your performance issues, it will help eliminate as much interfering software as possible.
-9. **Don't modify Windows BOOT options using BCDEDIT.exe**, although they have the **potential** to alter your computing experience they are intended for advanced software debugging. The default BOOT options are recommended by Microsoft.
-10. Reconnect your network ethernet cable, continue onto the next process.
+8. Avoid installing any uncessary software
+9. Run **Process Idle Tasks** then while it's running open task manager and monitor the progress. The CPU, disk and memory use will increase for a few minutes until all the necessary background, scheduled and maintenenace tasks are complete.
+   - Open cmd.exe as administrator then enter the following command
+   - Rundll32.exe advapi32.dll,ProcessIdleTasks
+10. **Don't modify Windows BOOT options using BCDEDIT.exe**, although they have the **potential** to alter your computing experience they are intended for advanced software debugging. The default BOOT options are recommended by Microsoft.
+11. Reconnect your network ethernet cable, continue onto the next process.
