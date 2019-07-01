@@ -35,7 +35,9 @@ Get-AppxPackage *yourphone* | Remove-AppxPackage
    - For the most part you may not need to install the latest audio or network drivers unless you notice issues with them in the future. The drivers that windows installs automatically are generally well tested or approved.
 8. Avoid installing any uncessary software
 9. Run **Process Idle Tasks** then while it's running open task manager and monitor the progress. The CPU, disk and memory use will increase for a few minutes until all the necessary background, scheduled and maintenenace tasks are complete.
-   - Open cmd.exe as administrator then enter the following command
-   - Rundll32.exe advapi32.dll,ProcessIdleTasks
+```
+Open cmd.exe as administrator then enter the following command
+Rundll32.exe advapi32.dll,ProcessIdleTasks
+```
 10. **Don't modify Windows BOOT options using BCDEDIT.exe**, although they have the **potential** to alter your computing experience they are intended for advanced software debugging. The default BOOT options are recommended by Microsoft.
 11. Reconnect your network ethernet cable, continue onto the next process.
