@@ -5,12 +5,12 @@ These are additional steps not covered by the PowerShell Desired State Configura
 **uncheck Allow the computer to turn off this device to save power**. 
 2. Repeat this step for your **Network adapters** as well.
 3. Right click the desktop and go to Display Settings, ensure that Scale and layout are set to 100% (Recommended)
-4. Open Powershell as admin and enter the following command to add scanning exclusions for the Steam folder to Windows Defender
+4. Open Powershell as admin and enter the following command to add scanning exclusions for the Steam and NVIDIA Shader Cache folder to Windows Defender. 
+   - This will prevent Windows Defender from scanning your games as they download files and during gameplay, **if you store your games on separate drives** ensure to add that path here as well.
 ```
 Add-MpPreference -ExclusionPath "C:\Program Files (x86)\Steam\"
 Add-MpPreference -ExclusionPath $env:LOCALAPPDATA"\Temp\NVIDIA Corporation\NV_Cache"
 ```
-   - This will prevent Windows Defender from scanning your games as they download files and during gameplay, **if you store your games on separate drives** ensure to add that path here as well.
 5. Uninstall common Windows Store Metro Apps, In Powershell as admin run the following commands and press enter so they complete.
 ```
 Get-AppxPackage *print3d* | Remove-AppxPackage
