@@ -28,7 +28,7 @@
    * Understanding P-State Control on Intel Xeon Scalable Processors to Maximize Energy Efficiency, Lenovo, LenovoPress 2019
      * https://lenovopress.com/lp0870-understanding-pstate-control-to-maximize-energy-efficiency
 
-## Microsoft Windows 
+## Microsoft Windows
 ### Interrupt Service Routines (ISR), Deferred Procedure Calls (DPC), Message-Signaled Interrupts (MSI)
    * Microsoft Hardware - Kernel-Mode Driver Architecture - Introduction to Interrupt Service Routines, Microsoft Docs
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/introduction-to-interrupt-service-routines
@@ -69,6 +69,24 @@ Performance Architect Intel Corporation
       * https://techcommunity.microsoft.com/t5/Microsoft-USB-Blog/Capturing-USB-ETW-traces-with-Microsoft-Message-Analyzer-MMA/ba-p/270811
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/capture-and-view-ing-usb-traces-with-microsoft-message-analyzer-
       
+### NVIDIA
+   * How Often to Update Graphics Card Display Drivers, NVIDIA Knowledgebase, NVIDIA 2017
+     * https://nvidia.custhelp.com/app/answers/detail/a_id/34/
+   * Setting "Power management mode" from Adaptive to Maximum Performance, NVIDIA Knowledgebase, NVIDIA 2014
+     * https://nvidia.custhelp.com/app/answers/detail/a_id/3130/
+   * How to calibrate your monitor, NVIDIA GeForce Guides, NVIDIA 2015
+     * https://www.geforce.com/whats-new/guides/how-to-calibrate-your-monitor
+   * Graphics card basic troubleshooting for video corruption / crashing / system lock ups / freezes / BSOD, NVIDIA Knowledgebase, NVIDIA 2014
+     * https://nvidia.custhelp.com/app/answers/detail/a_id/3565/
+   * Collecting GPU logs using GPU-Z, NVIDIA Knowledgebase, NVIDIA 2018
+     * https://nvidia.custhelp.com/app/answers/detail/a_id/4749/
+   * How to Get Rid of Lag, NVIDIA GeForce Guides
+     * https://www.geforce.com/whats-new/guides/how-to-get-rid-of-lag-guide
+   * How to generating an event trace log for GPUView to troubleshoot performance issues/low FPS/game stutter, NVIDIA Knowledgebase, NVIDIA 2019
+     * https://nvidia.custhelp.com/app/answers/detail/a_id/3507/
+   * How to generate a DirectX Diagnostic Tool report (dxdiag), NVIDIA Knowledgebase, NVIDIA 2015
+     * https://nvidia.custhelp.com/app/answers/detail/a_id/3721/
+
 ### Misc
    * Windows Hardware Dev Center Archive, Microsoft
       * https://docs.microsoft.com/en-us/previous-versions/windows/hardware/download/dn550976(v=vs.85)
