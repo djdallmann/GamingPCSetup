@@ -23,6 +23,8 @@
      * https://software.intel.com/en-us/blogs/2008/03/27/update-c-states-c-states-and-even-more-c-states/
    * There's got to be a catch (Part 2)
      * https://software.intel.com/en-us/blogs/2008/04/29/theres-got-to-be-a-catch
+   * Energy-Efficient Platforms – Considerations for Application Software and Services, Intel Whitepaper, Intel 2011
+     * https://www.intel.com/content/dam/doc/white-paper/energy-efficient-platforms-2011-white-paper.pdf
    * The Importance of UEFI Settings and Hardware C-States, Lenovo, LenovoPress 2017
      * https://lenovopress.com/lp0632-uefi-settings-and-hardware-c-states
    * Understanding P-State Control on Intel Xeon Scalable Processors to Maximize Energy Efficiency, Lenovo, LenovoPress 2019
