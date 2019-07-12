@@ -40,7 +40,7 @@ Pending
 - **UDP Checksum Offload (IPv6)**
    - Enabled
 
-For more information on these settings see the **Intel** and the **Microsoft Performance Tuning Network Adapters, Performance Tuning for Low Latency Packet Processing** support guides in the **Network** section of the [Technical References](../Technical References/README.md) page.
+For more information on these settings see the **Intel** and the **Microsoft Performance Tuning Network Adapters, Performance Tuning for Low Latency Packet Processing** support guides in the **Network** section of the [Technical References](../Technical%20References/README.md) page.
 
 ## Realtek
 Pending
