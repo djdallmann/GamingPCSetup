@@ -22,7 +22,7 @@ Pending
 - **Receive Side Scaling**
    - Enabled
 - **Maximum Number of RSS Queues**
-   - N Queues
+   - N Queues, Use 2 or more queues when available.
 - **Packet Priority & VLAN**
    - Both Enabled
 - **Receive Buffers**
