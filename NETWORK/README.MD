@@ -27,10 +27,10 @@ Pending
    - Both Enabled
 - **Receive Buffers**
    - Increase if you have extra memory to spare, *recommended 1024 or higher.*
-   - A lower value will results in dropped packets and decreased performance, as per Microsofts
+   - A lower value will results in dropped packets and decreased performance, as per Microsoft's Performance Tuning Network Adapters guide
 - **Transmit Buffers**
    - Increase if you have extra memory to spare, *recommended 1024 or higher.*
-   - A lower value generally results in dropped packets and decreased performance.
+   - A lower value will results in dropped packets and decreased performance, as per Microsoft's Performance Tuning Network Adapters guide
 - **TCP Checksum Offload (IPv4)**
    - Enabled
 - **TCP Checksum Offload (IPv6)**
