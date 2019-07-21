@@ -2,8 +2,8 @@
 1. Reset BIOS to optimal Defaults
    - Most BIOS provide an option for this in one of the menus
 2. Disable C-State
-   - CPU Enhanced Halt (C1E)
-3. Set Package C-State Limit if available to a lower cstate values such as C0/C1, C2, C3. 
+   - CPU Enhanced Halt (C1E), C3, C6, C7, C8
+3. Set Package C-State Limit if available to a low cstate values such as C2.
    - The deeper the C-State (C6, C7, C8) the more latency is introduced due to the time it takes to restore the active power state.
 4. Disable Intel (R) Speed Shift Technology
 5. Disable CPU Enhanced Intel Speedstep Technology (EIST) Function
