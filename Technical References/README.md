@@ -53,6 +53,11 @@ Performance Architect Intel Corporation
    * Network terminology and technology, tuning and performance, Konstantin Lepikhov, 2018, Geant eduPERT Knowledge Base
       * https://wiki.geant.org/display/public/EK/Network
 
+### Services
+   * Guidance on disabling system services on Windows Server 2016 with Desktop Experience, Microsoft, Microsoft Docs
+      * https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server
+   * Per-user services in Windows 10 and Windows Server
+      * https://docs.microsoft.com/en-us/windows/application-management/per-user-services-in-windows
 
 ### Latency
    * Intel Optimizing Computer Applications for Latency: Part 1: Configuring the Hardware, Intel 2017, Evgueny Khartchenko
