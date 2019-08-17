@@ -12,16 +12,18 @@ If you do use this or redistribute this in any way, please give due credit.
 
 [3. Windows Initial Post Installation Steps](POSTINSTALL/README.md)
 
-[4. Configure Network Settings](NETWORK/README.md)
+[4. Optimize Windows Services](SERVICES/README.md)
 
-[5. Setup and Configure Steam](STEAM/README.md)
+[5. Configure Network Settings](NETWORK/README.md)
 
-[6. Setup Your Video Card](VIDEOCARD/README.md)
+[6. Setup and Configure Steam](STEAM/README.md)
 
-[7. Powershell Desired State Configuration (DSC) Setup and Use](PSDSC/README.md)
+[7. Setup Your Video Card](VIDEOCARD/README.md)
 
-[8. Configure Your Games](GAMECONFIGS/README.md)
+[8. Powershell Desired State Configuration (DSC) Setup and Use](PSDSC/README.md)
 
-[9. Choosing Peripherals (Keyboard/Mice/Monitor)](PERIPHERALS/README.md)
+[9. Configure Your Games](GAMECONFIGS/README.md)
 
-[10. Troubleshooting](TROUBLESHOOTING/README.md)
+[10. Choosing Peripherals (Keyboard/Mice/Monitor)](PERIPHERALS/README.md)
+
+[11. Troubleshooting](TROUBLESHOOTING/README.md)
