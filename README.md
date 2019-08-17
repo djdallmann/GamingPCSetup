@@ -14,16 +14,18 @@ If you do use this or redistribute this in any way, please give due credit.
 
 [4. Optimize Windows Services](SERVICES/README.md)
 
-[5. Configure Network Settings](NETWORK/README.md)
+[5. Optimize Windows Scheduled Tasks](SCHEDULEDTASKS/README.md)
 
-[6. Setup and Configure Steam](STEAM/README.md)
+[6. Configure Network Settings](NETWORK/README.md)
 
-[7. Setup Your Video Card](VIDEOCARD/README.md)
+[7. Setup and Configure Steam](STEAM/README.md)
 
-[8. Powershell Desired State Configuration (DSC) Setup and Use](PSDSC/README.md)
+[8. Setup Your Video Card](VIDEOCARD/README.md)
 
-[9. Configure Your Games](GAMECONFIGS/README.md)
+[9. Powershell Desired State Configuration (DSC) Setup and Use](PSDSC/README.md)
 
-[10. Choosing Peripherals (Keyboard/Mice/Monitor)](PERIPHERALS/README.md)
+[10. Configure Your Games](GAMECONFIGS/README.md)
 
-[11. Troubleshooting](TROUBLESHOOTING/README.md)
+[11. Choosing Peripherals (Keyboard/Mice/Monitor)](PERIPHERALS/README.md)
+
+[12. Troubleshooting](TROUBLESHOOTING/README.md)
