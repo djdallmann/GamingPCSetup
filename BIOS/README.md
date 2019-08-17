@@ -10,8 +10,7 @@
 6. Enable Turbo Boost
 7. Enable XMP
 8. Set any Fast Boot Settings to OFF
-   - This may be in the Memory section and possibly BIOS section
-   - Memory Boot Mode: Fast Boot Disabled
+   - This may be in the Memory and other sections which let you control what devices that are powered up before it reaches the OS to save boot times.
 9. Disable any Active State Power Management (ASPM)/Aggressive Link Power Management (ALPM) settings
    - This may be in the SATA and/or PCI configuration sections, check each section
 10. Set your SATA disk controlled mode to AHCI
