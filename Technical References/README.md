@@ -76,6 +76,10 @@ Performance Architect Intel Corporation
       * https://techcommunity.microsoft.com/t5/Microsoft-USB-Blog/Capturing-USB-ETW-traces-with-Microsoft-Message-Analyzer-MMA/ba-p/270811
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/capture-and-view-ing-usb-traces-with-microsoft-message-analyzer-
       
+### Thermal Throttling
+   * Defective Heat Sinks Causing Garbage Gaming, Random ASCII – tech blog of Bruce Dawson, Bruce Dawson, Former Employee of Valve, Microsoft XBox 360 and Google Chrome Performance Management Teams
+      * https://randomascii.wordpress.com/2013/08/06/defective-heat-sinks-causing-garbage-gaming/
+      
 ### NVIDIA
    * How Often to Update Graphics Card Display Drivers, NVIDIA Knowledgebase, NVIDIA 2017
      * https://nvidia.custhelp.com/app/answers/detail/a_id/34/
