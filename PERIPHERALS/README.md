@@ -13,7 +13,7 @@ As for performance, most modern mice and even those made in the past 10 years wi
      - Mice may vary in size from the front to the back of the mouse, the back of the mouse is typically larger than the front.
    - Choose a mouse that can provide a **polling rate up to 1000hz (1ms) response time**, use a polling rate of either **500 or 1000hz**.
    - It always recommended to **read both positive and negative reviews** for mice to ensure there are no ongoing or known issues with the peripheral **software, hardware or build quality in general**.
-   - **A higher dpi doesn't necessarily mean better**, most FPS professionals play with 400 or 800 dpi. On higher resolution settings there may be some modification to the input signal which could negatively impact the intended outcome of a mouse gesture.
+   - **A higher dpi doesn't necessarily mean better**, most FPS professionals play with 400 or 800 dpi with great results. On higher resolution settings there may be some modification to the input signal which could negatively impact the intended outcome of a mouse gesture. Also some games may exhibit strange behavior with higher dpi, it's best to see what feels and performs best for you in each game.
    - Most people tend to lean towards **optical mice** versus laser mice, optical mice tend to give a more raw feeling where as laser feel like the movement is smoothed. Many laser sensors have been known to have **inconsistent acceleration** which can make it difficult to repeat gestures accurately.
    - A mouse can only improve your game so much, the rest will come down to consistent practice and development of your skills and techniques.
 
