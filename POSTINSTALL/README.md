@@ -1,7 +1,7 @@
 These are additional steps not covered by the PowerShell Desired State Configuration (DSC).
 ## Post Installation Steps
 
-1. In **Windows Device Manager** (devmgmt.msc) go to *Network adapters* and right click each and go to properties, then Power Management and **uncheck Allow the computer to turn off this device to save power**. 
+1. In **Windows Device Manager** (devmgmt.msc) go to **Network adapters** and right click each and go to properties, then Power Management and **uncheck Allow the computer to turn off this device to save power**. 
 2. Right click the desktop and go to Display Settings, ensure that Scale and layout are set to 100% (Recommended)
 3. Open Powershell as admin and enter the following command to add scanning exclusions for the Steam and NVIDIA Shader Cache folder to Windows Defender. 
    - This will prevent Windows Defender from scanning your games as they download files and during gameplay, **if you store your games on separate drives** ensure to add that path here as well.
@@ -58,7 +58,7 @@ These are additional steps not covered by the PowerShell Desired State Configura
     - Increase the frequency TRIM is run for your SSD drive
       - Open My Computer
       - Right click your drive (e.g. C:) and go to properties, go to the Tools tab then Optimize
-      - Press Change Settings, ensure Scheduled Optimization is enabled and set to *Daily* for each of your drives
+      - Press Change Settings, ensure Scheduled Optimization is enabled and set to **Daily** for each of your drives
       - Press the Drives button to double check each drive is specified for maintenance
       - Press OK/Apply for each of the open windows to submit the changes.
 11. Optimize NTFS file system parameters to reduce updates to some of the metadata that is tracked.
