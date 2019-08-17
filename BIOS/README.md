@@ -20,3 +20,5 @@
 14. Make sure Platform Power Management is disabled
 15. Disable Legacy USB Support, Port 60/64 Emulation
     - Having them enabled may cause the CPU to enter System Management Mode (SMM) via System Management Interrupt (SMI) which is a non blocking interrupt and may introduce minor latency.
+16. Disable any onboard LED traces/lights, e.g. Gigabyte Ambient LED
+17. Set your PCI Express Max Link Speed to Gen3, devices can negotiate lower spec as needed.
