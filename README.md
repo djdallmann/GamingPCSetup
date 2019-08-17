@@ -8,7 +8,7 @@ If you do use this or redistribute this in any way, please give due credit.
 
 [2. Download and Install Windows](INSTALLWIN/README.md)
 
-[3. Windows Post Installation Steps](POSTINSTALL/README.md)
+[3. Windows Initial Post Installation Steps](POSTINSTALL/README.md)
 
 [4. Configure Network Settings](NETWORK/README.md)
 
