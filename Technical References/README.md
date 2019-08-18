@@ -52,6 +52,8 @@ Performance Architect Intel Corporation
       * https://www.intel.ca/content/www/ca/en/support/articles/000005811/network-and-i-o/ethernet-products.html
    * Network terminology and technology, tuning and performance, Konstantin Lepikhov, 2018, Geant eduPERT Knowledge Base
       * https://wiki.geant.org/display/public/EK/Network
+   * Metered Internet connections: FAQ, Microsoft Support, Microsoft
+      * https://support.microsoft.com/en-ca/help/17452/windows-metered-internet-connections-faq
 
 ### Services
    * Guidance on disabling system services on Windows Server 2016 with Desktop Experience, Microsoft, Microsoft Docs
