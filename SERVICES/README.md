@@ -7,10 +7,9 @@ This section is based on two specific Microsoft support articles and will summar
 
 For the Microsoft references, see the heading **Microsoft - Windows Services** in the [Technical References](../Technical%20References/README.md) page.
 
-<details><summary><b>Click here to expand the system services summary</b></summary>
+#### System Services Summary
 
 This is a list of services which Microsoft has recommendations for disabling, if a service is not on this list then Microsoft is unsure of the impacts it may have on the desktop experience.
-
 
 | Service | Service Name | Impacts | My Recommendation
 | --- | --- | --- | --- |
@@ -62,11 +61,8 @@ This is a list of services which Microsoft has recommendations for disabling, if
 | XblAuthManager | Xbox Live Auth Manager | Provides authentication and authorization services for interacting with Xbox Live. If this service is stopped, some applications may not operate correctly. | Disable if you don't use XBox Live Features |
 | XblGameSave | Xbox Live Game Save | This service syncs save data for Xbox Live save enabled games. If this service is stopped, game save data will not upload to or download from Xbox Live. | Disable if you don't use XBox Live Features |
 
-</details>
-
-
-<details><summary><b>Click here to expand the per-user services summary</b></summary>
-This is a list of per-user services which Microsoft has recommendations for, disabling these only prevents the services from being started on login. <b>Per-user services are dynamically created upon creating a user session</b> for example you'll see ContactData service but also see the running service ContactData_37664 (per-user service), each user logged into the system will have their on per user service for those listed below if it is configured to be enabled.
+#### Per-user Services Summary
+This is a list of per-user services which Microsoft has recommendations for, disabling these only prevents the services from being started on login. **Per-user services are dynamically created upon creating a user session** for example you'll see ContactData service but also see the running service ContactData_37664 (per-user service), each user logged into the system will have their on per user service for those listed below if it is configured to be enabled.
 
 | Service | Service Name | Impacts
 | --- | --- | --- |
@@ -84,14 +80,10 @@ This is a list of per-user services which Microsoft has recommendations for, dis
 | WpnUserService | Windows Push Notifications User Service | Pending |
 | PrintWorkflowUserSvc | PrintWorkflow | Pending |
 
-</details>
-
 ### Alternative Service Configuration Overview
 
-<details><summary><b>Click here to expand the alternative services summary</b></summary>
+#### Alternative Services Summary
 
 | Service | Service Name | Impacts | My Recommendation
 | --- | --- | --- | --- |
 | SEMgrSvc | Payments and NFC/SE Manager | Near field communications for payments, tap to pay | Disable |
-  
-</details>
