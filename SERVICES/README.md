@@ -61,6 +61,51 @@ This is a list of services which Microsoft has recommendations for disabling, if
 | XblAuthManager | Xbox Live Auth Manager | Provides authentication and authorization services for interacting with Xbox Live. If this service is stopped, some applications may not operate correctly. | Disable if you don't use XBox Live Features |
 | XblGameSave | Xbox Live Game Save | This service syncs save data for Xbox Live save enabled games. If this service is stopped, game save data will not upload to or download from Xbox Live. | Disable if you don't use XBox Live Features |
 
+- Use the following to disable all those noted above **except** those pending review and for some primary services related to per-user services.
+  - Paste the following into an administrative Powershell terminal, press enter, the restart your computer for it to take effect.
+
+    ```
+    Set-Service AxInstSV -StartupType Disabled
+    Set-Service tzautoupdate -StartupType Disabled
+    Set-Service bthserv -StartupType Disabled
+    Set-Service dmwappushservice -StartupType Disabled
+    Set-Service MapsBroker -StartupType Disabled
+    Set-Service lfsvc -StartupType Disabled
+    Set-Service SharedAccess -StartupType Disabled
+    Set-Service lltdsvc -StartupType Disabled
+    Set-Service AppVClient -StartupType Disabled
+    Set-Service NetTcpPortSharing -StartupType Disabled
+    Set-Service NcbService -StartupType Disabled
+    Set-Service CscService -StartupType Disabled
+    Set-Service PhoneSvc -StartupType Disabled
+    Set-Service Spooler -StartupType Disabled
+    Set-Service PrintNotify -StartupType Disabled
+    Set-Service QWAVE -StartupType Disabled
+    Set-Service RmSvc -StartupType Disabled
+    Set-Service RemoteAccess -StartupType Disabled
+    Set-Service SensorDataService -StartupType Disabled
+    Set-Service SensrSvc -StartupType Disabled
+    Set-Service SensorService -StartupType Disabled
+    Set-Service ShellHWDetection -StartupType Disabled
+    Set-Service SCardSvr -StartupType Disabled
+    Set-Service ScDeviceEnum -StartupType Disabled
+    Set-Service SSDPSRV -StartupType Disabled
+    Set-Service WiaRpc -StartupType Disabled
+    Set-Service OneSyncSvc -StartupType Disabled
+    Set-Service TabletInputService -StartupType Disabled
+    Set-Service upnphost -StartupType Disabled
+    Set-Service UserDataSvc -StartupType Disabled
+    Set-Service UevAgentService -StartupType Disabled
+    Set-Service WalletService -StartupType Disabled
+    Set-Service FrameServer -StartupType Disabled
+    Set-Service stisvc -StartupType Disabled
+    Set-Service wisvc -StartupType Disabled
+    Set-Service icssvc -StartupType Disabled
+    Set-Service WSearch -StartupType Disabled
+    Set-Service XblAuthManager -StartupType Disabled
+    Set-Service XblGameSave -StartupType Disabled
+    ```
+
 #### Per-user Services Summary
 This is a list of per-user services which Microsoft has recommendations for, disabling these only prevents the services from being started on login. **Per-user services are dynamically created upon creating a user session** for example you'll see ContactData service but also see the running service ContactData_37664 (per-user service), each user logged into the system will have their on per user service for those listed below if it is configured to be enabled.
 
