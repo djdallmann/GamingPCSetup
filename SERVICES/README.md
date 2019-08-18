@@ -51,7 +51,7 @@ This is a list of services which Microsoft has recommendations for disabling, if
 | UserDataSvc | User Data Access | Provides apps access to structured user data, including contact info, calendars, messages, and other content. | Disable if you don't use these built-in features |
 | UevAgentService | User Experience Virtualization Service | Provides support for application and OS settings roaming | Keep disabled |
 | WalletService | WalletService | Hosts objects used by clients of the wallet | Disable |
-| Windows Camera Frame Server | FrameServer | Enables multiple clients to access video frames from camera devices. | Disable |
+| FrameServer | Windows Camera Frame Server | Enables multiple clients to access video frames from camera devices. | Disable |
 | stisvc | Windows Image Acquisition | Provides image acquisition services for scanners and cameras | Disable if you don't use image scanners |
 | wisvc | Windows Insider Service | Windows Insider Service | Disable if you don't subscribe to insider services |
 | icssvc | Windows Mobile Hotspot Service | Provides the ability to share a cellular data connection with another device. | Disable |
