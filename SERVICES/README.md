@@ -91,7 +91,6 @@ This is a list of services which Microsoft has recommendations for disabling, if
     Set-Service ScDeviceEnum -StartupType Disabled
     Set-Service SSDPSRV -StartupType Disabled
     Set-Service WiaRpc -StartupType Disabled
-    Set-Service OneSyncSvc -StartupType Disabled
     Set-Service TabletInputService -StartupType Disabled
     Set-Service upnphost -StartupType Disabled
     Set-Service UserDataSvc -StartupType Disabled
@@ -105,6 +104,13 @@ This is a list of services which Microsoft has recommendations for disabling, if
     Set-Service XblAuthManager -StartupType Disabled
     Set-Service XblGameSave -StartupType Disabled
     ```
+    
+- Those currently not listed in Powershell command summary:
+  - CDPUserSvc
+  - PimIndexMaintenanceSvc
+  - PcaSvc
+  - OneSyncSvc
+  - WpnUserService
 
 #### Per-user Services Summary
 This is a list of per-user services which Microsoft has recommendations for, disabling these only prevents the services from being started on login. **Per-user services are dynamically created upon creating a user session** for example you'll see ContactData service but also see the running service ContactData_37664 (per-user service), each user logged into the system will have their on per user service for those listed below if it is configured to be enabled.
