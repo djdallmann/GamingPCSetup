@@ -66,7 +66,6 @@ This is a list of services which Microsoft has recommendations for disabling, if
 
 
 <details><summary><b>Click here to expand the per-user services summary</b></summary>
-<div markdown="1">
 This is a list of per-user services which Microsoft has recommendations for, disabling these only prevents the services from being started on login. **Per-user services are dynamically created upon creating a user session** for example you'll see ContactData service but also see the running service ContactData_37664 (per-user service), each user logged into the system will have their on per user service for those listed below if it is configured to be enabled.
 
 | Service | Service Name | Impacts
@@ -85,7 +84,6 @@ This is a list of per-user services which Microsoft has recommendations for, dis
 | WpnUserService | Windows Push Notifications User Service | Pending |
 | PrintWorkflowUserSvc | PrintWorkflow | Pending |
 
-<div>
 </details>
 
 ### Alternative Service Configuration Overview
