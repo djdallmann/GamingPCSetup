@@ -12,6 +12,7 @@ For the Microsoft references, see the heading **Microsoft - Windows Services** i
 
 This is a list of services which Microsoft has recommendations for disabling, if a service is not on this list then Microsoft is unsure of the impacts it may have on the desktop experience.
 
+
 | Service | Service Name | Impacts
 | --- | --- | --- |
 | AxInstSV | ActiveX Installer | Pending |
@@ -56,6 +57,8 @@ This is a list of services which Microsoft has recommendations for disabling, if
 | XblAuthManager | Xbox Live Auth Manager | Pending |
 | XblGameSave | Xbox Live Game Save | Pending |
 | SEMgrSvc | Payments and NFC/SE Manager | Pending |
+
+
 </p>
 
 </details>
