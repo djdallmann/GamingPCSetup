@@ -1,4 +1,3 @@
-These are additional steps not covered by the PowerShell Desired State Configuration (DSC).
 ## Post Installation Steps
 
 1. In **Windows Device Manager** (devmgmt.msc) go to **Network adapters** and right click each and go to properties, then Power Management and **uncheck Allow the computer to turn off this device to save power**. 
@@ -70,5 +69,7 @@ These are additional steps not covered by the PowerShell Desired State Configura
          fsutil behavior set disableLastAccess 1
          fsutil behavior set disable8dot3 1
          ```
-         
-12. Reconnect your network ethernet cable, continue onto the next process.
+12. Set your **Ethernet adapter to a Metered Connection**, this will reduce network traffic used by the operating system for updates and other features however will not impact your gaming experience directly. 
+    - Open *Network & Internet Settings* then choose *Change adapter options*
+    - On the left hand side menu *select Ethernet* then on the right hand side *under the Ethernet heading* click on your adapter then enable *Set as a metered connection*
+13. Reconnect your network ethernet cable, continue onto the next process.
