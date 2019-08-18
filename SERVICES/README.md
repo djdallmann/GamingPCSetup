@@ -138,3 +138,10 @@ This is a list of per-user services which Microsoft has recommendations for, dis
 | Service | Service Name | Impacts | My Recommendation
 | --- | --- | --- | --- |
 | SEMgrSvc | Payments and NFC/SE Manager | Near field communications for payments, tap to pay | Disable |
+
+- Use the following to disable all those noted above **except** those pending review.
+  - Paste the following into an administrative Powershell terminal, press enter, the restart your computer for it to take effect.
+
+    ```
+    Set-Service SEMgrSvc -StartupType Disabled
+    ```
