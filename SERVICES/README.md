@@ -16,7 +16,7 @@ This is a list of services which Microsoft has recommendations for disabling, if
 | AxInstSV | ActiveX Installer | Provides User Account Control validation for the installation of ActiveX controls from the Internet and enables management of ActiveX control installation based on Group Policy settings | Disable |
 | tzautoupdate | Auto Time Zone Updater | Automatically sets the system time zone. | Keep Disabled |
 | bthserv | Bluetooth Support Service | The Bluetooth service supports discovery and association of remote Bluetooth devices. Stopping or disabling this service may cause already installed Bluetooth devices to fail to operate properly and prevent new devices from being discovered or associated. | Disable if you don't use or plan to use Bluetooth devices |
-| CDPUserSvc | Connected Devices Platform Service | If you deactivate it, the automatic mail retrieval, the update of the LiveTiles and the Infocenter should be dead. In addition, OndeDrive will no longer sync and a number of other synchronization-dependent features will cease the service. | Try disabling the per-user process to determine impacts to your system, see Per-User services section. |
+| CDPUserSvc | Connected Devices Platform Service | If you deactivate it, the automatic mail retrieval, the update of the LiveTiles and the Infocenter should be dead. In addition, OndeDrive will no longer sync and a number of other synchronization-dependent features will cease the service. | See per-user services section |
 | PimIndexMaintenanceSvc | ContactData | Indexes contact data for fast contact searching. If you stop or disable this service, contacts might be missing from your search results. | Disable completely or Per-User for shared computers, see Per-User services section. |
 | dmwappushservice  | Device Management Wireless Application | Service required on client devices for Intune, MDM and similar management technologies, and for Unified Write Filter. Not needed for Server. | Disable, for mobile |
 | MapsBroker | Downloaded Maps Manager | Windows service for application access to downloaded maps. This service is started on-demand by application accessing downloaded maps. Disabling this service will prevent apps from accessing maps. | Disable if you don't use any apps that use Map based features. |
@@ -31,11 +31,11 @@ This is a list of services which Microsoft has recommendations for disabling, if
 | NcbService | Network Connection Broker | Brokers connections that allow Microsoft Store Apps to receive notifications from the internet. | Disable, if you don't plan on using the MS Store apps with internet notifications |
 | CscService | Offline Files | The Offline Files service performs maintenance activities on the Offline Files cache, responds to user logon and logoff events | Keep Disabled |
 | PhoneSvc | Phone Service | Manages the telephony state on the device | Disable |
-| Spooler | Print Spooler | This service spools print jobs and handles interaction with the printer. If you turn off this service, you won't be able to print or see your printers. | Disable, unless you use printers or scanners |
+| Spooler | Print Spooler | This service spools print jobs and handles interaction with the printer. If you turn off this service, you won't be able to print or see your printers. | Disable unless you use printers or scanners |
 | PrintNotify | Printer Extensions and Notifications | This service opens custom printer dialog boxes and handles notifications from a remote print server or a printer. | Disable, unless you use printers or scanners |
 | PcaSvc | Program Compatibility Assistant Service | This service provides support for the Program Compatibility Assistant (PCA). PCA monitors programs installed and run by the user and detects known compatibility problems. | Pending |
 | QWAVE | Quality Windows Audio Video Experience | Quality Windows Audio Video Experience (qWave) is a networking platform for Audio Video (AV) streaming applications on IP home networks. | Disable |
-| RmSvc | Radio Management Service | Radio Management and Airplane Mode Service | Disable, if you don't use or plan to use wifi etc |
+| RmSvc | Radio Management Service | Radio Management and Airplane Mode Service | Disable if you don't use or plan to use wifi etc |
 | RemoteAccess | Routing and Remote Access | Offers routing services to businesses in local area and wide area network environments. | Disable |
 | SensorDataService | Sensor Data Service | Delivers data from a variety of sensors | Disable |
 | SensrSvc | Sensor Monitoring Service | Monitors various sensors in order to expose data and adapt to system and user state. If this service is stopped or disabled, the display brightness will not adapt to lighting conditions. | Disable |
@@ -55,8 +55,8 @@ This is a list of services which Microsoft has recommendations for disabling, if
 | stisvc | Windows Image Acquisition | Provides image acquisition services for scanners and cameras | Disable if you don't use image scanners |
 | wisvc | Windows Insider Service | Windows Insider Service | Disable if you don't subscribe to insider services |
 | icssvc | Windows Mobile Hotspot Service | Provides the ability to share a cellular data connection with another device. | Disable |
-| WpnService | Windows Push Notifications System Service | This service runs in session 0 and hosts the notification platform and connection provider which handles the connection between the device and WNS server. | Pending |
-| WpnUserService | Windows Push Notifications User Service | This service hosts Windows notification platform which provides support for local and push notifications. Supported notifications are tile, toast and raw. | Disabling this doesn't prevent per-user service from running, see per-user section for this one. |
+| WpnService | Windows Push Notifications System Service | This service runs in session 0 and hosts the notification platform and connection provider which handles the connection between the device and WNS server. | Leave Enabled |
+| WpnUserService | Windows Push Notifications User Service | This service hosts Windows notification platform which provides support for local and push notifications. Supported notifications are tile, toast and raw. | Leave Enabled, see per-user services |
 | WSearch | Windows Search | Provides content indexing, property caching, and search results for files, e-mail, and other content. | Disable |
 | XblAuthManager | Xbox Live Auth Manager | Provides authentication and authorization services for interacting with Xbox Live. If this service is stopped, some applications may not operate correctly. | Disable if you don't use XBox Live Features |
 | XblGameSave | Xbox Live Game Save | This service syncs save data for Xbox Live save enabled games. If this service is stopped, game save data will not upload to or download from Xbox Live. | Disable if you don't use XBox Live Features |
@@ -115,21 +115,21 @@ This is a list of services which Microsoft has recommendations for disabling, if
 #### Per-user Services Summary
 This is a list of per-user services which Microsoft has recommendations for, disabling these only prevents the services from being started on login. **Per-user services are dynamically created upon creating a user session** for example you'll see ContactData service but also see the running service ContactData_37664 (per-user service), each user logged into the system will have their on per user service for those listed below if it is configured to be enabled.
 
-| Service | Service Name | Impacts
-| --- | --- | --- |
-| BcastDVRUserService | GameDVR and Broadcast User Service | Pending |
-| BluetoothUserService | Bluetooth User Support Service | Pending |
-| PimIndexMaintenanceSvc | Contact Data | Pending |
-| CaptureService | Capture Service | Pending |
-| DevicePickerUserSvc | Device Picker | Pending |
-| DevicesFlowUserSvc | Devices Flow | Pending |
-| MessagingService | MessagingService | Pending |
-| CDPUserSvc | CDPUserSvc | Pending |
-| OneSyncSvc | Sync Host | Pending |
-| UserDataSvc | User Data Access | Pending |
-| UnistoreSvc| User Data Storage | Pending |
-| WpnUserService | Windows Push Notifications User Service | Pending |
-| PrintWorkflowUserSvc | PrintWorkflow | Pending |
+| Service | Service Name | Impacts | My Recommendation
+| --- | --- | --- | --- |
+| BcastDVRUserService | GameDVR and Broadcast User Service | Used for Game Recordings and Live Broadcasts | Disable if not using these features |
+| BluetoothUserService | Bluetooth User Support Service | The Bluetooth service supports discovery and association of remote Bluetooth devices. Stopping or disabling this service may cause already installed Bluetooth devices to fail to operate properly and prevent new devices from being discovered or associated. | Disable if you don't use or plan to use Bluetooth devices |
+| PimIndexMaintenanceSvc | Contact Data | Indexes contact data for fast contact searching. If you stop or disable this service, contacts might be missing from your search results. | Disable, if you don't use Contacts app data.
+| CaptureService | Capture Service | Related to Speech capture services, may impact web camera or other voice input | Leave Enabled
+| DevicePickerUserSvc | Device Picker | Unknown | Leave Enabled
+| DevicesFlowUserSvc | Devices Flow | Unknown | Leave Enabled
+| MessagingService | MessagingService | Service supporting text messaging and related functionality | Disable
+| CDPUserSvc | CDPUserSvc | This service is used for Connected Devices and Universal Glass scenarios | Leave Enabled, may have negative impact on user experience
+| OneSyncSvc | Sync Host | Synchronizes mail, contacts, calendar, and other user data. Mail and other applications dependent on this service don't work correctly when this service is not running. | Leave Enabled, may have negative impact on user experience
+| UserDataSvc | User Data Access | Provides apps access to structured user data, including contact info, calendars, and messages. If you stop or disable this service, apps that use this data might not work correctly. | Leave Enabled, may have negative impact on user experience
+| UnistoreSvc| User Data Storage | Handles storage of structured user data, including contact info, calendars, and messages. If you stop or disable this service, apps that use this data might not work correctly. | Leave Enabled, may have negative impact on user experience
+| WpnUserService | Windows Push Notifications User Service | Hosts Windows notification platform, which provides support for local and push notifications. Supported notifications are tile, toast, and raw. | Leave Enabled, may have negative impact on user experience
+| PrintWorkflowUserSvc | PrintWorkflow | Print Workflow | Leave Enabled
 
 ### Alternative Service Configuration Overview
 
