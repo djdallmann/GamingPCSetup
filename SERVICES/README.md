@@ -138,10 +138,12 @@ This is a list of per-user services which Microsoft has recommendations for, dis
 | Service | Service Name | Impacts | My Recommendation
 | --- | --- | --- | --- |
 | SEMgrSvc | Payments and NFC/SE Manager | Near field communications for payments, tap to pay | Disable |
+| DiagTrack | Connected User Experiences and Telemetry |  The Connected User Experiences and Telemetry service enables features that support in-application and connected user experiences. Additionally, this service manages the event-driven collection and transmission of diagnostic and usage information (used to improve the experience and quality of the Windows Platform) when the diagnostics and usage privacy option settings are enabled under Feedback and Diagnostics. | Disable
 
 - Use the following to disable all those noted above **except** those pending review.
   - Paste the following into an administrative Powershell terminal, press enter, the restart your computer for it to take effect.
 
     ```
     Set-Service SEMgrSvc -StartupType Disabled
+    Set-Service DiagTrack -StartupType Disabled
     ```
