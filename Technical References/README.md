@@ -54,6 +54,8 @@ Performance Architect Intel Corporation
       * https://wiki.geant.org/display/public/EK/Network
    * Metered Internet connections: FAQ, Microsoft Support, Microsoft
       * https://support.microsoft.com/en-ca/help/17452/windows-metered-internet-connections-faq
+   * Windows Transport converges on two Congestion Providers: Cubic and LEDBAT
+      * https://techcommunity.microsoft.com/t5/Networking-Blog/Windows-Transport-converges-on-two-Congestion-Providers-Cubic/ba-p/339819
 
 ### Services
    * Guidance on disabling system services on Windows Server 2016 with Desktop Experience, Microsoft, Microsoft Docs
