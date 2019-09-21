@@ -12,4 +12,6 @@ This section contains information that may help identify and resolve different c
   * Windows Sysinternals, Microsoft
     * Sysinternals utilities help you manage, troubleshoot and diagnose your Windows systems and applications.
     * https://docs.microsoft.com/en-us/sysinternals/
+  * Windows Performance Monitor
+    * A tool that comes installed on most Windows platforms by default, typically used as a first level system triage and monitoring tool.
 ### Hardware
