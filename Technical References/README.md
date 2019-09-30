@@ -57,6 +57,10 @@ Performance Architect Intel Corporation
    * Windows Transport converges on two Congestion Providers: Cubic and LEDBAT
       * https://techcommunity.microsoft.com/t5/Networking-Blog/Windows-Transport-converges-on-two-Congestion-Providers-Cubic/ba-p/339819
 
+### Filesystem and Disk
+   * Configuring the Disk and File System for Performance, Microsoft Docs 2008
+      * https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc938627(v=technet.10)
+
 ### Services
    * Guidance on disabling system services on Windows Server 2016 with Desktop Experience, Microsoft, Microsoft Docs
       * https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server
