@@ -78,8 +78,10 @@ The following covers a set of commonly used commands and those usually enforced 
       - These values should all be identical otherwise you will experience unusual movement.
    - **mp_infinite_ammo** - set to 0 to disable, 1 for infinite ammo in guns, 2 for infinite reload ammo
       - Useful if you want to practice spraying guns in a private server against bots
-   - **scoreboard_showavatars** - Allows you to to enable (1) or disable (0) the display of avatars on the scoreboard avatars
-   - **scoreboard_shortheaders** - Allows you to to enable (1) or disable (0) the display of shortened simple headers for columns.
+   - **scoreboard_showavatars** - Allows you to to enable (1) or disable (0) the display of avatars on the scoreboard avatars. Default: 1
+   - **scoreboard_shortheaders** - Allows you to to enable (1) or disable (0) the display of shortened simple headers for columns. Default: 0
+   - **scoreboard_showhealth** - Allows you to to enable (1) or disable (0) the display the health column in scoreboard. Default: 1
+   - **scoreboard_showmoney** - Allows you to to enable (1) or disable (0) the display the health column in scoreboard. Default: 1
       
 ### Mouse
    - **m_rawinput** - Toggles the use of mouse raw input option, enabled (1) and disabled (0). Default: Disabled
