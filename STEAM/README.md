@@ -12,6 +12,10 @@
    - Go to **Cloud** and uncheck all options, this will eliminate any old configs getting loaded from the cloud should they be interfering.
    - Go to **Broadcasting** and disable broadcasting
    - Go to **Shader Pre-Caching** and disable the feature
+   - Go to **Library** and enable any or all of the settings to reduce steam graphical and network overhead
+     - Low Bandwidth Mode
+     - Disable Community Content
+     - Low Performance Mode (this also turns on Disable Community Content)
 6. Press OK to save all your changes.
 7. Install your games
 8. **For each game** right click and go to properties, on the General tab choose **Forced-off** for **Steam Input Per-Game Setting**
