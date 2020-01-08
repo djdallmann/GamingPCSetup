@@ -61,6 +61,10 @@ Performance Architect Intel Corporation
    * Configuring the Disk and File System for Performance, Microsoft Docs 2008
       * https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc938627(v=technet.10)
 
+### Drivers
+   * What Determines When a Driver Is Loaded, Microsoft Docs 2017
+      * https://docs.microsoft.com/en-us/windows-hardware/drivers/ifs/what-determines-when-a-driver-is-loaded
+
 ### Services
    * Guidance on disabling system services on Windows Server 2016 with Desktop Experience, Microsoft, Microsoft Docs
       * https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server
