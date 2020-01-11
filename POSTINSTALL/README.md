@@ -8,6 +8,7 @@
       ```
       Add-MpPreference -ExclusionPath "C:\Program Files (x86)\Steam\"
       Add-MpPreference -ExclusionPath $env:LOCALAPPDATA"\Temp\NVIDIA Corporation\NV_Cache"
+      Add-MpPreference -ExclusionPath $env:PROGRAMDATA"\NVIDIA Corporation\NV_Cache"
       ```
 
 4. Uninstall common Windows Store Metro Apps, In Powershell as admin run the following commands and press enter so they complete.
