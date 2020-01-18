@@ -8,6 +8,10 @@
    * https://www.murata.com/en-us/products/emc/emifil/knowhow/basic
  * Susceptibility of PC to electromagnetic interference, IEEE, Defence Science and Technology Organisation, Piotrowski, 2009
    * https://ieeexplore.ieee.org/document/5349776
+ * EMI Design Guidelines for USB Components, Intel 
+    * http://www.ti.com/sc/docs/apps/msp/intrface/usb/emitest.pdf
+ * USB Voltage Drop and Droop Measurement, Intel
+    * http://intel-vintage-developer.eu5.org/DESIGN/USB/PAPERS/VDROOP.PDF
  * Trends in EM susceptibility of IT equipment, IEEE, IEEE Transactions on Electromagnetic Compatibility, R. Hoad, N.J. Carter, D. Herke, S.P. Watkins, 2004
    * https://ieeexplore.ieee.org/document/1325793
     
