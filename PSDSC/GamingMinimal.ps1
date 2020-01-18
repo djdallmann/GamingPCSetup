@@ -99,7 +99,7 @@ Configuration GamingMinimal {
             Ensure = "Present"
             Key = "HKEY_USERS\${mysid}\Control Panel\Accessibility\StickyKeys"
             ValueName   = "Flags"
-            ValueData   = "506"
+            ValueData   = "0"
             ValueType = "String"
         }
         #Disable Toggle Keys Shortcut
@@ -107,7 +107,7 @@ Configuration GamingMinimal {
             Ensure = "Present"
             Key = "HKEY_USERS\${mysid}\Control Panel\Accessibility\ToggleKeys"
             ValueName   = "Flags"
-            ValueData   = "58"
+            ValueData   = "0"
             ValueType = "String"
         }
         #Disable Filter Keys Shortcut
@@ -115,7 +115,7 @@ Configuration GamingMinimal {
             Ensure = "Present"
             Key = "HKEY_USERS\${mysid}\Control Panel\Accessibility\Keyboard Response"
             ValueName   = "Flags"
-            ValueData   = "122"
+            ValueData   = "0"
             ValueType = "String"
         }
         Registry DisableFilterKeys2 {
@@ -994,6 +994,13 @@ Configuration GamingMinimal {
         Registry DisableAppContactInfoAccess {
             Ensure = "Present"
             Key = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\contacts"
+            ValueName   = "Value"
+            ValueData   = "Deny"
+            ValueType = "String"
+        }
+        Registry DisableAppPhoneCall {
+            Ensure = "Present"
+            Key = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\phoneCall"
             ValueName   = "Value"
             ValueData   = "Deny"
             ValueType = "String"
