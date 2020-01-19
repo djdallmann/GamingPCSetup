@@ -574,188 +574,93 @@ Configuration GamingMinimal {
         # https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server
         # Privacy Settings
         # https://privacyamp.com/knowledge-base/windows-10-privacy-settings/
-        Service SvcAllJoyn {
-            Name   = "AJRouter"
+        Service SvcAxInstSV {
+            Name   = "AxInstSV"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcAppLayerGateway {
-            Name   = "ALG"
+        Service Svctzautoupdate {
+            Name   = "tzautoupdate"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcAppMgmtGrpPolicy {
-            Name   = "AppMgmt"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcBluetoothAudioGateway {
-            Name   = "BTAGService"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcBluetoothSupportService {
+        Service Svcbthserv {
             Name   = "bthserv"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcBranchCache {
-            Name   = "PeerDistSvc"
+        Service Svcdmwappushservice {
+            Name   = "dmwappushservice"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcCertPropagation {
-            Name   = "CertPropSvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcDiagTrack {
-            Name   = "DiagTrack"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcDownloadedMapsMgr {
+        Service SvcMapsBroker {
             Name   = "MapsBroker"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcGeoLocation {
+        Service Svclfsvc {
             Name   = "lfsvc"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcHVHost {
-            Name   = "HvHost"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcHVDataExch {
-            Name   = "vmickvpexchange"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcHVGuestInterface {
-            Name   = "vmicguestinterface"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcHVGuestShutdown {
-            Name   = "vmicshutdown"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcHVHeartBeat {
-            Name   = "vmicheartbeat"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcHVPowershell {
-            Name   = "vmicvmsession"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcHVRDP {
-            Name   = "vmicrdv"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcHVTime {
-            Name   = "vmictimesync"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcHVVolumeShadow {
-            Name   = "vmicvss"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcInfrared {
-            Name   = "irmon"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcInternetConnSharing {
+        Service SvcSharedAccess {
             Name   = "SharedAccess"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcIPHelperipv6 {
-            Name   = "iphlpsvc"
+        Service Svclltdsvc {
+            Name   = "lltdsvc"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcIPTranslateipv6 {
-            Name   = "IpxlatCfgSvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcMsAccountSignIn {
-            Name   = "wlidsvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcAppvclient {
+        Service SvcAppVClient {
             Name   = "AppVClient"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcSMSRouter {
-            Name   = "SmsRouter"
+        Service SvcNetTcpPortSharing {
+            Name   = "NetTcpPortSharing"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcNaturalAuth {
-            Name   = "NaturalAuthentication"
+        Service SvcNcbService {
+            Name   = "NcbService"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcNetlogon {
-            Name   = "Netlogon"
+        Service SvcCscService {
+            Name   = "CscService"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcNetDvcAutoSetup {
-            Name   = "NcdAutoSetup"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcParentalControls {
-            Name   = "WpcMonSvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcNFC {
-            Name   = "SEMgrSvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcPhoneService {
+        Service SvcPhoneSvc {
             Name   = "PhoneSvc"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcPrintSpooler {
+        Service SvcSpooler {
             Name   = "Spooler"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcProgramCompat {
-            Name   = "PcaSvc"
+        Service SvcPrintNotify {
+            Name   = "PrintNotify"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcRPCLocator {
-            Name   = "RpcLocator"
+        Service SvcQWAVE {
+            Name   = "QWAVE"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcRemoteRegistry {
-            Name   = "RemoteRegistry"
+        Service SvcRmSvc {
+            Name   = "RmSvc"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcRetailDemo {
-            Name   = "RetailDemo"
+        Service SvcRemoteAccess {
+            Name   = "RemoteAccess"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
@@ -764,134 +669,93 @@ Configuration GamingMinimal {
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcSensorMon {
+        Service SvcSensrSvc {
             Name   = "SensrSvc"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcSensorServ {
+        Service SvcSensorService {
             Name   = "SensorService"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcSmartCard {
+        Service SvcShellHWDetection {
+            Name   = "ShellHWDetection"
+            State = 'Stopped'
+            StartupType = 'Disabled'
+        }
+        Service SvcSCardSvr {
             Name   = "SCardSvr"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcSmartCardDevEnum {
+        Service SvcScDeviceEnum {
             Name   = "ScDeviceEnum"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcSmartCardRemove {
-            Name   = "SCPolicySvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcSnmptrap {
-            Name   = "SNMPTRAP"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcSSDP {
+        Service SvcSSDPSRV {
             Name   = "SSDPSRV"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcWebClient {
-            Name   = "WebClient"
+        Service SvcWiaRpc {
+            Name   = "WiaRpc"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcWifiDirect {
-            Name   = "WFDSConMgrSvc"
+        Service SvcTabletInputService {
+            Name   = "TabletInputService"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcWinCameraFrameServ {
+        Service Svcupnphost {
+            Name   = "upnphost"
+            State = 'Stopped'
+            StartupType = 'Disabled'
+        }
+        Service SvcUevAgentService {
+            Name   = "UevAgentService"
+            State = 'Stopped'
+            StartupType = 'Disabled'
+        }
+        Service SvcWalletService {
+            Name   = "WalletService"
+            State = 'Stopped'
+            StartupType = 'Disabled'
+        }
+        Service SvcFrameServer {
             Name   = "FrameServer"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcWinConnectNow {
-            Name   = "wcncsvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcWinImageAcquisition {
+        Service Svcstisvc {
             Name   = "stisvc"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcMobileHotspot {
+        Service Svcwisvc {
+            Name   = "wisvc"
+            State = 'Stopped'
+            StartupType = 'Disabled'
+        }
+        Service Svcicssvc {
             Name   = "icssvc"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcWinPerception {
-            Name   = "spectrum"
+        Service SvcWSearch {
+            Name   = "WSearch"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcWinPerceptionSim {
-            Name   = "perceptionsimulation"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcWinPush {
-            Name   = "WpnService"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcWlanautoconfig {
-            Name   = "WlanSvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcWWANAuto {
-            Name   = "WwanSvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcXboxAccessory {
-            Name   = "XboxGipSvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcXboxliveauth {
+        Service SvcXblAuthManager {
             Name   = "XblAuthManager"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcXboxgamesave {
+        Service SvcXblGameSave {
             Name   = "XblGameSave"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcXboxnetwork {
-            Name   = "XboxNetApiSvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        #FileSharing/Comms
-        Service SvcWorkstation {
-            Name   = "LanmanWorkstation"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcServer {
-            Name   = "LanmanServer"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcNetBios {
-            Name   = "lmhosts"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service SvcTouchKeyboardandHandwriting {
-            Name   = "TabletInputService"
             State = 'Stopped'
             StartupType = 'Disabled'
         }
