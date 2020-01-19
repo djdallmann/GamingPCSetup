@@ -1,71 +1,46 @@
 Settings applied by the Powershell Desired Configuration State script
 
 ## Stopped and Disabled Services
-   - AllJoyn Router Service
-   - Application Layer Gateway Service
-   - Application Management
-   - Bluetooth Audio Gateway Service
+   - ActiveX Installer
+   - Auto Time Zone Updater
    - Bluetooth Support Service
-   - BranchCache
-   - Certificate Propagation
-   - Connected User Experiences and Telemetry
+   - ContactData
+   - Device Management Wireless Application
    - Downloaded Maps Manager
    - Geolocation Service
-   - HV Host Service
-   - Hyper-V Data Exchange Service
-   - Hyper-V Guest Service Interface
-   - Hyper-V Guest Shutdown Service
-   - Hyper-V Heartbeat Service
-   - Hyper-V PowerShell Direct Service
-   - Hyper-V Remote Desktop Virtualization Service
-   - Hyper-V Time Synchronization Service
-   - Hyper-V Volume Shadow Copy Requestor
-   - Infrared monitor service
-   - Internet Connection Sharing (ICS)
-   - IP Helper
-   - IP Translation Configuration Service
+   - Internet Connection Sharing
+   - Link-Layer Topology Discovery Mapper
    - Microsoft Account Sign-in Assistant
    - Microsoft App-V Client
-   - Microsoft Windows SMS Router Service.
-   - Natural Authentication
-   - Netlogon
-   - Network Connected Devices Auto-Setup
-   - Parental Controls
-   - Payments and NFC/SE Manager
+   - Net.Tcp Port Sharing Service
+   - Network Connection Broker
+   - Offline Files
    - Phone Service
    - Print Spooler
-   - Program Compatibility Assistant Service
-   - Remote Procedure Call (RPC) Locator
-   - Remote Registry
-   - Retail Demo Service
-   - Sensor Data Service
+   - Printer Extensions and Notifications
+   - Quality Windows Audio Video Experience
+   - Radio Management Service
+   - Routing and Remote Access
    - Sensor Monitoring Service
    - Sensor Service
-   - Server
-   - Shared PC Account Manager
+   - Shell Hardware Detection
    - Smart Card
    - Smart Card Device Enumeration Service
-   - Smart Card Removal Policy
-   - SNMP Trap
    - SSDP Discovery
-   - TCP/IP NetBIOS Helper
+   - Still Image Acquisition Events
+   - Sync Host
    - Touch Keyboard and Handwriting Panel Service
-   - WebClient
-   - Wi-Fi Direct Services Connection Manager Service
+   - UPnP Device Host
+   - User Data Access
+   - User Experience Virtualization Service
+   - WalletService
    - Windows Camera Frame Server
-   - Windows Connect Now - Config Registrar
-   - Windows Image Acquisition (WIA)
+   - Windows Image Acquisition
+   - Windows Insider Service
    - Windows Mobile Hotspot Service
-   - Windows Perception Service
-   - Windows Perception Simulation Service
-   - Windows Push Notifications System Service
-   - WLAN AutoConfig
-   - Workstation
-   - WWAN AutoConfig
-   - Xbox Accessory Management Service
+   - Windows Search
    - Xbox Live Auth Manager
    - Xbox Live Game Save
-   - Xbox Live Networking Service
    
 ## Started and Enabled Services
    - Windows Remote Management (WS-Management)  **Required for DSC to work**
@@ -84,6 +59,7 @@ Settings applied by the Powershell Desired Configuration State script
    - Disables App Account Info Access
    - Disables App Contact Access
    - Disables App Calendar Access
+   - Disables App PhoneCall Access
    - Disables App Call Hist Access
    - Disables App Email Access
    - Disables App User Tasks Access
