@@ -2,7 +2,7 @@
 The Powershell DSC script focuses on the following:
 - A human readable and customizable script
 - A way of validating your system state before testing after initial Desired State Configuration (DSC) is applied
-- Disabling any unecessary services, it will impact Local Network File Transfers (CIFS/SMB), Printing and Scanning, Bluetooth Device and Communication
+- Disabling any unecessary services, it will impact Printing and Scanning, Bluetooth Device and Communication
 - Disables most if not all Windows 10 features and privacy/tracking settings, interfering Windows Update settings (P2P sharing)
 - High Performance power profile, USB selective suspend
 - Sets Windows Advanced Settings to 'Adjust for Best Performance', disables desktop visual features
