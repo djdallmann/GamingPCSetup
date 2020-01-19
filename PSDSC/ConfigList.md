@@ -46,7 +46,7 @@ Settings applied by the Powershell Desired Configuration State script
    - Windows Remote Management (WS-Management)  **Required for DSC to work**
 
 ## Settings > Privacy
-   - Disables Cortana and Cortana Search
+   - Disables Cortana, Cortana Search, Cortana Web Search
    - Sets Diagnostics and Feedback Reporting to Basic (The service is also disabled)
    - Disables Activity Tracking and Publishing
    - Disable Custom Adverising
