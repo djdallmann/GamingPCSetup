@@ -759,6 +759,16 @@ Configuration GamingMinimal {
             State = 'Stopped'
             StartupType = 'Disabled'
         }
+        Service SvcSEMgrSvc {
+            Name   = "SEMgrSvc"
+            State = 'Stopped'
+            StartupType = 'Disabled'
+        }
+        Service SvcDiagTrack {
+            Name   = "DiagTrack"
+            State = 'Stopped'
+            StartupType = 'Disabled'
+        }
         Service SvcWindowsRemoteManagement {
             Name   = "WinRM"
             State = 'Running'
