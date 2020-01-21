@@ -160,6 +160,13 @@ Configuration GamingMinimal {
             ValueData   = "0"
             ValueType = "Dword"
         }
+        Registry DisableCortanaBingWebSearch {
+            Ensure = "Present"
+            Key = "HKEY_USERS\${mysid}\SOFTWARE\Microsoft\Windows\CurrentVersion\Search"
+            ValueName   = "BingSearchEnabled"
+            ValueData   = "0"
+            ValueType = "Dword"
+        }
         Registry DoNotGiveCortanaConsent {
             Ensure = "Present"
             Key = "HKEY_USERS\${mysid}\SOFTWARE\Microsoft\Windows\CurrentVersion\Search"
