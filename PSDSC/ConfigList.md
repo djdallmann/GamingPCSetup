@@ -75,6 +75,9 @@ Settings applied by the Powershell Desired Configuration State script
    - Windows Updates Delivery Optimization - Don't allow downloads from other PCs (p2p)
    - Disable Find My Device
    - Disable Windows Defender Automatic Sample Submission
+   - Disable Windows Automatic Updates
+   - Disable Hardware Device Automatic Metadata Download
+   - Disable Windows Store automatic updates
 
 ## Settings > System
    - Disable Remote Assistance
