@@ -781,6 +781,27 @@ Configuration GamingMinimal {
             State = 'Running'
             StartupType = 'Automatic'
         }
+        Registry DisableAutomaticDeviceMetaDataDownload {
+            Ensure = "Present"
+            Key = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata"
+            ValueName   = "PreventDeviceMetadataFromNetwork"
+            ValueData   = "1"
+            ValueType = "Dword"
+        }
+        Registry DisableAutomaticUpdates {
+            Ensure = "Present"
+            Key = "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU"
+            ValueName   = "NoAutoUpdate"
+            ValueData   = "1"
+            ValueType = "Dword"
+        }
+        Registry DisableStoreAutomaticUpdates {
+            Ensure = "Present"
+            Key = "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore"
+            ValueName   = "AutoDownload"
+            ValueData   = "2"
+            ValueType = "Dword"
+        }
         Registry DisableCortanaSearch {
             Ensure = "Present"
             Key = "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search"
