@@ -95,7 +95,7 @@ Performance Architect Intel Corporation
 ### Thermal Throttling
    * Defective Heat Sinks Causing Garbage Gaming, Random ASCII – tech blog of Bruce Dawson, Bruce Dawson, Former Employee of Valve, Microsoft XBox 360 and Google Chrome Performance Management Teams
       * https://randomascii.wordpress.com/2013/08/06/defective-heat-sinks-causing-garbage-gaming/
-      
+            
 ### NVIDIA
    * How Often to Update Graphics Card Display Drivers, NVIDIA Knowledgebase, NVIDIA 2017
      * https://nvidia.custhelp.com/app/answers/detail/a_id/34/
@@ -119,3 +119,13 @@ Performance Architect Intel Corporation
 ### Misc
    * Windows Hardware Dev Center Archive, Microsoft
       * https://docs.microsoft.com/en-us/previous-versions/windows/hardware/download/dn550976(v=vs.85)
+
+## Troubleshooting
+### Windows Performance
+  * Windows Performance Analyzer step-by-step guide, Microsoft Hardware Dev Center, Microsoft 2017 
+    * https://docs.microsoft.com/en-us/windows-hardware/test/wpt/wpa-step-by-step-guide
+  * Common In-Depth Analysis Issues, Microsoft Hardware Dev Center, Microsoft 2017
+    * https://docs.microsoft.com/en-us/windows-hardware/test/assessments/common-in-depth-analysis-issues
+  * Using GPUView for determining the performance of the graphics processing unit (GPU) and CPU, Microsoft Hardware Dev Center, Microsoft 2017
+    * https://docs.microsoft.com/en-us/windows-hardware/drivers/display/using-gpuview
+    * https://graphics.stanford.edu/~mdfisher/GPUView.html
