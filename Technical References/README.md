@@ -113,6 +113,8 @@ Performance Architect Intel Corporation
      * https://nvidia.custhelp.com/app/answers/detail/a_id/3507/
    * How to generate a DirectX Diagnostic Tool report (dxdiag), NVIDIA Knowledgebase, NVIDIA 2015
      * https://nvidia.custhelp.com/app/answers/detail/a_id/3721/
+   * Are You Running Out of Video Memory? Detecting Video-Memory Overcommitment using GPUView, NVIDIA Gameworks Blog, NVIDIA 2015 
+     * https://developer.nvidia.com/content/are-you-running-out-video-memory-detecting-video-memory-overcommitment-using-gpuview
 
 ### Misc
    * Windows Hardware Dev Center Archive, Microsoft
