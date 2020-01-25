@@ -68,6 +68,8 @@ Performance Architect Intel Corporation
 ### Drivers
    * What Determines When a Driver Is Loaded, Microsoft Docs 2017
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/ifs/what-determines-when-a-driver-is-loaded
+   * Tools for Verifying Drivers: Driver Verifier, Microsoft Hardware Dev Center, Microsoft 2017 
+      * https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/driver-verifier
 
 ### Services
    * Guidance on disabling system services on Windows Server 2016 with Desktop Experience, Microsoft, Microsoft Docs
