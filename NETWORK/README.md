@@ -16,9 +16,9 @@ Pending
 - **Jumbo Packet**
    - Disabled
 - **Large Send Offload V2 (IPv4)**
-   - Enabled
+   - Disabled
 - **Large Send Offload V2 (IPv6)**
-   - Enabled
+   - Disabled
 - **Receive Side Scaling**
    - Enabled
 - **Maximum Number of RSS Queues**
