@@ -60,6 +60,8 @@ Performance Architect Intel Corporation
       * https://support.microsoft.com/en-ca/help/17452/windows-metered-internet-connections-faq
    * Windows Transport converges on two Congestion Providers: Cubic and LEDBAT
       * https://techcommunity.microsoft.com/t5/Networking-Blog/Windows-Transport-converges-on-two-Congestion-Providers-Cubic/ba-p/339819
+   * Guidance for configuring IPv6 in Windows for advanced users, Microsoft Windows Support, Microsoft 2019
+      * https://support.microsoft.com/en-us/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users
 
 ### Filesystem and Disk
    * Configuring the Disk and File System for Performance, Microsoft Docs 2008
