@@ -87,6 +87,7 @@ Settings applied by the Powershell Desired Configuration State script
    - Disable Lock Screen Notifications
    - Disable Toast Notifications
    - Disable Tablet Mode
+   - Prefer IPv4 Over IPv6
 
 ## Settings > Device
    - Disable Spellcheck
