@@ -1012,6 +1012,13 @@ Configuration GamingMinimal {
             ValueData   = "0"
             ValueType = "Dword"
         }
+        Registry PreferIPv4overIPv6 {
+            Ensure = "Present"
+            Key = "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters"
+            ValueName   = "DisabledComponents"
+            ValueData   = "32"
+            ValueType = "Dword"
+        }
         Registry DisableRemoteAssistance {
             Ensure = "Present"
             Key = "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Remote Assistance"
