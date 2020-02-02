@@ -133,3 +133,5 @@ Performance Architect Intel Corporation
   * Using GPUView for determining the performance of the graphics processing unit (GPU) and CPU, Microsoft Hardware Dev Center, Microsoft 2017
     * https://docs.microsoft.com/en-us/windows-hardware/drivers/display/using-gpuview
     * https://graphics.stanford.edu/~mdfisher/GPUView.html
+  * Performance Tuning Guidelines for Windows Server 2016, Microsoft Docs, Microsoft 2017
+    * https://docs.microsoft.com/en-us/windows-server/administration/performance-tuning/
