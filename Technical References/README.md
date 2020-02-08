@@ -14,6 +14,8 @@
     * http://intel-vintage-developer.eu5.org/DESIGN/USB/PAPERS/VDROOP.PDF
  * Trends in EM susceptibility of IT equipment, IEEE, IEEE Transactions on Electromagnetic Compatibility, R. Hoad, N.J. Carter, D. Herke, S.P. Watkins, 2004
    * https://ieeexplore.ieee.org/document/1325793
+ * Keys to Control Noise, Interference and EMI in PC Boards - Hartley, Altium
+   * https://www.youtube.com/watch?v=ZYUYOXmo9UU
     
 ## BIOS Optimizations
   * FUJITSU Server PRIMERGY - BIOS optimizations for Xeon Scalable processors based systems. BIOS settings for performance, low-latency and energy efficiency
