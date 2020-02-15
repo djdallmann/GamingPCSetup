@@ -17,12 +17,14 @@
  * Keys to Control Noise, Interference and EMI in PC Boards - Hartley, Altium
    * https://www.youtube.com/watch?v=ZYUYOXmo9UU
     
-## BIOS Optimizations
+## BIOS
   * FUJITSU Server PRIMERGY - BIOS optimizations for Xeon Scalable processors based systems. BIOS settings for performance, low-latency and energy efficiency
     *  https://sp.ts.fujitsu.com/dmsp/Publications/public/wp-skylake-RXTX-bios-settings-primergy-ww-en.pdf
   * Keyboard Prompts During Boot Process (POST) for Intel® Desktop Boards, Intel 2018
     * https://www.intel.ca/content/www/ca/en/support/articles/000005672/boards-and-kits/desktop-boards.html
     * Note the shortcut for Intel® Management Engine BIOS Extension (Intel® MEBX)
+  * 82093AA I/O ADVANCED PROGRAMMABLE INTERRUPT CONTROLLER (IO APIC), Intel
+    * https://pdos.csail.mit.edu/6.828/2016/readings/ia32/ioapic.pdf
   
 ### C-States, P-States, PC-States
    * C-states, C-states and even more C-states (Part 1)
