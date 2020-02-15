@@ -49,10 +49,11 @@
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/introduction-to-dpcs
    * Microsoft Hardware - Kernel-Mode Driver Architecture - Introduction to Deferred Procedure Calls, Microsoft Docs
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/introduction-to-message-signaled-interrupts
-   
    * Reducing Interrupt Latency Through the Use of Message Signaled Interrupts, Intel 2009, James Coleman
 Performance Architect Intel Corporation
       * https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/msg-signaled-interrupts-paper.pdf
+   * Microsoft Hardware - Kernel-Mode Driver Architecture - Enabling Message-Signaled Interrupts in the Registry, Microsoft Docs
+      * https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/enabling-message-signaled-interrupts-in-the-registry
       
 ### Networking
    * Network Subsystem Performance Tuning, Microsoft Windows IT Pro Center 2019
