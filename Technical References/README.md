@@ -70,6 +70,8 @@ Performance Architect Intel Corporation
       * https://techcommunity.microsoft.com/t5/Networking-Blog/Windows-Transport-converges-on-two-Congestion-Providers-Cubic/ba-p/339819
    * Guidance for configuring IPv6 in Windows for advanced users, Microsoft Windows Support, Microsoft 2019
       * https://support.microsoft.com/en-us/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users
+   * Information about the TCP Chimney Offload, Receive Side Scaling, Microsoft Support, Microsoft 2014
+      * https://support.microsoft.com/en-us/help/951037/information-about-the-tcp-chimney-offload-receive-side-scaling-and-net
 
 ### Filesystem and Disk
    * Configuring the Disk and File System for Performance, Microsoft Docs 2008
