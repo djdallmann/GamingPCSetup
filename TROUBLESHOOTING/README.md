@@ -14,4 +14,7 @@ This section contains information that may help identify and resolve different c
     * https://docs.microsoft.com/en-us/sysinternals/
   * Windows Performance Monitor
     * A tool that comes installed on most Windows platforms by default, typically used as a first level system triage and monitoring tool.
+  * Wireshark
+    * Wireshark® is a network protocol analyzer. It lets you capture and interactively browse the traffic running on a computer network.
+    * https://www.wireshark.org/
 ### Hardware
