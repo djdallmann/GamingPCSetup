@@ -90,6 +90,8 @@ Performance Architect Intel Corporation
       * https://web.archive.org/web/20071012033145/http://blogs.technet.com/markrussinovich/archive/2007/08/27/1833290.aspx
    * Multimedia Class Scheduler Service, Windows Dev Center, Microsoft 2018
       * https://docs.microsoft.com/en-us/windows/win32/procthread/multimedia-class-scheduler-service
+   * Multimedia Class Scheduler Service (MMCSS), How to use the throttling mechanism to control network performance in Windows Vista, Microsoft Help and Support, Microsoft 2008
+   * https://web.archive.org/web/20080724025429/http://support.microsoft.com/kb/948066
 
 ### Latency
    * Intel Optimizing Computer Applications for Latency: Part 1: Configuring the Hardware, Intel 2017, Evgueny Khartchenko
