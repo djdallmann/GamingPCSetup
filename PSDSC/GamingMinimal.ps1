@@ -94,6 +94,14 @@ Configuration GamingMinimal {
             ValueData   = "0"
             ValueType = "Dword"
         }
+        #Disable Mouse Keys
+            Registry DisableMouseKeysShort {
+            Ensure = "Present"
+            Key = "HKEY_USERS\${mysid}\Control Panel\Accessibility\MouseKeys"
+            ValueName   = "Flags"
+            ValueData   = "0"
+            ValueType = "String"
+        }
         #Disable Sticky Keys Shortcut
         Registry DisableStickyKeysShort {
             Ensure = "Present"
