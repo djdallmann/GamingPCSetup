@@ -17,4 +17,8 @@ This section contains information that may help identify and resolve different c
   * Wireshark
     * Wireshark® is a network protocol analyzer. It lets you capture and interactively browse the traffic running on a computer network.
     * https://www.wireshark.org/
+  * GPUView
+    * https://docs.microsoft.com/en-us/windows-hardware/drivers/display/using-gpuview
+    * https://graphics.stanford.edu/~mdfisher/GPUView.html
+   
 ### Hardware
