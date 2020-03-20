@@ -20,5 +20,9 @@ This section contains information that may help identify and resolve different c
   * GPUView
     * https://docs.microsoft.com/en-us/windows-hardware/drivers/display/using-gpuview
     * https://graphics.stanford.edu/~mdfisher/GPUView.html
+  * Intel® Extreme Tuning Utility - Intel® XTU
+    * https://downloadcenter.intel.com/download/24075/Intel-Extreme-Tuning-Utility-Intel-XTU
+  * HWiNFO Diagnostic Software
+    * https://www.hwinfo.com/download/
    
 ### Hardware
