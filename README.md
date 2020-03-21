@@ -29,3 +29,5 @@ If you do use this or redistribute this in any way, please give due credit.
 [11. Choosing Peripherals (Keyboard/Mice/Monitor)](PERIPHERALS/README.md)
 
 [12. Troubleshooting](TROUBLESHOOTING/README.md)
+
+[13. Miscellaneous Scripts](Scripts/README.md)
