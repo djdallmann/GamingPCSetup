@@ -1,5 +1,5 @@
 #########
-# Collect Information about DCP and ISR using xperf
+# Collect Information about DPC and ISR using xperf
 #########
 #Update paths before using
 #Run once to collect the data, run again to stop and generate report.
