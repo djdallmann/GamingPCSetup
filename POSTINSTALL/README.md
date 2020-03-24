@@ -68,7 +68,4 @@
          fsutil behavior set disableLastAccess 1
          fsutil behavior set disable8dot3 1
          ```
-12. Set your **Ethernet adapter to a Metered Connection**, this will reduce network traffic used by the operating system for updates and other features however will not impact your gaming experience directly. 
-    - Open *Network & Internet Settings* then choose *Change adapter options*
-    - On the left hand side menu *select Ethernet* then on the right hand side *under the Ethernet heading* click on your adapter then enable *Set as a metered connection*
-13. Reconnect your network ethernet cable, continue onto the next process.
+12. Reconnect your network ethernet cable, continue onto the next process.
