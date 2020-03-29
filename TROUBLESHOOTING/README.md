@@ -9,6 +9,8 @@ This section contains information that may help identify and resolve different c
   * Windows Performance Toolkit (WPT), Microsoft
     * A set of tools used to record and analyze Windows low level event traces (ETL), more notably Windows Performance Recorder (WPR) and Windows Performance Analyzer (WPA)
     * https://docs.microsoft.com/en-us/windows-hardware/test/wpt/
+  * WinDbg (Win Debug)
+    * https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools
   * Windows Sysinternals, Microsoft
     * Sysinternals utilities help you manage, troubleshoot and diagnose your Windows systems and applications.
     * https://docs.microsoft.com/en-us/sysinternals/
