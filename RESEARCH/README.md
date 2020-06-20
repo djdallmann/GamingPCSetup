@@ -48,4 +48,5 @@ ntdll.dll
 - NtSetTimerResolution
 ```
 * See results:
+[timermicroadjust.txt](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/timermicroadjust.txt)
 </details>
