@@ -9,6 +9,7 @@ If you do use this or redistribute this in any way, please give due credit.
 #### A: Not completely true, NDIS.sys DPC latency is increased quite notably when disabled.
 
 <details><summary>Findings and Analysis</summary>
+
 * A very common recommendation in many performance enhancement/gaming guides state that disabling *NetworkThrottleIndex* improves network performance and latency because in theory it should prevent rate limiting and quality of service (QoS) interactions. 
 * The main purpose of NetworkThrottlingIndex is to reduce (rate limit) calls which would otherwise impact real time audio and perhaps cause stutter or other audible artifacts.
 * Disabling it may increase **throughput** should the throughput exceed the default receiving packets per second (pps) limit (NetworkThrottleIndex: 10 decimal, roughly ~ 15Mbps with 1500byte Ethernet MTU) but it does not improve DPC latency which is probably more beneficial for lower latency applications such as video games.
