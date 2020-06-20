@@ -789,6 +789,20 @@ Configuration GamingMinimal {
             State = 'Running'
             StartupType = 'Automatic'
         }
+        Registry DisableLockScreenApp {
+            Ensure = "Present"
+            Key = "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization"
+            ValueName   = "NoLockScreen"
+            ValueData   = "1"
+            ValueType = "Dword"
+        }
+        Registry DisablePowerThrottleFeature {
+            Ensure = "Present"
+            Key = "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling"
+            ValueName   = "PowerThrottlingOff"
+            ValueData   = "1"
+            ValueType = "Dword"
+        }
         Registry DisableAutomaticDeviceMetaDataDownload {
             Ensure = "Present"
             Key = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata"
