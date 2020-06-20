@@ -111,6 +111,7 @@ Settings applied by the Powershell Desired Configuration State script
    - Disable power button hibernate
    - Set power profile to high performance
    - Disable USB Selective Suspend
+   - Disable Power Throttle feature
 
 ## User Preferences
    - Ensures mouse pointer speed is 6/11 (default 1:1)
@@ -130,3 +131,6 @@ Settings applied by the Powershell Desired Configuration State script
    - Disable Reopen Apps After Restart or Update
    - Disable Lock Screen Background Image
    - Disable Show People in Taskbar
+
+## Misc System Features
+   - Disable Lock Screen app and features
