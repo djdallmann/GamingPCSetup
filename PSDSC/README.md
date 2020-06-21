@@ -38,3 +38,6 @@ For a complete list see [DSC Itemized Configuration List](ConfigList.md)
    - For more details run ```PS C:\Windows\system32> Test-DscConfiguration -Detailed```
    - Sometimes you have to wait a minute to run the command if the DSC is being applied behind the scenes automatically after a restart.
 5. For the most part the configuration should always match (be **True**) if all other steps were followed in this guide, you can always re-apply the configuration at anytime for example after a Windows Update.
+
+**Note:** You can **force apply the DSC configuration** using the following command **if for some reason it hasn't applied all changes and says False**, or if you've edited the DSC script and rebuilt the localhost.mof database.
+```Start-DscConfiguration -Path .\GamingMinimal\ -wait -verbose -force```
