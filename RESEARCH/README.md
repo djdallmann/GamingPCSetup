@@ -35,6 +35,46 @@ If you do use this or redistribute this in any way, please give due credit.
 </details>
 
 ## Windows Kernel
+### Win32PrioritySeparation
+#### Q: If you modify Win32PrioritySeparation (process foreground and background quantum lengths) in the registry does it update in realtime or does it require a system restart?
+#### A: It updates in realtime which can be confirmed using WinDBG via Live Kernel debug
+
+<details><summary>Findings and Analysis</summary>
+
+* Using bcdedit you can enable debug mode which will allow you to use WinDBG in a more realtime debug mode. Once enabled and hooked you can read information about different processes and threads that are running including some of the operating systems global user and kernel space variables.
+1. In a kernel hooked WinDBG use the following commands to show the current values for priority separation and foreground quantum length. This should match the equivalent number format in the registry value and the Quantum Values mapping for the related bitmask.
+   * ```dd PsPrioritySeperation l1```
+   * ```db PspForegroundQuantum l3```
+2. Change the process context or get context of a specific process by listing processes and showing formation for that process, see references for .process.
+   ```
+   .process
+   Implicit process is now 85b32d90
+   lkd> dt _KPROCESS 85b32d90
+   nt!_KPROCESS
+   [...]
+   +0x000 Header           : _DISPATCHER_HEADER
+   +0x05c Affinity         : 3
+   +0x060 DisableBoost     : 0y0
+   +0x060 DisableQuantum   : 0y0
+   +0x064 BasePriority     : 8 ''
+   +0x065 QuantumReset     : 6 ''
+   
+   Note: Use     !process 0 0     to list all processes
+   ```
+3. Now change the win32priorityseparation value in the registry, then compare the results for the command above. Based on the return values it looks as if the base priority is a dynamic pointer reference and should adapt immediately, e.g. **quantum reset** aswell accordingly.
+
+![Win32PrioritySeparation Quantum Unit Mapping](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Quantum%20Units%20Mapping.PNG)
+
+XLSX File: [Win32PrioritySeparation Quantum Unit Mapping](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/Win32PrioritySeparation%20Quantum%20Unit%20Mapping.xlsx)
+
+* Related references and citation:
+  * https://docs.microsoft.com/en-us/previous-versions//cc976120(v=technet.10)?redirectedfrom=MSDN
+  * https://www.microsoftpressstore.com/articles/article.aspx?p=2233328&seqNum=7
+  * https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/-process--set-process-context-
+  * https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/dt--display-type-
+  * https://blogs.msdn.microsoft.com/embedded/2006/02/20/know-thy-tick/
+</details>
+
 ### Timer Resolution
 #### Q: Can you micro-increment/adjust the windows timer resolution?
 #### A: Yes, but it isn't always consistent see findings for more information.
