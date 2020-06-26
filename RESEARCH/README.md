@@ -91,3 +91,17 @@ ntdll.dll
 * See results:
 [timermicroadjust.txt](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/timermicroadjust.txt)
 </details>
+
+### Keyboard DPC and Interrupt Latency (PS/2 VS USB)
+#### Q: Does PS/2 keyboard driver provide lower DPC latency than USB keyboard driver?
+#### A: No, not during the tests I performed but PS/2 keyboard driver latency was more stable.
+
+<details><summary>Findings and Analysis</summary>
+
+* Based on 20 tests results of each PS/2 and USB it was noted that USB keyboard driver generally has lower DPC latency (~4-8 microseconds), however PS/2 overall is ultra consistent at 8 microsecond times 97-99% of the time. The test performed was a 5 second timer to alt-tab ingame then starts a 30 second sleep timer after xperf data capture is started, in-game I only held a single key for the entire duration. Not necessarily a real world test but a test that is relatively consistent/repeatable.
+
+* PS/2 interrupt latency is around 32 microseconds consistently, I'm using **Message Signaled Interrupts** for the USB controller so likely why it didn't show any results for the opposing side. Will see if I can look into that.
+
+* See results:
+[KeyboardDPCandInterruptLatency-PS2vsUSB.txt](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/KeyboardDPCandInterruptLatency-PS2vsUSB.txt)
+</details>
