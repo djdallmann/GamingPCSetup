@@ -1,0 +1,56 @@
+============
+DPC Latency
+============
+
+USB Keyboard Driver
+
+Total = 921 for module kbdhid.sys
+Elapsed Time, > 0 usecs AND <= 1 usecs, 0, or 0.00%
+Elapsed Time, > 1 usecs AND <= 2 usecs, 0, or 0.00%
+Elapsed Time, > 2 usecs AND <= 4 usecs, 411, or 44.63%
+Elapsed Time, > 4 usecs AND <= 8 usecs, 508, or 55.16%
+Elapsed Time, > 8 usecs AND <= 16 usecs, 0, or 0.00%
+Elapsed Time, > 16 usecs AND <= 32 usecs, 1, or 0.11%
+Elapsed Time, > 32 usecs AND <= 64 usecs, 1, or 0.11%
+
+Total = 920 for module kbdhid.sys
+Elapsed Time, > 0 usecs AND <= 1 usecs, 0, or 0.00%
+Elapsed Time, > 1 usecs AND <= 2 usecs, 0, or 0.00%
+Elapsed Time, > 2 usecs AND <= 4 usecs, 291, or 31.63%
+Elapsed Time, > 4 usecs AND <= 8 usecs, 628, or 68.26%
+Elapsed Time, > 8 usecs AND <= 16 usecs, 0, or 0.00%
+Elapsed Time, > 16 usecs AND <= 32 usecs, 1, or 0.11%
+Total, 920
+
+USB Keyboard with PS2 adapter, PS/2 driver DPC Latency
+
+Total = 938 for module i8042prt.sys
+Elapsed Time, > 0 usecs AND <= 1 usecs, 0, or 0.00%
+Elapsed Time, > 1 usecs AND <= 2 usecs, 0, or 0.00%
+Elapsed Time, > 2 usecs AND <= 4 usecs, 3, or 0.32%
+Elapsed Time, > 4 usecs AND <= 8 usecs, 935, or 99.68%
+Total,
+
+Total = 937 for module i8042prt.sys
+Elapsed Time, > 0 usecs AND <= 1 usecs, 0, or 0.00%
+Elapsed Time, > 1 usecs AND <= 2 usecs, 0, or 0.00%
+Elapsed Time, > 2 usecs AND <= 4 usecs, 21, or 2.24%
+Elapsed Time, > 4 usecs AND <= 8 usecs, 915, or 97.65%
+Elapsed Time, > 8 usecs AND <= 16 usecs, 0, or 0.00%
+Elapsed Time, > 16 usecs AND <= 32 usecs, 1, or 0.11%
+Total, 937
+
+============
+Interrupt Latency
+============
+
+USB Keyboard with PS2 adapter, PS/2 Interrupt Latency
+
+Total = 937 for module i8042prt.sys
+Elapsed Time, > 0 usecs AND <= 1 usecs, 0, or 0.00%
+Elapsed Time, > 1 usecs AND <= 2 usecs, 0, or 0.00%
+Elapsed Time, > 2 usecs AND <= 4 usecs, 0, or 0.00%
+Elapsed Time, > 4 usecs AND <= 8 usecs, 0, or 0.00%
+Elapsed Time, > 8 usecs AND <= 16 usecs, 8, or 0.85%
+Elapsed Time, > 16 usecs AND <= 32 usecs, 929, or 99.15%
+Total, 937
