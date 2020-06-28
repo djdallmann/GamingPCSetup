@@ -26,7 +26,7 @@ Download the latest drivers, install and configure your settings for ideal and c
    - Games may also provide options ingame for improving visual effects, colors or quality, try these first.
 10. Leave all other settings at the NVIDIA defaults. [See Gaming Configurations](../GAMECONFIGS/README.md)
 
-Many guides will recommend changing **Maximum pre-rendered frames** but not every PC will behave the same with it at a low value even on high end PCs. Many gaming professionals use the default setting and still perform at the highest levels.
+Many guides will recommend changing **Maximum pre-rendered frames** but not every PC or game will behave the same with it at a low value even on high end PCs. Many gaming professionals use the default setting and still perform at the highest levels. When in doubt benchmark the impacts with MSI Afterburner and GPUView.
 
 ### AMD
 To be completed
