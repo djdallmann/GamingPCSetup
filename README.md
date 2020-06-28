@@ -22,14 +22,16 @@ If you do use this or redistribute this in any way, please give due credit.
 
 [8. Setup Your Video Card](VIDEOCARD/README.md)
 
-[9. Powershell Desired State Configuration (DSC) Setup and Use](PSDSC/README.md)
+[9. Audio Configuration](AUDIO/README.md)
 
-[10. Configure Your Games](GAMECONFIGS/README.md)
+[10. Powershell Desired State Configuration (DSC) Setup and Use](PSDSC/README.md)
 
-[11. Choosing Peripherals (Keyboard/Mice/Monitor)](PERIPHERALS/README.md)
+[11. Configure Your Games](GAMECONFIGS/README.md)
 
-[12. Troubleshooting](TROUBLESHOOTING/README.md)
+[12. Choosing Peripherals (Keyboard/Mice/Monitor)](PERIPHERALS/README.md)
 
-[13. Miscellaneous Scripts](Scripts/README.md)
+[13. Troubleshooting](TROUBLESHOOTING/README.md)
+
+[14. Miscellaneous Scripts](Scripts/README.md)
 
 [14. Research](RESEARCH/README.md)
