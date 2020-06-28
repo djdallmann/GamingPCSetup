@@ -34,4 +34,4 @@ $ret1 = [Win32.NtStatus]::NtSetTimerResolution($ntdesiredres,$ntsetres,[ref]$ntc
 [Win32.NtStatus]::NtQueryTimerResolution([ref]$ntqtrmin, [ref]$ntqtrmax, [ref]$ntqtrcur)
 
 #Print the timer resolution values
-Write-Host "Current Timer Res: $ntqtrcur `r`nTimer Res Lowest: $ntqtrmin `r`nTimer Res Highest: $ntqtrmax `r`n"
+Write-Host "Current Timer Res: $ntqtrcur `r`nTimer Res Minimum: $ntqtrmin `r`nTimer Res Maximum: $ntqtrmax `r`n"
