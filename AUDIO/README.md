@@ -21,3 +21,4 @@ This section provides recommendations for your audio configuration, it also cove
    * [Download REALTEK HD Audio Driver](https://downloadcenter.intel.com/download/28433/Realtek-High-Definition-Audio-Driver-for-Windows-10-64-bit-for-NUC8i7BE-NUC8i5BE-NUC8i3BE)
    * Note: If the software ends up in a loop of trying to uninstall the old driver, uninstall the driver first from Device Manager then launch the Setup application.
 2. Open the **REALTEK Audio Console**, go to **Device Advanced Settings** and ensure your audio input (**front or backpanel**) is set to **Headphones** instead of speakers.
+   * **Note: This will change everytime you unplug your headset, so you need to do it each time**
