@@ -151,3 +151,5 @@ Performance Architect Intel Corporation
     * https://graphics.stanford.edu/~mdfisher/GPUView.html
   * Performance Tuning Guidelines for Windows Server 2016, Microsoft Docs, Microsoft 2017
     * https://docs.microsoft.com/en-us/windows-server/administration/performance-tuning/
+  * Mark's Blog : The Case of the System Process CPU Spikes, Mark Russinovich's Technical Blog 2008
+    * https://web.archive.org/web/20081217023055/http://blogs.technet.com/markrussinovich/archive/2008/04/07/3031251.aspx
