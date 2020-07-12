@@ -17,21 +17,30 @@
 # https://github.com/djdallmann/GamingPCSetup
 # Happy Scripting :D
 
-################
+#####################
 # Variables
-################
+#####################
 
-$procpath = "C:\Users\ddallmann\Desktop\proclist.xml"
-$svcpath = "C:\Users\ddallmann\Desktop\svclist.xml"
-[System.Collections.ArrayList]$ProcessesList = Import-Clixml -Path $procpath
-[System.Collections.ArrayList]$SvcList = Import-Clixml -Path $svcpath
+# Referenced Variable Name: $ProcessesSuspendList
+$ProcessesSuspendList = [System.Collections.ArrayList]::new()
+$procsuspendpath = "C:\Users\ddallmann\Desktop\procsuspendlist.xml"
 
-# How To: Example of creating your own proclist.xml OR svclist.xml
+# Referenced Variable Name: $SvcStopList
+$SvcStopList = [System.Collections.ArrayList]::new()
+$svcstoppath = "C:\Users\ddallmann\Desktop\svcstoplist.xml"
+
+# Referenced Variable Name: $SvcSuspendList
+$SvcSuspendList = [System.Collections.ArrayList]::new()
+$svcsuspendpath = "C:\Users\ddallmann\Desktop\svcsuspendlist.xml"
+
+# How To: Example of creating your own list.xml
 # $ProcessesList = [System.Collections.ArrayList]::new()
 # $ProcessesList.Add("steamwebhelper")
 # $ProcessesList.Add("armsvc")
 # $ProcessesList.Add("nvdisplay.container")
 # $ProcessesList | Export-Clixml -Path C:\Users\ddallmann\Desktop\proclist.xml
+
+$global:taskschedpid = ''
 
 #####################
 # External DLL Imports
@@ -57,6 +66,15 @@ $NtStatus = Add-Type -MemberDefinition $MethodDefinition -Name 'NtStatus' -Names
 #     Functions
 #####################
 
+function GM-ImportExternalList($MyPath) {
+	if (Test-Path -Path "$MyPath") {
+		Write-Host Importing $MyPath
+		return Import-Clixml -Path "$MyPath"
+	} else {
+		Write-Host "External list not found: $MyPath"
+	}
+}
+
 function GM-SuspendProcess-ByName($NamePattern) {
 	$processes = ''
 	$processes = Get-Process -Name "$NamePattern"
@@ -75,31 +93,97 @@ function GM-ResumeProcess-ByName($NamePattern) {
 	}
 }
 
+function GM-SuspendProcess-ByPid($ProcID) {
+	$process = Get-Process -Id "$ProcID"
+	$ret = [Win32.NtStatus]::NtSuspendProcess($process.handle)
+}
+
+function GM-ResumeProcess-ByPid($ProcID) {
+	$process = Get-Process -Id "$ProcID"
+	$ret = [Win32.NtStatus]::NtResumeProcess($process.handle)
+}
+
 function GM-ResumeProcessesInList($ProcNameList) {
-	Foreach ($i in $ProcNameList) {
-		Write-Host Resuming $i
-		GM-ResumeProcess-ByName($i)
+	if ($ProcNameList.Count -gt 1) {
+		Foreach ($i in $ProcNameList) {
+			Write-Host Resuming $i
+			GM-ResumeProcess-ByName($i)
+		}
+	} else {
+		Write-Host 'Resumed process count zero, no actions taken'
 	}
 }
 
 function GM-SuspendProcessesInList($ProcNameList) {
-	Foreach ($i in $ProcNameList) {
-		Write-Host Suspending $i
-		GM-SuspendProcess-ByName($i)
+	if ($ProcNameList.Count -gt 1) {
+		Foreach ($i in $ProcNameList) {
+			Write-Host Suspending $i
+			GM-SuspendProcess-ByName($i)
+		}
+	} else {
+		Write-Host 'Suspend process count zero, no actions taken'
+	}
+}
+
+function GM-SuspendServicesInList($ServiceList) {
+	$tasksched = $false
+
+	if ($ServiceList.Count -gt 1) {
+		if ($ServiceList.Contains("Schedule")) { $tasksched = $true }
+			Foreach ($i in $ServiceList) {
+				$procid = (get-wmiobject win32_service | where { $_.name -eq "$i"}).processID
+
+				if ($i -eq "Schedule") { $global:taskschedpid = $procid; continue; }
+
+				Write-Host Suspending service: $i
+				GM-SuspendProcess-ByPid($procid)
+			}
+		if ($tasksched) {
+			Write-Host Suspending service: Schedule
+			GM-SuspendProcess-ByPid($global:taskschedpid)
+		}
+	} else {
+		Write-Host 'Suspend service count zero, no actions taken'
+	}
+}
+
+function GM-ResumeServicesInList($ServiceList) {
+	if ($global:taskschedpid -ge 0) {
+		Write-Host Resuming service: Schedule
+		Write-Host NOTE: Suspending Task Scheduler will delay the resume process
+		GM-ResumeProcess-ByPid($global:taskschedpid)
+	}
+	if ($ServiceList.Count -gt 1) {
+		Foreach ($i in $ServiceList) {
+			if ($i -eq "Schedule") { continue }
+			$procid = (get-wmiobject win32_service | where { $_.name -eq "$i"}).processID
+			Write-Host Resuming service: $i
+			GM-ResumeProcess-ByPid($procid)
+		}
+	} else {
+		Write-Host 'Resumed service count zero, no actions taken'
 	}
 }
 
 function GM-StopServicesInList($ServiceList) {
-	Foreach ($i in $ServiceList) {
-		Write-Host Stopping service: $i
-		Stop-Service -Name "$i"
+	if ($ServiceList.Count -gt 1) {
+		Foreach ($i in $ServiceList) {
+			Write-Host Stopping service: $i
+			Stop-Service -Name "$i"
+		}
+	} else {
+		Write-Host 'Stop service count zero, no actions taken'
 	}
 }
 
 function GM-StartServicesInList($ServiceList) {
-	Foreach ($i in $ServiceList) {
-		Write-Host Starting service: $i
-		Start-Service -Name "$i"
+	if ($ServiceList.Count -gt 1) {	
+		Foreach ($i in $ServiceList) {
+			Write-Host Starting service: $i
+			Start-Service -Name "$i"
+		}
+	} else {
+		Write-Host 'Start service count zero, no actions taken'
 	}
 }
 
@@ -198,19 +282,29 @@ function GM-ReviveExplorer() {
 }
 
 function GM-GameMode-On() {
-	GM-SetTimerResolution(5000)
+	#GM-SetTimerResolution(5000)
 	GM-KillExplorer
-	GM-DisableIdle
+	#GM-DisableIdle
 	GM-DisableRealtimeWinDefender
-	GM-SuspendProcessesInList($ProcessesList)
-	GM-StopServicesInList($SvcList)
+	GM-SuspendProcessesInList($ProcessesSuspendList)
+	GM-StopServicesInList($SvcStopList)
+	GM-SuspendServicesInList($SvcSuspendList)
 }
 
 function GM-GameMode-Off() {
-	GM-ReleaseTimerResolution
+	#GM-ReleaseTimerResolution
 	GM-ReviveExplorer
-	GM-EnableIdle
+	#GM-EnableIdle
 	GM-EnableRealtimeWinDefender
-	GM-ResumeProcessesInList($ProcessesList)
-	GM-StartServicesInList($SvcList)
+	GM-ResumeProcessesInList($ProcessesSuspendList)
+	GM-StartServicesInList($SvcStopList)
+	GM-ResumeServicesInList($SvcSuspendList)
 }
+
+
+#####################
+# Imported Lists
+#####################
+$ProcessesSuspendList = GM-ImportExternalList($procsuspendpath)
+$SvcStopList = GM-ImportExternalList($svcstoppath)
+$SvcSuspendList = GM-ImportExternalList($svcsuspendpath)
