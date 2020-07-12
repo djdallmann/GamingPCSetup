@@ -15,9 +15,10 @@ This section contains information that may help identify and resolve different c
     * Sysinternals utilities help you manage, troubleshoot and diagnose your Windows systems and applications.
     * https://docs.microsoft.com/en-us/sysinternals/
   * Windows Performance Monitor
-      * A tool that comes installed on most Windows platforms by default, typically used as a first level system triage and monitoring tool.
+    * A tool that comes installed on most Windows platforms by default, typically used as a first level system triage and monitoring tool.
   * PAL (Performance Analysis of Logs)
-      * https://github.com/clinthuffman/PAL
+    * A tool for windows performance analysis that uses perfmon log data and thresholds to help identify common issues and fluctuations. Supports use of custom templates which could help measure the impact of a change across multiple areas of a system.
+    * https://github.com/clinthuffman/PAL
   * Wireshark
     * Wireshark® is a network protocol analyzer. It lets you capture and interactively browse the traffic running on a computer network.
     * https://www.wireshark.org/
