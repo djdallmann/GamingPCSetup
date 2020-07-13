@@ -60,6 +60,9 @@ public static extern int NtSetTimerResolution(int DesiredResolution, bool SetRes
 
 [DllImport("kernel32.dll", SetLastError=true)]
 public static extern bool SetProcessWorkingSetSize(IntPtr hProcess, int dwMinimumWorkingSetSize, int dwMaximumWorkingSetSize);
+
+[DllImport("Dwmapi.dll", SetLastError=true)]
+public static extern int DwmEnableMMCSS(bool fEnableMMCSS);
 '@
 
 $NtStatus = Add-Type -MemberDefinition $MethodDefinition -Name 'NtStatus' -Namespace 'Win32' -PassThru
@@ -291,6 +294,23 @@ function GM-TrimWorkingSetAll() {
 			$ret = [Win32.NtStatus]::SetProcessWorkingSetSize($processes[0].handle, -1, -1)
 		}
 	}
+}
+
+function GM-DwmEnableMMCSS([bool]$option) {
+	#TRUE to instruct DWM to participate in MMCSS scheduling; FALSE to opt out or end participation in MMCSS scheduling.
+	if ($option) {
+		Write-Host Requesting that DWM participate in MMCSS scheduling
+		$ret = [Win32.NtStatus]::DwmEnableMMCSS($option)
+	} else {
+		Write-Host "Requesting that DWM 'NOT' participate in MMCSS scheduling"
+		$ret = [Win32.NtStatus]::DwmEnableMMCSS($option)
+	}
+
+	if ($ret -gt 0) {
+		Write-Host DwmEnableMMCSS Enable Failed: $ret
+	}
+	#https://docs.microsoft.com/en-us/windows/win32/seccrypto/common-hresult-values
+	#https://docs.microsoft.com/en-us/windows/win32/api/dwmapi/nf-dwmapi-dwmenablemmcss
 }
 
 function GM-GameMode-On() {
