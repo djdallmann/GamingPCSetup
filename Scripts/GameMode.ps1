@@ -313,15 +313,26 @@ function GM-DwmEnableMMCSS([bool]$option) {
 	#https://docs.microsoft.com/en-us/windows/win32/api/dwmapi/nf-dwmapi-dwmenablemmcss
 }
 
+function GM-SetWin32PrioritySeparation($decvalue) {
+	Set-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\PriorityControl" -Name Win32PrioritySeparation -Value $decvalue
+	#https://docs.microsoft.com/en-us/previous-versions//cc976120(v=technet.10)?redirectedfrom=MSDN
+}
+
+function GM-RestoreWin32PrioritySeparationProgramDefault() {
+	Set-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\PriorityControl" -Name Win32PrioritySeparation -Value 2
+	#https://docs.microsoft.com/en-us/previous-versions//cc976120(v=technet.10)?redirectedfrom=MSDN
+}
+
 function GM-GameMode-On() {
 	#GM-SetTimerResolution(5000)
 	GM-KillExplorer
 	#GM-DisableIdle
-	GM-TrimWorkingSetAll
 	GM-DisableRealtimeWinDefender
 	GM-SuspendProcessesInList($ProcessesSuspendList)
 	GM-StopServicesInList($SvcStopList)
 	GM-SuspendServicesInList($SvcSuspendList)
+	#GM-SetWin32PrioritySeparation(2)
+	GM-TrimWorkingSetAll
 }
 
 function GM-GameMode-Off() {
@@ -332,6 +343,7 @@ function GM-GameMode-Off() {
 	GM-ResumeProcessesInList($ProcessesSuspendList)
 	GM-StartServicesInList($SvcStopList)
 	GM-ResumeServicesInList($SvcSuspendList)
+	GM-RestoreWin32PrioritySeparationProgramDefault
 }
 
 
