@@ -288,7 +288,7 @@ function GM-TrimWorkingSetAll() {
 	$processes = Get-Process
 	Foreach ($i in $processes) {
 		if ($processes.handle) {
-			[Win32.NtStatus]::SetProcessWorkingSetSize($processes[0].handle, -1, -1)
+			$ret = [Win32.NtStatus]::SetProcessWorkingSetSize($processes[0].handle, -1, -1)
 		}
 	}
 }
