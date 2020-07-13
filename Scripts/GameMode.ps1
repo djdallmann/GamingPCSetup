@@ -2,7 +2,7 @@
 # e.g. Suspend processes, turn off windows defender, close explorer, and adjust timer resolution 
 # then restore when done playing
 #
-# 1. Download proclist.xml and svclist.xml, edit if necessary or make your own. See how to in variable section.
+# 1. Download procsuspendlist.xml, svcstoplist.xml and svcsuspendlist.xml, edit if necessary or make your own. See how to in variable section.
 # 2. Change path references in variables section to your proclist.xml and svclist.xml if used
 # 3. Uncomment the desired both On and Off states GM-GameMode-On and GM-GameMode-Off
 #    Note: For every enabled game mode state, the opposite should also be uncommented 
