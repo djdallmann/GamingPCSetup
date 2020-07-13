@@ -57,6 +57,9 @@ public static extern NtStatus NtQueryTimerResolution(out uint MinimumResolution,
 
 [DllImport("ntdll.dll", SetLastError=true)]
 public static extern int NtSetTimerResolution(int DesiredResolution, bool SetResolution, out int CurrentResolution );
+
+[DllImport("kernel32.dll", SetLastError=true)]
+public static extern bool SetProcessWorkingSetSize(IntPtr hProcess, int dwMinimumWorkingSetSize, int dwMaximumWorkingSetSize);
 '@
 
 $NtStatus = Add-Type -MemberDefinition $MethodDefinition -Name 'NtStatus' -Namespace 'Win32' -PassThru
@@ -281,10 +284,20 @@ function GM-ReviveExplorer() {
 	C:\Windows\explorer.exe
 }
 
+function GM-TrimWorkingSetAll() {
+	$processes = Get-Process
+	Foreach ($i in $processes) {
+		if ($processes.handle) {
+			[Win32.NtStatus]::SetProcessWorkingSetSize($processes[0].handle, -1, -1)
+		}
+	}
+}
+
 function GM-GameMode-On() {
 	#GM-SetTimerResolution(5000)
 	GM-KillExplorer
 	#GM-DisableIdle
+	GM-TrimWorkingSetAll
 	GM-DisableRealtimeWinDefender
 	GM-SuspendProcessesInList($ProcessesSuspendList)
 	GM-StopServicesInList($SvcStopList)
