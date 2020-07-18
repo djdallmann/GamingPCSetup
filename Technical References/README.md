@@ -100,6 +100,13 @@ Performance Architect Intel Corporation
       * https://software.intel.com/en-us/articles/optimizing-computer-applications-for-latency-part-1-configuring-the-hardware
    * Intel Optimizing Computer Applications for Latency: Part 2: Tuning Applications, Intel 2017, Evgueny Khartchenko
       * https://software.intel.com/en-us/articles/optimizing-computer-applications-for-latency-part-2-tuning-applications
+### Timers, Clocks and Time Keeping
+   * Microsecond Resolution Time Services for Windows, The Windows Time Stamp Project, Arno Lentfer, June 2012
+      * http://www.windowstimestamp.com/description
+   * Game Timing and Multicore Processors, Microsoft Dev Center, May 2018
+      * https://docs.microsoft.com/en-us/windows/win32/dxtecharts/game-timing-and-multicore-processors?redirectedfrom=MSDN
+   * timeGetTime versus GetTickCount, Random ASCII – tech blog of Bruce Dawson, Bruce Dawson, Former Employee of Valve, Microsoft XBox 360 and Google Chrome Performance Management Teams
+      * https://randomascii.wordpress.com/2013/05/09/timegettime-versus-gettickcount/
 
 ### USB
    * Demystifying USB Selective Suspend, Microsoft USB Blog 2011, Vivek Gupta
