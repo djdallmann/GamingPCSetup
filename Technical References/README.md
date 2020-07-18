@@ -72,6 +72,12 @@ Performance Architect Intel Corporation
       * https://support.microsoft.com/en-us/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users
    * Information about the TCP Chimney Offload, Receive Side Scaling, Microsoft Support, Microsoft 2014
       * https://support.microsoft.com/en-us/help/951037/information-about-the-tcp-chimney-offload-receive-side-scaling-and-net
+   * Introduction to Receive Side Scaling, Microsoft Hardware Dev Center, Microsoft 2017
+      * https://docs.microsoft.com/en-us/windows-hardware/drivers/network/introduction-to-receive-side-scaling
+   * Non-RSS Receive Processing, Microsoft Hardware Dev Center, Microsoft 2017
+      * https://docs.microsoft.com/en-us/windows-hardware/drivers/network/non-rss-receive-processing
+   * RSS with Message Signaled Interrupts, Microsoft Hardware Dev Center, Microsoft 2017
+      * https://docs.microsoft.com/en-us/windows-hardware/drivers/network/rss-with-message-signaled-interrupts
 
 ### Filesystem and Disk
    * Configuring the Disk and File System for Performance, Microsoft Docs 2008
