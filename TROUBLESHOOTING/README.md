@@ -29,5 +29,7 @@ This section contains information that may help identify and resolve different c
     * https://downloadcenter.intel.com/download/24075/Intel-Extreme-Tuning-Utility-Intel-XTU
   * HWiNFO Diagnostic Software
     * https://www.hwinfo.com/download/
+  * FIO - Flexible I/O tester
+    * https://fio.readthedocs.io/en/latest/fio_doc.html
    
 ### Hardware
