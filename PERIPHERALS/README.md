@@ -16,13 +16,18 @@ As for performance, most modern mice and even those made in the past 10 years wi
    - **A higher dpi doesn't necessarily mean better**, most FPS professionals play with 400 or 800 dpi with great results. On higher resolution settings there may be some modification to the input signal which could negatively impact the intended outcome of a mouse gesture. Also some games may exhibit strange behavior with higher dpi, it's best to see what feels and performs best for you in each game.
    - Most people tend to lean towards **optical mice** versus laser mice, optical mice tend to give a more raw feeling where as laser feel like the movement is smoothed. Many laser sensors have been known to have **inconsistent acceleration** which can make it difficult to repeat gestures accurately.
    - A mouse can only improve your game so much, the rest will come down to consistent practice and development of your skills and techniques.
+   - Use this site to compare mouse shapes https://gearsearch.gg/shape.html to get an idea of what might fit best based on current mice you've used.
+   ![gearsearch mouse shape comparison](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/gearsearch.gg%20-%20MouseShapeCompare.PNG)
 
 ### Popular Brands
    - Zowie - https://zowie.benq.com/en-ca
+   - Finalmouse - https://finalmouse.com/
+   - Endgame Gear - https://www.endgamegear-shop.co.uk/
    - Logitech - https://www.logitech.com/en-ca
    - Razer - https://www.razer.com/ca-en
    - Roccat - https://en.roccat.org/
    - Steelseries - https://www.steelseries.com
+
    
 ## Keyboard
 
