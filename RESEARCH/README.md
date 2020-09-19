@@ -3,6 +3,38 @@
 This section contains different areas of research, performance impacts of various settings, tackling common misconceptions and just good to know information.
 If you do use this or redistribute this in any way, please give due credit.
 
+## Peripherals
+### Mouse Lift Off Distance (LOD)
+#### Q: Does the mouse LOD affect tracking on different surfaces, and do wear patterns also influence tracking with the same LOD?
+#### A: The LOD may have positive or negative influence on mouse tracking, users experience, type of surface and its particulates will also influence the sensors capability to track movement accurately.
+<details><summary>Findings and Analysis</summary>
+    
+* The lift of distance (LOD) of a mouse refers to the distance in which the sensor will register input from its surface, and usually measured in millimeters.
+* The most common benefits of a low LOD is to reduce unwanted tracking when a user briefly lifts the peripheral off the tracking surface and respositions it in an existing area which is preferred or in preparation for the next intended gesture.
+  * Users that tend to have lower sensitivity where their preferred application sensitivity and the use case (game/application) require them to reposition their mouse frequently  prefer a lower lift off distance throughout the session. 
+  * Likewise a user with a higher sensitivity may be less likely to resposition their mouse dependent on their play style, techniques and the use case. A higher sensitivity would reduce the amount of physical movement required to cover the same distance in the application.
+
+**Mousepad - HyperX Fury S XXL - Wear**
+* The area circled in blue in the image below represents a common wear pattern from repeated casual gaming use (slightly over 1 years time) and is likely a combination of degradation of the mouse surface due to friction, temperature, transfer of skincells or material from the peripheral, mouse skates or plastic.
+![Mousepad - HyperX Fury S XXL - Wear](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Mousepad%20-%20HyperX%20Fury%20S%20XXL%20-%20Wear.JPG)
+
+**Demo: How does LOD affect sensor tracking over degraded fabric surfaces?**
+* As a demonstration I've selected a brand new Razer Viper Mini (Model:RZ01-0325, Firmware: 1.03, Polling: 1000hz) to demonstrate how the sensors LOD calibration setting reacts to the surface and the area of wear on the HyperX Fury S XXL.
+  * Video: https://www.youtube.com/watch?v=A1u5M7Cn4ik
+  * **Observations:**
+    * There is minimal impact to mouse tracking on less used areas with both low and high LOD calibration
+    * Tracking across common wear patterns (although visually negligable) with a low LOD has a signficant impact on mouse tracking.
+    * Using a higher LOD to accomodate for the tracking issues on worn area provides a more consistent user experience except the concerns with higher LOD itself, although there may be a very subtle difference in tracking when the sensor is transitioning between both worn and less used surface areas.
+
+**Recommendations for tracking on fabric surfaces**
+  * Ensure your surface is consistent and level for optimal tracking
+  * For cloth mousepads, you may be able to increase the consistency of the surface by washing your mousepad with a mild detergent on target areas, see if others with your mousepad have done similar with success.
+  * Not all surfaces may be compatible with your mouses sensor LOD calibration, and not all mice have a wide range of LOD calibration settings which could result in a poor user experience depending on the surface.
+  * Test regularly for tracking inconsistencies, compare slightly worn areas to less used areas.
+  * Particles on the mouse sensor lens may also impact your tests and observations, consult with or see your manufacturers guidelines for cleaning your sensors lens.
+
+</details>
+
 ## Network
 ### NetworkThrottlingIndex
 #### Q: Disabling NetworkThrottlingIndex feature improves overall network performance and latency
