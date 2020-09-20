@@ -36,6 +36,81 @@ If you do use this or redistribute this in any way, please give due credit.
 </details>
 
 ## Network
+### Intel Interrupt Moderation
+#### Q: Does interrupt moderation rate have an effect on deferred procedure call (DPC) or interrupt service routine (ISR) latency, and what are the key differences between each of the settings?
+#### A: Yes, during the simulations it was found that it had more of an impact on DPC latency processing times over ISR, however each setting didn't scale equally as higher interrupt moderation values were used however this may be dependant other factors such as RSS, RSS affinity, rx/tx buffers, and timer resolution and the traffic simulation itself.
+
+<details><summary>Findings and Analysis</summary>
+
+**Configuration during the tests**
+  * Tools: xperf & iperf
+  * Windows 10 1909
+  * PCI-E Network Adapter (Intel Gigabit Desktop CT)
+  * Driver: Microsoft, 2018-06-12, 12.17.10.8
+  * MSI Mode
+  * RSS Enabled, 2 RSS on cores 3 & 4, NUMAStatic
+  * RX & TX buffer 768
+  * Adapter Power Savings Off
+  * Default Timer Resolution: 15.6ms
+  * 30sec simulation +900Mbps, TCP, 100MB transfers, no fragmentation
+
+**Interrupts and DPC stats by mode**
+
+**Extreme = 92,000**
+  * Avg NDIS DPC Performance
+  * 22% <= 8 usecs
+  * 46% <= 16 usecs
+  * 20% <= 32 usecs
+
+**High = 115,000**
+  * Avg NDIS DPC Performance
+  * 2% <= 1 usecs
+  * 7% <= 2 usecs
+  * 31% <= 8 usecs
+  * 46% <= 16 usecs
+  * 11% <= 32 usecs
+
+**Medium = 180,000**
+  * Avg NDIS DPC Performance
+  * 30% <= 1 usecs
+  * 22% <= 4 usecs
+  * 34% <= 16 usecs
+
+**Adaptive = 200,000**
+  * Avg NDIS DPC Performance
+  * 6% <= 1 usecs
+  * 22% <= 2 usecs
+  * 41% <= 4 usecs
+  * 24% <= 16 usecs
+
+**Low = 340,000**
+  * Avg NDIS DPC Performance
+  * 23% <= 2 usecs
+  * 55% <= 8 usecs
+
+**Minimal = 640,000**
+  * Avg NDIS DPC Performance
+  * 49% <= 2 usecs
+  * 8% <= 4 usecs
+  * 34% <= 8 usecs
+
+**Off (but Interrupt Moderation Enabled) = 2,650,000**
+  * Avg NDIS DPC Performance
+  * 27% <= 1 usecs
+  * 58% <= 2 usecs
+  * 8% <= 8 usecs
+
+**Observations**
+  * Interrupt Moderation Disabled produced the same numbers as with **Enabled but Off**
+  * NDIS dpc latency spread (across cores) isn't always equally balanced between runs
+but DPC latency performance does not change regardless
+  * DPC latency in general is consistent between runs
+  * The gap between Off and the next least restrictive setting (minimal) is very significant
+  * The proper ordering of these settings from **least to most** interrupt requests are:
+    * Extreme > High > Medium > Adaptive (Also dependent on load) > Low > Minimal > Off/Disabled
+  * Overall **Medium** seemed to have the least impact on user experience/gaming while still providing low DPC latency. A very low DPC latency can still be achieved with a medium interrupt moderation value in which DPCs are processed 90% equal to or below 1 usecs for high volume small packet UDP communications (gaming).
+</details>
+
 ### NetworkThrottlingIndex
 #### Q: Disabling NetworkThrottlingIndex feature improves overall network performance and latency
 #### A: Not completely true, NDIS.sys DPC latency is increased quite notably when disabled.
