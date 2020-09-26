@@ -5,7 +5,7 @@ In regards to functionality this generally refers to how many buttons there are 
 
 Comfortability relates to the shape and size of the mouse, is it ambidextrous, ergonomic, small, or large?
 
-![mouse sizing side view](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Mouse%20-%20Sizing%20-%20Side%20View.png)
+![mouse sizing side view](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Mouse%20-%20Sizing%20-%20Side%20View.png) ![mouse sizing top view](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Mouse%20-%20Sizing%20-%20Top%20View.png)
 
 ### Recommendations
 The following is a list of items to consider when searching for your ideal peripheral.
