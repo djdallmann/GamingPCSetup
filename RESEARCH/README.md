@@ -18,6 +18,9 @@ If you do use this or redistribute this in any way, please give due credit.
 * The area circled in blue in the image below represents a common wear pattern from repeated casual gaming use (slightly over 1 years time) and is likely a combination of degradation of the mouse surface due to friction, temperature, transfer of skincells or material from the peripheral, mouse skates or plastic.
 ![Mousepad - HyperX Fury S XXL - Wear](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Mousepad%20-%20HyperX%20Fury%20S%20XXL%20-%20Wear.JPG)
 
+**Microscopic image of the fabric consistency**
+![Mousepad - HyperX Fury S XXL - Micro - Wear Comparison](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Mousepad%20-%20HyperX%20Fury%20S%20XXL%20-%20Micro%20-%20Wear%20Comparison.png)
+
 **Demo: How does LOD affect sensor tracking over degraded fabric surfaces?**
 * As a demonstration I've selected a brand new Razer Viper Mini (Model:RZ01-0325, Firmware: 1.03, Polling: 1000hz) to demonstrate how the sensors LOD calibration setting reacts to the surface and the area of wear on the HyperX Fury S XXL.
   * Video: https://www.youtube.com/watch?v=A1u5M7Cn4ik
