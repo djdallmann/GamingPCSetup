@@ -26,7 +26,7 @@ The following is a list of items to consider when searching for your ideal perip
    9. The **mouse sensor** should provide optimal tracking on a variety of surfaces, high accuracy and a high max tracking speed.
    10. **Use the site below to compare mouse shapes** and see what might fit best, compare mice you currently own or have previously used along with the guidelines above.
       - https://gearsearch.gg/shape.html
-   ![gearsearch mouse shape comparison](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/gearsearch.gg%20-%20MouseShapeCompare.PNG)
+   ![gearsearch mouse shape comparison](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/gearsearch.gg%20-%20MouseShapeCompare.png)
 
 ### Misc Information
    - It always recommended to **read both positive and negative reviews** for mice to ensure there are no ongoing or known issues with the peripheral **software, hardware or build quality in general**.
