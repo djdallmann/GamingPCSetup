@@ -78,6 +78,8 @@ Performance Architect Intel Corporation
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/network/non-rss-receive-processing
    * RSS with Message Signaled Interrupts, Microsoft Hardware Dev Center, Microsoft 2017
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/network/rss-with-message-signaled-interrupts
+   * Placebo setting: QoS bandwidth reservation, Microsoft DevBlogs, Raymon Chen, Microsoft 2006
+      * https://devblogs.microsoft.com/oldnewthing/20061123-14/?p=28923
 
 ### Filesystem and Disk
    * Configuring the Disk and File System for Performance, Microsoft Docs 2008
