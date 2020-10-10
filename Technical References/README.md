@@ -78,7 +78,7 @@ Performance Architect Intel Corporation
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/network/non-rss-receive-processing
    * RSS with Message Signaled Interrupts, Microsoft Hardware Dev Center, Microsoft 2017
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/network/rss-with-message-signaled-interrupts
-   * Placebo setting: QoS bandwidth reservation, Microsoft DevBlogs, Raymon Chen, Microsoft 2006
+   * Placebo setting: QoS bandwidth reservation, Microsoft DevBlogs, Raymon Chen, Kernel Developer, Microsoft 2006
       * https://devblogs.microsoft.com/oldnewthing/20061123-14/?p=28923
 
 ### Filesystem and Disk
@@ -154,6 +154,8 @@ Performance Architect Intel Corporation
 ### Misc
    * Windows Hardware Dev Center Archive, Microsoft
       * https://docs.microsoft.com/en-us/previous-versions/windows/hardware/download/dn550976(v=vs.85)
+   * Adjust visual effects for best performance should really be called Adjust visual effects for crappiest appearance, Raymon Chen, Kernel Developer, Microsoft 2006
+      * https://devblogs.microsoft.com/oldnewthing/20130327-00/?p=4833
 
 ## Troubleshooting
 ### Windows Performance
