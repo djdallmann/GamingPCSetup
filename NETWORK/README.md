@@ -15,7 +15,8 @@
          Get-NetAdapterRSS
              Make note of the name associated with the network adapter e.g. Ethernet
          Set-NetAdapterRSS -Name "Ethernet" -BaseProcessorNumber 2
-             Bind the RSS base core value to core 2 (3rd core), if you have 2 RSS queues enabled this should allocate work to 3rd and 4th core.
+             Bind the RSS base core value to core 2 (3rd core), if you have 2 RSS queues
+             enabled this should allocate work to 3rd and 4th core.
      ```
 
 ## Intel Based Network Adapter Settings
