@@ -68,12 +68,12 @@
          fsutil behavior set disableLastAccess 1
          fsutil behavior set disable8dot3 1
          ```
-12. Enable the newer Ultimate Power Plan which is intended to be an improved version of the High Performance power scheme.
+12. Enable the Ultimate Performance power scheme which is intended to be an improved version of the High Performance power scheme.
     * As per [Technical References](../Technical%20References/README.md), *This new policy builds on the current High-Performance policy, and it goes a step further to eliminate micro-latencies associated with fine grained power management techniques.*
-    * Remember **if you use the provided Desired State Configuration (DSC)** script with this guide and plan to use the new power scheme, **you'll need to edit the DSC to enforce the new ultimate power plan** vs the high performance power scheme.
+    * Remember **if you use the provided Desired State Configuration (DSC)** script with this guide and plan to use the new power scheme, **you'll need to edit the DSC to enforce the new ultimate performance power scheme** vs the high performance power scheme.
          ```
          Run the following commands using cmd.exe as administrator
          powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
-         Go to power options
+         Go to Windows power options and enable Ultimate Performance power plan.
          ```
 13. Reconnect your network ethernet cable, continue onto the next process.
