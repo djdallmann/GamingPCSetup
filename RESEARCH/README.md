@@ -122,7 +122,7 @@ but DPC latency performance does not change regardless
 
 * A very common recommendation in many performance enhancement/gaming guides state that disabling *NetworkThrottleIndex* improves network performance and latency because in theory it should prevent rate limiting and quality of service (QoS) interactions. 
 * The main purpose of NetworkThrottlingIndex is to reduce (rate limit) calls which would otherwise impact real time audio and perhaps cause stutter or other audible artifacts.
-* Disabling it may increase **throughput** should the throughput exceed the default receiving packets per second (pps) limit (NetworkThrottleIndex: 10 decimal, 10,000 received packets per second which is roughly ~ 15Mbps with 1500byte Ethernet MTU) but it does not improve DPC latency which is probably more beneficial for lower latency applications such as video games.
+* Disabling it may increase **throughput** should the throughput exceed the default receiving packets per millisecond (ppms) limit (NetworkThrottleIndex: 10 decimal, 10 packets per millisecond, 10,000 received packets per second which is roughly ~ 15Mbps with 1500byte Ethernet MTU) but it does not improve DPC latency which is probably more beneficial for lower latency applications such as video games.
 * It's unclear why DPC processing latency is much lower when this feature is enabled even when you're not reaching the inbound receive rate limit in comparison to disabling the feature completely which removes any throttling.
 * To learn mouse about Network Throttling Index see the [Technical References](../Technical%20References/README.md) article **Multimedia Class Scheduler Service (MMCSS) Vista Multimedia Playback and Network Throughput** written by Mark Russinovich.
 
