@@ -154,8 +154,11 @@ Performance Architect Intel Corporation
 ### Misc
    * Windows Hardware Dev Center Archive, Microsoft
       * https://docs.microsoft.com/en-us/previous-versions/windows/hardware/download/dn550976(v=vs.85)
-   * Adjust visual effects for best performance should really be called Adjust visual effects for crappiest appearance, Raymon Chen, Kernel Developer, Microsoft 2006
+   * Adjust visual effects for best performance should really be called Adjust visual effects for crappiest appearance, Raymon Chen, Kernel Developer, Microsoft 2013
       * https://devblogs.microsoft.com/oldnewthing/20130327-00/?p=4833
+   *  Announcing Windows 10 Insider Preview Build 17101 for Fast & Build 17604 for Skip Ahead, Microsoft Windows Insider Blog, Microsoft 2018
+      * https://blogs.windows.com/windows-insider/2018/02/14/announcing-windows-10-insider-preview-build-17101-fast-build-17604-skip-ahead/
+      * Primary reference to Ultimate power scheme, documentation seems limited. Present/unhidden on LTSC by default.
 
 ## Troubleshooting
 ### Windows Performance
