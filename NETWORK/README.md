@@ -19,7 +19,7 @@
              enabled this should allocate work to 3rd and 4th core.
      ```
 
-## Intel Based Network Adapter Settings
+## Intel Network Adapter Settings
 *Offloading* features allows the network card to handle certain functions of the packet handling process reducing the overall cpu consumption, ideally allowing more cpu time for other tasks and your games.
 
 - **Adaptive Inter-Frame Spacing**
@@ -67,5 +67,5 @@
 
 For more information on these settings see the **Intel** and the **Microsoft Performance Tuning Network Adapters, Performance Tuning for Low Latency Packet Processing** support guides in the **Network** section of the [Technical References](../Technical%20References/README.md) page.
 
-## Realtek
+## Realtek Network Adapter Settings
 Realtek adapters and their drivers have shown to have worst DPC/ISR latency even after optimizations as noted in the Intel section above, however the Intel recommended settings above still apply to Realtek adapters. Will update this section and related settings if further research and evidence is accumulated to show otherwise.
