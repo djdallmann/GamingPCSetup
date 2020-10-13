@@ -4,6 +4,37 @@ This section contains different areas of research, performance impacts of variou
 If you do use this or redistribute this in any way, please give due credit.
 
 ## Peripherals
+### Mouse Sensor Lens
+#### Q: Should you clean your mouse sensor lens regularly, at what frequency and what cleaning methods are recommended?
+#### A: Yes, you should try to clear any debris not only from the lens but the tracking surface itself regularly to reduce the likelihood of such particles affecting the sensors capability to track accurately. Cleaning methods should be those simlar to those of camera sensors and lens. See findings and analysis for more information.
+<details><summary>Findings and Analysis</summary>
+    
+* If you use a fabric tracking surface there is a higher liklihood it has many particles, fibers, hair or other substances which can then be transfered onto your mouse sensor lens. 
+* The assumed primary causes of such particles getting onto the lens are directly correlated to the conditions of the environment such as air circulation and filtration, rate at which these particles build up, those found directly on the tracking surface, the type of fabric, and the density of weave and threads.
+
+**Observations: (See image sequences below)**
+  * Particles build up relatively quick if the tracking surface is not cleaned prior to the lens.
+  * The microscopic debris is not easily identifiable by sight, using a lint roller over the surface can greatly reduce the amount of particles which remain on the cloth tracking surface prior to cleaning lens.
+  * The particle debris built up over a 1 week period was minimal and had limited impact on user perceived tracking ability.
+  * Initial lens cleaning methods used included very gentle use of a cotton swab to loosen some debris followed by 1-2 shots of compressed air to achieve a clean sensor lens.
+
+**Mouse Lens Particle Analysis - 1 days use without prior cleaning of the tracking surface**
+![Mouse Lens - Particle Analysis - 1 Day Use Comparison.png](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Mouse%20Lens%20-%20Particle%20Analysis%20-%201%20Day%20Use%20Comparison.png)
+
+**Mouse Lens Particle Analysis - Build over 1 week, prior cleaning of both tracking surface and lens**
+![Mouse Lens - Particle Analysis - Cleaning and Build Up Over Time.png](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Mouse%20Lens%20-%20Particle%20Analysis%20-%20Cleaning%20and%20Build%20Up%20Over%20Time.png)
+
+**Tracking Surface Particle Removal via Generic Lint Roller**
+![Mousepad - HyperX Fury S XXL - Lint Roller Particle Removal.png](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Mousepad%20-%20HyperX%20Fury%20S%20XXL%20-%20Lint%20Roller%20Particle%20Removal.png)
+
+**Recommendations**
+  * To clean the mouse sensor lens you would want to use an air dust blower like those used on cameras which should not produce any moisture unlike cans of compressed air, and a lens/sensor brush which would be less likely to scratch the plastic or glass lens.
+  * Cleaning weekly or every two weeks after the initial tracking surface and lens would probably be sufficient as maintenance to ensure consistent performance overtime.
+  * Use a mildly adhesive lint roller to remove smaller debris and particles prior to cleaning the mouse sensor lens.
+  * You can purchase an Illuminated Jewelers Eye Loupe with approximately 40-60x zoom which is affordable, portable and functional to observe the conditions of your mousepad or mouse sensor lens.
+
+</details>
+
 ### Mouse Lift Off Distance (LOD)
 #### Q: Does the mouse LOD affect tracking on different surfaces, and do wear patterns also influence tracking with the same LOD?
 #### A: The LOD may have positive or negative influence on mouse tracking, users experience, type of surface and its particulates will also influence the sensors capability to track movement accurately.
