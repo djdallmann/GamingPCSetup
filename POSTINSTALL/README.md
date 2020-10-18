@@ -2,13 +2,29 @@
 
 1. In **Windows Device Manager** (devmgmt.msc) go to **Network adapters** and right click each and go to properties, then Power Management and **uncheck Allow the computer to turn off this device to save power**. 
 2. Right click the desktop and go to Display Settings, ensure that Scale and layout are set to 100% (Recommended)
-3. Open Powershell as admin and enter the following command to add scanning exclusions for the Steam and NVIDIA Shader Cache folder to Windows Defender. 
+3. Open Powershell as admin and enter the following command to add scanning exclusions for the Steam, NVIDIA Shader Cache folder and Microsoft's recommendations for exclusions to Windows Defender. See [Technical References](../Technical%20References/README.md) for more information on Microsoft's recommendations.
    - This will prevent Windows Defender from scanning your games as they download files and during gameplay, **if you store your games on separate drives** ensure to add that path here as well.
 
       ```
       Add-MpPreference -ExclusionPath "C:\Program Files (x86)\Steam\"
       Add-MpPreference -ExclusionPath $env:LOCALAPPDATA"\Temp\NVIDIA Corporation\NV_Cache"
       Add-MpPreference -ExclusionPath $env:PROGRAMDATA"\NVIDIA Corporation\NV_Cache"
+      Add-MpPreference -ExclusionPath $env:windir"\SoftwareDistribution\Datastore\Datastore.edb"
+      Add-MpPreference -ExclusionPath $env:windir"\SoftwareDistribution\Datastore\Logs\Edb*.jrs"
+      Add-MpPreference -ExclusionPath $env:windir"\SoftwareDistribution\Datastore\Logs\Edb.chk"
+      Add-MpPreference -ExclusionPath $env:windir"\SoftwareDistribution\Datastore\Logs\Tmp.edb"
+      Add-MpPreference -ExclusionPath $env:windir"\SoftwareDistribution\Datastore\Logs\*.log"
+      Add-MpPreference -ExclusionPath $env:windir"\Security\Database\*.edb"
+      Add-MpPreference -ExclusionPath $env:windir"\Security\Database\*.sdb"
+      Add-MpPreference -ExclusionPath $env:windir"\Security\Database\*.log"
+      Add-MpPreference -ExclusionPath $env:windir"\Security\Database\*.chk"
+      Add-MpPreference -ExclusionPath $env:windir"\Security\Database\*.jrs"
+      Add-MpPreference -ExclusionPath $env:windir"\Security\Database\*.xml"
+      Add-MpPreference -ExclusionPath $env:windir"\Security\Database\*.csv"
+      Add-MpPreference -ExclusionPath $env:windir"\Security\Database\*.cmtx"
+      Add-MpPreference -ExclusionPath $env:SystemRoot"\System32\GroupPolicy\Machine\Registry.pol"
+      Add-MpPreference -ExclusionPath $env:SystemRoot"\System32\GroupPolicy\Machine\Registry.tmp"
+      Add-MpPreference -ExclusionPath $env:userprofile"\NTUser.dat"
       ```
 
 4. Uninstall common Windows Store Metro Apps, In Powershell as admin run the following commands and press enter so they complete.
