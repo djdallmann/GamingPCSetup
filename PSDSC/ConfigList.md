@@ -14,6 +14,7 @@ Settings applied by the Powershell Desired Configuration State script
    - Microsoft App-V Client
    - Net.Tcp Port Sharing Service
    - Network Connection Broker
+   - Network Connected Devices Auto Setup
    - Offline Files
    - Phone Service
    - Print Spooler
@@ -55,7 +56,6 @@ Settings applied by the Powershell Desired Configuration State script
    - Disable Location Tracking
    - Disable Background Apps
    - Disables App Notifications
-   - Disables App Microphone Access
    - Disables App Account Info Access
    - Disables App Contact Access
    - Disables App Calendar Access
@@ -119,9 +119,6 @@ Settings applied by the Powershell Desired Configuration State script
    - Show all icons in taskbar
    - Disable Mouse Scrolling on Inactive Windows
    - Disable Ease of Access Touchback and Gestures
-   - Disable Ease of Access Sticky Keys/Shortcut
-   - Disable Ease of Access Toggle Keys/Shortcut
-   - Disable Ease of Access Filter Keys/Shortcut
    - Disable Ease of Access Narrator
    - Disable App Launch Tracking
    - Disable Suggested Content
@@ -134,3 +131,6 @@ Settings applied by the Powershell Desired Configuration State script
 
 ## Misc System Features
    - Disable Lock Screen app and features
+
+## Network Service Configuration
+   - Disable Multicast DNS (LLMNR)
