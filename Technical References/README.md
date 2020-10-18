@@ -159,6 +159,8 @@ Performance Architect Intel Corporation
    *  Announcing Windows 10 Insider Preview Build 17101 for Fast & Build 17604 for Skip Ahead, Microsoft Windows Insider Blog, Microsoft 2018
       * https://blogs.windows.com/windows-insider/2018/02/14/announcing-windows-10-insider-preview-build-17101-fast-build-17604-skip-ahead/
       * Primary reference to Ultimate power scheme, documentation seems limited. Present/unhidden on LTSC by default.
+   * Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows, Microsoft - Support - Windows Support, Microsoft 2020
+      * https://support.microsoft.com/en-us/help/822158/virus-scanning-recommendations-for-enterprise-computers
 
 ## Troubleshooting
 ### Windows Performance
@@ -173,3 +175,8 @@ Performance Architect Intel Corporation
     * https://docs.microsoft.com/en-us/windows-server/administration/performance-tuning/
   * Mark's Blog : The Case of the System Process CPU Spikes, Mark Russinovich's Technical Blog 2008
     * https://web.archive.org/web/20081217023055/http://blogs.technet.com/markrussinovich/archive/2008/04/07/3031251.aspx
+  * Book: Windows Performance Analysis Field Guide, Clint Huffman
+    * https://www.amazon.com/Windows-Performance-Analysis-Field-Guide-ebook/dp/B00MVTQWLY/
+  * Book: Windows Internals, Part 1: System architecture, processes, threads, memory management, and more (Developer Reference) 7th Edition, Authors:
+Pavel Yosifovich, Mark Russinovich, David Solomon, Alex Ionescu
+    * https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189/
