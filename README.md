@@ -1,5 +1,10 @@
-# Gaming PC Setup for Windows 10 v1909
-A minimalist approach to a gaming PC setup to help standardize your gaming PC builds and help isolating unusual behavior, it focuses on eliminating power saving, throttling, interfering features in BIOS and Windows. Many Windows features and settings will be optimized for your gaming experience automatically by the PowerShell Desired State Configuration (DSC).
+# Gaming PC Setup for Windows 10 v2004
+A research and evidence based approach to optimizing your gaming PC, configuration and setup. Recommendations found in this guide are based on curated reputable [technical references](Technical%20References/README.md), and personal [research](RESEARCH/README.md).
+
+ * Standardize your gaming PC builds
+ * Periperhal selection, configuration and maintenance
+ * Troubleshooting and isolating unusual performance behavior
+ * A customizable [PowerShell Desired State Configuration (DSC)](PSDSC/README.md) to help ensure your settings always stay the same and quickly verified with a simple command.
 
 Use this page for a minimalistic look: https://djdallmann.github.io/GamingPCSetup/
 
