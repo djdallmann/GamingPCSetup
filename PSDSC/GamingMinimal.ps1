@@ -94,66 +94,6 @@ Configuration GamingMinimal {
             ValueData   = "0"
             ValueType = "Dword"
         }
-        #Disable Mouse Keys
-            Registry DisableMouseKeysShort {
-            Ensure = "Present"
-            Key = "HKEY_USERS\${mysid}\Control Panel\Accessibility\MouseKeys"
-            ValueName   = "Flags"
-            ValueData   = "0"
-            ValueType = "String"
-        }
-        #Disable Sticky Keys Shortcut
-        Registry DisableStickyKeysShort {
-            Ensure = "Present"
-            Key = "HKEY_USERS\${mysid}\Control Panel\Accessibility\StickyKeys"
-            ValueName   = "Flags"
-            ValueData   = "0"
-            ValueType = "String"
-        }
-        #Disable Toggle Keys Shortcut
-        Registry DisableToggleKeysShort {
-            Ensure = "Present"
-            Key = "HKEY_USERS\${mysid}\Control Panel\Accessibility\ToggleKeys"
-            ValueName   = "Flags"
-            ValueData   = "0"
-            ValueType = "String"
-        }
-        #Disable Filter Keys Shortcut
-        Registry DisableFilterKeys1 {
-            Ensure = "Present"
-            Key = "HKEY_USERS\${mysid}\Control Panel\Accessibility\Keyboard Response"
-            ValueName   = "Flags"
-            ValueData   = "0"
-            ValueType = "String"
-        }
-        Registry DisableFilterKeys2 {
-            Ensure = "Present"
-            Key = "HKEY_USERS\${mysid}\Control Panel\Accessibility\Keyboard Response"
-            ValueName   = "DelayBeforeAcceptance"
-            ValueData   = "0"
-            ValueType = "String"
-        }
-        Registry DisableFilterKeys3 {
-            Ensure = "Present"
-            Key = "HKEY_USERS\${mysid}\Control Panel\Accessibility\Keyboard Response"
-            ValueName   = "AutoRepeatDelay"
-            ValueData   = "0"
-            ValueType = "String"
-        }
-        Registry DisableFilterKeys4 {
-            Ensure = "Present"
-            Key = "HKEY_USERS\${mysid}\Control Panel\Accessibility\Keyboard Response"
-            ValueName   = "AutoRepeatRate"
-            ValueData   = "0"
-            ValueType = "String"
-        }
-        Registry DisableFilterKeys5 {
-            Ensure = "Present"
-            Key = "HKEY_USERS\${mysid}\Control Panel\Accessibility\Keyboard Response"
-            ValueName   = "BounceTime"
-            ValueData   = "0"
-            ValueType = "String"
-        }
         Registry DisableOnlineSpeechPrivacyandRecognition {
             Ensure = "Present"
             Key = "HKEY_USERS\${mysid}\Software\Microsoft\Speech_OneCore\Settings\OnlineSpeechPrivacy"
@@ -784,10 +724,22 @@ Configuration GamingMinimal {
             State = 'Stopped'
             StartupType = 'Disabled'
         }
+        Service SvcNcdAutoSetup {
+            Name   = "NcdAutoSetup"
+            State = 'Stopped'
+            StartupType = 'Disabled'
+        }
         Service SvcWindowsRemoteManagement {
             Name   = "WinRM"
             State = 'Running'
             StartupType = 'Automatic'
+        }
+        Registry DisableMulticastDNS {
+            Ensure = "Present"
+            Key = "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient"
+            ValueName   = "EnableMulticast"
+            ValueData   = "0"
+            ValueType = "Dword"
         }
         Registry DisableLockScreenApp {
             Ensure = "Present"
@@ -900,13 +852,6 @@ Configuration GamingMinimal {
             ValueName   = "UploadUserActivities"
             ValueData   = "0"
             ValueType = "Dword"
-        }
-        Registry DisableAppMicroPhoneAccess {
-            Ensure = "Present"
-            Key = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\microphone"
-            ValueName   = "Value"
-            ValueData   = "Deny"
-            ValueType = "String"
         }
         Registry DisableAppNotificationsAccess {
             Ensure = "Present"
