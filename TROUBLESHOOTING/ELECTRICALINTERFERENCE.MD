@@ -2,7 +2,7 @@
 Many people report unusual or unexpected behavior on what appears to be well built stable computers sytems, the cause of this is most likely a high level of electrical noise or interference.
 
 # Disclaimer 
-I'm not an electrical engineer or subject matter expert, most of what is shared below is based on *translations* of reputable public works and research, see my Electrical section in Technical Reference. 
+I'm not an electrical engineer or subject matter expert, most of what is shared below is based on *translations* of reputable public works and research, see my Electrical section in [Technical References](../Technical%20References/README.md). 
 Use this guide at your own risk, electricity can be very dangerous please do your due dilegence and research before trying anything you're uncomfortable or unfamiliar with. 
 You are fully responsible for any loss, harm or damages caused by using the information described on this page.
 If you do use this or redistribute this in any way, please give due credit.
@@ -66,24 +66,4 @@ Reduce interfering near field (EMI) and far field (RFI) interference in some cas
    * Ebtech Humx - https://www.amazon.ca/Ebtech-Hum-X-Exterminator/dp/B0002E4YI8
    * Tripp Lite Isolation Transformer - https://www.amazon.ca/Tripp-Lite-Isolation-Transformer-outlet/dp/B00006HPFH
    * PowerVar Ground Guard - https://www.powervar.com/products/power-conditioners/ground-guard-power-conditioners
-2. Ferrites where there aren't any, note using too many ferrites on a single cable for example can have negative impacts as well.
-
-**Want to learn a LOT more, take a look at the Electrical References section on my github**
-https://github.com/djdallmann/GamingPCSetup/tree/master/Technical%20References
-
-## Credits
-This current written work is based on *translations* of reputable public works and research, see my Electrical section in Technical Reference. 
-It is also written and inspired by the dedication, work, tests and observations of a group of people with common issues and goals, most notably:
-
-**Ashr** - https://steamcommunity.com/profiles/76561197979240181/
-
-**Nug** - https://steamcommunity.com/profiles/76561198042287644/
-
-**Timecard aka TC!** - http://steamcommunity.com/id/tcard
-
-**Melody** - https://steamcommunity.com/profiles/76561198036418430/
-
-**Haze** - https://steamcommunity.com/profiles/76561197986101135
-
-**Some history**
-https://docs.google.com/document/d/1Ihak2mMEogNm3IkoJxizY1YN7vXjuNr_NfEdAnjTAII/
+2. Ferrites where there aren't any, note using too many ferrites on a single cable for example can have negative impacts as well. Keep in mind not all ferrites are equal, size and dimensions filter different range of frequencies. If you have a general idea of where the interference is coming from find ferrites to help reduce those types of frequencies emitted from those sources.
