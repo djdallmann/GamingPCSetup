@@ -235,6 +235,25 @@ ntdll.dll
 [timermicroadjust.txt](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/timermicroadjust.txt)
 </details>
 
+#### Q: Can you monitor which programs requested specific timer resolutions over a period of time?
+#### A: Yes, there are a few ways to monitor these requests here are two common methods, powercfg.exe energy report and a Windows Performance Recorder power usage resource analysis capture. See findings and analysis for the procedures.
+<details><summary>Findings and Analysis</summary>
+    
+1. The **PowerCfg tool** built into windows has many functions, one of those is the energy report which will monitor the PC over a period of time and report any issues related to power consumption, timer resolution being one of those factors which changes the behavior of the computer which increases power consumption.
+    1. Open cmd.exe or powershell.exe as an administrator
+    2. Change your working directory, or use the output file path parameter to specify the location of the report.
+    3. Run **powercfg.exe /energy** and wait for it to complete (60 sec by default)
+    4. Look for sections with the following heading **Platform Timer Resolution:Outstanding Timer Request** for more information on the timer resolution requested and the associated processes.
+2. Using **Windows Performance Recorder and Analyzer** which is part of the Windows Assessment and Deployment Kit, you can use the following instructions to capture long running information on power usage and information on timer resolution requests for that period of time.
+    1. Download and install windows performance analyzer  if you haven't already.
+       * https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install
+    2. Open Windows Performance Recorder, **untick all and then select Power Usage** then press Start and let run until the monitoring period is satisfied then press Stop.
+    3. Save the recording
+    4. Open the recording in Windows Performance Analyzer
+    5. Expand the **Power section** then scrol down to the bottom and expand the **Timer Resolution section** then double click **Timer Resolution Requests** to load the information.
+    6. Review and analyze the displayed information, more notably the **Process** column and associated column **Resolution (us)**.
+</details>
+
 ### Keyboard DPC and Interrupt Latency (PS/2 VS USB)
 #### Q: Does PS/2 keyboard driver provide lower DPC latency than USB keyboard driver?
 #### A: No, not during the tests I performed but PS/2 keyboard driver latency was more stable.
