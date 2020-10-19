@@ -5,8 +5,10 @@
    * **Network & Internet Settings > Change Adapter Options > Adapter Properties > Select TCP/IP v4 > Advanced > WINS tab > Disable NetBIOS over TCP/IP > Press OK**
    * Note: This change is immediate
 3. Right click the desktop and go to Display Settings, ensure that Scale and layout are set to 100% (Recommended)
-4. Open Powershell as admin and enter the following command to add scanning exclusions for the Steam, NVIDIA Shader Cache folder and Microsoft's recommendations for exclusions to Windows Defender. See [Technical References](../Technical%20References/README.md) for more information on Microsoft's recommendations.
-   - This will prevent Windows Defender from scanning your games as they download files and during gameplay, **if you store your games on separate drives** ensure to add that path here as well.
+4. **Add exclusions to Windows Defender**
+   - Open **Windows Security** and go to **Virus and Threat Protection > Virus and Threat Protection Settings > Exclusions** and be sure to add each of your games as as **full paths to the executable** vs just using executable name to ensure ideal security with least impact during gameplay. e.g. *D:\Steam Games\steamapps\common\Half-Life\hl.exe vs just hl.exe*
+   - Open Powershell as admin and enter the following command to add scanning exclusions for the Steam, NVIDIA Shader Cache folder and Microsoft's recommendations for exclusions to Windows Defender. See [Technical References](../Technical%20References/README.md) for more information on Microsoft's recommendations.
+   - This will help reduce the time spent scanning by Windows Defender as new files are downloaded and those used during gameplay (e.g. textures, sounds).
 
       ```
       Add-MpPreference -ExclusionPath "C:\Program Files (x86)\Steam\"
@@ -28,6 +30,15 @@
       Add-MpPreference -ExclusionPath $env:SystemRoot"\System32\GroupPolicy\Machine\Registry.pol"
       Add-MpPreference -ExclusionPath $env:SystemRoot"\System32\GroupPolicy\Machine\Registry.tmp"
       Add-MpPreference -ExclusionPath $env:userprofile"\NTUser.dat"
+      Add-MpPreference -ExclusionPath $env:SystemRoot"\System32\sru\*.log"
+      Add-MpPreference -ExclusionPath $env:SystemRoot"\System32\sru\*.dat"
+      Add-MpPreference -ExclusionPath $env:SystemRoot"\System32\sru\*.chk"
+      Add-MpPreference -ExclusionPath $env:SystemRoot"\System32\Configuration\MetaConfig.mof"
+      Add-MpPreference -ExclusionPath $env:SystemRoot"\System32\winevt\Logs\*.evtx"
+      Add-MpPreference -ExclusionPath $env:windir"\apppatch\sysmain.sdb"
+      Add-MpPreference -ExclusionPath $env:windir"\EventLog\Data\lastalive?.dat"
+      Add-MpPreference -ExclusionPath ${env:ProgramFiles(x86)}"\Windows Kits\10\Windows Performance Toolkit\WPRUI.exe"
+      Add-MpPreference -ExclusionPath ${env:ProgramFiles(x86)}"\Windows Kits\10\Windows Performance Toolkit\wpa.exe"
       ```
 
 5. Uninstall common Windows Store Metro Apps, In Powershell as admin run the following commands and press enter so they complete.
