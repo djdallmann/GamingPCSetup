@@ -37,8 +37,8 @@
       Add-MpPreference -ExclusionPath $env:SystemRoot"\System32\winevt\Logs\*.evtx"
       Add-MpPreference -ExclusionPath $env:windir"\apppatch\sysmain.sdb"
       Add-MpPreference -ExclusionPath $env:windir"\EventLog\Data\lastalive?.dat"
-      Add-MpPreference -ExclusionPath ${env:ProgramFiles(x86)}"\Windows Kits\10\Windows Performance Toolkit\WPRUI.exe"
-      Add-MpPreference -ExclusionPath ${env:ProgramFiles(x86)}"\Windows Kits\10\Windows Performance Toolkit\wpa.exe"
+      Add-MpPreference -ExclusionProcess ${env:ProgramFiles(x86)}"\Windows Kits\10\Windows Performance Toolkit\WPRUI.exe"
+      Add-MpPreference -ExclusionProcess ${env:ProgramFiles(x86)}"\Windows Kits\10\Windows Performance Toolkit\wpa.exe"
       ```
 
 5. Uninstall common Windows Store Metro Apps, In Powershell as admin run the following commands and press enter so they complete.
