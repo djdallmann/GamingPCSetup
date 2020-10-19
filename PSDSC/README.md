@@ -6,7 +6,6 @@ The Powershell DSC script focuses on the following:
 - Disables most if not all Windows 10 features and privacy/tracking settings, interfering Windows Update settings (P2P sharing)
 - High Performance power profile, USB selective suspend
 - Sets Windows Advanced Settings to 'Adjust for Best Performance', disables desktop visual features
-- Disables Ease of Access settings impacting keyboard and mouse, also Enhanced Pointer Precision etc
 - Disables GameBar, GameMode, GameDVR, Audio/Game Capture Settings
 
 For a complete list see [DSC Itemized Configuration List](ConfigList.md)
