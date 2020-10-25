@@ -11,7 +11,7 @@
    - This will help reduce the time spent scanning by Windows Defender as new files are downloaded and those used during gameplay (e.g. textures, sounds).
 
       ```
-      Add-MpPreference -ExclusionPath "C:\Program Files (x86)\Steam\"
+      Add-MpPreference -ExclusionPath ${env:ProgramFiles(x86)}"\Steam\"
       Add-MpPreference -ExclusionPath $env:LOCALAPPDATA"\Temp\NVIDIA Corporation\NV_Cache"
       Add-MpPreference -ExclusionPath $env:PROGRAMDATA"\NVIDIA Corporation\NV_Cache"
       Add-MpPreference -ExclusionPath $env:windir"\SoftwareDistribution\Datastore\Datastore.edb"
@@ -39,12 +39,12 @@
       Add-MpPreference -ExclusionPath $env:windir"\EventLog\Data\lastalive?.dat"
       Add-MpPreference -ExclusionProcess ${env:ProgramFiles(x86)}"\Windows Kits\10\Windows Performance Toolkit\WPRUI.exe"
       Add-MpPreference -ExclusionProcess ${env:ProgramFiles(x86)}"\Windows Kits\10\Windows Performance Toolkit\wpa.exe"
-      Add-MpPreference -ExclusionPath "C:\Windows\System32\WindowsPowerShell\v1.0\Modules"
-      Add-MpPreference -ExclusionPath "C:\Windows\System32\Configuration\DSCStatusHistory.mof"
-      Add-MpPreference -ExclusionPath "C:\Windows\System32\Configuration\DSCEngineCache.mof"
-      Add-MpPreference -ExclusionPath "C:\Windows\System32\Configuration\DSCResourceStateCache.mof"
-      Add-MpPreference -ExclusionPath "C:\Windows\System32\Configuration\ConfigurationStatus"
-      Add-MpPreference -ExclusionProcess "C:\Program Files (x86)\Common Files\Steam\SteamService.exe"
+      Add-MpPreference -ExclusionPath $env:SystemRoot"\System32\WindowsPowerShell\v1.0\Modules"
+      Add-MpPreference -ExclusionPath $env:SystemRoot"\System32\Configuration\DSCStatusHistory.mof"
+      Add-MpPreference -ExclusionPath $env:SystemRoot"\System32\Configuration\DSCEngineCache.mof"
+      Add-MpPreference -ExclusionPath $env:SystemRoot"\System32\Configuration\DSCResourceStateCache.mof"
+      Add-MpPreference -ExclusionPath $env:SystemRoot"\System32\Configuration\ConfigurationStatus"
+      Add-MpPreference -ExclusionProcess ${env:ProgramFiles(x86)}"\Common Files\Steam\SteamService.exe"
       ```
 
 5. Uninstall common Windows Store Metro Apps, In Powershell as admin run the following commands and press enter so they complete.
