@@ -39,6 +39,12 @@
       Add-MpPreference -ExclusionPath $env:windir"\EventLog\Data\lastalive?.dat"
       Add-MpPreference -ExclusionProcess ${env:ProgramFiles(x86)}"\Windows Kits\10\Windows Performance Toolkit\WPRUI.exe"
       Add-MpPreference -ExclusionProcess ${env:ProgramFiles(x86)}"\Windows Kits\10\Windows Performance Toolkit\wpa.exe"
+      Add-MpPreference -ExclusionPath "C:\Windows\System32\WindowsPowerShell\v1.0\Modules"
+      Add-MpPreference -ExclusionPath "C:\Windows\System32\Configuration\DSCStatusHistory.mof"
+      Add-MpPreference -ExclusionPath "C:\Windows\System32\Configuration\DSCEngineCache.mof"
+      Add-MpPreference -ExclusionPath "C:\Windows\System32\Configuration\DSCResourceStateCache.mof"
+      Add-MpPreference -ExclusionPath "C:\Windows\System32\Configuration\ConfigurationStatus"
+      Add-MpPreference -ExclusionProcess "C:\Program Files (x86)\Common Files\Steam\SteamService.exe"
       ```
 
 5. Uninstall common Windows Store Metro Apps, In Powershell as admin run the following commands and press enter so they complete.
