@@ -2,25 +2,14 @@
 # Collect Information about DPC and ISR using xperf
 #########
 #Update paths before using
-#Run once to collect the data, run again to stop and generate report.
+#Once the script is run it'll sleep for 5 seconds so you can switch 
+#to your game or application then it records for 30 seconds.
+#Adjust to best suite your conditions or scenario
 
-$fLocation = "D:\PerfMon\xperfstate.txt"
-
-if (Test-Path $fLocation) {
-    $TSTATE = import-clixml -path $fLocation
-} else {
-    $TSTATE = "OFF"
-    $TSTATE | export-clixml -path $fLocation
-}
-
-if ( $TSTATE -eq "ON" ) {
-	$date = date
-	xperf -d "D:\PerfMon\trace.etl"
-	xperf -i D:\PerfMon\trace.etl -o "D:\PerfMon\$($date.ToString("yyyyMMdd-hhmm")).txt" -a dpcisr
-	$TSTATE = "OFF"
-    $TSTATE | export-clixml -path $fLocation
-} else {
-	xperf.exe -on base+interrupt+dpc
-	$TSTATE = "ON"
-    $TSTATE | export-clixml -path $fLocation
-}
+$date = date
+Start-Sleep -s 5
+xperf -on Latency -stackwalk profile -BufferSize 1024
+write-host "Started"
+Start-Sleep -s 30
+xperf -d "D:\PerfMon\trace.etl"
+xperf -i D:\PerfMon\trace.etl -o "D:\PerfMon\$($date.ToString("yyyyMMdd-hhmm")).txt" -a dpcisr
