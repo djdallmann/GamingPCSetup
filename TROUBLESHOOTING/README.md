@@ -33,3 +33,7 @@ This section contains information that may help identify and resolve different c
     * https://fio.readthedocs.io/en/latest/fio_doc.html
    
 ### Hardware
+  * Affordable Advanced GQ EMF-390 Multi-Field, Multi-Function EMF Meter and RF Spectrum Power Analyzer
+    * This device can also take screenshots, and record data over longer periods of time and allow you to save and analyze it on your PC at a later date.
+    * Device also has an internal clock which can be syncd to your computers time, this will allow for more precise analysis for point in time references.
+    * https://www.gqelectronicsllc.com/comersus/store/comersus_viewItem.asp?idProduct=5678&idAffiliate=1169
