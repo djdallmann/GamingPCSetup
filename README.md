@@ -10,6 +10,8 @@ Use this page for a minimalistic look: https://djdallmann.github.io/GamingPCSetu
 
 If you do use this or redistribute this in any way, please give due credit.
 
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.me/ghgamingpcsetup)
+
 ## Steps
 [1. BIOS Configuration](BIOS/README.md)
 
