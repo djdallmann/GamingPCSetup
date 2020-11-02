@@ -1,6 +1,6 @@
 Registry keys accessed under the NDIS service/driver path
 
-The following is a list of keys that are either read or used by NDIS service/driver service/driver upon being initialized.
+The following is a list of keys that are either read or used by NDIS service/driver upon being initialized.
 
 \Registry\Machine\SYSTEM\ControlSet001\Services\NDIS\PARAMETERS : WppRecorder_TraceGuid
 \Registry\Machine\SYSTEM\ControlSet001\Services\NDIS\PARAMETERS : WppRecorder_RetainLastNDeletedLogs
