@@ -1,4 +1,4 @@
-This section contains guidance and recommendation on selecting peripherals.
+This section contains guidance and recommendation when selecting peripherals.
 
 [Mice](MICE/README.md)
 - Size and shape, which is best for you and considerations when upgrading
