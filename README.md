@@ -2,7 +2,7 @@
 A research and evidence based approach to optimizing your gaming PC, configuration and setup. Recommendations found in this guide are based on curated reputable [technical references](Technical%20References/README.md), and personal [research](RESEARCH/README.md).
 
  * Standardize your gaming PC builds
- * Periperhal selection, configuration and maintenance
+ * Peripheral selection, configuration and maintenance
  * Troubleshooting and isolating unusual performance behavior
  * A customizable [PowerShell Desired State Configuration (DSC)](PSDSC/README.md) to help ensure your settings always stay the same and quickly verified with a simple command.
 
