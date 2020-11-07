@@ -10,6 +10,7 @@ If you do use this or redistribute this in any way, please give due credit.
 [Peripherals](PERIPHERALS/README.md)
 - Should you clean your mouse sensor lens regularly, at what frequency and what cleaning methods are recommended?
 - Does the mouse LOD affect tracking on different surfaces, and do wear patterns also influence tracking with the same LOD?
+- How are the HyperX Fury S Speed and Control fabrics different in texture? Do they have noticeably different resistance as a tracking surface?
 
 [Windows Kernel](WINKERNEL/README.md)
 - If you modify Win32PrioritySeparation (process foreground and background quantum lengths) in the registry does it update in realtime or does it require a system restart?
