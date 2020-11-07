@@ -64,3 +64,17 @@
   * Particles on the mouse sensor lens may also impact your tests and observations, consult with or see your manufacturers guidelines for cleaning your sensors lens.
 
 </details>
+
+### Mousepad Surfaces
+#### Q: How are the HyperX Fury S Speed and Control fabrics different in texture? Do they have noticeably different resistance as a tracking surface?
+#### A: Yes, the overall physical texture of the mousepad is quite different, one being ultra smooth similar to silk (Speed) where as the other as a more rough feeling to the touch but not necessarily abrasive. Both however have very similar resistance when moving the mouse on the tracking surface when using 100% PTFE mouse skates.
+<details><summary>Findings and Analysis</summary>
+    
+* There are visual microscopic differences between each tracking surface, upon closer look you can see that the speed version of the HyperX Fury S has a much tigher weave in comparison giving the fabric which gives it an ultra smooth finish, the standard version of the pad although very consistent texture is much looser and feels abbrasive to the touch.
+![Mousepad - HyperX Fury S XXL - Wear](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Mousepad%20-%20HyperX%20Fury%20S%20-%20Speed%20vs%20Standard%20Fabric%20Comparison.png)
+* During use both provide nearly the same experience or feeling of resistance unlike some other cloth pads marketed as Control pads when using 100% PTFE mouse skates.
+* The primary potential differences otherwise are: 
+  * How each feel to the touch.
+  * If the mouse tracks better/worst given the differences in the weave/texture.
+  * The color of the fabrics, which may also have some impact to tracking. Speed has a colored pattern where as the Standard version is a solid black color.
+</details>
