@@ -25,8 +25,8 @@ The following is a list of items to consider when searching for your ideal perip
       - You can purchase third party mouse skates made with different materials, if you have found a mouse that meets all other criteria see misc information for notes on mouse skate replacements.
    9. The **mouse sensor** should provide optimal tracking on a variety of surfaces, high accuracy and a high max tracking speed.
    10. **Use the sites below to compare mouse shapes** and see what might fit best, compare mice you currently own or have previously used along with the guidelines above.
-      - https://gearsearch.gg/shape.html
-      - https://www.rtings.com/mouse/tools/3d-model-shape-compare
+       - https://gearsearch.gg/shape.html
+       - https://www.rtings.com/mouse/tools/3d-model-shape-compare
 
    ![gearsearch mouse shape comparison](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/gearsearch.gg%20-%20MouseShapeCompare.png)
 
