@@ -22,3 +22,28 @@
 5. Once the restart process is complete **use Windows Performance Analyzer to review the recorded information**, use the builtin filtering options to limit by process or registry paths.
 
 </details>
+
+#### Q: What are some of the registry keys accessed on boot? Do they reveal potentially hidden registry keys and values?
+#### A: There's a large amount of registry keys loaded on boot as the registry is intended to persist application and operating system configuration state between uses. There does appear to be many potentially hidden registry keys for drivers and operating system functions based on the attempted access patterns, however most of these are often without documentation so to prove there is any difference may require further research, performance analysis, trial and error. See findings and analysis for more details.
+
+<details><summary>Findings and Analysis</summary>
+  
+* Using Windows Performance Analyzer and Recorder as described in [Is there an easy way to see what registry keys are accessed or modified?](https://github.com/djdallmann/GamingPCSetup/tree/master/RESEARCH/WINREGISTRY#q-is-there-an-easy-way-to-see-what-registry-keys-are-accessed-or-modified-by-every-process-or-dll-upon-execution-or-during-runtime), the following key value pairs were only some of the notable identified values during the boot process of my machine.
+  * [AudioSrv](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_audiosrv.txt)
+  * [Desktop Window Manager (dwm)](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_dwm.txt)
+  * [Windows OS Supplementary Graphics Drivers Options](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_graphicsdrivers.txt)
+  * [Display Adapter Class](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_displayadapter_class_4d36e968-e325-11ce-bfc1-08002be10318.txt)
+  * [Network Adapter Class](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_networkadapter_class_4d36e972-e325-11ce-bfc1-08002be10318.txt)
+  * [Keyboard Class](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_kbdclass.txt)
+  * [Keyboard HID](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_kbdhid.txt)
+  * [Mouse Class](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_mouclass.txt)
+  * [Mouse HID](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_mouhid.txt)
+  * [Kernel Velocity](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_kernelvelocity.txt)
+  * [Multimedia Class Scheduler Service](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_mmcss.txt)
+  * [NVIDIA Display Driver](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_nvlddmkm.txt)
+  * [Storage AHCI](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_storahci.txt)
+  * [Storage NVME](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_stornvme.txt)
+  * [Storage TCPIP](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_tcpip.txt)
+  * [Network Driver Interface Specification (NDIS)](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_ndis.txt)
+
+</details>
