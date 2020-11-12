@@ -109,4 +109,11 @@ No
 
 * At this time it is assumed that when NoLazyMode is enabled (DWORD: 0x1) it likely uses more cycles and becomes more aggressive by reducing idling/sleeping and operates in a more realtime mode. 
 * This can also be validated by context switch, cycle, frequency and cpu usage analysis which may come at a later date to help determine if the setting has any positive influence.
+
+**Registry Key Path:**
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile
+"NoLazyMode"=dword:00000001
+```
+
 </details>
