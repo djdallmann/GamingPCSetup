@@ -20,3 +20,15 @@ If you do use this or redistribute this in any way, please give due credit.
 
 [Windows Registry](WINREGISTRY/README.md)
 - Is there an easy way to see what registry keys are accessed or modified by every process or dll upon execution or during runtime?
+- What are some of the registry keys accessed on boot? Do they reveal potentially hidden registry keys and values?
+
+[Windows Services](WINSERVICES/README.md)
+* **Multimedia Class Scheduler Service (MMCSS)**
+  - What is Multimedia Class Scheduler Service (MMCSS)?
+  - Is it possible to tell what processes register to MMCSS and can you determine which tasks they requested?
+  - What types of MMCSS tasks are requested by common applications?
+  - Does CSRSS.exe (Client/Server Run-Time Subsystem) or DWM.exe (Desktop Window Manager) ever use MMCSS?
+  - Do any processes or threads register with MMCSS during the boot process?
+  - Do any processes or threads register with MMCSS task DisplayPostProcessing?
+  - Do any processes or threads register with MMCSS task Games?
+  - What the heck is NoLazyMode, is it real? What does it do?
