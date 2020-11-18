@@ -59,6 +59,7 @@
   * csrss.exe - *By default none*, even during early boot process. See other Q & A for more info on when it uses MMCSS.
   * fortnite client/game - **Audio**
   * r5apex.exe - **Both Audio and Pro Audio**
+  * taskhostw.exe - **Audio**
   
 **Note:** Keep in mind that the requests to MMCSS are typically only for threads which process audio, to date I have not yet confirmed any threads are associated to input or graphics processing.
 </details>
