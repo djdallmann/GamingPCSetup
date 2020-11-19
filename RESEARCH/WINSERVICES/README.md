@@ -118,3 +118,31 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\Syste
 ```
 
 </details>
+
+#### Q: What does the hidden MMCSS Latency Sensitive registry key actually do? What is the default value?
+#### A: Latency Sensitive refers to Latency Sensitive Hints, essentially under cpu heavy conditions MMCSS can create latency sensitive hints to the processor power performance engine to help adjust performance state (PoLatencySensitive). When this condition occurs we see **TurboEngaged** events in MMCSS provider event audit and corresponding Latency Sensitive Hints from SYSTEM in the Windows Kernel Power Provider.
+<details><summary>Findings and Analysis</summary>
+ 
+* Latency Sensitive refers to Latency Sensitive Hints, essentially under heavy cpu use MMCSS can create latency sensitive hints 
+to the processor power performance engine to help adjust performance state (PoLatencySensitive). When this condition occurs we see **TurboEngaged** events 
+in MMCSS provider event audit and corresponding Latency Sensitive Hints from SYSTEM in the **Windows Kernel Power Provider.**
+
+![MMCSS.sys Latency Sensitive](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/MMCSS.sys%20-%20Latency%20Sensitive.PNG)
+
+* The **default value of Latency Sensitive is TRUE** at least on Windows 10, in order to set this to FALSE in MMCSS globally it must be added to all tasks.
+* Adjusting the values in the hidden power plan settings increases the frequency of those Latency Sensitive Hints for MMCSS tasks by 
+lowering the threshold and response for those scenarios. The documentation and impact of changing these settings seems sparse
+so I cannot recommend changing these values at this time but it is noteworthy, these settings impact the entire system. 
+On a similar note the Client/Server Runtime Subsystem (CSRSS) process is continually generating latency sensitive hints on my computer
+likely since its performance is directly tied to user experience and many components on the windows system including raw input interface 
+between kernel and user space for mouse and keyboard. There also appears to be different types of Latency Sensitive Hint Types according to the event trails.
+ 
+To unhide those values in the current power plan:
+```
+powercfg -attributes SUB_PROCESSOR 619b7505-003b-4e82-b7a6-4dd29c300971 -ATTRIB_HIDE
+powercfg -attributes SUB_PROCESSOR 619b7505-003b-4e82-b7a6-4dd29c300972 -ATTRIB_HIDE
+```
+
+Related Power Options:
+   * https://docs.microsoft.com/en-us/windows-hardware/customize/power-settings/options-for-perf-state-engine-perflatencyhint
+</details>
