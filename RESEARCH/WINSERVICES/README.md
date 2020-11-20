@@ -208,7 +208,7 @@ Unfortunately this has zero impact on how many threads total or per process that
 </details></br>
 
 #### Q: Does the MMCSS task registry setting SFIO Priority actually change the IO Priority or does it do nothing like Microsoft's documentation states?
-Microsoft's documention is spot on again, the value of this registry setting does not influence IO Priority of the MMCSS registered thread.
+Microsoft's documentation is spot on again, the value of this registry setting does not influence IO Priority of the MMCSS registered thread.
 
 <details><summary>Findings and Analysis</summary>
  
