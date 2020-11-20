@@ -1,7 +1,7 @@
 ## Windows Kernel
 ### Win32PrioritySeparation
 #### Q: If you modify Win32PrioritySeparation (process foreground and background quantum lengths) in the registry does it update in realtime or does it require a system restart?
-#### A: It updates in realtime which can be confirmed using WinDBG via Live Kernel debug
+It updates in realtime which can be confirmed using WinDBG via Live Kernel debug
 
 <details><summary>Findings and Analysis</summary>
 
@@ -37,11 +37,11 @@ XLSX File: [Win32PrioritySeparation Quantum Unit Mapping](https://github.com/djd
   * https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/-process--set-process-context-
   * https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/dt--display-type-
   * https://blogs.msdn.microsoft.com/embedded/2006/02/20/know-thy-tick/
-</details>
+</details></br>
 
 ### Timer Resolution
 #### Q: Can you micro-increment/adjust the windows timer resolution?
-#### A: Yes, but it isn't always consistent see findings for more information.
+Yes, but it isn't always consistent see findings for more information.
 
 <details><summary>Findings and Analysis</summary>
 
@@ -54,10 +54,10 @@ ntdll.dll
 ```
 * See results:
 [timermicroadjust.txt](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/timermicroadjust.txt)
-</details>
+</details></br>
 
 #### Q: Can you monitor which programs requested specific timer resolutions over a period of time?
-#### A: Yes, there are a few ways to monitor these requests here are two common methods, powercfg.exe energy report and a Windows Performance Recorder power usage resource analysis capture. See findings and analysis for the procedures.
+Yes, there are a few ways to monitor these requests here are two common methods, powercfg.exe energy report and a Windows Performance Recorder power usage resource analysis capture. See findings and analysis for the procedures.
 <details><summary>Findings and Analysis</summary>
     
 1. The **PowerCfg tool** built into windows has many functions, one of those is the energy report which will monitor the PC over a period of time and report any issues related to power consumption, timer resolution being one of those factors which changes the behavior of the computer which increases power consumption.
@@ -73,11 +73,11 @@ ntdll.dll
     4. Open the recording in Windows Performance Analyzer
     5. Expand the **Power section** then scrol down to the bottom and expand the **Timer Resolution section** then double click **Timer Resolution Requests** to load the information.
     6. Review and analyze the displayed information, more notably the **Process** column and associated column **Resolution (us)**.
-</details>
+</details></br>
 
 ### Keyboard DPC and Interrupt Latency (PS/2 VS USB)
 #### Q: Does PS/2 keyboard driver provide lower DPC latency than USB keyboard driver?
-#### A: No, not during the tests I performed but PS/2 keyboard driver latency was more stable.
+No, not during the tests I performed but PS/2 keyboard driver latency was more stable.
 
 <details><summary>Findings and Analysis</summary>
 
@@ -87,4 +87,4 @@ ntdll.dll
 
 * See results:
 [KeyboardDPCandInterruptLatency-PS2vsUSB.txt](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/KeyboardDPCandInterruptLatency-PS2vsUSB.txt)
-</details>
+</details></br>
