@@ -145,4 +145,20 @@ powercfg -attributes SUB_PROCESSOR 619b7505-003b-4e82-b7a6-4dd29c300972 -ATTRIB_
 
 Related Power Options:
    * https://docs.microsoft.com/en-us/windows-hardware/customize/power-settings/options-for-perf-state-engine-perflatencyhint
+   
+Registry Key Path:
+```
+HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\MultiMedia\systemprofile\Tasks\<TASKNAME>\
+String Value: Latency Sensitive
+Values: True or False
+```
+</details></br>
+
+#### Q: Does the MMCSS task Clock Rate registry setting do anything?
+Firstly no, I haven't found any evidence that this setting has any impact which aligns with Microsofts Documentation but it can... yes I know very click baity. See findings and analysis for more information.
+<details><summary>Findings and Analysis</summary>
+ 
+* During my tests of manipulating the Clockrate MMCSS task had no impact on MMCSS cycles, timer resolution or anything else I could think of at the time, Microsofts documentation states specifically **Starting with Windows 7 and Windows Server 2008 R2, this guarantee was removed to reduce system power consumption.** which seems to align with everything I checked.
+* There is one issue though which actually applies to MANY of the MMCSS task registry settings and parent keys, and that is **if you set a value too high (above 10,000 the default in this case), too low (~2,000, not sure of exact range tried a few) that MMCSS task will cease to function** while others will continue to work and receive boosts, this effectively creates a way of having MMCSS run while blocking certain MMCSS tasks. I will make a specific entry in this research page for other settings, examples and what impacts it could have.
+* On the last bullet point, this might explain why people say they can feel a difference changing the Clock Rate registry setting and that is because the MMCSS task completely ceases to function.
 </details></br>
