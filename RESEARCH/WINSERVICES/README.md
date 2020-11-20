@@ -179,9 +179,18 @@ The BackgroundPriority registry key influences the **Base Thread priority** when
 | 4  | 11 |
 | 5  | 12 |
 | 6  | 13 |
-| 7  | 14  |
-| 8  | 15  |
+| 7  | 14 |
+| 8  | 15 |
 
 As noted above, this only applies when Scheduling Category is LOW.
 
  </details></br>
+ 
+#### Q: Does the hidden MMCSS SystemProfile registry setting LazeModeTimeout alter the running state?
+Yes, this value does in fact alter the settings in the MMCSS Scheduler sleep cycle for idle time periods related to  the events **IdleDetectionLazy** and **SleepRealtimeLazy**.
+<details><summary>Findings and Analysis</summary>
+
+* This one was pretty easy to confirm, I changed the value then compared it to what MMCSS event provider was recording. This value alters the lazy sleep timeout periods globally, more information on what impact this has on the MMCSS scheduler in another MMCSS research article.
+
+   ![MMCSS.sys - LazyModeTimeout](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/MMCSS.sys%20-%20LazyModeTimeout.PNG)
+</details></br>
