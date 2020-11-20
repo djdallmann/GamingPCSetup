@@ -163,11 +163,11 @@ Firstly no, I haven't found any evidence that this setting has any impact which 
 * On the last bullet point, this might explain why people say they can feel a difference changing the Clock Rate registry setting and that is because the MMCSS task completely ceases to function.
 </details></br>
 
-#### Q: What is the BackgroundPriority mmcss registry setting? Does it have anything to do with the Background registry key?
-The BackgroundPriority registry key influences the **Base Thread priority** when the **Scheduling Category is Low**, and has no direct relation to the Background registry key. See findings and analysis for more information.
+#### Q: What is the BackgroundPriority mmcss registry setting? Does it have anything to do with the Background Only registry key?
+The BackgroundPriority registry key influences the **Base Thread priority** when the **Scheduling Category is Low**, and has no direct relation to the Background Only registry key. See findings and analysis for more information.
 <details><summary>Findings and Analysis</summary>
  
-* During my analysis of different MMCSS tasks Audio and Pro Audio, the Background registry key value (True or False) had no direct relationship to the BackgroundPriority value. 
+* During my analysis of different MMCSS tasks Audio and Pro Audio, the Background Only registry key value (True or False) had no direct relationship to the BackgroundPriority value. 
 * When the **Scheduling Category is LOW, the base priority of the thread is not influenced by the tasks Priority setting**. When set to LOW the thread has a base value of 8, incrementing BackgroundPriority (default is 1) will boost the base priority giving you a maximum base priority of 15 (just before REALTIME 16 priority class).
 
 **Thread Base Priority to BackgroundPriority Mapping**
@@ -181,5 +181,7 @@ The BackgroundPriority registry key influences the **Base Thread priority** when
 | 6  | 13 |
 | 7  | 14  |
 | 8  | 15  |
+
+As noted above, this only applies when Scheduling Category is LOW.
 
  </details></br>
