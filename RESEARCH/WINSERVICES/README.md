@@ -206,3 +206,14 @@ Unfortunately this has zero impact on how many threads total or per process that
 * A similar test was done however in relation to **MaxThreadsTotal**, the assumption of this setting is to globally restrict the total amount of threads that can register with MMCSS, in all tests the total threads registered in MMCSS were not restricted in those scenarios.
 
 </details></br>
+
+#### Q: Does the MMCSS task registry setting SFIO Priority actually change the IO Priority or does it do nothing like Microsoft's documentation states?
+Microsoft's documention is spot on again, the value of this registry setting does not influence IO Priority of the MMCSS tasks registered thread.
+
+<details><summary>Findings and Analysis</summary>
+ 
+* Microsofts documentation for MMCSS states the following and is again it's spot on.
+  * SFIO Priority	REG_SZ	The scheduled I/O priority. This value can be set to Idle, Low, Normal, or High. **This value is not used.**
+* To test if this value had any impact I changed the setting of each to one of the expected values **Idle, Low, Normal, and High** and ensured that MMCSS driver was restarted to re-read the new configuration from the registry. Kicked off a new capture of the MMCSS provider and launched some multimedia applications then let it run for a bit and  stopped the capture. With the multimedia applications still running I reviewed the MMCSS provider information and found the associated Thread ID and analyzed the associated thread properties using Microsoft Windows Sysinternals Process Explorer and **observed that the IO Priority was not influenced in any scenario**.
+
+</details></br>
