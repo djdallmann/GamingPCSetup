@@ -16,7 +16,7 @@ MMCSS has been a part of the Microsoft Windows operating system for quite a whil
   * Pro Audio
   * Window Manager
   
-</details>
+</details></br>
 
 #### Q: Is it possible to tell what processes register to MMCSS and can you determine which tasks they requested?
 Yes, you can capture quite a bit of detail about MMCSS activities by capturing the MMCSS ETW trace provider with a tool such as **xperf or Windows Performance Analyzer and Recorder** such as what processes requested MMCSS, the requested task (e.g. Audio, Pro Audio), information about the sleep cycle/system responsiveness and when MMCSS has boosted or adjusted a processes priority and to what value.
@@ -38,7 +38,7 @@ Yes, you can capture quite a bit of detail about MMCSS activities by capturing t
 
 ![winservices_MMCSSETW_WPADetailSummary](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/winservices_MMCSSETW_WPADetailSummary.png)
 
-</details>
+</details></br>
 
 #### Q: What types of MMCSS tasks are requested by common applications?
 The most commonly requested task is Audio, this will occur naturally when Windows applications make requests to Microsofts High Level Apis for Audio playback. Browsers based on Chromium such as the new Microsoft Edge and the Google Chrome browser use **Pro Audio**. See findings and analysis for other common processes including some old and modern games.
@@ -62,7 +62,7 @@ The most commonly requested task is Audio, this will occur naturally when Window
   * taskhostw.exe - **Audio**
   
 **Note:** Keep in mind that the requests to MMCSS are typically only for threads which process audio, to date I have not yet confirmed any threads are associated to input or graphics processing.
-</details>
+</details></br>
 
 #### Q: Does CSRSS.exe (Client/Server Run-Time Subsystem) or DWM.exe (Desktop Window Manager) ever use MMCSS?
 Not by default or without user intervention but... there is a DWM api function call which you can use to allow DWM/CSRSS to opt into MMCSS. See findings and analysis for more information.
@@ -78,25 +78,25 @@ Not by default or without user intervention but... there is a DWM api function c
 * Microsoft Docs Reference: DwmEnableMMCSS function (dwmapi.h)
   * https://docs.microsoft.com/en-us/windows/win32/api/dwmapi/nf-dwmapi-dwmenablemmcss
 
-</details>
+</details></br>
 
 #### Q: Do any processes or threads register with MMCSS during the boot process?
 No threads or process have been observed using MMCSS during the boot process.
 <details><summary>Findings and Analysis</summary>
 No
-</details>
+</details></br>
 
 #### Q: Do any processes or threads register with MMCSS task DisplayPostProcessing?
 No threads or process have been observed using this MMCSS task both during runtime or the boot process.
 <details><summary>Findings and Analysis</summary>
 No
-</details>
+</details></br>
 
 #### Q: Do any processes or threads register with MMCSS task Games?
 No threads or process have been observed using this MMCSS task in both old or new games.
 <details><summary>Findings and Analysis</summary>
 No
-</details>
+</details></br>
 
 #### Q: What the heck is NoLazyMode, is it real? What does it do?
 Yes, NoLazyMode is a real MMCSS setting which can be seen through registry key access monitoring and is also identified by extracting strings from mmcss.sys (driver). Current analysis suggests that the MMCSS scheduler sleep cycle and idle detection are different when enabled vs disabled. See findings and analysis for more details.
@@ -117,7 +117,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\Syste
 "NoLazyMode"=dword:00000001
 ```
 
-</details>
+</details></br>
 
 #### Q: What does the hidden MMCSS Latency Sensitive registry key actually do? What is the default value?
 Latency Sensitive refers to Latency Sensitive Hints, essentially under cpu heavy conditions MMCSS can create latency sensitive hints to the processor power performance engine to help adjust performance state (PoLatencySensitive). When this condition occurs we see **TurboEngaged** events in MMCSS provider event audit and corresponding Latency Sensitive Hints from SYSTEM in the Windows Kernel Power Provider.
@@ -145,4 +145,4 @@ powercfg -attributes SUB_PROCESSOR 619b7505-003b-4e82-b7a6-4dd29c300972 -ATTRIB_
 
 Related Power Options:
    * https://docs.microsoft.com/en-us/windows-hardware/customize/power-settings/options-for-perf-state-engine-perflatencyhint
-</details>
+</details></br>
