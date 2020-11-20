@@ -1,7 +1,7 @@
 ## Peripherals
 ### Mouse Sensor Lens
 #### Q: Should you clean your mouse sensor lens regularly, at what frequency and what cleaning methods are recommended?
-#### A: Yes, you should try to clear any debris not only from the lens but the tracking surface itself regularly to reduce the likelihood of such particles affecting the sensors capability to track accurately. Cleaning methods should be those simlar to those of camera sensors and lens. See findings and analysis for more information.
+Yes, you should try to clear any debris not only from the lens but the tracking surface itself regularly to reduce the likelihood of such particles affecting the sensors capability to track accurately. Cleaning methods should be those simlar to those of camera sensors and lens. See findings and analysis for more information.
 <details><summary>Findings and Analysis</summary>
     
 * If you use a fabric tracking surface there is a higher liklihood it has many particles, fibers, hair or other substances which can then be transfered onto your mouse sensor lens. 
@@ -29,11 +29,11 @@
   * Use a mildly adhesive lint roller to remove smaller debris and particles prior to cleaning the mouse sensor lens.
   * You can purchase an Illuminated Jewelers Eye Loupe with approximately 40-60x zoom which is affordable, portable and functional to observe the conditions of your mousepad or mouse sensor lens.
 
-</details>
+</details></br>
 
 ### Mouse Lift Off Distance (LOD)
 #### Q: Does the mouse LOD affect tracking on different surfaces, and do wear patterns also influence tracking with the same LOD?
-#### A: The LOD may have positive or negative influence on mouse tracking, users experience, type of surface and its particulates will also influence the sensors capability to track movement accurately.
+The LOD may have positive or negative influence on mouse tracking, users experience, type of surface and its particulates will also influence the sensors capability to track movement accurately.
 <details><summary>Findings and Analysis</summary>
     
 * The lift of distance (LOD) of a mouse refers to the distance in which the sensor will register input from its surface, and usually measured in millimeters.
@@ -63,11 +63,11 @@
   * Test regularly for tracking inconsistencies, compare slightly worn areas to less used areas.
   * Particles on the mouse sensor lens may also impact your tests and observations, consult with or see your manufacturers guidelines for cleaning your sensors lens.
 
-</details>
+</details></br>
 
 ### Mousepad Surfaces
 #### Q: How are the HyperX Fury S Speed and Control fabrics different in texture? Do they have noticeably different resistance as a tracking surface?
-#### A: Yes, the overall physical texture of the mousepad is quite different, one being ultra smooth similar to silk (Speed) where as the other as a more rough feeling to the touch but not necessarily abrasive. Both however have very similar resistance when moving the mouse on the tracking surface when using 100% PTFE mouse skates.
+Yes, the overall physical texture of the mousepad is quite different, one being ultra smooth similar to silk (Speed) where as the other as a more rough feeling to the touch but not necessarily abrasive. Both however have very similar resistance when moving the mouse on the tracking surface when using 100% PTFE mouse skates.
 <details><summary>Findings and Analysis</summary>
     
 * There are visual microscopic differences between each tracking surface, upon closer look you can see that the speed version of the HyperX Fury S has a much tigher weave in comparison giving the fabric which gives it an ultra smooth finish, the standard version of the pad although very consistent texture is much looser and feels abbrasive to the touch.
@@ -77,4 +77,4 @@
   * How each feel to the touch.
   * If the mouse tracks better/worst given the differences in the weave/texture.
   * The color of the fabrics, which may also have some impact to tracking. Speed has a colored pattern where as the Standard version is a solid black color.
-</details>
+</details></br>
