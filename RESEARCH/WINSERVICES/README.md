@@ -1,7 +1,7 @@
 ## Windows Services
 ### Multimedia Class Scheduler Service (MMCSS)
 #### Q: What is Multimedia Class Scheduler Service (MMCSS)?
-#### A: MMCSS has been a part of the Microsoft Windows operating system for quite a while and was originally designed to improve time sensitive processing for multimedia applications by ensuring those processes/threads get the cpu time they need while still allowing lower priority applications to function. Developers can register their application threads with MMCSS under a customizable set of multimedia Task groups which define what type of priority and cpu resources they should receive.
+MMCSS has been a part of the Microsoft Windows operating system for quite a while and was originally designed to improve time sensitive processing for multimedia applications by ensuring those processes/threads get the cpu time they need while still allowing lower priority applications to function. Developers can register their application threads with MMCSS under a customizable set of multimedia Task groups which define what type of priority and cpu resources they should receive.
 <details><summary>Findings and Analysis</summary>
 
 * **For more complete information see the official docs page:**
@@ -19,7 +19,7 @@
 </details>
 
 #### Q: Is it possible to tell what processes register to MMCSS and can you determine which tasks they requested?
-#### A: Yes, you can capture quite a bit of detail about MMCSS activities by capturing the MMCSS ETW trace provider with a tool such as **xperf or Windows Performance Analyzer and Recorder** such as what processes requested MMCSS, the requested task (e.g. Audio, Pro Audio), information about the sleep cycle/system responsiveness and when MMCSS has boosted or adjusted a processes priority and to what value.
+Yes, you can capture quite a bit of detail about MMCSS activities by capturing the MMCSS ETW trace provider with a tool such as **xperf or Windows Performance Analyzer and Recorder** such as what processes requested MMCSS, the requested task (e.g. Audio, Pro Audio), information about the sleep cycle/system responsiveness and when MMCSS has boosted or adjusted a processes priority and to what value.
 <details><summary>Findings and Analysis</summary>
 
 * Quite a bit of information can be learned about how MMCSS functions and that information can be collected and analyzed with it's MMCSS ETW trace provider such as when MMCSS has chosen to boost the priority of a process, and to what value, what multimedia task group was selected, the idle/sleep cycles (lazy or **no lazy** function). This information and those such as context switchs, cycle and frequency analysis, it may be possible to optimize the values for a given scenario or your computer to improve overall responsiveness and efficiency.
@@ -41,7 +41,7 @@
 </details>
 
 #### Q: What types of MMCSS tasks are requested by common applications?
-#### A: The most commonly requested task is Audio, this will occur naturally when Windows applications make requests to Microsofts High Level Apis for Audio playback. Browsers based on Chromium such as the new Microsoft Edge and the Google Chrome browser use **Pro Audio**. See findings and analysis for other common processes including some old and modern games.
+The most commonly requested task is Audio, this will occur naturally when Windows applications make requests to Microsofts High Level Apis for Audio playback. Browsers based on Chromium such as the new Microsoft Edge and the Google Chrome browser use **Pro Audio**. See findings and analysis for other common processes including some old and modern games.
 <details><summary>Findings and Analysis</summary>
 
 * Below is a basic list of common processes including some new and old games and the MMCSS tasks they register under:
@@ -65,7 +65,7 @@
 </details>
 
 #### Q: Does CSRSS.exe (Client/Server Run-Time Subsystem) or DWM.exe (Desktop Window Manager) ever use MMCSS?
-#### A: Not by default or without user intervention but... there is a DWM api function call which you can use to allow DWM/CSRSS to opt into MMCSS. See findings and analysis for more information.
+Not by default or without user intervention but... there is a DWM api function call which you can use to allow DWM/CSRSS to opt into MMCSS. See findings and analysis for more information.
 <details><summary>Findings and Analysis</summary>
 
 * Both Desktop Window Manager (DWM) and Client/Server Run-Time Subsystem (CSRSS) do not register with MMCSS at anytime without user intervention or the use of the DWM API DwmEnableMMCSS function, when this function is used they register under the following multimedia task groups.
@@ -81,25 +81,25 @@
 </details>
 
 #### Q: Do any processes or threads register with MMCSS during the boot process?
-#### A: No threads or process have been observed using MMCSS during the boot process.
+No threads or process have been observed using MMCSS during the boot process.
 <details><summary>Findings and Analysis</summary>
 No
 </details>
 
 #### Q: Do any processes or threads register with MMCSS task DisplayPostProcessing?
-#### A: No threads or process have been observed using this MMCSS task both during runtime or the boot process.
+No threads or process have been observed using this MMCSS task both during runtime or the boot process.
 <details><summary>Findings and Analysis</summary>
 No
 </details>
 
 #### Q: Do any processes or threads register with MMCSS task Games?
-#### A: No threads or process have been observed using this MMCSS task in both old or new games.
+No threads or process have been observed using this MMCSS task in both old or new games.
 <details><summary>Findings and Analysis</summary>
 No
 </details>
 
 #### Q: What the heck is NoLazyMode, is it real? What does it do?
-#### A: Yes, NoLazyMode is a real MMCSS setting which can be seen through registry key access monitoring and is also identified by extracting strings from mmcss.sys (driver). Current analysis suggests that the MMCSS scheduler sleep cycle and idle detection are different when enabled vs disabled. See findings and analysis for more details.
+Yes, NoLazyMode is a real MMCSS setting which can be seen through registry key access monitoring and is also identified by extracting strings from mmcss.sys (driver). Current analysis suggests that the MMCSS scheduler sleep cycle and idle detection are different when enabled vs disabled. See findings and analysis for more details.
 <details><summary>Findings and Analysis</summary>
 
 * The NoLazyMode MMCSS registry key has been floating around the web although no conclusive evidence or measurement has been given surrounding it's use nor does it have any official documentation by Microsoft. 
@@ -120,7 +120,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\Syste
 </details>
 
 #### Q: What does the hidden MMCSS Latency Sensitive registry key actually do? What is the default value?
-#### A: Latency Sensitive refers to Latency Sensitive Hints, essentially under cpu heavy conditions MMCSS can create latency sensitive hints to the processor power performance engine to help adjust performance state (PoLatencySensitive). When this condition occurs we see **TurboEngaged** events in MMCSS provider event audit and corresponding Latency Sensitive Hints from SYSTEM in the Windows Kernel Power Provider.
+Latency Sensitive refers to Latency Sensitive Hints, essentially under cpu heavy conditions MMCSS can create latency sensitive hints to the processor power performance engine to help adjust performance state (PoLatencySensitive). When this condition occurs we see **TurboEngaged** events in MMCSS provider event audit and corresponding Latency Sensitive Hints from SYSTEM in the Windows Kernel Power Provider.
 <details><summary>Findings and Analysis</summary>
  
 * Latency Sensitive refers to Latency Sensitive Hints, essentially under heavy cpu use MMCSS can create latency sensitive hints 
