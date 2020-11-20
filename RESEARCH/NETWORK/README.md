@@ -1,7 +1,7 @@
 ## Network
 ### Intel Interrupt Moderation
 #### Q: Does interrupt moderation rate have an effect on deferred procedure call (DPC) or interrupt service routine (ISR) latency, and what are the key differences between each of the settings?
-#### A: Yes, during the simulations it was found that it had more of an impact on DPC latency processing times over ISR, however each setting didn't scale equally as higher interrupt moderation values were used however this may be dependant other factors such as RSS, RSS affinity, rx/tx buffers, and timer resolution and the traffic simulation itself.
+Yes, during the simulations it was found that it had more of an impact on DPC latency processing times over ISR, however each setting didn't scale equally as higher interrupt moderation values were used however this may be dependant other factors such as RSS, RSS affinity, rx/tx buffers, and timer resolution and the traffic simulation itself.
 
 <details><summary>Findings and Analysis</summary>
 
@@ -72,11 +72,11 @@ but DPC latency performance does not change regardless
   * The proper ordering of these settings from **least to most** interrupt requests are:
     * Extreme > High > Medium > Adaptive (Also dependent on load) > Low > Minimal > Off/Disabled
   * Overall **Medium** seemed to have the least impact on user experience/gaming while still providing low DPC latency. A very low DPC latency can still be achieved with a medium interrupt moderation value in which DPCs are processed 90% equal to or below 1 usecs for high volume small packet UDP communications (gaming).
-</details>
+</details></br>
 
 ### NetworkThrottlingIndex
 #### Q: Disabling NetworkThrottlingIndex feature improves overall network performance and latency
-#### A: Not completely true, NDIS.sys DPC latency is increased quite notably when disabled.
+Not completely true, NDIS.sys DPC latency is increased quite notably when disabled.
 
 <details><summary>Findings and Analysis</summary>
 
@@ -104,4 +104,4 @@ but DPC latency performance does not change regardless
     
     ![NetworkThrottlingIndex Enabled](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/NDIS.sys%20-%20Intel%20-%20DPC%20Latency%20Optimized.png)
     
-</details>
+</details></br>
