@@ -1,7 +1,7 @@
 ## Windows Registry
 ### Registry Keys and Values
 #### Q: Is there an easy way to see what registry keys are accessed or modified by every process or dll upon execution or during runtime?
-#### A: Yes, there are two relatively easy methods to check for this activity, Windows Sysinternals Process Monitor and Windows Performance Analyzer and Recorder. Windows Sysinternals Process Monitor is best used during realtime analysis, launching a process or restarting a service whereas Windows Performance Analyzer and Recorder also allows you to capture key information during the boot process.
+Yes, there are two relatively easy methods to check for this activity, Windows Sysinternals Process Monitor and Windows Performance Analyzer and Recorder. Windows Sysinternals Process Monitor is best used during realtime analysis, launching a process or restarting a service whereas Windows Performance Analyzer and Recorder also allows you to capture key information during the boot process.
 
 <details><summary>Findings and Analysis</summary>
 
@@ -21,10 +21,10 @@
 ![WindowsPerformanceRecorderRegistryBootProcess](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/WindowsPerformanceRecorderRegistryBootProcess.png)
 5. Once the restart process is complete **use Windows Performance Analyzer to review the recorded information**, use the builtin filtering options to limit by process or registry paths.
 
-</details>
+</details></br>
 
 #### Q: What are some of the registry keys accessed on boot? Do they reveal potentially hidden registry keys and values?
-#### A: There's a large amount of registry keys loaded on boot as the registry is intended to persist application and operating system configuration state between uses. There does appear to be many potentially hidden registry keys for drivers and operating system functions based on the attempted access patterns, however most of these are often without documentation so to prove there is any difference may require further research, performance analysis, trial and error. See findings and analysis for more details.
+There's a large amount of registry keys loaded on boot as the registry is intended to persist application and operating system configuration state between uses. There does appear to be many potentially hidden registry keys for drivers and operating system functions based on the attempted access patterns, however most of these are often without documentation so to prove there is any difference may require further research, performance analysis, trial and error. See findings and analysis for more details.
 
 <details><summary>Findings and Analysis</summary>
   
@@ -46,4 +46,4 @@
   * [Storage TCPIP](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_tcpip.txt)
   * [Network Driver Interface Specification (NDIS)](https://github.com/djdallmann/GamingPCSetup/blob/master/RESEARCH/FINDINGS/registrykeys_ndis.txt)
 
-</details>
+</details></br>
