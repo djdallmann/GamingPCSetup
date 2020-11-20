@@ -209,7 +209,6 @@ Unfortunately this has zero impact on how many threads total or per process that
 
 #### Q: Does the MMCSS task registry setting SFIO Priority actually change the IO Priority or does it do nothing like Microsoft's documentation states?
 Microsoft's documentation is spot on again, the value of this registry setting does not influence IO Priority of the MMCSS registered thread.
-
 <details><summary>Findings and Analysis</summary>
  
 * Microsofts documentation for MMCSS states the following and is again it's spot on.
@@ -217,3 +216,76 @@ Microsoft's documentation is spot on again, the value of this registry setting d
 * To test if this value had any impact I changed the setting for each scenario to one of the expected values **Idle, Low, Normal, and High** and ensured that MMCSS driver was restarted to re-read the new configuration from the registry. Kicked off a new capture of the MMCSS provider and launched some multimedia applications then let it run for a bit and  stopped the capture. With the multimedia applications still running I reviewed the MMCSS provider information and found the associated Thread ID and analyzed the associated thread properties using Microsoft Windows Sysinternals Process Explorer and **observed that the IO Priority was not influenced in any scenario**.
 
 </details></br>
+
+#### Q: How does MMCSS map the defined priorities and scheduling category in relation to the values recorded by the event provider?
+When a thread joins MMCSS it reads the registry for the specified tasks and maps those values to three different priority levels **Medium, Low and Uber Low** under the given Scheduling Category. For more information see findings and analysis, and associated priority mapping table reference.
+<details><summary>Findings and Analysis</summary>
+ 
+Based on those values (**Medium, Low and Uber Low**) and the scheduling category MMCSS has it's own internal mapping which is reflected in the boosted priority and a deprioritization value. The **Medium value reflects the boosted value** give or take +1 (not exactly intuitive but probably done this way for a reason, you'll see..) , the **Low value only applies for Scheduling Category Low** then **Uber Low reflects the deprioritzation value.**
+
+The values are pretty consistent between the Scheduling Category Medium and High as you'll note when analyzing the table below. However when the scheduling category is Low things aren't exactly as they seem and I have seen some variation in the outcome which I'll note below. **When using Low the process is never deprioritized**, this is likely because the kernel will typically handle processes priority management outside of the realtime range (16+), on the same note only the processes intial priority value is set and **not boosted again**, at least during my analysis.
+
+**Scheduling Category: High**
+  * Intended range: 23-26
+  * Actual range: 26
+  
+| Conf. Priority  | Medium Pri | Low Pri  |  Uber Low Pri | MMCSS Boost Pri  | MMCSS Deprioritization | 
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | 
+| 8  | 24 | 8  | 7  | 26  | 7  |
+| 7  | 24 | 8  | 6  | 26  | 7  |
+| 6  | 24 | 8  | 5  | 26  | 7  |
+| 5  | 24 | 8  | 4  | 26  | 6  |
+| 4  | 24 | 8  | 3  | 26  | 5  |
+| 3  | 24 | 8  | 2  | 26  | 4  |
+| 2  | 24 | 8  | 1  | 26  | 3  |
+| 1  | 24 | 8  | 1  | 26  | 2  |
+
+**Scheduling Category: Medium**
+  * Intended range: 16-22
+  * Actual range: 17-23
+  
+| Conf. Priority  | Medium Pri | Low Pri  |  Uber Low Pri | MMCSS Boost Pri  | MMCSS Deprioritization | 
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | 
+| 8  | 23 | 8  | 7  | 23  | 7  |
+| 7  | 22 | 8  | 6  | 23  | 7  |
+| 6  | 21 | 8  | 5  | 22  | 6  |
+| 5  | 20 | 8  | 4  | 21  | 5  |
+| 4  | 19 | 8  | 3  | 20  | 4  |
+| 3  | 18 | 8  | 2  | 19  | 3  |
+| 2  | 17 | 8  | 1  | 18  | 2  |
+| 1  | 16 | 8  | 1  | 17  | 1  |
+
+**Scheduling Category: Low**
+  * Intended range: 8-15
+  * Actual range: **It depends..**, see both tables and narrative
+
+| Conf. Priority  | Medium Pri | Low Pri  |  Uber Low Pri | MMCSS Boost Pri  | MMCSS Deprioritization | 
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | 
+| 8  | 8 | 8  | 7  | 8  | None  |
+| 7  | 8 | 8  | 6  | 8  | None  |
+| 6  | 8 | 8  | 5  | 8  | None  |
+| 5  | 8 | 8  | 4  | 8  | None  |
+| 4  | 8 | 8  | 3  | 8  | None  |
+| 3  | 8 | 8  | 2  | 8  | None  |
+| 2  | 8 | 8  | 1  | 8  | None  |
+| 1  | 8 | 8  | 1  | 8  | None  |
+
+With Scheduling Category set as Low I recevied two different results when comparing for example audiodg and Chrome, Chrome's task (Pro Audio) base priority never changes from 10 regardless of settings so this is likely due to the way the application was coded. However audiodg will use the default base priority of 8 using the **normal Priority** values, and then **only using Background Priority will it actually boost the base priority** as indicated below.
+
+**Scheduling Category: Low and Background Priority**
+  * Intended range: 8-15
+  * Actual range: 8,9,11-15
+  
+| Conf. BG Priority  | Medium Pri | Low Pri  |  Uber Low Pri | MMCSS Boost Pri  | MMCSS Deprioritization | 
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | 
+| 8  | 8 | 8  | 8  | 15  | None  |
+| 7  | 8 | 8  | 7  | 14  | None  |
+| 6  | 8 | 8  | 6  | 13  | None  |
+| 5  | 8 | 8  | 5  | 12  | None  |
+| 4  | 8 | 8  | 4  | 11 | None  |
+| 3  | 8 | 8  | 3  | 9  | None  |
+| 2  | 8 | 8  | 2  | 8  | None  |
+| 1  | 8 | 8  | 1  | 8  | None  |  
+  
+ </details></br>
+ 
