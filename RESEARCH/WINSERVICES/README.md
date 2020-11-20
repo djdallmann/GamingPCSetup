@@ -194,3 +194,15 @@ Yes, this value does in fact alter the settings in the MMCSS Scheduler sleep cyc
 
    ![MMCSS.sys - LazyModeTimeout](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/MMCSS.sys%20-%20LazyModeTimeout.PNG)
 </details></br>
+
+#### Q: Does the hidden MMCSS SystemProfile registry settings MaxThreadsTotal and MaxThreadsPerProcess restrict overall use of MMCSS?
+Unfortunately this has zero impact on how many threads total or per process that could register with MMCSS during multiple tests, see findings for more information.
+<details><summary>Findings and Analysis</summary>
+
+* For the evaluation of these settings I set each to different combinations of 1 and 3 (e.g. 3&1, 1&3, 3&3, 1&1) then I proceeded to generate MMCSS tasks for both Pro Audio and Audio, both separately and together. The simplest way to generate multiple threads for under a single process **under normal circumstances** is to open a browser such as Chrome then load a bunch of YouTube videos let's say 6 and ensure they are all playing media simultaneously, and in this scenario it had no impact on the number of threads registered to MMCSS under the Chrome browser process in relation to **MaxThreadsPerProcess** setting. 
+  * Its hard to say if this particular test is ideal but it was the quickest way to test, the reason being is that Chrome is a single parent process but for each tab child processes are created. Perhaps if it was a single parent process and I tried registering multiple threads in that process it may change the outcome. 
+  * I don't feel like writing custom code to test but if someone's intertested in recreating the test and capturing the result please let me know.
+
+* A similar test was done however in relation to **MaxThreadsTotal**, the assumption of this setting is to globally restrict the total amount of threads that can register with MMCSS, in all tests the total threads registered in MMCSS were not restricted in those scenarios.
+
+</details></br>
