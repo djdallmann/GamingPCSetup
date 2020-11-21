@@ -289,3 +289,5 @@ With Scheduling Category set as Low I recevied two different results when compar
   
  </details></br>
  
+#### Q: Does the MMCSS AlwaysOn registry setting exist?
+Yes, there does appear to be an MMCSS **AlwaysOn** registry setting in **both Windows 7 and Windows 8** but it does not exist in Windows 10. This may related to the fact that MMCSS is a driver in Windows 10 where as it is a service integrated in svchost.exe on older versions. The purpose of this registry key is currently unknown, if anyone has any evidence of its impact and use let me know.
