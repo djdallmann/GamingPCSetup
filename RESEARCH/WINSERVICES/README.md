@@ -186,7 +186,7 @@ As noted above, this only applies when Scheduling Category is LOW.
 
  </details></br>
  
-#### Q: Does the hidden MMCSS SystemProfile registry setting LazeModeTimeout alter the running state?
+#### Q: Does the hidden MMCSS SystemProfile registry setting LazyModeTimeout alter the running state?
 Yes, this value does in fact alter the settings in the MMCSS Scheduler sleep cycle for idle time periods related to  the events **IdleDetectionLazy** and **SleepRealtimeLazy**.
 <details><summary>Findings and Analysis</summary>
 
