@@ -351,7 +351,7 @@ In the following table time represents the actions performed during each millise
 | 210ms | Scheduler Sleep | IdleDetection (Default 10ms) or IdleDetectionLazy (Default 100ms) |
 | 211ms | Scheduler Wakeup | Yield Deadline |
 | 211ms | Scheduler Priority Change | MMCSS boosts all the threads |
-| [...] | Cycle repeats | **If you are detected as not Idle all task threads boost**, otherwise if Idle detected only audiodg.exe is boosted like in the beginning more details on Idle detection below |
+| [...] | Cycle repeats | **If you are detected as not Idle all task threads boost**, otherwise if idle state is detected only audiodg.exe is boosted like in the beginning, more details on Idle detection below |
 
 And there you have it, a general overview of what happens inside MMCSS and now we get into IdleDetection and IdleDetectionLazy...
 
