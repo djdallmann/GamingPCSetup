@@ -365,7 +365,7 @@ Luckily you can alter how MMCSS IdleDetection and IdleDetectionLazy states opera
 
 ```
 LazyModeTimeout Default: 1,000,000 (100ms), is a 100 nanosecond interval.
-Optimized: 10,000 (1ms)
+Example: 10,000 (1ms)
 HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\MultiMedia\systemprofile\LazyModeTimeout DWORD (32bit) : 10000
 
 NoLazyMode Default: 0 (Off)
