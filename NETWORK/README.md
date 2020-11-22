@@ -35,6 +35,9 @@
              Bind the RSS base core value to core 2 (3rd core), if you have 2 RSS queues
              enabled this should allocate work to 3rd and 4th core.
      ```
+   * Disable NetBIOS over TCP in Network Adapter IPV4 settings to disable unnecessary SYSTEM listening service
+     * **Network & Internet Settings > Change Adapter Options > Adapter Properties > Select TCP/IP v4 > Advanced > WINS tab > Disable NetBIOS over TCP/IP > Press OK**
+     * Note: This change is immediate, and also listed in Post Install section but here for completeness.
 
 ## Intel Network Adapter Settings
 *Offloading* features allows the network card to handle certain functions of the packet handling process reducing the overall cpu consumption, ideally allowing more cpu time for other tasks and your games.
