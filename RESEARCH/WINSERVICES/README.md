@@ -60,6 +60,7 @@ The most commonly requested task is Audio, this will occur naturally when Window
   * fortnite client/game - **Audio**
   * r5apex.exe - **Both Audio and Pro Audio**
   * taskhostw.exe - **Audio**
+  * ShellExperienceHost.exe - **Audio**
   
 **Note:** Keep in mind that the requests to MMCSS are typically only for threads which process audio, to date I have not yet confirmed any threads are associated to input or graphics processing.
 </details></br>
