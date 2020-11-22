@@ -390,3 +390,6 @@ After having gone through the example above you may note that this setting is a 
 
 #### Q: What happens when you set SystemResponsiveness to a value higher than 50?
 When MMCSS SystemResponsiveness is set to values above 50 (e.g. 60, 70, 80 & 90) audiodg.exe will register a thread with MMCSS and leave immediately after, following this only the games registered thread will be boosted. Thank you plumch who reported this on discord.
+
+#### Q: Can you set SystemResponsiveness to 100?
+Setting SystemResponsiveness to 100 on Windows 10 MMCSS essentially disables the service preventing it from starting.
