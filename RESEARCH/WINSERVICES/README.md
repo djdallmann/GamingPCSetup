@@ -387,3 +387,6 @@ HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\MultiMedia\systemprofile\NoLaz
 After having gone through the example above you may note that this setting is a literal translation of time, **2ms (20) for low priority tasks** and **8ms, the remainder** for mmcss registered tasks in their boosted priority states when using the default systemresponsiveness setting. On that note you should also keep in mind those same threads are still using quite a bit of cpu time in a lower priority state but... when the threads are below priority 16 (realtime) the kernel can give more attention to those other threads by shifting their priorities as needed.
 
 </details></br>
+
+#### Q: What happens when you set SystemResponsiveness to a value higher than 50?
+When MMCSS SystemResponsiveness is set to values above 50 (e.g. 60, 70, 80 & 90) audiodg.exe will register a thread with MMCSS and leave immediately after, following this only the games registered thread will be boosted. Thank you plumch who reported this on discord.
