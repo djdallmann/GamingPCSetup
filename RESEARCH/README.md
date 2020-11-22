@@ -32,3 +32,12 @@ If you do use this or redistribute this in any way, please give due credit.
   - Do any processes or threads register with MMCSS task DisplayPostProcessing?
   - Do any processes or threads register with MMCSS task Games?
   - What the heck is NoLazyMode, is it real? What does it do?
+  - What does the hidden MMCSS Latency Sensitive registry key actually do? What is the default value?
+  - Does the MMCSS task Clock Rate registry setting do anything? 
+  - What is the BackgroundPriority mmcss registry setting? Does it have anything to do with the Background Only registry key?
+  - Does the hidden MMCSS SystemProfile registry setting LazyModeTimeout alter the running state?
+  - Does the hidden MMCSS SystemProfile registry settings MaxThreadsTotal and MaxThreadsPerProcess restrict overall use of MMCSS?
+  - Does the MMCSS task registry setting SFIO Priority actually change the IO Priority or does it do nothing like Microsoft's documentation states?
+  - How does MMCSS map the defined priorities and scheduling category in relation to the values recorded by the event provider?
+  - Does the MMCSS AlwaysOn registry setting exist?
+  - What's actually happening inside MMCSS on a millisecond time scale? What variables are there and how do they come into play?
