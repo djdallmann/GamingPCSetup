@@ -291,3 +291,98 @@ With Scheduling Category set as Low I recevied two different results when compar
  
 #### Q: Does the MMCSS AlwaysOn registry setting exist?
 Yes, there does appear to be an MMCSS **AlwaysOn** registry setting in **both Windows 7 and Windows 8** but it does not exist in Windows 10. This may related to the fact that MMCSS is a driver in Windows 10 where as it is a service integrated in svchost.exe on older versions. The purpose of this registry key is currently unknown, if anyone has any evidence of its impact and use let me know.
+
+</br>
+
+#### Q: What's actually happening inside MMCSS on a millisecond time scale? What variables are there and how do they come into play?
+There's a handful of events that are happening inside MMCSS, here's a breakdown of those events:
+  * **Thread Joins** - Occurs when a thread registers with MMCSS and indicates which task it selected
+  * **Scheduler Priority Change** - Priority is increased or decreased
+  * **TaskIndex_PreDeadlineExpired** - Indicates a yield deadline has expired, occurs just before Scheduler Wakeup
+  * **Scheduler Wakeup** - Occurs when a yield deadline is reached
+  * **Scheduler Sleep** - Indicates when the scheduler sleeps, the type of sleep and duration.
+  * **Set_MultimediaMode and Thread Buffering** - Likely signals kernel streaming
+  * **TaskIndex_Yield** - Summarizes the yield period duration
+
+To learn more about MMCSS behavior, potential gotchas, and variables then see findings and analysis.
+<details><summary>Findings and Analysis</summary>
+ 
+To explain what MMCSS is doing it's best to use an example so in this case we'll assume the following: 
+* We have a **default MMCSS system profile and task settings**
+* Using the Chromium based Microsoft Edge browser we'll play a YouTube video
+
+**Note:** audiodg.exe is required for media playback so it'll always have a thread join event as a result **there will always be a minimum of 2 mmcss task threads** in most circumstances.
+
+![MMCSS.sys - Millisecond Scale](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/MMCSS.sys%20-%20Millisecond%20Scale.png)
+
+In the following table time represents the actions performed during each millisecond:
+| Time  | Event | Description |
+| ------------- | ------------- | ------------- |
+| 1ms | MMCSS Initialization of first registered threads | N/A |
+| 1ms | Thread Joins | A MMCSS Pro Audio task is registered (Index00001 - msedge.exe) |
+| 1ms | Scheduler Priority Change | MMCSS boosts the thread (Index00001 - msedge.exe) to the defined value in Pro Audio e.g. Sched Cat: High, Pri: 2, Priority 26 (Realtime) |
+| 1ms | Scheduler Wakeup | Returns from a **DeepSleep state** |
+| 1ms | Scheduler Sleep | Enters the realtime sleep state |
+| 1ms | Thread Joins | A MMCSS Audio task is registered (Index00002 - audiodg.exe) |
+| 1ms | Scheduler Priority Change | MMCSS boosts the thread (Index00002 - audiodg.exe) to the defined value in Audio e.g. Sched Cat: Medium, Pri: 6, Priority 22 (Realtime) |
+| 2ms | Set_MultimediaMode (1 then 0), Thread Buffering (Start then Stop) | Toggles two functions briefly, usually only seen upon initialization of MMCSS |
+| 2ms | TaskIndex_Yield | TaskIndex Index00002 (audiodg.exe) has yielded for X |
+| 2ms | Scheduler Priority Change | Deprioritizes task TaskIndex Index00002 (audiodg.exe) to 16. |
+| [...] | **~10ms passes** | The thread yields and service is in an Idle detection sleep state, **when this happens only audiodg.exe is boosted** 22 to 16, 16 to 22 (Audio Task) |
+| 11ms | Scheduler Priority Change | MMCSS boosts the thread (Index00002 - audiodg.exe) to 22 |
+| 11ms | TaskIndex_PreDeadlineExpired | TaskIndex Index00002 (audiodg.exe) predeadline has passed. |
+| 11ms | Scheduler Wakeup | New thread yield deadline |
+| 12ms | TaskIndex_Yield | TaskIndex Index00002 (audiodg.exe) yield complete |
+| 12ms | Scheduler Priority Change | Deprioritizes task TaskIndex Index00002 (audiodg.exe) to 16. |
+| [...] | **~10ms passes** | Yield and Idle detection |
+| 22ms | Scheduler Priority Change | MMCSS boosts the thread (Index00002 - audiodg.exe) to 22 |
+| 22ms | TaskIndex_PreDeadlineExpired | TaskIndex Index00002 (audiodg.exe) predeadline has passed. |
+| 22ms | Scheduler Wakeup | Yield Deadline |
+| 23ms | TaskIndex_Yield | TaskIndex Index00002 (audiodg.exe) yield complete |
+| 23ms | Scheduler Priority Change | Deprioritizes task TaskIndex Index00002 (audiodg.exe) to 16. |
+| [...] | Cycle repeats |  If Idle Detection identifies activity. **When tasks priorities are updated they are done in the order of the index** e.g. 00001, 00002, 00003. |
+| 200ms | Idle detection | Finally realizes you're there and begins prioritizing things according to **SystemResponsiveness** |
+| 200ms | Scheduler Priority Change | **Deprioritizes** each tasks based on their config mapping |
+| 200ms | Scheduler Sleep | IdleDetection (Default 10ms) or IdleDetectionLazy (Default 100ms), will explain this after |
+| 202ms | Scheduler Wakeup | Yield Deadline |
+| 202ms | Scheduler Priority Change, **2ms passes** | **MMCSS boosts priority of all mmcss threads**, also **note 2ms has passed** during the deprioritized state and that systemresponsiveness is 20 by default, e.g. 2ms and 8ms |
+| [...] | **8ms passes** in a boosted state | N/A |
+| 210ms | Scheduler Priority Change | Deprioritizes each tasks based on their config mapping |
+| 210ms | Scheduler Sleep | IdleDetection (Default 10ms) or IdleDetectionLazy (Default 100ms) |
+| 211ms | Scheduler Wakeup | Yield Deadline |
+| 211ms | Scheduler Priority Change | MMCSS boosts all the threads |
+| [...] | Cycle repeats | **If you are detected as not Idle all task threads boost**, otherwise if Idle detected only audiodg.exe is boosted like in the beginning more details on Idle detection below |
+
+And there you have it, a general overview of what happens inside MMCSS and now we get into IdleDetection and IdleDetectionLazy...
+
+**Idle Detection and IdleDetectionLazy**
+
+Idle detection doesn't seem to work the way you think it might, it doesn't appear to be based on the fact that you're constantly playing media but perhaps related to other methods such as user input or indicators. 
+
+Based on my analysis this is how IdleDetection works and how it can get into similar states where no mmcss prioritization occurs** although the user is actively playing game or playing media. First off **IdleDetection** is done roughly on 10ms periods (value 100,000, **100 nanosecond intervals**) and if it doesn't detect any activity it shifts into **IdleDetectionLazy** mode which operates at 100ms periods (value 1,000,000, 100 nanosecond intervals). When activity isn't detected **on** the 100ms interval, it goes into another 100ms period which seems to easily chain into many lazy cycles for **20 seconds or more** leaving threads in a potentially **suboptimal state**. When IdleDetectionLazy occurs only audiodg.exe is prioritized and deprioritized as indicated above.
+
+Luckily you can alter how MMCSS IdleDetection and IdleDetectionLazy states operate by fine tuning a few hidden variables, **NoLazyMode and LazyModeTimeout**. NoLazyMode will outright disable IdleDetection for the most part however it **may** be more resource intensive, alternatively you can change the LazyModeTimeout 100ns interval by adding and setting the hidden registry key value.
+
+```
+LazyModeTimeout Default: 1,000,000 (100ms), is a 100 nanosecond interval.
+Optimized: 10,000 (1ms)
+HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\MultiMedia\systemprofile\LazyModeTimeout DWORD (32bit) : 10000
+
+NoLazyMode Default: 0 (Off)
+Optional: On
+HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\MultiMedia\systemprofile\NoLazyMode DWORD (32bit) : 1
+```
+
+**List of values for scheduler sleep:**
+*	SleepRealtimeLazy: 1,000,000 (100ms)
+*	IdleDetectionLazy: 1,000,000 (100ms)
+*	IdleDetection: 100,000 (10ms)
+*	Realtime 80,000 (8ms)
+*	SleepResponsiveness 20,000 (2ms)
+*	DeepSleep: 4,294,967,295
+
+**System Responsiveness**
+
+After having gone through the example above you may note that this setting is a literal translation of time, **2ms (20) for low priority tasks** and **8ms, the remainder** for mmcss registered tasks in their boosted priority states when using the default systemresponsiveness setting. On that note you should also keep in mind those same threads are still using quite a bit of cpu time in a lower priority state but... when the threads are below priority 16 (realtime) the kernel can give more attention to those other threads by shifting their priorities as needed.
+
+</details></br>
