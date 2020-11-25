@@ -78,3 +78,66 @@ Yes, the overall physical texture of the mousepad is quite different, one being 
   * If the mouse tracks better/worst given the differences in the weave/texture.
   * The color of the fabrics, which may also have some impact to tracking. Speed has a colored pattern where as the Standard version is a solid black color.
 </details></br>
+
+### Universal Serial Bus (USB)
+#### Q: Can you define the interrupt moderation rate for USB controllers? Do different versions of windows have different default values?
+Yes, with intel based usb controllers you can interract with the mapped virtual address space of the USB controller to change the interrupt moderation (IMOD) register. **Windows 7** has been observed to use a interrupt moderation rate of **1 millisecond (ms)** where as **Windows 8 and 10** both use **50 microsecond (us)** interrupt moderation rate which is significantly different than Windows 7 which might explain some reported experiences between each but there are other variables as well. See findings and analysis for more details on this topic.
+
+Thanks to **ucode** on overclock.net for raising awareness on this capability.
+
+<details><summary>Findings and Analysis</summary>
+
+**How To**
+* Probably the most interesting part for readers is the *how do I* vs the actual technical detail so I'll start with that, for more technical information see the section following this to fill in the gaps.
+* First download **RWEverything – Read & Write Everything** or use a tool with similar capability.
+    * http://rweverything.com/download/
+* Use the ordered steps below and screenshots to help navigate your way to the xHCI IMOD register.
+
+1. Open the tool then **Click** on the **PCI Devices icon**, furthest to the left typically.
+2. From the dropdown menu find and select your **Intel xHCI USB Host Controller**, you should now see information about that device on the right including the **Base Address Registers** location e.g. **BAR1**
+3. In the PCI window **make sure dword 32bit is selected**
+4. Make note of the **BAR address on the right** and **double click that same value in the PCI window** this will open a **Memory window**.
+5. In the Memory window **switch to word 16bit**
+6. **Click** the value that is in the **position 18hex**, when selected will be indicated by the numbers in red in the upper left corner of the grid. Make note of this value (**Base address offset**/Base address space offset)
+7. **Double click the address space field**. e.g. Address = 000000000000
+8. **Add the value from step 6** to the current address value **plus 24h** (Capability register) as demonstrated in the screenshot then **press OK**. e.g. if the value is 0xF7310000 and the value from 6 was 2000, plus 24 would be 0xF7312024
+9. In the 16bit view you should now be presented with the IMOD register. 
+10. To edit the values double click that value position (1/0) then edit the bits to represent the decimal value you are interested in, remember that if all bits are 0 (zero) then interrupt moderation will be turned off immediately. **If you're not familiar with binary or hex, use a decimal to binary converter.**
+   * Note: These settings do not persist beyond a restart or shutdown they will need to be set each time you turn on your computer.
+
+![Intel xHCI - RWE Locating IMOD](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Intel%20xHCI%20-%20RWE%20Locating%20IMOD.PNG)
+![Intel xHCI - RWE Locating IMOD](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Intel%20xHCI%20-%20RWE%20Setting%20IMOD2.PNG)
+
+* Orange selections represent the areas of interest
+* Green indictors map to the numbered steps above and act as a visual guide
+
+**Technical Detail and Reference**
+* The PCI address configuration space defines how the registers are mapped to memory locations in the operating system, this configuration space stores information for each device such as if the device is MSI and MSIX capable, the MSI message limit, vendor, device classification and many other properties which you also see in the device manager details section for the device.
+
+**PCI Configuration Space**
+
+ ![PCI - Configuration Space - Wikipedia](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/PCI%20-%20Configuration%20Space%20-%20Wikipedia%20-%20Small.png)
+ 
+ Photo from wikipedia and is under public domain
+
+**Intel eXtensible Host Controller Interface (xHCI) for Universal Serial Bus**
+* This document outlines Intels specifications for the xHCI host controller specification it desribes the address layout, how interrupt moderation works, the location of the interrupt moderation (IMOD) registers, how to change the IMOD register operating state and many other aspects of xHCI through the virtual address space mapped in the PCI configuration space.
+   * https://www.intel.com/content/dam/www/public/us/en/documents/technical-specifications/extensible-host-controler-interface-usb-xhci.pdf
+* If you dig through the documentation you'll find it indicates that the **IMOD register** is in **xHCI Runtime Base** which is the **PCI Base Address** Registers(BAR) **plus** the the value in **Base Address Offset** which is found in position **18hex** from the begging of the PCI BAR e.g. **BASE ADDRESS + BASE ADDRESS OFFSET + 24hex**
+  * The PCI base address registers can be found through device manager or through a tool that let's you explore and enumerate the PCI configuration space.
+     * Device Manager > View Resources by Type > Memory > then locate the USB Controller and you'll then have the approximate base address range.
+* The IMOD register itself is intended to have a default value of **4000** (decimal, or **0xFA0** hex), **1 millisecond** interrupt moderation rate, the value is specified in 250ns (nanosecond) increments so can be calculated as **250ns x Value = Result**. e.g. 250ns x 4000 = 1ms. **To disable interrupt moderation the value can be set to 0 (zero).**
+
+**Intel xHCI - Interrupt Moderation Register Reference**
+
+![Intel xHCI - Interrupt Moderation Register](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Intel%20xHCI%20-%20Interrupt%20Moderation%20Register%20(IMOD).PNG)
+
+**Intel xHCI - Host Controller Runtime Registers Reference**
+
+![Intel xHCI - Host Controller Runtime Registers](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Intel%20xHCI%20-%20Host%20Controller%20Runtime%20Registers.PNG)
+
+**Intel xHCI - Capability Registers Reference**
+
+![Intel xHCI - Capability Registers](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/Intel%20xHCI%20-%20Capability%20Registers.PNG)
+
+</details></br>
