@@ -16,6 +16,9 @@ This section contains information that may help identify and resolve different c
   * Windows Sysinternals, Microsoft
     * Sysinternals utilities help you manage, troubleshoot and diagnose your Windows systems and applications.
     * https://docs.microsoft.com/en-us/sysinternals/
+  * Microsoft Performance HUD
+    * A real-time performance profiler that detects and identifies the source of high resource usage, GDI leaks, memory leaks and more.
+    * https://www.microsoft.com/en-us/download/100813
   * Windows Performance Monitor
     * A tool that comes installed on most Windows platforms by default, typically used as a first level system triage and monitoring tool.
   * PAL (Performance Analysis of Logs)
