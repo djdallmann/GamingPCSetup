@@ -13,7 +13,6 @@ Settings applied by the Powershell Desired Configuration State script
    - Microsoft Account Sign-in Assistant
    - Microsoft App-V Client
    - Net.Tcp Port Sharing Service
-   - Network Connection Broker
    - Network Connected Devices Auto Setup
    - Offline Files
    - Phone Service
