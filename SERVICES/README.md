@@ -28,7 +28,7 @@ This is a list of services which Microsoft has recommendations for disabling, if
 | NgcSvc | Microsoft Passport | rovides process isolation for cryptographic keys used to authenticate to a user's associated identity providers. If this service is disabled, all uses and management of these keys will not be available, which includes machine logon and single-sign on for apps and websites. | Leave Enabled |
 | NgcCtnrSvc | Microsoft Passport Container | Manages local user identity keys used to authenticate user to identity providers as well as TPM virtual smart cards. If this service is disabled, local user identity keys and TPM virtual smart cards will not be accessible. | Leave Enabled |
 | NetTcpPortSharing | Net.Tcp Port Sharing Service | Provides ability to share TCP ports over the net.tcp protocol. | Keep Disabled |
-| NcbService | Network Connection Broker | Brokers connections that allow Microsoft Store Apps to receive notifications from the internet. | Disable, if you don't plan on using the MS Store apps with internet notifications |
+| NcbService | Network Connection Broker | Brokers connections that allow Microsoft Store Apps to receive notifications from the internet. | Leave enabled unless you disable all CDP services (system and user), dependency |
 | CscService | Offline Files | The Offline Files service performs maintenance activities on the Offline Files cache, responds to user logon and logoff events | Keep Disabled |
 | PhoneSvc | Phone Service | Manages the telephony state on the device | Disable |
 | Spooler | Print Spooler | This service spools print jobs and handles interaction with the printer. If you turn off this service, you won't be able to print or see your printers. | Disable unless you use printers or scanners |
@@ -75,7 +75,6 @@ This is a list of services which Microsoft has recommendations for disabling, if
     Set-Service lltdsvc -StartupType Disabled
     Set-Service AppVClient -StartupType Disabled
     Set-Service NetTcpPortSharing -StartupType Disabled
-    Set-Service NcbService -StartupType Disabled
     Set-Service CscService -StartupType Disabled
     Set-Service PhoneSvc -StartupType Disabled
     Set-Service Spooler -StartupType Disabled
