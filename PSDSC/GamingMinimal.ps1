@@ -579,11 +579,6 @@ Configuration GamingMinimal {
             State = 'Stopped'
             StartupType = 'Disabled'
         }
-        Service SvcNcbService {
-            Name   = "NcbService"
-            State = 'Stopped'
-            StartupType = 'Disabled'
-        }
         Service SvcCscService {
             Name   = "CscService"
             State = 'Stopped'
