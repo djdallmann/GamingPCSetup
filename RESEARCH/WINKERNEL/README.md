@@ -1,4 +1,48 @@
 ## Windows Kernel
+### Hardware Abstraction Layer (HAL)
+#### Q: What information does the Windows HAL Event Provider capture when you change different bcdedit settings such as useplatformclock and useplatformtick in combination with the High Precision Event Timer (HPET) setting in the BIOS? What are the default values on/off vs undefined? Does the bcdedit tscsyncpolicy change the outcome in the event audit?
+There's a few findings in the results which are dependant on the HPET being on vs off in the BIOS e.g. **VpptPhysicalTimer, Perf Counter**, what you may also notice is that the source CPU source isn't always the same but during the est. ~50 runs I performed it was primarily linked to one cpu core. 
+
+The values **MaxComputedSpread** and **MaxWaves** I assume have to do with the **TSC calibration process** which determines an ideal value during runtime. A similar process can be seen in the [ReactOS project codebase under HAL](https://github.com/reactos/reactos/blob/2e1aeb12dfd8b44b4b57d377b59ef347dfe3386e/hal/halx86/apic/tsc.c). The tscsyncpolicy did not have any notable impact on the details in the event audit capture, it's possible it may affect MaxComputedSpread and MaxWaves but it is unclear without more information.
+
+As for the default values **on/off vs undefined** I assume these are the same across similar CPU architectures so your mileage may vary, I'm currently on an Intel I7 6700k. See findings and analysis for more details.
+
+<details><summary>Findings and Analysis</summary>
+  
+When comparing undefined vs off/in for both userplatformclock and useplatformtick, **undefined was the same as FALSE**.
+  
+To reduce the size of the table below, the following column values did not change during any of the tests:
+  * **AlwaysOnTimer**: 0
+  * **AlwaysOnCounter**: 15
+  * **Watchdog**: 0
+  * **AuxCounter**: 15
+ 
+**Column abbreviations**
+  * **UPC:** useplatformclock - **UPT:** useplatformtick - **DDT:** disabledynamictick
+  
+| HPET BIOS | UPC | UPT | DDT | Clock Timer | CPU* | Perf Counter | Vppt Physical Timer | CPU | Tsc Adjust Avail | Max Computed Spread* | Max Waves* |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| **TRUE** | UNDEF | UNDEF | UNDEF | 7 | 7 | 5 | 0 | 7 | 1 | 6,28,29,39 | 5,2 |
+| **TRUE** | **TRUE** | UNDEF | UNDEF | 7 | 7 | 3 | 0 | NOTSC | NOTSC | NOTSC | NOTSC | 
+| **TRUE** | UNDEF | **TRUE** | UNDEF | 12 | 7 | 5 | 3 | 7 | 1 | 27,44,32 | 2,3,4 | 
+| **TRUE** | UNDEF | UNDEF | **TRUE** | 7 | 7,0 | 5 | 0 | 7 | 1 | 10,11,23 | 2,2,2 |
+| **TRUE** | **TRUE** | **TRUE** | UNDEF | 12 | 7 | 3 | 3 | NOTSC | NOTSC | NOTSC | NOTSC | 
+| **TRUE** | **TRUE** | UNDEF | **TRUE** | 7 | 7 | 3 | 0 | NOTSC | NOTSC | NOTSC | NOTSC |  
+| **TRUE** | UNDEF | **TRUE** | **TRUE** | 12 | 7 | 5 | 3 | 7 | 1 | 4 | 3 | 
+| **TRUE** | **TRUE** | **TRUE** | **TRUE** | 12 | 7 | 3 | 3 | NOTSC | NOTSC | NOTSC | NOTSC |
+| **FALSE** | UNDEF | UNDEF | UNDEF | 7 | 7 | 5 | 0 | 7 | 1 | 34,50 | 3,2,6 |
+| **FALSE** | **TRUE** | UNDEF | UNDEF | 7 | 7 | 1 | 0 | NOTSC | NOTSC | NOTSC | NOTSC |
+| **FALSE** | UNDEF | **TRUE** | UNDEF | 12 | 7 | 5 | 2 | 7 | 1 | 16| 3 |
+| **FALSE** | UNDEF | UNDEF | **TRUE** | 7 | 7 | 5 | 0 | 7 | 1 | 29 | 6 |
+| **FALSE** | **TRUE** | **TRUE** | UNDEF | 12 | 0 | 1 | 2 | NOTSC | NOTSC | NOTSC | NOTSC |
+| **FALSE** | **TRUE** | UNDEF | **TRUE** | 7 | 2 | 1 | 0 | NOTSC | NOTSC | NOTSC | NOTSC |
+| **FALSE** | UNDEF | **TRUE** | **TRUE** | 7 | 7 | 5 | 0 | 7 | 1 | 12 | 4 |
+| **FALSE** | **TRUE** | **TRUE** | **TRUE** | 12 | 7 | 1 | 2 | NOTSC | NOTSC | NOTSC | NOTSC |
+
+**Note:** CPU, Max Computed Spread and Max Waves values may change on every reboot so a few were given as examples.
+
+</details></br>
+
 ### Win32PrioritySeparation
 #### Q: If you modify Win32PrioritySeparation (process foreground and background quantum lengths) in the registry does it update in realtime or does it require a system restart?
 It updates in realtime which can be confirmed using WinDBG via Live Kernel debug
