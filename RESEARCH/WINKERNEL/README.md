@@ -5,7 +5,7 @@ There's a few findings in the results which are dependant on the HPET being on v
 
 The values **MaxComputedSpread** and **MaxWaves** I assume have to do with the **TSC calibration process** which determines an ideal value during runtime. A similar process can be seen in the [ReactOS project codebase under HAL](https://github.com/reactos/reactos/blob/2e1aeb12dfd8b44b4b57d377b59ef347dfe3386e/hal/halx86/apic/tsc.c). The tscsyncpolicy did not have any notable impact on the details in the event audit capture, it's possible it may affect MaxComputedSpread and MaxWaves but it is unclear without more information.
 
-As for the default values **on/off vs undefined** I assume these are the same across similar CPU architectures so your mileage may vary, I'm currently on an Intel I7 6700k. See findings and analysis for more details.
+As for the default values **on/off vs undefined** I assume these are the same across similar CPU architectures and chipsets so your mileage may vary, I'm currently using an Intel I7 6700k on H270M. See findings and analysis for more details.
 
 <details><summary>Findings and Analysis</summary>
   
