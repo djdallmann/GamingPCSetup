@@ -13,6 +13,10 @@ If you do use this or redistribute this in any way, please give due credit.
 - How are the HyperX Fury S Speed and Control fabrics different in texture? Do they have noticeably different resistance as a tracking surface?
 - Can you define the interrupt moderation rate for USB controllers? Do different versions of windows have different default values?
 
+[Windows Drivers](WINDRIVERS/README.md)
+- What are the default non-paged pool allocations for mouclass.sys and kbdhid.sys dataqueuesize parameters indicated by the mouclass and kbdclass event providers?
+- How do the values in keyboarddataqueuesize and mousedataqueuesize affect the non-page pool memory allocation? How can you tell?
+
 [Windows Kernel](WINKERNEL/README.md)
 - If you modify Win32PrioritySeparation (process foreground and background quantum lengths) in the registry does it update in realtime or does it require a system restart?
 - Can you micro-increment/adjust the windows timer resolution?
