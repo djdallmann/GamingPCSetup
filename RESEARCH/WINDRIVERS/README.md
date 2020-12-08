@@ -38,3 +38,15 @@ Then we see similar behavior for the mouse, again there is one **Mice and other 
 ![KBDCLASS and MOUCLASS non-paged pool allocation](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/KBDCLASS%20and%20MOUCLASS%20non-paged%20pool%20allocation.png)
 
 </details></br>
+
+#### Q: Are there any paged or non-paged pool buffer allocations or frees when you move the mouse?
+Yes, when you move the mouse the usb drivers hidusb.sys and usbhub3.sys dynamically allocate and free bytes associated with the amount of data processed, the more you move the mouse the more bytes seen allocated and freed. This may be different depending on the type of device and supported driver such as USB3 vs USB2. 
+
+<details><summary>Findings and Analysis</summary>
+
+Rows highlighted below represent byte allocation and frees since the last update cycle. The values displayed appear to be a total count of bytes allocated and freed perhaps since the PC was first booted as the numbers remain present after closing and re-opening poolmon.
+
+**Screenshot of byte allocations during mouse movement via poolmon**
+![HIDUSB and USBHUB3 nonpaged pool alloc mouse movement](https://github.com/djdallmann/GamingPCSetup/blob/master/IMAGES/HIDUSB%20and%20USBHUB3%20nonpaged%20pool%20alloc%20mouse%20movement.png)
+
+</details></br>
