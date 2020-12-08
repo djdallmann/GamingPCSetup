@@ -18,6 +18,7 @@ If you do use this or redistribute this in any way, please give due credit.
 - Can you micro-increment/adjust the windows timer resolution?
 - Can you monitor which programs requested specific timer resolutions over a period of time?
 - Does PS/2 keyboard driver provide lower DPC latency than the USB keyboard driver?
+- What information does the Windows HAL Event Provider capture when you change different bcdedit settings such as useplatformclock and useplatformtick in combination with the High Precision Event Timer (HPET) setting in the BIOS? What are the default values on/off vs undefined? Does the bcdedit tscsyncpolicy change the outcome in the event audit?
 
 [Windows Registry](WINREGISTRY/README.md)
 - Is there an easy way to see what registry keys are accessed or modified by every process or dll upon execution or during runtime?
