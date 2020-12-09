@@ -3,7 +3,7 @@
    * Ensure **Network Throttling Index feature is enabled**
      * **Recommendation:** Set a value between **10 and 20 decimal**, e.g. 15mbps-30mbps
      ```HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\NetworkThrottlingIndex``` 
-     * See [research on Network Throttling Index](../../RESEARCH/README.md#networkthrottlingindex) and the impacts on NDIS DPC processing latency.
+     * See [research on Network Throttling Index](../../RESEARCH/NETWORK/README.md#networkthrottlingindex) and the impacts on NDIS DPC processing latency.
    * **Use a network adapter that supports Message-Signaled Interrupts (MSI/MSI-X)**
      * Most modern network adapters and associated driver configuration files define the use of MSI out of the box, when this is enabled it allows both the interrupt service routines and deferred procedure calls to be allocated to the same CPU cores allowing for better processing efficiency and improved performance.
      * To determine if Windows recognizes your adapter as RSS and MSI-X capable use the following commands, if identified as capable windows will allocate ISR/DPCs to CPU/Cores as specified by the RSS Base and Max core configuration discussed in the next step.
