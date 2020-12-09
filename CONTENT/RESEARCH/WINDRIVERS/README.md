@@ -1,6 +1,6 @@
 ## Windows Drivers
 ### Keyboard and Mouse
-#### Q: What are the default non-paged pool allocations for mouclass.sys and kbdhid.sys \*dataqueuesize parameters indicated by the mouclass and kbdclass event providers?
+#### Q: What are the default non-paged pool allocations for mouclass.sys and kbdclass.sys \*dataqueuesize parameters indicated by the mouclass and kbdclass event providers?
 The default non-page pool allocation for keyboarddataqueuesize is **1200 bytes** and mousedataqueuesize **2400 bytes**. The value of mousedataqueuesize is the value specified in the registry multiplied by the size of the structure **MOUSE_INPUT_DATA (24 bytes)** defined in NTDDMOU.H, 100 x 24 = 2400. Similarly for the keyboarddataqueue size it is the value specified in the registry multiplied by the size of the structure **KEYBOARD_INPUT_DATA (12 bytes)** defined in NTDDKBD.H, 100 x 12 = 1200. 
 
 <details><summary>Findings and Analysis</summary>

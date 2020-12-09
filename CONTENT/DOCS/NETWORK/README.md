@@ -23,7 +23,7 @@
        --------------- ----------- ------------ -----  -----------    -------------
        14              True        False        1 Gbps {192.168.0.3} Ethernet 2
        ```
-     * See the [Technical References](../../Technical%20References/README.md) page articles under **Microsoft Windows > Networking** regarding RSS, and RSS with Message Signaled Interrupts. You can also validate this optimization is working not only via performance increase but that the NDIS work is being locked to the predefined CPU cores with tools such as xperf.
+     * See the [Technical References](../../TECHNICAL%20REFERENCES/README.md) page articles under **Microsoft Windows > Networking** regarding RSS, and RSS with Message Signaled Interrupts. You can also validate this optimization is working not only via performance increase but that the NDIS work is being locked to the predefined CPU cores with tools such as xperf.
    * Consider **binding your Receive Side Scaling (RSS) queue workloads to one or more CPUs**, assuming you have MSI/MSI-X enabled as noted above.
      * There has been notable NDIS DPC latency processing improvements observed (xperf isr/dpc latency analysis) through binding your RSS queues to specific cores. By default Windows primarily allocates much of the process and thread work to Core 0 of your CPU so there may be added benefit moving that workload to less used cores.
      * **Recommendation:** If you have a 4 core CPU, try binding RSS queues to cores 2 and 3 (3rd and 4th core)
@@ -85,7 +85,7 @@
 - **Power Saving Options**
    - Disable all power saving options in drivers and for the adapter, more options are available in the latest Intel drivers sets.
 
-For more information on these settings see the **Intel** and the **Microsoft Performance Tuning Network Adapters, Performance Tuning for Low Latency Packet Processing** support guides in the **Network** section of the [Technical References](../../Technical%20References/README.md) page.
+For more information on these settings see the **Intel** and the **Microsoft Performance Tuning Network Adapters, Performance Tuning for Low Latency Packet Processing** support guides in the **Network** section of the [Technical References](../../TECHNICAL%20REFERENCES/README.md) page.
 
 ## Realtek Network Adapter Settings
 Realtek adapters and their drivers have shown to have worst DPC/ISR latency even after optimizations as noted in the Intel section above, however the Intel recommended settings above still apply to Realtek adapters. Will update this section and related settings if further research and evidence is accumulated to show otherwise.

@@ -5,7 +5,7 @@ This guide will be separated into two sub-sections, Microsoft guidelines and rec
 ### Microsoft Guidelines and Recommendations
 This section is based on two specific Microsoft support articles and will summarize the services which may be **disabled** and their impacts. Although the articles are specific to Windows Server with Windows Desktop Experience, the majority of recommendations will still apply.
 
-For the Microsoft references, see the heading **Microsoft - Windows Services** in the [Technical References](../../Technical%20References/README.md) page.
+For the Microsoft references, see the heading **Microsoft - Windows Services** in the [Technical References](../../TECHNICAL%20REFERENCES/README.md) page.
 
 #### System Services Summary
 

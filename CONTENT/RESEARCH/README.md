@@ -14,7 +14,7 @@ If you do use this or redistribute this in any way, please give due credit.
 - Can you define the interrupt moderation rate for USB controllers? Do different versions of windows have different default values?
 
 [Windows Drivers](WINDRIVERS/README.md)
-- What are the default non-paged pool allocations for mouclass.sys and kbdhid.sys dataqueuesize parameters indicated by the mouclass and kbdclass event providers?
+- What are the default non-paged pool allocations for mouclass.sys and kbdclass.sys dataqueuesize parameters indicated by the mouclass and kbdclass event providers?
 - How do the values in keyboarddataqueuesize and mousedataqueuesize affect the non-page pool memory allocation? How can you tell?
 
 [Windows Kernel](WINKERNEL/README.md)

@@ -7,7 +7,7 @@
 3. Right click the desktop and go to Display Settings, ensure that Scale and layout are set to 100% (Recommended)
 4. **Add exclusions to Windows Defender**
    - Open **Windows Security** and go to **Virus and Threat Protection > Virus and Threat Protection Settings > Exclusions** and be sure to add each of your games as as **full paths to the executable** vs just using executable name to ensure ideal security with least impact during gameplay. e.g. *D:\Steam Games\steamapps\common\Half-Life\hl.exe vs just hl.exe*
-   - Open Powershell as admin and enter the following command to add scanning exclusions for the Steam, NVIDIA Shader Cache folder and Microsoft's recommendations for exclusions to Windows Defender. See [Technical References](../../Technical%20References/README.md) for more information on Microsoft's recommendations.
+   - Open Powershell as admin and enter the following command to add scanning exclusions for the Steam, NVIDIA Shader Cache folder and Microsoft's recommendations for exclusions to Windows Defender. See [Technical References](../../TECHNICAL%20REFERENCES/README.md) for more information on Microsoft's recommendations.
    - This will help reduce the time spent scanning by Windows Defender as new files are downloaded and those used during gameplay (e.g. textures, sounds).
 
       ```
@@ -105,7 +105,7 @@
          fsutil behavior set disable8dot3 1
          ```
 13. Enable the Ultimate Performance power scheme which is intended to be an improved version of the High Performance power scheme.
-    * As per [Technical References](../../Technical%20References/README.md), *This new policy builds on the current High-Performance policy, and it goes a step further to eliminate micro-latencies associated with fine grained power management techniques.*
+    * As per [Technical References](../../TECHNICAL%20REFERENCES/README.md), *This new policy builds on the current High-Performance policy, and it goes a step further to eliminate micro-latencies associated with fine grained power management techniques.*
     * Remember **if you use the provided Desired State Configuration (DSC)** script with this guide and plan to use the new power scheme, **you'll need to edit the DSC to enforce the new ultimate performance power scheme** vs the high performance power scheme.
          ```
          Run the following commands using cmd.exe as administrator

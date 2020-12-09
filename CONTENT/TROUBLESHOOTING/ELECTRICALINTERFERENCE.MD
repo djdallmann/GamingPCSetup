@@ -2,7 +2,7 @@
 Many people report unusual or unexpected behavior on what appears to be well built stable computers sytems, the cause of this is most likely a high level of electrical noise or interference.
 
 # Disclaimer 
-I'm not an electrical engineer or subject matter expert, most of what is shared below is based on *translations* of reputable public works and research, see my Electrical section in [Technical References](../Technical%20References/README.md). 
+I'm not an electrical engineer or subject matter expert, most of what is shared below is based on *translations* of reputable public works and research, see my Electrical section in [Technical References](../TECHNICAL%20REFERENCES/README.md). 
 Use this guide at your own risk, electricity can be very dangerous please do your due dilegence and research before trying anything you're uncomfortable or unfamiliar with. 
 You are fully responsible for any loss, harm or damages caused by using the information described on this page.
 If you do use this or redistribute this in any way, please give due credit.
