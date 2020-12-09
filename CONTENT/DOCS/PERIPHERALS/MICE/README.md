@@ -15,7 +15,7 @@ The following is a list of items to consider when searching for your ideal perip
    2. For the most natural click response **ensure your fingers are directly above the mouse switch** as indicated in the image above.
       - To determine the location of the mouse switch find a review of the mouse which includes full teardown.
    3. Has **manual calibration of Lift Off Distance (LOD)**, automatical calibration methods may not give the optimal result.
-      - See [research](https://github.com/djdallmann/GamingPCSetup/tree/master/CONTENT/RESEARCH#mouse-lift-off-distance-lod) on lift off distance calibration.
+      - See [research](../../../RESEARCH/PERIPHERALS#mouse-lift-off-distance-lod) on lift off distance calibration.
    4. **Polling rate up to 1000hz (1ms) response time**, use a polling rate of either **500 or 1000hz**.
       - If you have a lower frequency processor in the range of ~2-3ghz, 500hz may feel both more responsive and consistent.
    5. **Select a mouse with the lowest click latency**, compare the results and findings shared by reputable sources.
