@@ -6,8 +6,6 @@ A research and evidence based approach to optimizing your gaming PC, configurati
  * Troubleshooting and isolating unusual performance behavior
  * A customizable [PowerShell Desired State Configuration (DSC)](CONTENT/DOCS/PSDSC/README.md) to help ensure your settings always stay the same and quickly verified with a simple command.
 
-Use this page for a minimalistic look: https://djdallmann.github.io/GamingPCSetup/
-
 If you do use this or redistribute this in any way, please give due credit.
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.me/ghgamingpcsetup)
