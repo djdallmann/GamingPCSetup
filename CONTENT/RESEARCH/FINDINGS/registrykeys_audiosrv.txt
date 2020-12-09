@@ -1,0 +1,35 @@
+Registry keys accessed under the Audiosrv service/driver path
+
+The following is a list of keys that are either read or used by Audiosrv service/driver upon being initialized.
+
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv\PARAMETERS : ServiceManifest
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv\PARAMETERS : ServiceMain
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv\PARAMETERS : ServiceDllUnloadOnStop
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv\PARAMETERS : ServiceDll
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv\PARAMETERS : LegacyCOMBehavior
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv\PARAMETERS : DeadlineDurationThreshold
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv\PARAMETERS : AudioDGCPUPercentMax
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : SvcMemSoftLimitInMB
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : SvcMemMidLimitInMB
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : SvcMemHardLimitInMB
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : ServicesPipeTimeout
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : ServiceSidType
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : ServiceAccountManaged
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : RequiredPrivileges
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : PreferredNode
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : ObjectName
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : LaunchProtected
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : InterruptAffinity
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : ImagePath
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : Group
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : FailureActionsOnNonCrashFailures
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : FailureActions
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : ErrorControl
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : Environment
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : DisplayName
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : DESCRIPTION
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : DependOnService
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : DependOnGroup
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : DeleteFlag
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : DelayedAutostart
+\Registry\Machine\SYSTEM\ControlSet001\Services\Audiosrv : CoreAudioBufferDuration

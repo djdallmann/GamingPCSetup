@@ -1,0 +1,16 @@
+Registry Keys Accessed by KBDHID (Keyboard Human Interface Device)
+
+The following is a list of keys that are either read or used by Keyboard Human Interface Device upon being initialized
+https://docs.microsoft.com/en-us/windows-hardware/drivers/hid/keyboard-and-mouse-class-drivers
+
+\Registry\Machine\SYSTEM\ControlSet001\Services\kbdhid\PARAMETERS : WppRecorder_TraceGuid
+\Registry\Machine\SYSTEM\ControlSet001\Services\kbdhid\PARAMETERS : WppRecorder_RetainLastNDeletedLogs
+\Registry\Machine\SYSTEM\ControlSet001\Services\kbdhid\PARAMETERS : WppRecorder_ReplayEnabled
+\Registry\Machine\SYSTEM\ControlSet001\Services\kbdhid\PARAMETERS : WppRecorder_PerBufferMinBytes
+\Registry\Machine\SYSTEM\ControlSet001\Services\kbdhid\PARAMETERS : WppRecorder_PerBufferMaxBytes
+\Registry\Machine\SYSTEM\ControlSet001\Services\kbdhid\PARAMETERS : VerboseOn
+\Registry\Machine\SYSTEM\ControlSet001\Services\kbdhid\PARAMETERS : LogPages
+\Registry\Machine\SYSTEM\ControlSet001\Services\kbdhid\PARAMETERS : ForceLogsInMiniDump
+\Registry\Machine\SYSTEM\ControlSet001\Services\kbdhid\PARAMETERS : DisableAutoRepeat
+\Registry\Machine\SYSTEM\ControlSet001\Services\kbdhid\PARAMETERS : CrashOnCtrlScroll
+\Registry\Machine\SYSTEM\ControlSet001\Services\kbdhid\PARAMETERS : BreakOnSysRq

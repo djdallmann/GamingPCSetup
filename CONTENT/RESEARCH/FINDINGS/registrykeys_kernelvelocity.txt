@@ -1,0 +1,5 @@
+Registry keys accessed under the control KernelVelocity
+
+\Registry\Machine\SYSTEM\ControlSet001\Control\KernelVelocity : KVF_HotPatchSimulation
+\Registry\Machine\SYSTEM\ControlSet001\Control\KernelVelocity : KVF_ExMutantAutoboost
+\Registry\Machine\SYSTEM\ControlSet001\Control\KernelVelocity : DisableFGBoostDecay

@@ -1,0 +1,18 @@
+Registry Keys Accessed by MOUHID (Mouse Human Interface Device)
+
+The following is a list of keys that are either read or used by Mouse Human Interface Device upon being initialized
+https://docs.microsoft.com/en-us/windows-hardware/drivers/hid/keyboard-and-mouse-class-drivers
+
+\Registry\Machine\SYSTEM\ControlSet001\Services\mouhid\PARAMETERS
+\Registry\Machine\SYSTEM\ControlSet001\Services\mouhid\PARAMETERS : ForceLogsInMiniDump
+\Registry\Machine\SYSTEM\ControlSet001\Services\mouhid\PARAMETERS : LogPages
+\Registry\Machine\SYSTEM\ControlSet001\Services\mouhid\PARAMETERS : TreatAbsoluteAsRelative
+\Registry\Machine\SYSTEM\ControlSet001\Services\mouhid\PARAMETERS : TreatAbsolutePointerAsAbsolute
+\Registry\Machine\SYSTEM\ControlSet001\Services\mouhid\PARAMETERS : UseOnlyMice
+\Registry\Machine\SYSTEM\ControlSet001\Services\mouhid\PARAMETERS : VerboseOn
+\Registry\Machine\SYSTEM\ControlSet001\Services\mouhid\PARAMETERS : WppRecorder_PerBufferMaxBytes
+\Registry\Machine\SYSTEM\ControlSet001\Services\mouhid\PARAMETERS : WppRecorder_PerBufferMinBytes
+\Registry\Machine\SYSTEM\ControlSet001\Services\mouhid\PARAMETERS : WppRecorder_ReplayEnabled
+\Registry\Machine\SYSTEM\ControlSet001\Services\mouhid\PARAMETERS : WppRecorder_RetainLastNDeletedLogs
+\Registry\Machine\SYSTEM\ControlSet001\Services\mouhid\PARAMETERS : WppRecorder_TraceGuid
+
