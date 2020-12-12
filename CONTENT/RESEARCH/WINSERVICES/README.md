@@ -91,7 +91,14 @@ Unfortunately not, once a game changes the state to fullscreen exclusive dwm dro
   * Import the module with the command ```Import-Module <path>\GameMode.ps1```
   * Then enable DwmEnableMMCSS by running the Gamemode command ```GM-DwmEnableMMCSS 1```, this will cause dwm.exe and csrss.exe threads to register with mmcss and will then operate as a mmcss managed process in the realtime priority range (>= 16).
   
-**Note:** Remember once you load a fullscreen exclusive application both dwm and csrss will unregister from mmcss so you'll have to re-enable it again before you can take advantage of it again.
+**Gotchas:** 
+* Once you load a fullscreen exclusive application both dwm and csrss will unregister from mmcss so you'll have to re-enable it again before you can take advantage of it again.
+* The powershell terminal needs to remain open for the boost to remain effective, if for some reason the processes are unregistered from mmcss from fullscreen exclusive app then may need to fully close powershell and redo the commands. See remark from Microsoft docs page.
+
+```
+DWM will be scheduled by the MMCSS as long as any process that called DwmEnableMMCSS to enable MMCSS 
+is active and has not previously called DwmEnableMMCSS to disable MMCSS.
+```
 
 * Microsoft Docs Reference: DwmEnableMMCSS function (dwmapi.h)
   * https://docs.microsoft.com/en-us/windows/win32/api/dwmapi/nf-dwmapi-dwmenablemmcss
