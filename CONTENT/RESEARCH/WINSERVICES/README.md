@@ -93,7 +93,7 @@ Unfortunately not, once a game changes the state to fullscreen exclusive dwm dro
   
 **Gotchas:** 
 * Once you load a fullscreen exclusive application both dwm and csrss will unregister from mmcss so you'll have to re-enable it again before you can take advantage of it again.
-* The powershell terminal needs to remain open for the boost to remain effective, if for some reason the processes are unregistered from mmcss from fullscreen exclusive app then may need to fully close powershell and redo the commands. See remark from Microsoft docs page.
+* The powershell terminal needs to remain open for the boost to remain effective, if for some reason the processes are unregistered from mmcss from fullscreen exclusive app use then you may need to fully close powershell and redo the commands. See remark from Microsoft docs page.
 
 ```
 DWM will be scheduled by the MMCSS as long as any process that called DwmEnableMMCSS to enable MMCSS 
