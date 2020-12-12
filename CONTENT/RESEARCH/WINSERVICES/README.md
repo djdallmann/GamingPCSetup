@@ -81,6 +81,20 @@ Not by default or without user intervention but... there is a DWM api function c
 
 </details></br>
 
+#### Q: Can you take advantage of the MMCSS boosted CSRSS and DWM thread priorities (DwmEnableMMCSS) while using a fullscreen exclusive application?
+Unfortunately not, once a game changes the state to fullscreen exclusive dwm drops into a lower processing state and unregisters the MMCSS thread for both csrss and dwm. What this does mean though is that **you can use DwmEnableMMCSS for non fullscreen exclusive applications and games**, this should theoretically **give you a boost in a responsiveness from both dwm (graphics scheduling) and csrss (mouse and keyboard raw input)**. To test this for yourself see findings and analysis.
+<details><summary>Findings and Analysis</summary>
+
+**To test DwmEnableMMCSS while using a non-fullscreen exlcusive application perform the following steps:**
+  * Download my [GameMode](https://raw.githubusercontent.com/djdallmann/GamingPCSetup/master/CONTENT/SCRIPTS/GameMode.ps1) script to your desktop
+  * Open powershell as an administrator
+  * Import the module with the command ```Import-Module <path>\GameMode.ps1```
+  * Then enable DwmEnableMMCSS by running the Gamemode command ```GM-DwmEnableMMCSS 1```, this will cause dwm.exe and csrss.exe threads to register with mmcss and will then operate as a mmcss managed process in the realtime priority range (>= 16).
+  
+**Note:** Remember once you load a fullscreen exclusive application both dwm and csrss will unregister from mmcss so you'll have to re-enable it again before you can take advantage of it again.
+ 
+</details></br>
+
 #### Q: Do any processes or threads register with MMCSS during the boot process?
 No threads or process have been observed using MMCSS during the boot process.
 <details><summary>Findings and Analysis</summary>
