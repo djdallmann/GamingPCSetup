@@ -34,6 +34,7 @@ If you do use this or redistribute this in any way, please give due credit.
   - Is it possible to tell what processes register to MMCSS and can you determine which tasks they requested?
   - What types of MMCSS tasks are requested by common applications?
   - Does CSRSS.exe (Client/Server Run-Time Subsystem) or DWM.exe (Desktop Window Manager) ever use MMCSS?
+  - Can you take advantage of the MMCSS boosted CSRSS and DWM thread priorities (DwmEnableMMCSS) while using a fullscreen exclusive application?
   - Do any processes or threads register with MMCSS during the boot process?
   - Do any processes or threads register with MMCSS task DisplayPostProcessing?
   - Do any processes or threads register with MMCSS task Games?
