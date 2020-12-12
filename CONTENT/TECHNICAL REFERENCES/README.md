@@ -180,3 +180,5 @@ Performance Architect Intel Corporation
   * Book: Windows Internals, Part 1: System architecture, processes, threads, memory management, and more (Developer Reference) 7th Edition, Authors:
 Pavel Yosifovich, Mark Russinovich, David Solomon, Alex Ionescu
     * https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189/
+  * Delivering a great media experience, Microsoft Windows Hardware Developer, Microsoft 2017
+    * https://docs.microsoft.com/en-us/windows-hardware/test/weg/delivering-a-great-media-experience
