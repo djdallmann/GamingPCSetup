@@ -92,6 +92,9 @@ Unfortunately not, once a game changes the state to fullscreen exclusive dwm dro
   * Then enable DwmEnableMMCSS by running the Gamemode command ```GM-DwmEnableMMCSS 1```, this will cause dwm.exe and csrss.exe threads to register with mmcss and will then operate as a mmcss managed process in the realtime priority range (>= 16).
   
 **Note:** Remember once you load a fullscreen exclusive application both dwm and csrss will unregister from mmcss so you'll have to re-enable it again before you can take advantage of it again.
+
+* Microsoft Docs Reference: DwmEnableMMCSS function (dwmapi.h)
+  * https://docs.microsoft.com/en-us/windows/win32/api/dwmapi/nf-dwmapi-dwmenablemmcss
  
 </details></br>
 
