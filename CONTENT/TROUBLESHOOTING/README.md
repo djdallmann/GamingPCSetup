@@ -9,8 +9,9 @@ This section contains information that may help identify and resolve different c
   * Windows Driver Kit (WDK), Microsoft
     * https://docs.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk
   * Windows Performance Toolkit (WPT), Microsoft
-    * A set of tools used to record and analyze Windows low level event traces (ETL), more notably Windows Performance Recorder (WPR) and Windows Performance Analyzer (WPA)
+    * A set of tools used to record and analyze Windows low level event traces (ETL), more notably Windows Performance Recorder (WPR), Windows Performance Analyzer (WPA) and Media eXperience Analyzer (MXA or XA)
     * https://docs.microsoft.com/en-us/windows-hardware/test/wpt/
+    * https://docs.microsoft.com/en-us/windows-hardware/test/weg/delivering-a-great-media-experience
   * WinDbg (Win Debug)
     * https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools
   * Windows Sysinternals, Microsoft
