@@ -26,7 +26,7 @@ For a complete list see [DSC Itemized Configuration List](ConfigList.md)
 9. Apply the optimized configuration to your local computer, wait for it to complete.
    - ```PS C:\Users\johndoe\Desktop> Start-DscConfiguration -Path .\GamingMinimal\ -wait -verbose```
    - The first pass might give one or two errors (red), these will go away after restart
-10. Restart your PC and **redo steps 4, 8 and 9.**
+10. Restart your PC and **redo steps 4, 6, 8 and 9.**
 
 ## Testing your computers desired state configuration
 1. Open Powershell as an administrator
