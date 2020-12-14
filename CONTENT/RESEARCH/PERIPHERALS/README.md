@@ -14,7 +14,7 @@ Yes, you should try to clear any debris not only from the lens but the tracking 
   * Initial lens cleaning methods used included very gentle use of a cotton swab to loosen some debris followed by 1-2 shots of compressed air to achieve a clean sensor lens.
 
 **Mouse Lens Particle Analysis - 1 days use without prior cleaning of the tracking surface**
-![Mouse Lens - Particle Analysis - 1 Day Use Comparison.png](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/Mouse%20Lens%20-%20Particle%20Analysis%20-%201%20Day%20Use%20Comparison.png)
+![Mouse Lens - Particle Analysis - 1 Day Use Comparison.png](../../DOCS/IMAGES/Mouse%20Lens%20-%20Particle%20Analysis%20-%201%20Day%20Use%20Comparison.png)
 
 **Mouse Lens Particle Analysis - Build over 1 week, prior cleaning of both tracking surface and lens**
 ![Mouse Lens - Particle Analysis - Cleaning and Build Up Over Time.png](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/Mouse%20Lens%20-%20Particle%20Analysis%20-%20Cleaning%20and%20Build%20Up%20Over%20Time.png)
