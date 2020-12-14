@@ -3,7 +3,10 @@
 #### Q: Does interrupt moderation rate have an effect on deferred procedure call (DPC) or interrupt service routine (ISR) latency, and what are the key differences between each of the settings?
 Yes, during the simulations it was found that it had more of an impact on DPC latency processing times over ISR, however each setting didn't scale equally as higher interrupt moderation values were used however this may be dependant other factors such as RSS, RSS affinity, rx/tx buffers, and timer resolution and the traffic simulation itself.
 
-<details><summary>Findings and Analysis</summary>
+<details>
+ <summary>
+  Findings and Analysis
+ </summary>
 
 **Configuration during the tests**
   * Tools: xperf & iperf
