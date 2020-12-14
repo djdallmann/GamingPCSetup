@@ -17,11 +17,11 @@ Yes, you should try to clear any debris not only from the lens but the tracking 
 ![Mouse Lens - Particle Analysis - 1 Day Use Comparison.png](../../DOCS/IMAGES/Mouse%20Lens%20-%20Particle%20Analysis%20-%201%20Day%20Use%20Comparison.png)
 
 **Mouse Lens Particle Analysis - Build over 1 week, prior cleaning of both tracking surface and lens**
-![Mouse Lens - Particle Analysis - Cleaning and Build Up Over Time.png](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/Mouse%20Lens%20-%20Particle%20Analysis%20-%20Cleaning%20and%20Build%20Up%20Over%20Time.png)
+![Mouse Lens - Particle Analysis - Cleaning and Build Up Over Time.png](../../DOCS/IMAGES/Mouse%20Lens%20-%20Particle%20Analysis%20-%20Cleaning%20and%20Build%20Up%20Over%20Time.png)
 
 **Tracking Surface Particle Removal via Generic Lint Roller**
 
-![Mousepad - HyperX Fury S XXL - Lint Roller Particle Removal.png](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/Mousepad%20-%20HyperX%20Fury%20S%20XXL%20-%20Lint%20Roller%20Particle%20Removal.png)
+![Mousepad - HyperX Fury S XXL - Lint Roller Particle Removal.png](../../DOCS/IMAGES/Mousepad%20-%20HyperX%20Fury%20S%20XXL%20-%20Lint%20Roller%20Particle%20Removal.png)
 
 **Recommendations**
   * To clean the mouse sensor lens you would want to use an air dust blower like those used on cameras which should not produce any moisture unlike cans of compressed air, and a lens/sensor brush which would be less likely to scratch the plastic or glass lens.
@@ -43,10 +43,10 @@ The LOD may have positive or negative influence on mouse tracking, users experie
 
 **Mousepad - HyperX Fury S XXL - Wear**
 * The area circled in blue in the image below represents a common wear pattern from repeated casual gaming use (slightly over 1 years time) and is likely a combination of degradation of the mouse surface due to friction, temperature, transfer of skincells or material from the peripheral, mouse skates or plastic.
-![Mousepad - HyperX Fury S XXL - Wear](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/Mousepad%20-%20HyperX%20Fury%20S%20XXL%20-%20Wear.JPG)
+![Mousepad - HyperX Fury S XXL - Wear](../../DOCS/IMAGES/Mousepad%20-%20HyperX%20Fury%20S%20XXL%20-%20Wear.JPG)
 
 **Microscopic image of the fabric consistency**
-![Mousepad - HyperX Fury S XXL - Micro - Wear Comparison](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/Mousepad%20-%20HyperX%20Fury%20S%20XXL%20-%20Micro%20-%20Wear%20Comparison.png)
+![Mousepad - HyperX Fury S XXL - Micro - Wear Comparison](../../DOCS/IMAGES/Mousepad%20-%20HyperX%20Fury%20S%20XXL%20-%20Micro%20-%20Wear%20Comparison.png)
 
 **Demo: How does LOD affect sensor tracking over degraded fabric surfaces?**
 * As a demonstration I've selected a brand new Razer Viper Mini (Model:RZ01-0325, Firmware: 1.03, Polling: 1000hz) to demonstrate how the sensors LOD calibration setting reacts to the surface and the area of wear on the HyperX Fury S XXL.
@@ -71,7 +71,7 @@ Yes, the overall physical texture of the mousepad is quite different, one being 
 <details><summary>Findings and Analysis</summary>
     
 * There are visual microscopic differences between each tracking surface, upon closer look you can see that the speed version of the HyperX Fury S has a much tigher weave in comparison giving the fabric which gives it an ultra smooth finish, the standard version of the pad although very consistent texture is much looser and feels abbrasive to the touch.
-![Mousepad - HyperX Fury S XXL - Wear](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/Mousepad%20-%20HyperX%20Fury%20S%20-%20Speed%20vs%20Standard%20Fabric%20Comparison.png)
+![Mousepad - HyperX Fury S XXL - Wear](../../DOCS/IMAGES/Mousepad%20-%20HyperX%20Fury%20S%20-%20Speed%20vs%20Standard%20Fabric%20Comparison.png)
 * During use both provide nearly the same experience or feeling of resistance unlike some other cloth pads marketed as Control pads when using 100% PTFE mouse skates.
 * The primary potential differences otherwise are: 
   * How each feel to the touch.
@@ -105,8 +105,8 @@ Thanks to **ucode** on overclock.net for raising awareness on this capability.
 10. To edit the values double click that value position (1/0) then edit the bits to represent the decimal value you are interested in, remember that if all bits are 0 (zero) then interrupt moderation will be turned off immediately. **If you're not familiar with binary or hex, use a decimal to binary converter.**
    * Note: These settings do not persist beyond a restart or shutdown they will need to be set each time you turn on your computer.
 
-![Intel xHCI - RWE Locating IMOD](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/Intel%20xHCI%20-%20RWE%20Locating%20IMOD.PNG)
-![Intel xHCI - RWE Locating IMOD](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/Intel%20xHCI%20-%20RWE%20Setting%20IMOD2.PNG)
+![Intel xHCI - RWE Locating IMOD](../../DOCS/IMAGES/Intel%20xHCI%20-%20RWE%20Locating%20IMOD.PNG)
+![Intel xHCI - RWE Locating IMOD](../../DOCS/IMAGES/Intel%20xHCI%20-%20RWE%20Setting%20IMOD2.PNG)
 
 * Orange selections represent the areas of interest
 * Green indictors map to the numbered steps above and act as a visual guide
@@ -116,7 +116,7 @@ Thanks to **ucode** on overclock.net for raising awareness on this capability.
 
 **PCI Configuration Space**
 
- ![PCI - Configuration Space - Wikipedia](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/PCI%20-%20Configuration%20Space%20-%20Wikipedia%20-%20Small.png)
+ ![PCI - Configuration Space - Wikipedia](../../DOCS/IMAGES/PCI%20-%20Configuration%20Space%20-%20Wikipedia%20-%20Small.png)
  
  Photo from wikipedia and is under public domain
 
@@ -130,14 +130,14 @@ Thanks to **ucode** on overclock.net for raising awareness on this capability.
 
 **Intel xHCI - Interrupt Moderation Register Reference**
 
-![Intel xHCI - Interrupt Moderation Register](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/Intel%20xHCI%20-%20Interrupt%20Moderation%20Register%20(IMOD).PNG)
+![Intel xHCI - Interrupt Moderation Register](../../DOCS/IMAGES/Intel%20xHCI%20-%20Interrupt%20Moderation%20Register%20(IMOD).PNG)
 
 **Intel xHCI - Host Controller Runtime Registers Reference**
 
-![Intel xHCI - Host Controller Runtime Registers](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/Intel%20xHCI%20-%20Host%20Controller%20Runtime%20Registers.PNG)
+![Intel xHCI - Host Controller Runtime Registers](../../DOCS/IMAGES/Intel%20xHCI%20-%20Host%20Controller%20Runtime%20Registers.PNG)
 
 **Intel xHCI - Capability Registers Reference**
 
-![Intel xHCI - Capability Registers](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/Intel%20xHCI%20-%20Capability%20Registers.PNG)
+![Intel xHCI - Capability Registers](../../DOCS/IMAGES/Intel%20xHCI%20-%20Capability%20Registers.PNG)
 
 </details></br>

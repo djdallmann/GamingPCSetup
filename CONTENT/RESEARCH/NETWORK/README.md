@@ -102,9 +102,9 @@ Not completely true, NDIS.sys DPC latency is increased quite notably when disabl
   * **Intel**
     * **Disabled**, 0xFFFFFFFF
     
-    ![NetworkThrottlingIndex Disabled](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/NDIS.sys%20-%20Intel%20-%20DPC%20Latency%20Unoptimized.png)
+    ![NetworkThrottlingIndex Disabled](../../DOCS/IMAGES/NDIS.sys%20-%20Intel%20-%20DPC%20Latency%20Unoptimized.png)
     * **Enabled**, Decimal 10
     
-    ![NetworkThrottlingIndex Enabled](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/NDIS.sys%20-%20Intel%20-%20DPC%20Latency%20Optimized.png)
+    ![NetworkThrottlingIndex Enabled](../../DOCS/IMAGES/NDIS.sys%20-%20Intel%20-%20DPC%20Latency%20Optimized.png)
     
 </details></br>

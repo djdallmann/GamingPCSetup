@@ -9,16 +9,16 @@ Yes, there are two relatively easy methods to check for this activity, Windows S
 1. Download Process Monitor - https://docs.microsoft.com/en-us/sysinternals/downloads/procmon
 2. **Run as admin** and **press OK** to apply the default filter
 3. In the navigation bar ensure that only **Show Registry Activity** button is selected.
-![ProcessMonitorShowRegistryActivity](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/ProcessMonitorShowRegistryActivity.png)
+![ProcessMonitorShowRegistryActivity](../../DOCS/IMAGES/ProcessMonitorShowRegistryActivity.png)
 4. Use the filtering options **Filter Menu -> Filter -> Add** to narrow down on the process of interest then **press OK**. You can also filter on the type of Registry I/O activity once you have a better idea of what you're looking for.
-![ProcessMonitorFilterbyProcessName](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/ProcessMonitorFilterbyProcessName2.png)
+![ProcessMonitorFilterbyProcessName](../../DOCS/IMAGES/ProcessMonitorFilterbyProcessName2.png)
 
 **Windows Performance Analyzer and Recorder**
 1. Download Windows Assessment and Deployment Kit (Windows ADK) - https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install
 2. Only **install Windows Performance Analyzer** toolset
 3. Open Windows Performance Recorder, select **Performance Scenario: Boot**, or if you want to capture a realtime snapshot then just choose memory or disk. Memory is preferred for short lived performance recording scenarios and disk for longer recording sessions.
 4. Expand **Resource Analysis** then ensure to select **Registry I/O Activity** and **if ready, press Start**
-![WindowsPerformanceRecorderRegistryBootProcess](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/WindowsPerformanceRecorderRegistryBootProcess.png)
+![WindowsPerformanceRecorderRegistryBootProcess](../../DOCS/IMAGES/WindowsPerformanceRecorderRegistryBootProcess.png)
 5. Once the restart process is complete **use Windows Performance Analyzer to review the recorded information**, use the builtin filtering options to limit by process or registry paths.
 
 </details></br>
@@ -29,21 +29,21 @@ There's a large amount of registry keys loaded on boot as the registry is intend
 <details><summary>Findings and Analysis</summary>
   
 * Using Windows Performance Analyzer and Recorder as described in [Is there an easy way to see what registry keys are accessed or modified?](https://github.com/djdallmann/GamingPCSetup/tree/master/CONTENT/RESEARCH/WINREGISTRY#q-is-there-an-easy-way-to-see-what-registry-keys-are-accessed-or-modified-by-every-process-or-dll-upon-execution-or-during-runtime), the following key value pairs were only some of the notable identified values during the boot process of my machine.
-  * [AudioSrv](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_audiosrv.txt)
-  * [Desktop Window Manager (dwm)](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_dwm.txt)
-  * [Windows OS Supplementary Graphics Drivers Options](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_graphicsdrivers.txt)
-  * [Display Adapter Class](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_displayadapter_class_4d36e968-e325-11ce-bfc1-08002be10318.txt)
-  * [Network Adapter Class](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_networkadapter_class_4d36e972-e325-11ce-bfc1-08002be10318.txt)
-  * [Keyboard Class](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_kbdclass.txt)
-  * [Keyboard HID](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_kbdhid.txt)
-  * [Mouse Class](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_mouclass.txt)
-  * [Mouse HID](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_mouhid.txt)
-  * [Kernel Velocity](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_kernelvelocity.txt)
-  * [Multimedia Class Scheduler Service](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_mmcss.txt)
-  * [NVIDIA Display Driver](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_nvlddmkm.txt)
-  * [Storage AHCI](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_storahci.txt)
-  * [Storage NVME](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_stornvme.txt)
-  * [Storage TCPIP](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_tcpip.txt)
-  * [Network Driver Interface Specification (NDIS)](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/registrykeys_ndis.txt)
+  * [AudioSrv](../FINDINGS/registrykeys_audiosrv.txt)
+  * [Desktop Window Manager (dwm)](../FINDINGS/registrykeys_dwm.txt)
+  * [Windows OS Supplementary Graphics Drivers Options](../FINDINGS/registrykeys_graphicsdrivers.txt)
+  * [Display Adapter Class](../FINDINGS/registrykeys_displayadapter_class_4d36e968-e325-11ce-bfc1-08002be10318.txt)
+  * [Network Adapter Class](../FINDINGS/registrykeys_networkadapter_class_4d36e972-e325-11ce-bfc1-08002be10318.txt)
+  * [Keyboard Class](../FINDINGS/registrykeys_kbdclass.txt)
+  * [Keyboard HID](../FINDINGS/registrykeys_kbdhid.txt)
+  * [Mouse Class](../FINDINGS/registrykeys_mouclass.txt)
+  * [Mouse HID](../FINDINGS/registrykeys_mouhid.txt)
+  * [Kernel Velocity](../FINDINGS/registrykeys_kernelvelocity.txt)
+  * [Multimedia Class Scheduler Service](../FINDINGS/registrykeys_mmcss.txt)
+  * [NVIDIA Display Driver](../FINDINGS/registrykeys_nvlddmkm.txt)
+  * [Storage AHCI](../FINDINGS/registrykeys_storahci.txt)
+  * [Storage NVME](../FINDINGS/registrykeys_stornvme.txt)
+  * [Storage TCPIP](../FINDINGS/registrykeys_tcpip.txt)
+  * [Network Driver Interface Specification (NDIS)](../FINDINGS/registrykeys_ndis.txt)
 
 </details></br>

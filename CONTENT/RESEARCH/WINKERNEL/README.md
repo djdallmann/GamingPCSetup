@@ -71,9 +71,9 @@ It updates in realtime which can be confirmed using WinDBG via Live Kernel debug
    ```
 3. Now change the win32priorityseparation value in the registry, then compare the results for the command above. Based on the return values it looks as if the base priority is a dynamic pointer reference and should adapt immediately, e.g. **quantum reset** aswell accordingly.
 
-![Win32PrioritySeparation Quantum Unit Mapping](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/Quantum%20Units%20Mapping.PNG)
+![Win32PrioritySeparation Quantum Unit Mapping](../../DOCS/IMAGES/Quantum%20Units%20Mapping.PNG)
 
-XLSX File: [Win32PrioritySeparation Quantum Unit Mapping](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/Win32PrioritySeparation%20Quantum%20Unit%20Mapping.xlsx)
+XLSX File: [Win32PrioritySeparation Quantum Unit Mapping](../FINDINGS/Win32PrioritySeparation%20Quantum%20Unit%20Mapping.xlsx)
 
 * Related references and citation:
   * https://docs.microsoft.com/en-us/previous-versions//cc976120(v=technet.10)?redirectedfrom=MSDN
@@ -97,7 +97,7 @@ ntdll.dll
 - NtSetTimerResolution
 ```
 * See results:
-[timermicroadjust.txt](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/timermicroadjust.txt)
+[timermicroadjust.txt](../FINDINGS/timermicroadjust.txt)
 </details></br>
 
 #### Q: Can you monitor which programs requested specific timer resolutions over a period of time?
@@ -130,5 +130,5 @@ No, not during the tests I performed but PS/2 keyboard driver latency was more s
 * PS/2 interrupt latency is around 32 microseconds consistently, I'm using **Message Signaled Interrupts** for the USB controller so likely why it didn't show any results for the opposing side. Will see if I can look into that.
 
 * See results:
-[KeyboardDPCandInterruptLatency-PS2vsUSB.txt](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/KeyboardDPCandInterruptLatency-PS2vsUSB.txt)
+[KeyboardDPCandInterruptLatency-PS2vsUSB.txt](../FINDINGS/KeyboardDPCandInterruptLatency-PS2vsUSB.txt)
 </details></br>

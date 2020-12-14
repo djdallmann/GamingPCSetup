@@ -5,7 +5,7 @@ The default non-page pool allocation for keyboarddataqueuesize is **1200 bytes**
 
 <details><summary>Findings and Analysis</summary>
 
-![KBDCLASS and MOUCLASS default dataqueuesize](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/KBDCLASS%20and%20%20MOUCLASS%20default%20dataqueuesize.png)
+![KBDCLASS and MOUCLASS default dataqueuesize](../../DOCS/IMAGES/KBDCLASS%20and%20%20MOUCLASS%20default%20dataqueuesize.png)
 
 **Registry Paths:**
 * **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\kbdclass\Parameters\KeyboardDataQueueSize**
@@ -35,7 +35,7 @@ In this case there are two keyboard devices registered (**HID Keyboard Device** 
 
 Then we see similar behavior for the mouse, again there is one **Mice and other pointing devices registered** (HID-compliant mouse) which results in a value that is rougly 2400 bytes (2400 x 1) and another set of bytes related to some other data structures.
 
-![KBDCLASS and MOUCLASS non-paged pool allocation](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/KBDCLASS%20and%20MOUCLASS%20non-paged%20pool%20allocation.png)
+![KBDCLASS and MOUCLASS non-paged pool allocation](../../DOCS/IMAGES/KBDCLASS%20and%20MOUCLASS%20non-paged%20pool%20allocation.png)
 
 </details></br>
 
@@ -47,6 +47,6 @@ Yes, when you move the mouse the usb drivers hidusb.sys and usbhub3.sys dynamica
 Rows highlighted below represent byte allocation and frees since the last update cycle. The values displayed appear to be a total count of bytes allocated and freed perhaps since the PC was first booted as the numbers remain present after closing and re-opening poolmon.
 
 **Screenshot of byte allocations during mouse movement via poolmon**
-![HIDUSB and USBHUB3 nonpaged pool alloc mouse movement](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/HIDUSB%20and%20USBHUB3%20nonpaged%20pool%20alloc%20mouse%20movement.png)
+![HIDUSB and USBHUB3 nonpaged pool alloc mouse movement](../../DOCS/IMAGES/HIDUSB%20and%20USBHUB3%20nonpaged%20pool%20alloc%20mouse%20movement.png)
 
 </details></br>

@@ -36,7 +36,7 @@ Yes, you can capture quite a bit of detail about MMCSS activities by capturing t
 7. Go to **System Activity** and double click **Generic Events, Activity by Provider, Task and Opcode**
 8. Filter on the Microsoft-Windows-MMCSS provider and review the different MMCCS events, tasks and state details.
 
-![winservices_MMCSSETW_WPADetailSummary](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/winservices_MMCSSETW_WPADetailSummary.png)
+![winservices_MMCSSETW_WPADetailSummary](../FINDINGS/winservices_MMCSSETW_WPADetailSummary.png)
 
 </details></br>
 
@@ -74,7 +74,7 @@ Not by default or without user intervention but... there is a DWM api function c
     * dwm.exe - Window Manager AND Capture
     * csrss.exe - Capture
  
-![winservices_DWMCSRSS_mmcsstask](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/winservices_DWMCSRSS_mmcsstask.png)
+![winservices_DWMCSRSS_mmcsstask](../FINDINGS/winservices_DWMCSRSS_mmcsstask.png)
 
 * Microsoft Docs Reference: DwmEnableMMCSS function (dwmapi.h)
   * https://docs.microsoft.com/en-us/windows/win32/api/dwmapi/nf-dwmapi-dwmenablemmcss
@@ -86,7 +86,7 @@ Unfortunately not, once a game changes the state to fullscreen exclusive dwm dro
 <details><summary>Findings and Analysis</summary>
 
 **To test DwmEnableMMCSS while using a non-fullscreen exlcusive application perform the following steps:**
-  * Download my [GameMode](https://raw.githubusercontent.com/djdallmann/GamingPCSetup/master/CONTENT/SCRIPTS/GameMode.ps1) script to your desktop
+  * Download my [GameMode](../../SCRIPTS/GameMode.ps1) script to your desktop
   * Open powershell as an administrator
   * Import the module with the command ```Import-Module <path>\GameMode.ps1```
   * Then enable DwmEnableMMCSS by running the Gamemode command ```GM-DwmEnableMMCSS 1```, this will cause dwm.exe and csrss.exe threads to register with mmcss and will then operate as a mmcss managed process in the realtime priority range (>= 16).
@@ -131,7 +131,7 @@ Yes, NoLazyMode is a real MMCSS setting which can be seen through registry key a
 * Based on early analysis of MMCSS ETW trace provider setting the DWORD value to 0x1 (Default: 0, Disabled/Non-Present) changes the MMCSS scheduler sleep/idle behavior.
 * The screenshot below demonstrates some of the initial differences between each mode enabled (0x1) vs off (x0, Non-Present), during these tests MMCSS tasks were engaged and the same pattern reoccurred each time e.g. the Idle related conditions were no longer present leaving only **System Responsiveness, Deep Sleep and Realtime** MMCSS scheduler task results.
 
-![winservices_MMCSS_nolazymode_onvsoff](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/RESEARCH/FINDINGS/winservices_MMCSS_nolazymode_onvsoff.png)
+![winservices_MMCSS_nolazymode_onvsoff](../FINDINGS/winservices_MMCSS_nolazymode_onvsoff.png)
 
 * At this time it is assumed that when NoLazyMode is enabled (DWORD: 0x1) it likely uses more cycles and becomes more aggressive by reducing idling/sleeping and operates in a more realtime mode. 
 * This can also be validated by context switch, cycle, frequency and cpu usage analysis which may come at a later date to help determine if the setting has any positive influence.
@@ -152,7 +152,7 @@ Latency Sensitive refers to Latency Sensitive Hints, essentially under cpu heavy
 to the processor power performance engine to help adjust performance state (PoLatencySensitive). When this condition occurs we see **TurboEngaged** events 
 in MMCSS provider event audit and corresponding Latency Sensitive Hints from SYSTEM in the **Windows Kernel Power Provider.**
 
-![MMCSS.sys Latency Sensitive](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/MMCSS.sys%20-%20Latency%20Sensitive.PNG)
+![MMCSS.sys Latency Sensitive](../../DOCS/IMAGES/MMCSS.sys%20-%20Latency%20Sensitive.PNG)
 
 * The **default value of Latency Sensitive is TRUE** at least on Windows 10, in order to set this to FALSE in MMCSS globally it must be added to all tasks.
 * Adjusting the values in the hidden power plan settings increases the frequency of those Latency Sensitive Hints for MMCSS tasks by 
@@ -217,7 +217,7 @@ Yes, this value does in fact alter the settings in the MMCSS Scheduler sleep cyc
 
 * This one was pretty easy to confirm, I changed the value then compared it to what MMCSS event provider was recording. This value alters the lazy sleep timeout periods globally, more information on what impact this has on the MMCSS scheduler in another MMCSS research article.
 
-   ![MMCSS.sys - LazyModeTimeout](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/MMCSS.sys%20-%20LazyModeTimeout.PNG)
+   ![MMCSS.sys - LazyModeTimeout](../../DOCS/IMAGES/MMCSS.sys%20-%20LazyModeTimeout.PNG)
 </details></br>
 
 #### Q: Does the hidden MMCSS SystemProfile registry settings MaxThreadsTotal and MaxThreadsPerProcess restrict overall use of MMCSS?
@@ -338,7 +338,7 @@ To explain what MMCSS is doing it's best to use an example so in this case we'll
 
 **Note:** audiodg.exe is required for media playback so it'll always have a thread join event as a result **there will always be a minimum of 2 mmcss task threads** in most circumstances.
 
-![MMCSS.sys - Millisecond Scale](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/MMCSS.sys%20-%20Millisecond%20Scale.png)
+![MMCSS.sys - Millisecond Scale](../../DOCS/IMAGES/MMCSS.sys%20-%20Millisecond%20Scale.png)
 
 In the following table time represents the actions performed during each millisecond:
 | Time  | Event | Description |
