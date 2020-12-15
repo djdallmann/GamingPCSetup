@@ -196,6 +196,7 @@ The BackgroundPriority registry key influences the **Base Thread priority** when
 * When the **Scheduling Category is LOW, the base priority of the thread is not influenced by the tasks Priority setting**. When set to LOW the thread has a base value of 8, incrementing BackgroundPriority (default is 1) will boost the base priority giving you a maximum base priority of 15 (just before REALTIME 16 priority class).
 
 **Thread Base Priority to BackgroundPriority Mapping**
+
 | BackgroundPriority  | Thread Base Pri |
 | ------------- | ------------- |
 | 1  | 8  |
@@ -341,6 +342,7 @@ To explain what MMCSS is doing it's best to use an example so in this case we'll
 ![MMCSS.sys - Millisecond Scale](../../DOCS/IMAGES/MMCSS.sys%20-%20Millisecond%20Scale.png)
 
 In the following table time represents the actions performed during each millisecond:
+
 | Time  | Event | Description |
 | ------------- | ------------- | ------------- |
 | 1ms | MMCSS Initialization of first registered threads | N/A |
