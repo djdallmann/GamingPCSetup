@@ -3,6 +3,9 @@
 This section contains different areas of research, performance impacts of various settings, tackling common misconceptions and just good to know information.
 If you do use this or redistribute this in any way, please give due credit.
 
+[Electrical](ELECTRICAL/README.md)
+- What types of near field radio frequencies do monitors and DVI cables create? Does the color or activity on screen change the radiated emissions?
+
 [Network Performance](NETWORK/README.md)
 - Does interrupt moderation rate have an effect on deferred procedure call (DPC) or interrupt service routine (ISR) latency, and what are the key differences between each of the settings?
 - Does disabling NetworkThrottlingIndex feature improve overall network performance and latency?
