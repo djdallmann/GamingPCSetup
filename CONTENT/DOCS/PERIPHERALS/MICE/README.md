@@ -5,7 +5,7 @@ In regards to functionality this generally refers to how many buttons there are 
 
 Comfortability relates to the shape and size of the mouse, is it ambidextrous, ergonomic, small, or large?
 
-![mouse sizing side view](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/Mouse%20-%20Sizing%20-%20Side%20View.png) ![mouse sizing top view](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/Mouse%20-%20Sizing%20-%20Top%20View.png)
+![mouse sizing side view](../../IMAGES/Mouse%20-%20Sizing%20-%20Side%20View.png) ![mouse sizing top view](../../IMAGES/Mouse%20-%20Sizing%20-%20Top%20View.png)
 
 ### Recommendations
 The following is a list of items to consider when searching for your ideal peripheral.
@@ -28,7 +28,7 @@ The following is a list of items to consider when searching for your ideal perip
        - https://gearsearch.gg/shape.html
        - https://www.rtings.com/mouse/tools/3d-model-shape-compare
 
-   ![gearsearch mouse shape comparison](https://github.com/djdallmann/GamingPCSetup/blob/master/CONTENT/DOCS/IMAGES/gearsearch.gg%20-%20MouseShapeCompare.png)
+   ![gearsearch mouse shape comparison](../../IMAGES/gearsearch.gg%20-%20MouseShapeCompare.png)
 
 ### Misc Information
    - It always recommended to **read both positive and negative reviews** for mice to ensure there are no ongoing or known issues with the peripheral **software, hardware or build quality in general**.
