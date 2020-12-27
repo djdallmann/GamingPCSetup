@@ -6,6 +6,8 @@
    * https://www.phidgets.com/docs/Addressing_Electromagnetic_Interference_with_Phidgets
  * Noise Suppressing Basic Course, Murata Americas
    * https://www.murata.com/en-us/products/emc/emifil/knowhow/basic
+ * Practical Shielding, EMC/EMI, Noise Reduction, Earthing and Circuit Board Layout, Engineering Institute of Technology
+   * https://www.eit.edu.au/resources/practical-shielding-emc-emi-noise-reduction-earthing-and-circuit-board-layout/
  * Susceptibility of PC to electromagnetic interference, IEEE, Defence Science and Technology Organisation, Piotrowski, 2009
    * https://ieeexplore.ieee.org/document/5349776
  * EMI Design Guidelines for USB Components, Intel 
