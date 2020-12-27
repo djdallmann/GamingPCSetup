@@ -1,5 +1,8 @@
 ## Electrical
 ### Ground Loops, EMI, EMF, EMC
+ * EMI analysis of DVI link connectors, Abhishek Patnaik, 2015
+   * Also associated with Dr. YaoJiang Zhang at Missouri University of Science and Technology and Chen Wang and Chuck Jackson at **NVIDIA, Inc.**
+   * https://scholarsmine.mst.edu/cgi/viewcontent.cgi?article=8407&context=masters_theses
  * Understanding, Finding & Eliminating Ground Loops, CEDIA Class EST016. Instructor. Bill Whitlock. President & Chief
    * https://web.mit.edu/~jhawk/tmp/p/EST016_Ground_Loops_handout.pdf
  * Addressing Electromagnetic Interference With Phidgets, Phidgets Inc. 2017.
