@@ -28,8 +28,8 @@ Most devices, wiring (e.g. single, twisted and non-twisted pair), cable shields 
 
 * **Recommendations for low inductive coupling environment**
   * Avoid adding things such as speaker systems or DACs to your configuration especially if these require separate grounded power sources which may introduce some noise due to the creation of ground current loops between interconnected devices increasing the ground potential between them.
-  * Disable or remove known wireless radio frequency transmitters such as wiii routers and cell phones from the area/room
-  * Consider using shielded power and signal lines for noisy environments. The effectiveness of these shields depend on the source and frequency of the interference, surface coverage, material used, number of layers and thickness, and ootentially grounding and bonding those shields.
+  * Disable or remove known wireless radio frequency transmitters such as wifi routers and cell phones from the area/room
+  * Consider using shielded power and signal lines for noisy environments. The effectiveness of these shields depend on the source and frequency of the interference, surface coverage, material used, number of layers and thickness, and potentially grounding and bonding those shields.
   * Separate signal and power lines to reduce induction/conducted emissions, not only consider those in your office/room but the signal lines which traverse the area such as network cables from the service entry point. In most cases the strength of near field radiation/emissions significantly reduces with distance which could be multiple inches or less. 
   * Power all interconnected devices at common point using a surge protector and/or uninterruptible power supply (UPS).
   * Always use a surge protector to reduce impact of transient events to your devices.
