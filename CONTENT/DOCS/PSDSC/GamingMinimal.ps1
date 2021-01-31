@@ -18,7 +18,7 @@ Configuration GamingMinimal {
     # Import the module that contains the resources we're using.
     Import-DscResource -ModuleName PsDesiredStateConfiguration
 
-    $myusername = "ddallmann"
+    $myusername = "godfr"
     $mysid = (New-Object System.Security.Principal.NTAccount($myusername)).Translate([System.Security.Principal.SecurityIdentifier]).value
 
     # The Node statement specifies which targets this configuration will be applied to.
