@@ -1,4 +1,55 @@
 ## Electrical
+### Shielding
+#### Q: How do computer chassis help control and reduce coupling? Does the composition or material have an effect?
+A well-built chassis will not only reduce outside interference from reaching sensitive computer components it will also reduce the noise radiating out. Most materials will have some level of resistance however some may only resist high frequencies whereas some both low and high.
+
+Desktop chassis on the market today use a mix of materials such as tempered glass, plastic, cold-rolled steel and/or aluminum. These materials may reduce some higher frequency noise but **not lower frequencies** which is more commonly associated with alternating current from power lines, transformers and supply.
+
+For more information on chassis shilelding, material resistance, and real-world case measurement. See findings and analysis below.
+
+<details><summary>Findings and Analysis</summary>
+ 
+Having researched the current market of desktop chassis and composition it was clear most vendors cater to those interested in the presentation of unique designs and lighting effects instead of environmental conditions or treating computers as scientific devices. This made sense given the current market so no fault to them during my search for an ideal chassis. I contacted the support of the **top 10 desktop chassis vendors** and found that none would meet the specifications below, except one potentially but it currently remains untested.
+
+**Key Factors for Chassis Selection**
+1. Ventilation and cooling
+2. Materials resistance to environment
+   * Thickness
+   * Type(s) of materials
+3. Fully enclosed with the exception of ventilation
+4. Limited air gaps in relation to interfering frequency or in corners/joins
+   * If air gaps are a concern you can get EMI gaskets
+5. Compartmentalization e.g. internal noise and shielding
+
+**Industrial Grade Server Chassis Specifications**
+  * SGCC (Galvanized Steel)
+  * 1mm or thicker
+  * Fully enclosed (all sides) in SGCC except where required for ventilation
+
+**Server Grade Chassis Example - mATX/ATX Compatible**
+* Rosewill RSV-R4100 4U Rackmount Server Case
+  * https://www.rosewill.com/product/rsv-r4100-4u-rackmount-server-case-chassis-8-internal-bays-2-included-cooling-fans/
+
+**Potential Desktop Chassis Candidate**
+* Antec P7 Silent (0.6 mm SGCC + Plastic)
+  * Material but not thickness
+  * Plastic is used on the faceplate but behind faceplate is SGCC
+  * https://antec.com/product/case/p7-silent.php
+  
+**My Rosewill RSV-R4100 4U Rackmount Server Case Shielding Measurements**
+
+![Shielding - Case Measurement - Rosewill RSV-R4100](../FINDINGS/Shielding%20-%20Case%20Measurement%20-%20Rosewill%20RSV-R4100.png)
+Note: These measurements are specific to my environment and are for demonstration purposes only.
+
+**Magnetic Field Shielding Demonstrations (Multiple Materials)** 
+* YouTube Channel - LearnEMC : Low-Frequency Magnetic Field Shielding Demonstration
+  * https://www.youtube.com/watch?v=EZLu8v3tTfY
+
+* YouTube Channel - LearnEMC : High-Frequency Magnetic Field Shielding Demonstration
+  * https://www.youtube.com/watch?v=_Zq6qiuuINE
+
+</details></br>
+
 ### Radio Frequency Interference
 #### Q: What types of near field radio frequencies do monitors and DVI cables create? Does the color or activity on screen change the radiated emissions?
 An LCD monitor may radiate different ranges of near field emissions based on serveral different factors such as the colors displayed and monitors refresh rate, during the few brief experiments it was found that a Benq GL2450 60hz monitor may radiate in the range of 150-800MHz with stronger signals at 150, 280-380, 450 and 590MHz.
