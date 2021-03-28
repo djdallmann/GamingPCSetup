@@ -7,7 +7,8 @@ Desktop chassis on the market today use a mix of materials such as tempered glas
 
 For more information on chassis shilelding, material resistance, and real-world case measurement. See findings and analysis below.
 
-<details><summary>Findings and Analysis</summary>
+<details>
+<summary><ins>Findings and Analysis<ins></summary>
  
 Having researched the current market of desktop chassis and composition it was clear most vendors cater to those interested in the presentation of unique designs and lighting effects instead of environmental conditions or treating computers as scientific devices. This made sense given the current market so no fault to them during my search for an ideal chassis. I contacted the support of the **top 10 desktop chassis vendors** and found that none would meet the specifications below, except one potentially but it currently remains untested.
 
