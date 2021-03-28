@@ -2,7 +2,7 @@
 ### Multimedia Class Scheduler Service (MMCSS)
 #### Q: What is Multimedia Class Scheduler Service (MMCSS)?
 MMCSS has been a part of the Microsoft Windows operating system for quite a while and was originally designed to improve time sensitive processing for multimedia applications by ensuring those processes/threads get the cpu time they need while still allowing lower priority applications to function. Developers can register their application threads with MMCSS under a customizable set of multimedia Task groups which define what type of priority and cpu resources they should receive.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 
 * **For more complete information see the official docs page:**
   * https://docs.microsoft.com/en-us/windows/win32/procthread/multimedia-class-scheduler-service
@@ -20,7 +20,7 @@ MMCSS has been a part of the Microsoft Windows operating system for quite a whil
 
 #### Q: Is it possible to tell what processes register to MMCSS and can you determine which tasks they requested?
 Yes, you can capture quite a bit of detail about MMCSS activities by capturing the MMCSS ETW trace provider with a tool such as **xperf or Windows Performance Analyzer and Recorder** such as what processes requested MMCSS, the requested task (e.g. Audio, Pro Audio), information about the sleep cycle/system responsiveness and when MMCSS has boosted or adjusted a processes priority and to what value.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 
 * Quite a bit of information can be learned about how MMCSS functions and that information can be collected and analyzed with it's MMCSS ETW trace provider such as when MMCSS has chosen to boost the priority of a process, and to what value, what multimedia task group was selected, the idle/sleep cycles (lazy or **no lazy** function). This information and those such as context switchs, cycle and frequency analysis, it may be possible to optimize the values for a given scenario or your computer to improve overall responsiveness and efficiency.
 
@@ -42,7 +42,7 @@ Yes, you can capture quite a bit of detail about MMCSS activities by capturing t
 
 #### Q: What types of MMCSS tasks are requested by common applications?
 The most commonly requested task is Audio, this will occur naturally when Windows applications make requests to Microsofts High Level Apis for Audio playback. Browsers based on Chromium such as the new Microsoft Edge and the Google Chrome browser use **Pro Audio**. See findings and analysis for other common processes including some old and modern games.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 
 * Below is a basic list of common processes including some new and old games and the MMCSS tasks they register under:
   * msedge.exe (Chromium) - **Pro Audio**
@@ -67,7 +67,7 @@ The most commonly requested task is Audio, this will occur naturally when Window
 
 #### Q: Does CSRSS.exe (Client/Server Run-Time Subsystem) or DWM.exe (Desktop Window Manager) ever use MMCSS?
 Not by default or without user intervention but... there is a DWM api function call which you can use to allow DWM/CSRSS to opt into MMCSS. See findings and analysis for more information.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 
 * Both Desktop Window Manager (DWM) and Client/Server Run-Time Subsystem (CSRSS) do not register with MMCSS at anytime without user intervention or the use of the DWM API DwmEnableMMCSS function, when this function is used they register under the following multimedia task groups.
   * **MMCSS Task Groups:**
@@ -83,7 +83,7 @@ Not by default or without user intervention but... there is a DWM api function c
 
 #### Q: Can you take advantage of the MMCSS boosted CSRSS and DWM thread priorities (DwmEnableMMCSS) while using a fullscreen exclusive application?
 Unfortunately not, once a game changes the state to fullscreen exclusive dwm drops into a lower processing state and unregisters the MMCSS thread for both csrss and dwm. What this does mean though is that **you can use DwmEnableMMCSS for non fullscreen exclusive applications and games**, this should theoretically **give you a boost in a responsiveness from both dwm (graphics scheduling) and csrss (mouse and keyboard raw input)**. To test this for yourself see findings and analysis.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 
 **To test DwmEnableMMCSS while using a non-fullscreen exlcusive application perform the following steps:**
   * Download my [GameMode](../../SCRIPTS/GameMode.ps1) script to your desktop
@@ -107,25 +107,25 @@ is active and has not previously called DwmEnableMMCSS to disable MMCSS.
 
 #### Q: Do any processes or threads register with MMCSS during the boot process?
 No threads or process have been observed using MMCSS during the boot process.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 No
 </details></br>
 
 #### Q: Do any processes or threads register with MMCSS task DisplayPostProcessing?
 No threads or process have been observed using this MMCSS task both during runtime or the boot process.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 No
 </details></br>
 
 #### Q: Do any processes or threads register with MMCSS task Games?
 No threads or process have been observed using this MMCSS task in both old or new games.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 No
 </details></br>
 
 #### Q: What the heck is NoLazyMode, is it real? What does it do?
 Yes, NoLazyMode is a real MMCSS setting which can be seen through registry key access monitoring and is also identified by extracting strings from mmcss.sys (driver). Current analysis suggests that the MMCSS scheduler sleep cycle and idle detection are different when enabled vs disabled. See findings and analysis for more details.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 
 * The NoLazyMode MMCSS registry key has been floating around the web although no conclusive evidence or measurement has been given surrounding it's use nor does it have any official documentation by Microsoft. 
 * Based on early analysis of MMCSS ETW trace provider setting the DWORD value to 0x1 (Default: 0, Disabled/Non-Present) changes the MMCSS scheduler sleep/idle behavior.
@@ -146,7 +146,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\Syste
 
 #### Q: What does the hidden MMCSS Latency Sensitive registry key actually do? What is the default value?
 Latency Sensitive refers to Latency Sensitive Hints, essentially under cpu heavy conditions MMCSS can create latency sensitive hints to the processor power performance engine to help adjust performance state (PoLatencySensitive). When this condition occurs we see **TurboEngaged** events in MMCSS provider event audit and corresponding Latency Sensitive Hints from SYSTEM in the Windows Kernel Power Provider.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
  
 * Latency Sensitive refers to Latency Sensitive Hints, essentially under heavy cpu use MMCSS can create latency sensitive hints 
 to the processor power performance engine to help adjust performance state (PoLatencySensitive). When this condition occurs we see **TurboEngaged** events 
@@ -181,7 +181,7 @@ Values: True or False
 
 #### Q: Does the MMCSS task Clock Rate registry setting do anything?
 Firstly no, I haven't found any evidence that this setting has any impact which aligns with Microsofts Documentation but it can... yes I know very click baity. See findings and analysis for more information.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
  
 * During my tests of manipulating the Clockrate MMCSS task registry value it had no impact on MMCSS cycles, timer resolution or anything else I could think of at the time, Microsofts documentation states specifically **Starting with Windows 7 and Windows Server 2008 R2, this guarantee was removed to reduce system power consumption.** which seems to align with everything I checked.
 * There is one issue though which actually applies to MANY of the MMCSS task registry settings and parent keys, and that is **if you set a value too high (above 10,000 the default in this case), too low (~2,000, not sure of exact range tried a few) that MMCSS task will cease to function** while others will continue to work and receive boosts, this effectively creates a way of having MMCSS run while blocking certain MMCSS tasks. I will make a specific entry in this research page for other settings, examples and what impacts it could have.
@@ -190,7 +190,7 @@ Firstly no, I haven't found any evidence that this setting has any impact which 
 
 #### Q: What is the BackgroundPriority mmcss registry setting? Does it have anything to do with the Background Only registry key?
 The BackgroundPriority registry key influences the **Base Thread priority** when the **Scheduling Category is Low**, and has no direct relation to the Background Only registry key. See findings and analysis for more information.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
  
 * During my analysis of different MMCSS tasks Audio and Pro Audio, the Background Only registry key value (True or False) had no direct relationship to the BackgroundPriority value. 
 * When the **Scheduling Category is LOW, the base priority of the thread is not influenced by the tasks Priority setting**. When set to LOW the thread has a base value of 8, incrementing BackgroundPriority (default is 1) will boost the base priority giving you a maximum base priority of 15 (just before REALTIME 16 priority class).
@@ -214,7 +214,7 @@ As noted above, this only applies when Scheduling Category is LOW.
  
 #### Q: Does the hidden MMCSS SystemProfile registry setting LazyModeTimeout alter the running state?
 Yes, this value does in fact alter the settings in the MMCSS Scheduler sleep cycle for idle time periods related to  the events **IdleDetectionLazy** and **SleepRealtimeLazy**.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 
 * This one was pretty easy to confirm, I changed the value then compared it to what MMCSS event provider was recording. This value alters the lazy sleep timeout periods globally, more information on what impact this has on the MMCSS scheduler in another MMCSS research article.
 
@@ -223,7 +223,7 @@ Yes, this value does in fact alter the settings in the MMCSS Scheduler sleep cyc
 
 #### Q: Does the hidden MMCSS SystemProfile registry settings MaxThreadsTotal and MaxThreadsPerProcess restrict overall use of MMCSS?
 Unfortunately this has zero impact on how many threads total or per process that could register with MMCSS during multiple tests, see findings for more information.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 
 * For the evaluation of these settings I set each to different combinations of 1 and 3 (e.g. 3&1, 1&3, 3&3, 1&1) then I proceeded to generate MMCSS tasks for both Pro Audio and Audio, both separately and together. The simplest way to generate multiple threads for under a single process **under normal circumstances** is to open a browser such as Chrome then load a bunch of YouTube videos let's say 6 and ensure they are all playing media simultaneously, and in this scenario it had no impact on the number of threads registered to MMCSS under the Chrome browser process in relation to **MaxThreadsPerProcess** setting. 
   * Its hard to say if this particular test is ideal but it was the quickest way to test, the reason being is that Chrome is a single parent process but for each tab child processes are created. Perhaps if it was a single parent process and I tried registering multiple threads in that process it may change the outcome. 
@@ -235,7 +235,7 @@ Unfortunately this has zero impact on how many threads total or per process that
 
 #### Q: Does the MMCSS task registry setting SFIO Priority actually change the IO Priority or does it do nothing like Microsoft's documentation states?
 Microsoft's documentation is spot on again, the value of this registry setting does not influence IO Priority of the MMCSS registered thread.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
  
 * Microsofts documentation for MMCSS states the following and is again it's spot on.
   * SFIO Priority	REG_SZ	The scheduled I/O priority. This value can be set to Idle, Low, Normal, or High. **This value is not used.**
@@ -245,7 +245,7 @@ Microsoft's documentation is spot on again, the value of this registry setting d
 
 #### Q: How does MMCSS map the defined priorities and scheduling category in relation to the values recorded by the event provider?
 When a thread joins MMCSS it reads the registry for the specified tasks and maps those values to three different priority levels **Medium, Low and Uber Low** under the given Scheduling Category. For more information see findings and analysis, and associated priority mapping table reference.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
  
 Based on those values (**Medium, Low and Uber Low**) and the scheduling category MMCSS has it's own internal mapping which is reflected in the boosted priority and a deprioritization value. The **Medium value reflects the boosted value** give or take +1 (not exactly intuitive but probably done this way for a reason, you'll see..) , the **Low value only applies for Scheduling Category Low** then **Uber Low reflects the deprioritzation value.**
 
@@ -331,7 +331,7 @@ There's a handful of events that are happening inside MMCSS, here's a breakdown 
   * **TaskIndex_Yield** - Summarizes the yield period duration
 
 To learn more about MMCSS behavior, potential gotchas, and variables then see findings and analysis.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
  
 To explain what MMCSS is doing it's best to use an example so in this case we'll assume the following: 
 * We have a **default MMCSS system profile and task settings**

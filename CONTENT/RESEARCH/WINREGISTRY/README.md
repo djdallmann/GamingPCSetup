@@ -3,7 +3,7 @@
 #### Q: Is there an easy way to see what registry keys are accessed or modified by every process or dll upon execution or during runtime?
 Yes, there are two relatively easy methods to check for this activity, Windows Sysinternals Process Monitor and Windows Performance Analyzer and Recorder. Windows Sysinternals Process Monitor is best used during realtime analysis, launching a process or restarting a service whereas Windows Performance Analyzer and Recorder also allows you to capture key information during the boot process.
 
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 
 **Process Monitor**
 1. Download Process Monitor - https://docs.microsoft.com/en-us/sysinternals/downloads/procmon
@@ -26,7 +26,7 @@ Yes, there are two relatively easy methods to check for this activity, Windows S
 #### Q: What are some of the registry keys accessed on boot? Do they reveal potentially hidden registry keys and values?
 There's a large amount of registry keys loaded on boot as the registry is intended to persist application and operating system configuration state between uses. There does appear to be many potentially hidden registry keys for drivers and operating system functions based on the attempted access patterns, however most of these are often without documentation so to prove there is any difference may require further research, performance analysis, trial and error. See findings and analysis for more details.
 
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
   
 * Using Windows Performance Analyzer and Recorder as described in [Is there an easy way to see what registry keys are accessed or modified?](https://github.com/djdallmann/GamingPCSetup/tree/master/CONTENT/RESEARCH/WINREGISTRY#q-is-there-an-easy-way-to-see-what-registry-keys-are-accessed-or-modified-by-every-process-or-dll-upon-execution-or-during-runtime), the following key value pairs were only some of the notable identified values during the boot process of my machine.
   * [AudioSrv](../FINDINGS/registrykeys_audiosrv.txt)

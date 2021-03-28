@@ -7,7 +7,7 @@ The values **MaxComputedSpread** and **MaxWaves** I assume have to do with the *
 
 As for the default values **on/off vs undefined** I assume these are the same across similar CPU architectures and chipsets so your mileage may vary, I'm currently using an Intel I7 6700k on H270M. See findings and analysis for more details.
 
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
   
 When comparing undefined vs off/in for both userplatformclock and useplatformtick, **undefined was the same as FALSE**.
   
@@ -47,7 +47,7 @@ To reduce the size of the table below, the following column values did not chang
 #### Q: If you modify Win32PrioritySeparation (process foreground and background quantum lengths) in the registry does it update in realtime or does it require a system restart?
 It updates in realtime which can be confirmed using WinDBG via Live Kernel debug
 
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 
 * Using bcdedit you can enable debug mode which will allow you to use WinDBG in a more realtime debug mode. Once enabled and hooked you can read information about different processes and threads that are running including some of the operating systems global user and kernel space variables.
 1. In a kernel hooked WinDBG use the following commands to show the current values for priority separation and foreground quantum length. This should match the equivalent number format in the registry value and the Quantum Values mapping for the related bitmask.
@@ -87,7 +87,7 @@ XLSX File: [Win32PrioritySeparation Quantum Unit Mapping](../FINDINGS/Win32Prior
 #### Q: Can you micro-increment/adjust the windows timer resolution?
 Yes, but it isn't always consistent see findings for more information.
 
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 
 * Using a programmatic loop of the Windows Kernel functions for setting and returning the value of the current windows timer resolution you can see that the result isn't always set to what was requested and sometimes reverts to a lower previous value.
 * One aspect to this would be to see if there are any benefits of doing this if applications are analyzed at a lower level.
@@ -102,7 +102,7 @@ ntdll.dll
 
 #### Q: Can you monitor which programs requested specific timer resolutions over a period of time?
 Yes, there are a few ways to monitor these requests here are two common methods, powercfg.exe energy report and a Windows Performance Recorder power usage resource analysis capture. See findings and analysis for the procedures.
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
     
 1. The **PowerCfg tool** built into windows has many functions, one of those is the energy report which will monitor the PC over a period of time and report any issues related to power consumption, timer resolution being one of those factors which changes the behavior of the computer which increases power consumption.
     1. Open cmd.exe or powershell.exe as an administrator
@@ -123,7 +123,7 @@ Yes, there are a few ways to monitor these requests here are two common methods,
 #### Q: Does PS/2 keyboard driver provide lower DPC latency than USB keyboard driver?
 No, not during the tests I performed but PS/2 keyboard driver latency was more stable.
 
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 
 * Based on 20 tests results of each PS/2 and USB it was noted that USB keyboard driver generally has lower DPC latency (~4-8 microseconds), however PS/2 overall is ultra consistent at 8 microsecond times 97-99% of the time. The test performed was a 5 second timer to alt-tab ingame then starts a 30 second sleep timer after xperf data capture is started, in-game I only held a single key for the entire duration. Not necessarily a real world test but a test that is relatively consistent/repeatable.
 

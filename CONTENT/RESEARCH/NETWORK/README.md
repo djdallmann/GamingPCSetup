@@ -4,9 +4,7 @@
 Yes, during the simulations it was found that it had more of an impact on DPC latency processing times over ISR, however each setting didn't scale equally as higher interrupt moderation values were used however this may be dependant other factors such as RSS, RSS affinity, rx/tx buffers, and timer resolution and the traffic simulation itself.
 
 <details>
- <summary>
-  Findings and Analysis
- </summary>
+ <summary><ins>Findings and Analysis</ins></summary>
 
 **Configuration during the tests**
   * Tools: xperf & iperf
@@ -81,7 +79,7 @@ but DPC latency performance does not change regardless
 #### Q: Disabling NetworkThrottlingIndex feature improves overall network performance and latency
 Not completely true, NDIS.sys DPC latency is increased quite notably when disabled.
 
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 
 * A very common recommendation in many performance enhancement/gaming guides state that disabling *NetworkThrottleIndex* improves network performance and latency because in theory it should prevent rate limiting and quality of service (QoS) interactions. 
 * The main purpose of NetworkThrottlingIndex is to reduce (rate limit) calls which would otherwise impact real time audio and perhaps cause stutter or other audible artifacts.

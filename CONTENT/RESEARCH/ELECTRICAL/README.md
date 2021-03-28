@@ -8,7 +8,7 @@ Desktop chassis on the market today use a mix of materials such as tempered glas
 For more information on chassis shilelding, material resistance, and real-world case measurement. See findings and analysis below.
 
 <details>
-<summary><ins>Findings and Analysis<ins></summary>
+<summary><ins>Findings and Analysis</ins></summary>
  
 Having researched the current market of desktop chassis and composition it was clear most vendors cater to those interested in the presentation of unique designs and lighting effects instead of environmental conditions or treating computers as scientific devices. This made sense given the current market so no fault to them during my search for an ideal chassis. I contacted the support of the **top 10 desktop chassis vendors** and found that none would meet the specifications below, except one potentially but it currently remains untested.
 
@@ -57,7 +57,7 @@ An LCD monitor may radiate different ranges of near field emissions based on ser
 
 The display cable itself generates frequencies more notably at 82.5 to 84.5MHz depending on the monitors activity, if no active content is being rendered the emissions are not as pronounced similarly as when a single ferrite is applied. See findings and analysis for more information.
 
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 
 * Monitor: Benq GL2450 TN Panel
   * https://www.benq.com/en-ap/monitor/stylish/gl2450/specifications.html
@@ -76,7 +76,7 @@ The display cable itself generates frequencies more notably at 82.5 to 84.5MHz d
 #### Q: What techniques, physical configuration and cable routing methods may best reduce inductive coupling of data cable, shield and power cables?
 Most devices, wiring (e.g. single, twisted and non-twisted pair), cable shields and communication protocols generally provide some or no resistance to inductive coupling and interference. All electrical devices both produce and conduct Electromagnetic Interference (EMI) and Radio Frequency Interference (RFI) which may be near field or far field emissions and radiation. The general rule of thumb in reducing inductive coupling is to appropriately shield data and signal lines, filtering or reducing the impedence of interfereing frequencies (e.g. ferrites, chokes, baluns, toroids), and increasing distance from interfering signals through good cable management practices by separating power from data and signal lines. For more details see findings and analysis for further recommendations and diagrams of a low inductive coupling cable configuration.
 
-<details><summary>Findings and Analysis</summary>
+<details><summary><ins>Findings and Analysis</ins></summary>
 
 * **Recommendations for low inductive coupling environment**
   * Avoid adding things such as speaker systems or DACs to your configuration especially if these require separate grounded power sources which may introduce some noise due to the creation of ground current loops between interconnected devices increasing the ground potential between them.
