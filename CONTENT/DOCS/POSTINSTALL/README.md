@@ -1,4 +1,4 @@
-## Post Installation Steps
+# Post Installation Steps
 
 1. In **Windows Device Manager** (devmgmt.msc) go to **Network adapters** and right click each and go to properties, then Power Management and **uncheck Allow the computer to turn off this device to save power**.
 2. Disable NetBIOS over TCP in Network Adapter IPV4 settings to disable unnecessary SYSTEM listening service
