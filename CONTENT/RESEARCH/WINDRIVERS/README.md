@@ -50,3 +50,21 @@ Rows highlighted below represent byte allocation and frees since the last update
 ![HIDUSB and USBHUB3 nonpaged pool alloc mouse movement](../../DOCS/IMAGES/HIDUSB%20and%20USBHUB3%20nonpaged%20pool%20alloc%20mouse%20movement.png)
 
 </details></br>
+
+### Video Card
+#### Q: Are there any configuration options that allow you to disable HDCP when using Nvidia based graphics cards?
+As far as I'm aware there are no graphical user interface systems which allow you to do this, however you can modify the display adapters (class) HDCP configuration through the registry which allows you to define an unsupported configuration which causes the feature to be disabled. Windows or driver updates will likely revert the configuration, as will reinstalling the display adapter. To note I'm not the original pioneer of this finding, just helped to simplify it through testing.
+
+<details><summary><ins>Findings and Analysis</ins></summary>
+ 
+Configure the following DWORD value below for your active display adapter then resart your computer. This should cause Nvidia to display **This display does not support HDCP as configured** in the Nvidia control panel in the View HDCP Status sub-menu, third party tools can also be used to validate HDCP is disabled. 
+ 
+The key 0002 in the registry reflects the path of the active display adapter, look for the value of **HardwareInformation.AdapterString** to help identify your display adapter and the appropriate key to create the DWORD in. (e.g. 0000, 0001, 0002)
+
+**Example**
+```
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0002]
+"RMHdcpKeyglobZero"=dword:00000001
+```
+ 
+ </details></br>

@@ -21,6 +21,8 @@ If you do use this or redistribute this in any way, please give due credit.
 [Windows Drivers](WINDRIVERS/README.md)
 - What are the default non-paged pool allocations for mouclass.sys and kbdclass.sys dataqueuesize parameters indicated by the mouclass and kbdclass event providers?
 - How do the values in keyboarddataqueuesize and mousedataqueuesize affect the non-page pool memory allocation? How can you tell?
+- Are there any paged or non-paged pool buffer allocations or frees when you move the mouse?
+- Are there any configuration options that allow you to disable HDCP when using Nvidia based graphics cards?
 
 [Windows Kernel](WINKERNEL/README.md)
 - If you modify Win32PrioritySeparation (process foreground and background quantum lengths) in the registry does it update in realtime or does it require a system restart?
