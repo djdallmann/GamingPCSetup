@@ -2,12 +2,13 @@
 1. **Reset BIOS to optimal defaults**
    - Most BIOS provide an option for this in one of the available menus
 2. **Set the Package C-State Limit**
-   - When higher C-States values are made available such as  C6, C7, C8 the more latency is introduced due to the time it takes to restore and transition the active power state.
-   - Some configurations may be negatively impacted by disabling all avaiable C-States, if this is the case then try limiting the value to **C2 or C3**. This is likely due to a bottleneck in memory or cpu.
+   -When higher C-States values are made available such as  C6, C7, C8 the more latency is introduced due to the time it takes to restore and transition the active power state.
+   -Some configurations may be negatively impacted by disabling all avaiable C-States, if this is the case then try limiting the value to **C2 or C3**. This is likely due to a bottleneck in memory or cpu.
 3. **Disable Intel (R) Speed Shift Technology**
 4. **Disable CPU Enhanced Intel Speedstep Technology (EIST) Function**
-5. **Disable Turbo Boost**
-   - If you'd like to use Turbo Boost frequencies I'd recommend using a static overclock instead.
+5. **Turbo Boost**
+   - If isolating performance behavior issues, disable.
+   - If you'd like to use Turbo Boost frequencies I'd recommend using a static overclock to reduce minor overhead from dynamic frequency scaling, otherwise **enable**.
 6. **Enable Memory XMP Profile**
 7. Set any **Fast Boot Settings to OFF**
    - This may be in the Memory and other sections which let you control what devices that are powered up before it reaches the OS to save boot times.
