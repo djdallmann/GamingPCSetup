@@ -4,6 +4,7 @@ This section contains information that may help identify and resolve different c
 
 * [Electrical Interference](ELECTRICALINTERFERENCE.MD)
 * [Media Playback](MEDIAPLAYBACK/README.md)
+* [Video Card](VIDEOCARD.md)
 
 ## Tools
 ### Software
