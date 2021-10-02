@@ -38,6 +38,13 @@ This section contains information that may help identify and resolve different c
     * https://www.hwinfo.com/download/
   * FIO - Flexible I/O tester
     * https://fio.readthedocs.io/en/latest/fio_doc.html
+  * nvidia-smi - NVIDIA System Management Interface
+    * A multipurpose Nvidia graphics management and monitoring tool. 
+    * Comes with driver installations, path may vary for each driver installation.
+      * e.g. C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_xxxxxxxxxxxxxxx\nvidia-smi.exe
+  * MSI Afterburner
+    * Graphics card monitoring, overclocking and performance management tool.
+    * https://www.msi.com/Landing/afterburner/graphics-cards
    
 ### Hardware
   * Affordable Advanced GQ EMF-390 Multi-Field, Multi-Function EMF Meter and RF Spectrum Power Analyzer
