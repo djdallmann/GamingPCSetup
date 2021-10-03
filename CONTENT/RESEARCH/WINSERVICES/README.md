@@ -1,4 +1,9 @@
 ## Windows Services
+### Client/Server Runtime Subsystem (CSRSS)
+#### Q: What is Client/Server Runtime Subsystem (CSRSS)?
+CSRSS performs many functions but most notably it is responsible for raw input handling for both the keyboard and the mouse cursor. This can easily be verified by looking at cpu usage and cycles using a tool such as [Windows Sysinternals Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer), as you move the mouse CSRSS usage increases. For more complete detail regarding CSRSS please reference Windows Internals for the version that applies to your Windows platform, e.g. Windows Internals 7th Ed. for Microsoft Windows 10 and greater.
+</br></br>
+
 ### Multimedia Class Scheduler Service (MMCSS)
 #### Q: What is Multimedia Class Scheduler Service (MMCSS)?
 MMCSS has been a part of the Microsoft Windows operating system for quite a while and was originally designed to improve time sensitive processing for multimedia applications by ensuring those processes/threads get the cpu time they need while still allowing lower priority applications to function. Developers can register their application threads with MMCSS under a customizable set of multimedia Task groups which define what type of priority and cpu resources they should receive.
