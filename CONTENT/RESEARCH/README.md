@@ -36,6 +36,9 @@ If you do use this or redistribute this in any way, please give due credit.
 - What are some of the registry keys accessed on boot? Do they reveal potentially hidden registry keys and values?
 
 [Windows Services](WINSERVICES/README.md)
+* **Client/Server Runtime Subsystem (CSRSS)**
+  - What is Client/Server Runtime Subsystem (CSRSS)?
+
 * **Multimedia Class Scheduler Service (MMCSS)**
   - What is Multimedia Class Scheduler Service (MMCSS)?
   - Is it possible to tell what processes register to MMCSS and can you determine which tasks they requested?
