@@ -52,7 +52,7 @@
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/introduction-to-interrupt-service-routines
    * Microsoft Hardware - Kernel-Mode Driver Architecture - Introduction to Deferred Procedure Calls, Microsoft Docs
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/introduction-to-dpcs
-   * Microsoft Hardware - Kernel-Mode Driver Architecture - Introduction to Deferred Procedure Calls, Microsoft Docs
+   * Microsoft Hardware - Kernel-Mode Driver Architecture - Introduction to Message-Signaled Interrupts, Microsoft Docs
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/introduction-to-message-signaled-interrupts
    * Reducing Interrupt Latency Through the Use of Message Signaled Interrupts, Intel 2009, James Coleman
 Performance Architect Intel Corporation
@@ -107,6 +107,8 @@ Performance Architect Intel Corporation
       * https://docs.microsoft.com/en-us/windows/win32/procthread/multimedia-class-scheduler-service
    * Multimedia Class Scheduler Service (MMCSS), How to use the throttling mechanism to control network performance in Windows Vista, Microsoft Help and Support, Microsoft 2008
       * https://web.archive.org/web/20080724025429/http://support.microsoft.com/kb/948066
+   * Changes to Service Host grouping in Windows 10, Microsoft, Microsoft Docs
+      * https://docs.microsoft.com/en-us/windows/application-management/svchost-service-refactoring  
 
 ### Latency
    * Intel Optimizing Computer Applications for Latency: Part 1: Configuring the Hardware, Intel 2017, Evgueny Khartchenko
