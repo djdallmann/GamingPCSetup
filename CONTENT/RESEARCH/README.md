@@ -23,6 +23,7 @@ If you do use this or redistribute this in any way, please give due credit.
 - How do the values in keyboarddataqueuesize and mousedataqueuesize affect the non-page pool memory allocation? How can you tell?
 - Are there any paged or non-paged pool buffer allocations or frees when you move the mouse?
 - Are there any configuration options that allow you to disable HDCP when using Nvidia based graphics cards?
+- Is there a registry setting that can force your display adapter to remain at it's highest performance state (PState, P0)?
 
 [Windows Kernel](WINKERNEL/README.md)
 - If you modify Win32PrioritySeparation (process foreground and background quantum lengths) in the registry does it update in realtime or does it require a system restart?
