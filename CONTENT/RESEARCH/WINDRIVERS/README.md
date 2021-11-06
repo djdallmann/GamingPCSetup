@@ -68,3 +68,21 @@ The key 0002 in the registry reflects the path of the active display adapter, lo
 ```
  
  </details></br>
+ 
+#### Q: Is there a registry setting that can force your display adapter to remain at it's highest performance state (PState, P0)?
+Yes, when the DWORD DisableDynamicPstate is set to 1 for your active graphics card under the display adapter class settings it will cause your graphics card to operate at it's highest defined frequencies similarly to setting your NVIDIA card to **Prefer Maximum Performance** in the power settings. In theory this should override NVIDIAs hidden per-application power settings (DWM, Explorer which are set to adaptive out of box).
+
+<details><summary><ins>Findings and Analysis</ins></summary>
+
+While examining some of the [registry keys accessed](../FINDINGS/registrykeys_displayadapter_class_4d36e968-e325-11ce-bfc1-08002be10318.txt) during the boot process I noticed the **DisableDynamicPstate** option under the display adapter class configuration. After setting the DWORD value to 1 and restarting the computer the NVIDIA graphics card no longer changed [PState values](https://docs.nvidia.com/gameworks/content/gameworkslibrary/coresdk/nvapi/group__gpupstate.html) (it was P0) even when the NVIDIA power profiles were set to Adaptive/Optimal. This was validated using [nvidia-smi in monitoring mode](../../TROUBLESHOOTING/VIDEOCARD.md#nvidia-system-management-interface-nvidia-smi) to capture the PState and GPU core and memory frequencies during desktop use and gameplay.
+
+**Registry Path**
+
+```
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000]
+"DisableDynamicPstate"=dword:00000001
+```
+
+This path won't be identical in all cases, the number 0000 references a specific video card and may be overwritten during driver installations, or if you move the GPU to another slot. To determine the appropriate reference number (eg. 0000, 0001, 0002) open registry editor and navigate to the path below then look at the "DriverDesc or HardwareInformation.AdapterString" values which should contain a name of the video card adapter e.g. **NVIDIA GeForce GTX 1050**.
