@@ -133,6 +133,8 @@ Performance Architect Intel Corporation
    * Capturing USB ETW traces with Microsoft Message Analyzer (MMA), Microsoft USB Blog, Andrea Keating & Eliyas Yakub
       * https://techcommunity.microsoft.com/t5/Microsoft-USB-Blog/Capturing-USB-ETW-traces-with-Microsoft-Message-Analyzer-MMA/ba-p/270811
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/capture-and-view-ing-usb-traces-with-microsoft-message-analyzer-
+  * USB Device Power States, Microsoft Hardware Dev Center, Microsoft 2020
+      * https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/comparing-usb-device-states-to-wdm-device-states
       
 ### Thermal Throttling
    * Defective Heat Sinks Causing Garbage Gaming, Random ASCII – tech blog of Bruce Dawson, Bruce Dawson, Former Employee of Valve, Microsoft XBox 360 and Google Chrome Performance Management Teams
