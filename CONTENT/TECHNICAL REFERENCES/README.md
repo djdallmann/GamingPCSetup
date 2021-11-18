@@ -135,7 +135,9 @@ Performance Architect Intel Corporation
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/capture-and-view-ing-usb-traces-with-microsoft-message-analyzer-
   * USB Device Power States, Microsoft Hardware Dev Center, Microsoft 2020
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/comparing-usb-device-states-to-wdm-device-states
-      
+  * USB Selective Suspend, Microsoft Hardware Dev Center, Microsoft 2021
+      * https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/usb-selective-suspend
+
 ### Thermal Throttling
    * Defective Heat Sinks Causing Garbage Gaming, Random ASCII – tech blog of Bruce Dawson, Bruce Dawson, Former Employee of Valve, Microsoft XBox 360 and Google Chrome Performance Management Teams
       * https://randomascii.wordpress.com/2013/08/06/defective-heat-sinks-causing-garbage-gaming/
