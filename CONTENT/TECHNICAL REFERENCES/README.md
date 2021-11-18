@@ -47,6 +47,10 @@
      * https://lenovopress.com/lp0870-understanding-pstate-control-to-maximize-energy-efficiency
 
 ## Microsoft Windows
+### Audio Processing
+   * Use MXA to Verify that Audio is Offloaded During Full Screen Video Playback, Windows Hardware Dev, Microsoft 2021
+      * https://docs.microsoft.com/en-us/windows-hardware/test/wpt/optimizing-windows-devices-for-multimedia-experiences-exercise-3
+
 ### Interrupt Service Routines (ISR), Deferred Procedure Calls (DPC), Message-Signaled Interrupts (MSI)
    * Microsoft Hardware - Kernel-Mode Driver Architecture - Introduction to Interrupt Service Routines, Microsoft Docs
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/introduction-to-interrupt-service-routines
