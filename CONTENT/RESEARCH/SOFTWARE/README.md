@@ -65,5 +65,7 @@ Visual from [Microsoft's Media Experience Analyzer (MXA/XA)](../../TROUBLESHOOTI
 * [Microsofts Interrupt_Affinity_Policy_Tool](https://docs.microsoft.com/en-us/previous-versions/windows/hardware/download/dn550976(v=vs.85)?redirectedfrom=MSDN)
    * For assisting with USB XHCI Controller affinity (WDF01000.sys driver DPC/ISR affinity), this can be achieved manually as well.
    * https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/interrupt-affinity-and-priority
+* [Microsoft's Media Experience Analyzer (MXA/XA)](../../TROUBLESHOOTING/MEDIAPLAYBACK/README.md#media-experience-analyzer)
+* [Microsoft's Windows Performance Analyzer](../../TROUBLESHOOTING/MEDIAPLAYBACK/README.md#media-experience-analyzer)
 
 </details></br>
