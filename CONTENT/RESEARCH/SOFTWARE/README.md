@@ -49,7 +49,7 @@ Visual from [Microsoft's Media Experience Analyzer (MXA/XA)](../../TROUBLESHOOTI
 
 **What I found to provide the most consistent results**
    * WDF01000.sys
-      * Bind the USB XHCI Controller to a single dedicated core which is not shared or underutilized by other drivers (ISR/DPC), processes and threads. e.g. Use core 5 of 8
+      * Bind the USB XHCI Controller to a single dedicated core which is underutilized and not shared by other drivers (ISR/DPC), processes and threads. e.g. Use core 5 of 8
    * DWM and CSRSS
       * Put these on the same core (affinity), if separated you'll likely get outliers consistently at 1005 or 1010Hz but nearly stable 1000hz otherwise. They work closely together so putting them on separate cores cause the other CPU to be initiated to process the information vs remaining on the same core. e.g. Use core 8/8.
       * Increase CSRSS priority class from Normal to High to more closely align with DWMs default priority class.
@@ -62,6 +62,7 @@ Visual from [Microsoft's Media Experience Analyzer (MXA/XA)](../../TROUBLESHOOTI
    * This is probably the book you want to read if you want to learn more about Windows behind the scenes.
 * [Process Hacker](https://processhacker.sourceforge.io/)
    * For changing affinities/priorities of privileged processes (CSRSS etc)
+   * Some anti-cheats will block this driver if it's running, the driver should unload itself after being idle. To disable it manually open a Command Prompt as admin then run **sc stop kprocesshacker3**
 * [Microsofts Interrupt_Affinity_Policy_Tool](https://docs.microsoft.com/en-us/previous-versions/windows/hardware/download/dn550976(v=vs.85)?redirectedfrom=MSDN)
    * For assisting with USB XHCI Controller affinity (WDF01000.sys driver DPC/ISR affinity), this can be achieved manually as well.
    * https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/interrupt-affinity-and-priority
