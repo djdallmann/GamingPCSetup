@@ -18,6 +18,10 @@ If you do use this or redistribute this in any way, please give due credit.
 - How are the HyperX Fury S Speed and Control fabrics different in texture? Do they have noticeably different resistance as a tracking surface?
 - Can you define the interrupt moderation rate for USB controllers? Do different versions of windows have different default values?
 
+[Software](SOFTWARE/README.md)
+- What is MouseTester?
+- What contributes to variance in MouseTester plots and how can you improve it?
+
 [Windows Drivers](WINDRIVERS/README.md)
 - What are the default non-paged pool allocations for mouclass.sys and kbdclass.sys dataqueuesize parameters indicated by the mouclass and kbdclass event providers?
 - How do the values in keyboarddataqueuesize and mousedataqueuesize affect the non-page pool memory allocation? How can you tell?
