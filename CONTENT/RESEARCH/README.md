@@ -63,3 +63,5 @@ If you do use this or redistribute this in any way, please give due credit.
   - How does MMCSS map the defined priorities and scheduling category in relation to the values recorded by the event provider?
   - Does the MMCSS AlwaysOn registry setting exist?
   - What's actually happening inside MMCSS on a millisecond time scale? What variables are there and how do they come into play?
+  - What happens when you set SystemResponsiveness to a value higher than 50?
+  - Can you set SystemResponsiveness to 100?
