@@ -21,6 +21,12 @@
 13. Make sure **Platform Power Management is disabled**
 14. **Disable any onboard LED/RGB traces/lights**, e.g. Gigabyte Ambient LED
 15. Set your **PCI Express Max Link Speed to Gen3**, devices can negotiate lower spec as needed.
+16. Set a static voltage for CPU vcore then use load line calibration (LLC) to help maintain constant voltage under load.
+    - Reference CPU manufacturers documention as a guideline for vcore specifications.
+    - Using auto/automatic values will increase voltage variability since it dynamically scales.
+    - Use HWInfo and HWInfoCompare to compare static vs auto voltages, monitor for performance and stability.
+    - Test out different LLC levels while under load (e.g. your game)
+    - You should be able to achieve a near constant vcore voltage or at least a constant value 90% or more of the time without excessive overvolting or extreme LLC.
 
 ### Other Considerations
 * Disable or Enable Legacy USB Support & Port 60/64 Emulation
