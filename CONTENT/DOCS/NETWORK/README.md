@@ -85,7 +85,7 @@
 - **Power Saving Options**
    - Disable all power saving options in drivers and for the adapter, more options are available in the latest Intel drivers sets.
 
-For more information on these settings see the **Intel** and the **Microsoft Performance Tuning Network Adapters, Performance Tuning for Low Latency Packet Processing** support guides in the **Network** section of the [Technical References](../../TECHNICAL%20REFERENCES/README.md) page.
+For more information on these settings see the **Intel's** and **Microsoft's Network Subsystem Performance Tuning** support guides which includes performance tuning network adapters and low latency packet processing in the **Network** section of the [Technical References](../../TECHNICAL%20REFERENCES/README.md) page.
 
 ## Realtek Network Adapter Settings
 Realtek adapters and their drivers have shown to have worst DPC/ISR latency even after optimizations as noted in the Intel section above, however the Intel recommended settings above still apply to Realtek adapters. Will update this section and related settings if further research and evidence is accumulated to show otherwise.
