@@ -73,9 +73,13 @@ It updates in realtime which can be confirmed using WinDBG via Live Kernel debug
 
 ![Win32PrioritySeparation Quantum Unit Mapping](../../DOCS/IMAGES/Quantum%20Units%20Mapping.PNG)
 
-XLSX File: [Win32PrioritySeparation Quantum Unit Mapping](../FINDINGS/Win32PrioritySeparation%20Quantum%20Unit%20Mapping.xlsx)
+Win32PrioritySeparation Quantum Unit Mapping Table (XLSX File): 
+* [Win32PrioritySeparation Quantum Unit Mapping](../FINDINGS/Win32PrioritySeparation%20Quantum%20Unit%20Mapping.xlsx)
 
-* Related references and citation:
+List of precaculated Win32PrioritySeparation values (CSV): 
+* [Precaculated Win32PrioritySeparation Values](../FINDINGS/win32prisep0to271.csv)
+
+Related references and citation:
   * https://docs.microsoft.com/en-us/previous-versions//cc976120(v=technet.10)?redirectedfrom=MSDN
   * https://www.microsoftpressstore.com/articles/article.aspx?p=2233328&seqNum=7
   * https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/-process--set-process-context-
