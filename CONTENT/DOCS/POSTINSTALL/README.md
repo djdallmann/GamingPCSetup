@@ -68,7 +68,7 @@
 
 6. Open CMD.exe (Command Prompt) as administrator and run this command to uninstall Microsoft OneDrive
 `%SystemRoot%\SysWOW64\OneDriveSetup.exe /uninstall`
-7. Install any necessary drivers such as Chipset drives provided by your manufacturer for your motherboard. **(Not videocard drivers, this will be done later)**
+7. Install any necessary drivers such as Chipset drivers provided by your manufacturer for your motherboard. **(Not videocard drivers, this will be done later)**
    - Check Windows Device Manager for clues as to which drivers may not be present or working, devices under System generally refer to Chipset or Management Systems (Intel Management Engine)
    - It is often recommended to use the drivers provided by your motherboard manufacturer since they may include additional optimizations for your specific hardware.
    - For the most part you may not need to install the latest audio or network drivers unless you notice issues with them in the future. The drivers that windows installs automatically are generally well tested or approved.
