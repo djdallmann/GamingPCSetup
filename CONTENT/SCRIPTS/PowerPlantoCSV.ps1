@@ -23,7 +23,7 @@ foreach ($plan in $powerplanlist) {
 	}
 }
 
-Write-Output "PowerPlanGUID,PowerPlanName,SugGroup,SubGroupGUID,PowerSettingGUID,PowerSettingName,CurAcVal,CurDCVal"
+Write-Output "PowerPlanGUID,PowerPlanName,SubGroup,SubGroupGUID,PowerSettingGUID,PowerSettingName,CurAcVal,CurDCVal"
 
 foreach ( $plan in $powerplans.GetEnumerator() ) {
 	$result = Get-Content -Path .\"$($plan.Name).txt"
