@@ -36,6 +36,9 @@ If you do use this or redistribute this in any way, please give due credit.
 - Does PS/2 keyboard driver provide lower DPC latency than the USB keyboard driver?
 - What information does the Windows HAL Event Provider capture when you change different bcdedit settings such as useplatformclock and useplatformtick in combination with the High Precision Event Timer (HPET) setting in the BIOS? What are the default values on/off vs undefined? Does the bcdedit tscsyncpolicy change the outcome in the event audit?
 
+[Windows Power Settings](WINPOWER/README.md)
+- What are the differences between the Windows Power Plans and their hidden settings?
+
 [Windows Registry](WINREGISTRY/README.md)
 - Is there an easy way to see what registry keys are accessed or modified by every process or dll upon execution or during runtime?
 - What are some of the registry keys accessed on boot? Do they reveal potentially hidden registry keys and values?
