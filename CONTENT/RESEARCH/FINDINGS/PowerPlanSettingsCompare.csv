@@ -1,4 +1,4 @@
-PowerPlanGUID,PowerPlanName,SugGroup,SubGroupGUID,PowerSettingGUID,PowerSettingName,CurAcVal,CurDCVal
+PowerPlanGUID,PowerPlanName,SubGroup,SubGroupGUID,PowerSettingGUID,PowerSettingName,CurAcVal,CurDCVal
 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c,High performance,fea3413e-7e05-4911-9a71-700331f1c294,Settings belonging to no subgroup,0e796bdb-100d-47d6-a2d5-f7d2daa51f51,Require a password on wakeup,0x00000001,0x00000001
 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c,High performance,fea3413e-7e05-4911-9a71-700331f1c294,Settings belonging to no subgroup,245d8541-3943-4422-b025-13a784f679b7,Power plan type,0x00000001,0x00000001
 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c,High performance,fea3413e-7e05-4911-9a71-700331f1c294,Settings belonging to no subgroup,4faab71a-92e5-4726-b531-224559672d19,Device idle policy,0x00000000,0x00000000
