@@ -56,6 +56,8 @@
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/introduction-to-interrupt-service-routines
    * Microsoft Hardware - Kernel-Mode Driver Architecture - Introduction to Deferred Procedure Calls, Microsoft Docs
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/introduction-to-dpcs
+   * Microsoft Hardware - Kernel-Mode Driver Architecture - Organization of DPC Queues
+      * https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/organization-of-dpc-queues
    * Microsoft Hardware - Kernel-Mode Driver Architecture - Introduction to Message-Signaled Interrupts, Microsoft Docs
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/introduction-to-message-signaled-interrupts
    * Reducing Interrupt Latency Through the Use of Message Signaled Interrupts, Intel 2009, James Coleman
