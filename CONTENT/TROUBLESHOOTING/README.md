@@ -43,6 +43,8 @@ This section contains information that may help identify and resolve different c
     * A multipurpose Nvidia graphics management and monitoring tool. 
     * Comes with driver installations, path may vary for each driver installation.
       * e.g. C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_xxxxxxxxxxxxxxx\nvidia-smi.exe
+  * NVIDIA Cleanup Tool (For Drivers, Applications and Utilities)
+    * https://developer.nvidia.com/cleanup-tool
   * MSI Afterburner
     * Graphics card monitoring, overclocking and performance management tool.
     * https://www.msi.com/Landing/afterburner/graphics-cards
