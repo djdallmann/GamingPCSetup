@@ -48,6 +48,11 @@ This section contains information that may help identify and resolve different c
   * MSI Afterburner
     * Graphics card monitoring, overclocking and performance management tool.
     * https://www.msi.com/Landing/afterburner/graphics-cards
+  * TechPowerUp Counter Control
+    * _Microsoft's Windows Defender anti-virus software will sporadically take over all hardware performance counters and use them in a way that reduces system performance significantly. Using Counter Control you can identify this and mitigate it._
+    * https://www.techpowerup.com/download/counter-control/
+    * https://www.techpowerup.com/295877/windows-defender-can-significantly-impact-intel-cpu-performance-we-have-the-fix
+    * https://www.overclock.net/threads/9900k-5ghz-effective-clock-not-boosting-to-max.1798506/page-2#post-28990420
    
 ### Hardware
   * Affordable Advanced GQ EMF-390 Multi-Field, Multi-Function EMF Meter and RF Spectrum Power Analyzer
