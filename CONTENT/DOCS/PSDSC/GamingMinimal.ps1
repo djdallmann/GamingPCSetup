@@ -950,7 +950,7 @@ Configuration GamingMinimal {
             Ensure = "Present"
             Key = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\broadFileSystemAccess"
             ValueName   = "Value"
-            ValueData   = "Allow"
+            ValueData   = "Deny"
             ValueType = "String"
         }
         Registry DisableDeliveryOptDownloadOtherPCs1 {
