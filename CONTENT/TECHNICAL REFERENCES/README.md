@@ -169,6 +169,8 @@ Performance Architect Intel Corporation
      * https://developer.nvidia.com/content/are-you-running-out-video-memory-detecting-video-memory-overcommitment-using-gpuview
 
 ### Misc
+   * This KB article describes the case in which a monitor or TV reports 59.94Hz, (e.g. 119.880Hz, but not 120Hz) Windows Support, Microsoft
+      * https://support.microsoft.com/en-us/topic/screen-refresh-rate-in-windows-does-not-apply-the-user-selected-settings-on-monitors-tvs-that-report-specific-tv-compatible-timings-0a7a6a38-6c6a-2aec-debc-5183a76b9e1d
    * Windows Hardware Dev Center Archive, Microsoft
       * https://docs.microsoft.com/en-us/previous-versions/windows/hardware/download/dn550976(v=vs.85)
    * Adjust visual effects for best performance should really be called Adjust visual effects for crappiest appearance, Raymon Chen, Kernel Developer, Microsoft 2013
