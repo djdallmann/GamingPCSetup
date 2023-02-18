@@ -72,6 +72,8 @@ The key 0002 in the registry reflects the path of the active display adapter, lo
 #### Q: Is there a registry setting that can force your display adapter to remain at it's highest performance state (PState, P0)?
 Yes, when the DWORD DisableDynamicPstate is set to 1 for your active graphics card under the display adapter class settings it will cause your graphics card to operate at it's highest defined frequencies similarly to setting your NVIDIA card to **Prefer Maximum Performance** in the power settings. In theory this should override NVIDIAs hidden per-application power settings (DWM, Explorer which are set to adaptive out of box).
 
+**Disclaimer: Using this setting may cause instability in some cases.**
+
 <details><summary><ins>Findings and Analysis</ins></summary>
 
 While examining some of the [registry keys accessed](../FINDINGS/registrykeys_displayadapter_class_4d36e968-e325-11ce-bfc1-08002be10318.txt) during the boot process I noticed the **DisableDynamicPstate** option under the display adapter class configuration. After setting the DWORD value to 1 and restarting the computer the NVIDIA graphics card no longer changed [PState values](https://docs.nvidia.com/gameworks/content/gameworkslibrary/coresdk/nvapi/group__gpupstate.html) (it was P0) even when the NVIDIA power profiles were set to Adaptive/Optimal. This was validated using [nvidia-smi in monitoring mode](../../TROUBLESHOOTING/VIDEOCARD.md#nvidia-system-management-interface-nvidia-smi) to capture the PState and GPU core and memory frequencies during desktop use and gameplay.
