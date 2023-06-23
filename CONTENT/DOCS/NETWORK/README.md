@@ -46,6 +46,7 @@
    - Disabled
 - **Flow Control**
    - Disabled
+     * Disabling this will *SEVERELY* impact the PC's ability to upload streaming video.
 - **Interrupt Moderation and Moderation Rate**
    - My personal recommendation is to set this to *Medium* or leave it on *Adaptive* (default)
      * Try medium for a week or more then consider changing it if you believe something to be wrong from a network perspective.
