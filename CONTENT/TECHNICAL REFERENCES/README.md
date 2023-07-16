@@ -114,7 +114,9 @@ Performance Architect Intel Corporation
    * Multimedia Class Scheduler Service (MMCSS), How to use the throttling mechanism to control network performance in Windows Vista, Microsoft Help and Support, Microsoft 2008
       * https://web.archive.org/web/20080724025429/http://support.microsoft.com/kb/948066
    * Changes to Service Host grouping in Windows 10, Microsoft, Microsoft Docs
-      * https://docs.microsoft.com/en-us/windows/application-management/svchost-service-refactoring  
+      * https://docs.microsoft.com/en-us/windows/application-management/svchost-service-refactoring
+   * Service Trigger Events, Microsoft, Microsoft Learn - Windows App Development
+      * https://learn.microsoft.com/en-us/windows/win32/services/service-trigger-events     
 
 ### Latency
    * Intel Optimizing Computer Applications for Latency: Part 1: Configuring the Hardware, Intel 2017, Evgueny Khartchenko
