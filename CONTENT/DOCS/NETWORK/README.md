@@ -46,7 +46,12 @@
    - Disabled
 - **Flow Control**
    - Disabled
-     * Disabling this will *SEVERELY* impact the PC's ability to upload streaming video.
+     * Disabling this can cause dropped frames in some situations, reducing throughput
+       if a link partner cannot sustain the data transfer rate. In particular, video
+       streaming may become untenable.
+     * If enabled, only link partners supporting flow control frames will benefit.
+     * See Technical Reference: Tuning Throughput Performance for Intel® Ethernet
+Adapters.
 - **Interrupt Moderation and Moderation Rate**
    - My personal recommendation is to set this to *Medium* or leave it on *Adaptive* (default)
      * Try medium for a week or more then consider changing it if you believe something to be wrong from a network perspective.
