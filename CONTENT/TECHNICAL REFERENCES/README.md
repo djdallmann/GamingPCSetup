@@ -50,6 +50,8 @@
 ### Audio Processing
    * Use MXA to Verify that Audio is Offloaded During Full Screen Video Playback, Windows Hardware Dev, Microsoft 2021
       * https://docs.microsoft.com/en-us/windows-hardware/test/wpt/optimizing-windows-devices-for-multimedia-experiences-exercise-3
+   * Low Latency Audio, Microsoft Learn, Microsoft 2022
+      * https://learn.microsoft.com/en-us/windows-hardware/drivers/audio/low-latency-audio   
 
 ### Interrupt Service Routines (ISR), Deferred Procedure Calls (DPC), Message-Signaled Interrupts (MSI)
    * Microsoft Hardware - Kernel-Mode Driver Architecture - Introduction to Interrupt Service Routines, Microsoft Docs
