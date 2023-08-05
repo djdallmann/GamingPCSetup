@@ -94,6 +94,16 @@ Performance Architect Intel Corporation
    * Placebo setting: QoS bandwidth reservation, Microsoft DevBlogs, Raymon Chen, Kernel Developer, Microsoft 2006
       * https://devblogs.microsoft.com/oldnewthing/20061123-14/?p=28923
 
+### Power Management
+   * Storage (Storport) Idle Power Management Configuration and Usage, Microsoft Learn, Microsoft 2021
+      * https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/ipm-configuration-and-usage
+      * It says it is disabled by default but that is false, see your SATA/AHCI/NVME Controllers configuration in the registry.
+   * PortCls Registry Power Settings, Microsoft Learn, Microsoft 2022
+      * https://learn.microsoft.com/en-us/windows-hardware/drivers/audio/portcls-registry-power-settings
+         * `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e96c-e325-11ce-bfc1-08002be10318}\<YourDevices>\PowerSettings`
+         * https://learn.microsoft.com/en-us/windows-hardware/drivers/install/system-defined-device-setup-classes-available-to-vendors
+         * See technical reference *Audio Processing - Low Latency Audio* for more information about PortCls miniport driver.
+
 ### Filesystem and Disk
    * Configuring the Disk and File System for Performance, Microsoft Docs 2008
       * https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc938627(v=technet.10)
