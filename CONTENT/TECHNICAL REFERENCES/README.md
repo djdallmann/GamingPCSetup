@@ -184,6 +184,8 @@ Performance Architect Intel Corporation
       * Primary reference to Ultimate power scheme, documentation seems limited. Present/unhidden on LTSC by default.
    * Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows, Microsoft - Support - Windows Support, Microsoft 2020
       * https://support.microsoft.com/en-us/help/822158/virus-scanning-recommendations-for-enterprise-computers
+   * Soft Real-Time on Windows, Microsoft Learn, Microsoft 2023
+      * https://learn.microsoft.com/en-us/windows/iot/iot-enterprise/soft-real-time/soft-real-time
 
 ## Troubleshooting
 ### Windows Performance
