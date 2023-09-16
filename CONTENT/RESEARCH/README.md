@@ -11,6 +11,7 @@ If you do use this or redistribute this in any way, please give due credit.
 [Network Performance](NETWORK/README.md)
 - Does interrupt moderation rate have an effect on deferred procedure call (DPC) or interrupt service routine (ISR) latency, and what are the key differences between each of the settings?
 - Does disabling NetworkThrottlingIndex feature improve overall network performance and latency?
+- My onboard network adapter (I225-V) supports RSS, MSI and MSI-X but why is my indirection table missing that gives proper support for RSS in Microsoft Windows?
 
 [Peripherals](PERIPHERALS/README.md)
 - Should you clean your mouse sensor lens regularly, at what frequency and what cleaning methods are recommended?
