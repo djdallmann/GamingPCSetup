@@ -111,4 +111,45 @@
          powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
          Go to Windows power options and enable Ultimate Performance power plan.
          ```
-14. Reconnect your network ethernet cable, continue onto the next process.
+14. Disable Windows Updates
+    * Registry change below will stop windows from downloading and installing new updates, it also prevents forced updates after X days (paused updates).
+      * This sets a custom Windows Server Update Services (WSUS) configuration to null value, so it always returns "up to date" and disables store automatic app updates.
+      * This is more ideal than trying to disable all the windows update services (wuaserv, waasmedicsvc, usosvc etc) and scheduled tasks that re-enable/initiate update services.
+      * Reference: https://learn.microsoft.com/en-us/windows/iot/iot-enterprise/soft-real-time/soft-real-time-device
+    ```
+    Windows Registry Editor Version 5.00
+
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+    "ExcludeWUDriversInQualityUpdate"=dword:00000001
+    "DoNotConnectToWindowsUpdateInternetLocations"=dword:00000000
+    "DisableWindowsUpdateAccess"=dword:00000001
+    "WUServer"=" "
+    "WUStatusServer"=" "
+    "UpdateServiceUrlAlternate"=" "
+
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+    "UseWUServer"=dword:00000001
+
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsStore\WindowsUpdate]
+    "AutoDownload"=dword:00000002
+    ```
+15. Disable Automatic Driver Downloads and Updates
+    * This is useful if you want absolute control of your installed drivers, windows will silently install and change drivers unless you're paying very close attention to the Windows Updates summary which adds variables to testing, benchmarks and experience.
+    * Some of the most notable being AMD and Nvidia video drivers, you'll also see attempts to install new mouse HID drivers and their CoInstallers (Razer etc). Please note device drivers can be updated without CoInstallers (e.g. Razer Synapse) being installed, evidence in Device Manager in Human Interface Device entries.
+    ```
+    Windows Registry Editor Version 5.00
+    
+    ;Disable windows updates driver searching, control installation of drivers
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DriverSearching]
+    "DriverUpdateWizardWuSearchEnabled"=dword:00000000
+
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
+    "SearchOrderConfig"=dword:00000000
+
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+    "ExcludeWUDriversInQualityUpdate"=dword:00000001
+    
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata]
+    "PreventDeviceMetadataFromNetwork"=dword:00000001
+    ```
+17. Reconnect your network ethernet cable, continue onto the next process.
