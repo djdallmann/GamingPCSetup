@@ -44,6 +44,10 @@ If you do use this or redistribute this in any way, please give due credit.
 - Is there an easy way to see what registry keys are accessed or modified by every process or dll upon execution or during runtime?
 - What are some of the registry keys accessed on boot? Do they reveal potentially hidden registry keys and values?
 
+[Windows Scheduled Tasks](WINSCHTASKS/README.md)
+* **Automatic Maintenance**
+   - What does advapi32.dll ProcessIdleTasks do? Which tasks consume the most time?
+
 [Windows Services](WINSERVICES/README.md)
 * **Client/Server Runtime Subsystem (CSRSS)**
   - What is Client/Server Runtime Subsystem (CSRSS)?
