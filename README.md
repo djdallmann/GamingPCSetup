@@ -29,7 +29,7 @@ If you do use this or redistribute this in any way, please give due credit.
 
 [9. Audio Configuration](CONTENT/DOCS/AUDIO/README.md)
 
-[10. Powershell Desired State Configuration (DSC) Setup and Use](CONTENT/DOCS/PSDSC/README.md)
+[10. PowerShell Desired State Configuration (DSC) Setup and Use](CONTENT/DOCS/PSDSC/README.md)
 
 [11. Configure Your Games](CONTENT/DOCS/GAMECONFIGS/README.md)
 
