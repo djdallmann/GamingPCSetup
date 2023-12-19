@@ -13,18 +13,17 @@ For a complete list see [DSC Itemized Configuration List](ConfigList.md)
 ## Setup
 1. Download the GamingMinimal.ps1 PowerShell DSC Script to your desktop
    - [GamingMinimal.ps1](GamingMinimal.ps1)
-2. Save the file
-3. Open Windows PowerShell as an administrator
-4. Change the directory to your desktop where you saved the file
+2. Open Windows PowerShell as an administrator
+3. Change the directory to your desktop where you saved the file
    - ```PS C:\Windows\system32> cd ~\Desktop```
-5. Run the command ```PS C:\Users\johndoe\Desktop> Set-ExecutionPolicy Unrestricted -Force```, this will allow the script to run
-6. Run the command ```PS C:\Users\johndoe\Desktop> .\GamingMinimal.ps1 -myusername "your_windows_username"```, this will build the configuration state file
-7. Start the Windows Remote Management Service (This is necessary for DSC to work)
+4. Run the command ```PS C:\Users\johndoe\Desktop> Set-ExecutionPolicy Unrestricted -Force```, this will allow the script to run
+5. Run the command ```PS C:\Users\johndoe\Desktop> .\GamingMinimal.ps1 -myusername "your_windows_username"```, this will build the configuration state file
+6. Start the Windows Remote Management Service (This is necessary for DSC to work)
    - ```PS C:\Users\johndoe\Desktop> Start-Service -name WinRM```
-8. Apply the optimized configuration to your local computer, wait for it to complete.
+7. Apply the optimized configuration to your local computer, wait for it to complete.
    - ```PS C:\Users\johndoe\Desktop> Start-DscConfiguration -Path .\GamingMinimal\ -wait -verbose```
    - The first pass might give one or two errors (red), these will go away after restart
-9. Restart your PC and **redo steps 3, 7 and 8.**
+8. Restart your PC and **redo steps 2, 6 and 7.**
 
 ## Testing your computers desired state configuration
 1. Open Windows PowerShell as an administrator
