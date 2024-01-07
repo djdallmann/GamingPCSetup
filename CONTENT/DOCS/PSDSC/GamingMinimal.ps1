@@ -12,13 +12,11 @@
 # https://github.com/djdallmann
 # https://play.esea.net/users/26101
 # steamcommunity.com/id/tcard
-
+param([Parameter(Mandatory=$true)] [String]$myusername)
 Configuration GamingMinimal {
-
     # Import the module that contains the resources we're using.
     Import-DscResource -ModuleName PsDesiredStateConfiguration
 
-    $myusername = "ddallmann"
     $mysid = (New-Object System.Security.Principal.NTAccount($myusername)).Translate([System.Security.Principal.SecurityIdentifier]).value
 
     # The Node statement specifies which targets this configuration will be applied to.
