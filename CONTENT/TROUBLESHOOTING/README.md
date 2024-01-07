@@ -45,6 +45,8 @@ This section contains information that may help identify and resolve different c
       * e.g. C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_xxxxxxxxxxxxxxx\nvidia-smi.exe
   * NVIDIA Cleanup Tool (For Drivers, Applications and Utilities)
     * https://developer.nvidia.com/cleanup-tool
+  * AMD Cleanup Utility (Graphics and Audio Drivers/Software)
+    * https://www.amd.com/en/support/kb/faq/gpu-601
   * MSI Afterburner
     * Graphics card monitoring, overclocking and performance management tool.
     * https://www.msi.com/Landing/afterburner/graphics-cards
