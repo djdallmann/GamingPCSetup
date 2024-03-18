@@ -14,7 +14,7 @@
 # steamcommunity.com/id/tcard
 param([Parameter(Mandatory=$true)] [String]$myusername)
 Configuration GamingMinimal {
-    # Import the module that contains the resources we"re using.
+    # Import the module that contains the resources we're using.
     Import-DscResource -ModuleName PsDesiredStateConfiguration
 
     $mysid = (New-Object System.Security.Principal.NTAccount($myusername)).Translate([System.Security.Principal.SecurityIdentifier]).value
