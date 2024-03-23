@@ -20,7 +20,7 @@ Configuration GamingMinimal {
     $mysid = (New-Object System.Security.Principal.NTAccount($myusername)).Translate([System.Security.Principal.SecurityIdentifier]).value
 
     # The Node statement specifies which targets this configuration will be applied to.
-    Node 'localhost' {
+    Node "localhost" {
 
         ###########################
         # USER SETTINGS/PREFERENCES
@@ -520,212 +520,292 @@ Configuration GamingMinimal {
             ValueType = "String"
         }
 
-        ###########################
+        ##########################
         # SYSTEM/MACHINE SETTINGS
         ###########################
         # Disable Services
         # https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server
         # Privacy Settings
         # https://privacyamp.com/knowledge-base/windows-10-privacy-settings/
-        Service SvcAxInstSV {
-            Name   = "AxInstSV"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "AxInstSV" -ErrorAction SilentlyContinue ) {
+            Service SvcAxInstSV {
+                Name   = "AxInstSV"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service Svctzautoupdate {
-            Name   = "tzautoupdate"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "tzautoupdate" -ErrorAction SilentlyContinue ) {
+            Service Svctzautoupdate {
+                Name   = "tzautoupdate"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service Svcbthserv {
-            Name   = "bthserv"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "bthserv" -ErrorAction SilentlyContinue ) {
+            Service Svcbthserv {
+                Name   = "bthserv"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service Svcdmwappushservice {
-            Name   = "dmwappushservice"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "dmwappushservice" -ErrorAction SilentlyContinue ) {
+            Service Svcdmwappushservice {
+                Name   = "dmwappushservice"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcMapsBroker {
-            Name   = "MapsBroker"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "MapsBroker" -ErrorAction SilentlyContinue ) {
+            Service SvcMapsBroker {
+                Name   = "MapsBroker"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service Svclfsvc {
-            Name   = "lfsvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "lfsvc" -ErrorAction SilentlyContinue ) {
+            Service Svclfsvc {
+                Name   = "lfsvc"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcSharedAccess {
-            Name   = "SharedAccess"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "SharedAccess" -ErrorAction SilentlyContinue ) {
+            Service SvcSharedAccess {
+                Name   = "SharedAccess"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service Svclltdsvc {
-            Name   = "lltdsvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "lltdsvc" -ErrorAction SilentlyContinue ) {
+            Service Svclltdsvc {
+                Name   = "lltdsvc"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcAppVClient {
-            Name   = "AppVClient"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "AppVClient" -ErrorAction SilentlyContinue ) {
+            Service SvcAppVClient {
+                Name   = "AppVClient"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcNetTcpPortSharing {
-            Name   = "NetTcpPortSharing"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "NetTcpPortSharing" -ErrorAction SilentlyContinue ) {
+            Service SvcNetTcpPortSharing {
+                Name   = "NetTcpPortSharing"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcCscService {
-            Name   = "CscService"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "CscService" -ErrorAction SilentlyContinue ) {
+            Service SvcCscService {
+                Name   = "CscService"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcPhoneSvc {
-            Name   = "PhoneSvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "PhoneSvc" -ErrorAction SilentlyContinue ) {
+            Service SvcPhoneSvc {
+                Name   = "PhoneSvc"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcSpooler {
-            Name   = "Spooler"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "Spooler" -ErrorAction SilentlyContinue ) {
+            Service SvcSpooler {
+                Name   = "Spooler"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcPrintNotify {
-            Name   = "PrintNotify"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "PrintNotify" -ErrorAction SilentlyContinue ) {
+            Service SvcPrintNotify {
+                Name   = "PrintNotify"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcQWAVE {
-            Name   = "QWAVE"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "QWAVE" -ErrorAction SilentlyContinue ) {
+            Service SvcQWAVE {
+                Name   = "QWAVE"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcRmSvc {
-            Name   = "RmSvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "RmSvc" -ErrorAction SilentlyContinue ) {
+            Service SvcRmSvc {
+                Name   = "RmSvc"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcRemoteAccess {
-            Name   = "RemoteAccess"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "RemoteAccess" -ErrorAction SilentlyContinue ) {
+            Service SvcRemoteAccess {
+                Name   = "RemoteAccess"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcSensorDataService {
-            Name   = "SensorDataService"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "SensorDataService" -ErrorAction SilentlyContinue ) {
+            Service SvcSensorDataService {
+                Name   = "SensorDataService"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcSensrSvc {
-            Name   = "SensrSvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "SensrSvc" -ErrorAction SilentlyContinue ) {
+            Service SvcSensrSvc {
+                Name   = "SensrSvc"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcSensorService {
-            Name   = "SensorService"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "SensorService" -ErrorAction SilentlyContinue ) {
+            Service SvcSensorService {
+                Name   = "SensorService"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcShellHWDetection {
-            Name   = "ShellHWDetection"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "ShellHWDetection" -ErrorAction SilentlyContinue ) {
+            Service SvcShellHWDetection {
+                Name   = "ShellHWDetection"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcSCardSvr {
-            Name   = "SCardSvr"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "SCardSvr" -ErrorAction SilentlyContinue ) {
+            Service SvcSCardSvr {
+                Name   = "SCardSvr"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcScDeviceEnum {
-            Name   = "ScDeviceEnum"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "ScDeviceEnum" -ErrorAction SilentlyContinue ) {
+            Service SvcScDeviceEnum {
+                Name   = "ScDeviceEnum"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcSSDPSRV {
-            Name   = "SSDPSRV"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "SSDPSRV" -ErrorAction SilentlyContinue ) {
+            Service SvcSSDPSRV {
+                Name   = "SSDPSRV"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcWiaRpc {
-            Name   = "WiaRpc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "WiaRpc" -ErrorAction SilentlyContinue ) {
+            Service SvcWiaRpc {
+                Name   = "WiaRpc"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcTabletInputService {
-            Name   = "TabletInputService"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "TabletInputService" -ErrorAction SilentlyContinue ) {
+            Service SvcTabletInputService {
+                Name   = "TabletInputService"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service Svcupnphost {
-            Name   = "upnphost"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "upnphost" -ErrorAction SilentlyContinue ) {
+            Service Svcupnphost {
+                Name   = "upnphost"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcUevAgentService {
-            Name   = "UevAgentService"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "UevAgentService" -ErrorAction SilentlyContinue ) {
+            Service SvcUevAgentService {
+                Name   = "UevAgentService"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcWalletService {
-            Name   = "WalletService"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "WalletService" -ErrorAction SilentlyContinue ) {
+            Service SvcWalletService {
+                Name   = "WalletService"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcFrameServer {
-            Name   = "FrameServer"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "FrameServer" -ErrorAction SilentlyContinue ) {
+            Service SvcFrameServer {
+                Name   = "FrameServer"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service Svcstisvc {
-            Name   = "stisvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "stisvc" -ErrorAction SilentlyContinue ) {
+            Service Svcstisvc {
+                Name   = "stisvc"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service Svcwisvc {
-            Name   = "wisvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "wisvc" -ErrorAction SilentlyContinue ) {
+            Service Svcwisvc {
+                Name   = "wisvc"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service Svcicssvc {
-            Name   = "icssvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "icssvc" -ErrorAction SilentlyContinue ) {
+            Service Svcicssvc {
+                Name   = "icssvc"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcWSearch {
-            Name   = "WSearch"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "WSearch" -ErrorAction SilentlyContinue ) {
+            Service SvcWSearch {
+                Name   = "WSearch"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcXblAuthManager {
-            Name   = "XblAuthManager"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "XblAuthManager" -ErrorAction SilentlyContinue ) {
+            Service SvcXblAuthManager {
+                Name   = "XblAuthManager"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcXblGameSave {
-            Name   = "XblGameSave"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "XblGameSave" -ErrorAction SilentlyContinue ) {
+            Service SvcXblGameSave {
+                Name   = "XblGameSave"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcSEMgrSvc {
-            Name   = "SEMgrSvc"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "SEMgrSvc" -ErrorAction SilentlyContinue ) {
+            Service SvcSEMgrSvc {
+                Name   = "SEMgrSvc"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcDiagTrack {
-            Name   = "DiagTrack"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "DiagTrack" -ErrorAction SilentlyContinue ) {
+            Service SvcDiagTrack {
+                Name   = "DiagTrack"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcNcdAutoSetup {
-            Name   = "NcdAutoSetup"
-            State = 'Stopped'
-            StartupType = 'Disabled'
+        if (Get-Service "NcdAutoSetup" -ErrorAction SilentlyContinue ) {
+            Service SvcNcdAutoSetup {
+                Name   = "NcdAutoSetup"
+                State = "Stopped"
+                StartupType = "Disabled"
+            }
         }
-        Service SvcWindowsRemoteManagement {
-            Name   = "WinRM"
-            State = 'Running'
-            StartupType = 'Automatic'
+        if (Get-Service "WinRM" -ErrorAction SilentlyContinue ) {
+            Service SvcWindowsRemoteManagement {
+                Name   = "WinRM"
+                State = "Running"
+                StartupType = "Automatic"
+            }
         }
         Registry DisableMulticastDNS {
             Ensure = "Present"
