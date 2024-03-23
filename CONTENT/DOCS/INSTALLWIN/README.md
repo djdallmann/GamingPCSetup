@@ -12,4 +12,11 @@
 9. On the screen where it asks **What type of installation do you want?**, Choose **Custom: Install Windows only (advanced)**
 8. Assuming you have a single disk (HDD/SSD) in the computer and no other disk in the system, for each disk present on the screen choose Delete until all the space is unallocated.
 9. Press Next and Windows may indicate it will create other required partitions automatically
-10. Continue through the rest of the guided setup process, note many features will be disabled after the installation if the Powershell Desired State Configuration (DSC) is used, so it won't matter what features you opt to use or not use.
+10. Continue through the rest of the guided setup process, if installing Windows 11 use the following process to do an offline local user account installation.
+    ```
+    1. Press Shift and F10 together to open a command prompt
+    2. Change your directory to C:\Windows\System32\oobe
+    3. Run C:\Windows\System32\oobe\BypassNRO.cmd
+    Your computer will apply a registry setting and automatically restart so you can continue an offline installation.
+    ```
+Note: Many features will be disabled after the installation if you choose to use Powershell Desired State Configuration (DSC) in this guide, otherwise select the options you prefer out of box.
