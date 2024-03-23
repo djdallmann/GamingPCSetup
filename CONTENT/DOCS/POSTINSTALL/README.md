@@ -111,10 +111,20 @@
          powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
          Go to Windows power options and enable Ultimate Performance power plan.
          ```
-14. Disable Windows Updates
+14. Core Parking (Windows 11 and later)
+    * Starting with Windows 11 all built-in power plans have core parking enabled by default including the High Performance and Ultimate Performance power plans.
+    * Setting Core Parking Min Cores value to 100% will disable Windows core parking algorithm, this can be configured for both P-Cores (CPMINCORES) and E-Cores (CPMINCORES1).
+    * Windows 11 has many scheduler optimizations such as those used with Intel Thread Director, these settings may influence those optimizations.
+         ```
+         Run the following commands using cmd.exe as administrator to disable core parking on the current power plan.
+         powercfg -setacvalueindex scheme_current sub_processor CPMINCORES 100
+         powercfg -setacvalueindex scheme_current sub_processor CPMINCORES1 100
+         powercfg -setactive scheme_current
+         ```
+15. Disable Windows Updates
     * Registry change below will stop windows from downloading and installing new updates, it also prevents forced updates after X days (paused updates).
       * This sets a custom Windows Server Update Services (WSUS) configuration to null value, so it always returns "up to date" and disables store automatic app updates.
-      * This is more ideal than trying to disable all the windows update services (wuaserv, waasmedicsvc, usosvc etc) and scheduled tasks that re-enable/initiate update services.
+      * This is more ideal than trying to disable all the windows update services (wuaserv, waasmedicsvc, usosvc etc) and scheduled tasks that restore windows update services.
       * Reference: https://learn.microsoft.com/en-us/windows/iot/iot-enterprise/soft-real-time/soft-real-time-device
     ```
     Windows Registry Editor Version 5.00
@@ -133,7 +143,7 @@
     [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsStore\WindowsUpdate]
     "AutoDownload"=dword:00000002
     ```
-15. Disable Automatic Driver Downloads and Updates
+16. Disable Automatic Driver Downloads and Updates
     * This is useful if you want absolute control of your installed drivers, windows will silently install and change drivers unless you're paying very close attention to the Windows Updates summary which adds variables to testing, benchmarks and experience.
     * Some of the most notable being AMD and Nvidia video drivers, you'll also see attempts to install new mouse HID drivers and their CoInstallers (Razer etc). Please note device drivers can be updated without CoInstallers (e.g. Razer Synapse) being installed, evidence in Device Manager in Human Interface Device entries.
     ```
@@ -152,4 +162,5 @@
     [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata]
     "PreventDeviceMetadataFromNetwork"=dword:00000001
     ```
-17. Reconnect your network ethernet cable, continue onto the next process.
+17. Restart your computer to ensure all settings are applied.
+18. Reconnect your network ethernet cable, continue onto the next process.
