@@ -13,6 +13,10 @@
       ```
       Add-MpPreference -ExclusionPath $env:LOCALAPPDATA"\Temp\NVIDIA Corporation\NV_Cache"
       Add-MpPreference -ExclusionPath $env:PROGRAMDATA"\NVIDIA Corporation\NV_Cache"
+      Add-MpPreference -ExclusionPath $env:LOCALAPPDATA"\AMD\DX9Cache"
+      Add-MpPreference -ExclusionPath $env:LOCALAPPDATA"\AMD\DxCache"
+      Add-MpPreference -ExclusionPath $env:LOCALAPPDATA"\AMD\DxcCache"
+      Add-MpPreference -ExclusionPath $env:LOCALAPPDATA"\AMD\OglCache"
       Add-MpPreference -ExclusionPath $env:windir"\SoftwareDistribution\Datastore\Datastore.edb"
       Add-MpPreference -ExclusionPath $env:windir"\SoftwareDistribution\Datastore\Logs\Edb*.jrs"
       Add-MpPreference -ExclusionPath $env:windir"\SoftwareDistribution\Datastore\Logs\Edb.chk"
@@ -162,5 +166,15 @@
     [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata]
     "PreventDeviceMetadataFromNetwork"=dword:00000001
     ```
-17. Restart your computer to ensure all settings are applied.
-18. Reconnect your network ethernet cable, continue onto the next process.
+17. Disable Co-Installers (Optional, recommended to disabled automatic driver updates instead)
+    * Disables the Windows plug and play feature that performs additional software installation processes when a new device is connected to your computer. The most common example of this Razer Synapse setup starting when you connect a new device.
+    * Having this feature disabled will prevent Windows from loading software like Razer Synapse _even if it was already added to your system through automatic updates_, to prevent this software from being automatically downloaded in the first place disable automatic driver downloads and updates before connecting your computer to the internet.
+    * Disabling this feature may prevent legitimate software and drivers from being loaded when plugging in other types of devices such as printers and audio playback devices.
+    ```
+    Windows Registry Editor Version 5.00
+
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Installer]
+    "DisableCoInstallers"=dword:00000001
+    ```
+18. Restart your computer to ensure all settings are applied.
+19. Reconnect your network ethernet cable, continue onto the next process.
