@@ -130,6 +130,7 @@ Settings applied by the Powershell Desired Configuration State script
 
 ## Misc System Features
    - Disable Lock Screen app and features
+   - Disable Widgets
 
 ## Network Service Configuration
    - Disable Multicast DNS (LLMNR)
