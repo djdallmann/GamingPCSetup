@@ -1,0 +1,29 @@
+Windows Registry Editor Version 5.00
+
+;Disable windows updates driver searching, control installation of drivers
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DriverSearching]
+"DriverUpdateWizardWuSearchEnabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
+"SearchOrderConfig"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+"ExcludeWUDriversInQualityUpdate"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata]
+"PreventDeviceMetadataFromNetwork"=dword:00000001
+
+;https://learn.microsoft.com/en-us/windows/iot/iot-enterprise/soft-real-time/soft-real-time-device
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+"ExcludeWUDriversInQualityUpdate"=dword:00000001
+"DoNotConnectToWindowsUpdateInternetLocations"=dword:00000000
+"DisableWindowsUpdateAccess"=dword:00000001
+"WUServer"=" "
+"WUStatusServer"=" "
+"UpdateServiceUrlAlternate"=" "
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+"UseWUServer"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsStore\WindowsUpdate]
+"AutoDownload"=dword:00000002
