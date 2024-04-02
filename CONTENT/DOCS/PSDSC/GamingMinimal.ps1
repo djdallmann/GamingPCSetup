@@ -34,6 +34,13 @@ Configuration GamingMinimal {
             ValueData   = "0"
             ValueType = "Dword"
         }
+        Registry DisableWidgets {
+            Ensure = "Present"
+            Key = "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Dsh"
+            ValueName   = "AllowNewsAndInterests"
+            ValueData   = "0"
+            ValueType = "Dword"        
+        }
         Registry VisualEffects {
             Ensure = "Present"
             Key = "HKEY_USERS\${mysid}\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects"
