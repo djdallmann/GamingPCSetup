@@ -147,6 +147,7 @@
     [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsStore\WindowsUpdate]
     "AutoDownload"=dword:00000002
     ```
+    Use this to disable both automatic driver updates and windows updates [disableautomaticupdates.reg](disableautomaticupdates.reg)
 16. Disable Automatic Driver Downloads and Updates
     * This is useful if you want absolute control of your installed drivers, windows will silently install and change drivers unless you're paying very close attention to the Windows Updates summary which adds variables to testing, benchmarks and experience.
     * Some of the most notable being AMD and Nvidia video drivers, you'll also see attempts to install new mouse HID drivers and their CoInstallers (Razer etc). Please note device drivers can be updated without CoInstallers (e.g. Razer Synapse) being installed, evidence in Device Manager in Human Interface Device entries.
@@ -166,6 +167,7 @@
     [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata]
     "PreventDeviceMetadataFromNetwork"=dword:00000001
     ```
+    Use this to disable both automatic driver updates and windows updates [disableautomaticupdates.reg](disableautomaticupdates.reg)
 17. Disable Co-Installers (Optional, recommended to disabled automatic driver updates instead)
     * Disables the Windows plug and play feature that performs additional software installation processes when a new device is connected to your computer. The most common example of this Razer Synapse setup starting when you connect a new device.
     * Having this feature disabled will prevent Windows from loading software like Razer Synapse _even if it was already added to your system through automatic updates_, to prevent this software from being automatically downloaded in the first place disable automatic driver downloads and updates before connecting your computer to the internet.
