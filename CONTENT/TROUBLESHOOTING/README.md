@@ -19,6 +19,13 @@ This section contains information that may help identify and resolve different c
   * Windows Sysinternals, Microsoft
     * Sysinternals utilities help you manage, troubleshoot and diagnose your Windows systems and applications.
     * https://docs.microsoft.com/en-us/sysinternals/
+  * Microsoft diskspd
+    * DiskSpd is a storage performance tool from the Windows, Windows Server and Cloud Server Infrastructure engineering teams at Microsoft. The tool CrystalDiskMark uses DiskSpd under the hood.
+    * https://github.com/microsoft/diskspd
+    * https://github.com/Microsoft/diskspd/wiki
+  * Microsoft ctsTraffic
+    * ctsTraffic is a highly scalable client/server networking tool giving detailed performance and reliability analytics.
+    * https://github.com/microsoft/ctsTraffic
   * Microsoft Performance HUD
     * A real-time performance profiler that detects and identifies the source of high resource usage, GDI leaks, memory leaks and more.
     * https://www.microsoft.com/en-us/download/100813
