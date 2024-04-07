@@ -42,6 +42,10 @@ This section contains information that may help identify and resolve different c
     * https://graphics.stanford.edu/~mdfisher/GPUView.html
   * Intel® Extreme Tuning Utility - Intel® XTU
     * https://downloadcenter.intel.com/download/24075/Intel-Extreme-Tuning-Utility-Intel-XTU
+  * Intel® Performance Counter Monitor (Intel® PCM)
+     * Intel® Performance Counter Monitor - A Better Way to Measure CPU Utilization: Provides metrics for CPU cache hits and misses, PCIe metrics such as bandwidth per device (for select processor families)
+     * https://www.intel.com/content/www/us/en/developer/articles/tool/performance-counter-monitor.html
+     * https://github.com/intel/pcm
   * HWiNFO Diagnostic Software
     * https://www.hwinfo.com/download/
   * FIO - Flexible I/O tester
