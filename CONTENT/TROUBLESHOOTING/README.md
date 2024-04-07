@@ -2,6 +2,7 @@
 
 This section contains information that may help identify and resolve different computer systems, component and electrical issues
 
+* [Building and Using Intel® Performance Counter Monitor (Intel® PCM) on Windows](IntelPCM.md)
 * [Electrical Interference](ELECTRICALINTERFERENCE.MD)
 * [Media Playback](MEDIAPLAYBACK/README.md)
 * [Video Card](VIDEOCARD.md)
