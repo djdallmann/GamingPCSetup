@@ -29,3 +29,6 @@ Many guides will recommend changing **Maximum pre-rendered frames** but not ever
 
 ### AMD
 To be completed
+
+### Intel - ARC and UHD
+TBD
