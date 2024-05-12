@@ -19,7 +19,6 @@ This section provides recommendations for your audio configuration, it also cove
 #### Recommendation
 1. Download and install the latest REALTEK HD AUDIO driver
    * [Download REALTEK HD Audio Driver](https://www.realtek.com/Download/Index?cate_id=195&menu_id=298)
-     (The above link took people to an Intel page informing that "Customer Support Services for Intel® NUC Products Has Transitioned to ASUS as of January 16, 2024")
    * Note: If the software ends up in a loop of trying to uninstall the old driver, uninstall the driver first from Device Manager then launch the Setup application.
 2. Open the **REALTEK Audio Console**, go to **Device Advanced Settings** and ensure your audio input (**front or backpanel**) is set to **Headphones** instead of speakers.
    * **Note: This will change everytime you unplug your headset, so you need to do it each time**
