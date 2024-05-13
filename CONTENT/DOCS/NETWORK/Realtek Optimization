@@ -1,101 +1,59 @@
+; Turn off power savings
 "AdvancedEEE"="0"
+; Turn off power savings
 "ASPM"=dword:00000000
-"BiosSetting"="0"
-"BlueFlame"="0"
-"BusType"="5"
-"CFHTime"="0"
-"CHNLWCnt"="0"
-"CHNLWTime"="0"
-"CLKREQ"="1"
-"ComboPerfAdjust"="0"
-"CRSPDThreshold"="0"
-"DACount"="0"
-"DAInterval"="0"
-"DcbxMode"="2"
-"DeviceRemovable"="0"
-"Diskless"="0"
-"DisklessOption"="0"
+"CLKREQ"=dword:00000001
+; Turn off power savings
 "*EEE"="0"
+; The below means that "If you ignore me telling you to not use EEE, then keep the speed limit at 2.5G"
 "EEEMaxSupportSpeed"="2500"
-"EnableEDT"="1"
+; Turn off power savings
 "EnableGreenEthernet"="0"
-"ENPWMode"="0"
-"FactoryMode"="0"
+; There is no need for FC if you are using TCP/IP
 "*FlowControl"="0"
-"ForceMode"="0"
+; Don't allow the 500Mb/s mode
 "GigaLite"="0"
-"GPPSW"="0"
-"HwAutoloadMedia"="3"
-"HwBpMask"=dword:00000000
-"HwFPSM"=dword:00000000
-"HwMode"=dword:00000000
-"HwOptimize"=dword:00000000
-"HwOption"=dword:00000000
-"HwOptionV2"=dword:10000000
-"HwOptionV3"=dword:00000000
-"HwOptionV4"=dword:00000000
-"HwOptionV5"=dword:00000000
-"HwParaMask"=dword:00000000
-"HwPciOtherFunDevMask"=dword:00000000
-"HwWolCrcVal"=dword:00000000
-"IfTypePreStart"=dword:00000006
-"IntMitiInterval"=dword:00000000
-"*InterruptModeration"="1"
+; Block Interrupt Moderation to speed up processing
+"*InterruptModeration"="0"
+; 3="Rx & Tx Enabled"
+; Allow IP checksum calculation offload for IPv4
 "*IPChecksumOffloadIPv4"="3"
+; Jumbo packet setting.   1500 is normal MTU.  If you want to use 'Normal' then do "*JumboPacket"="1514"          
 "*JumboPacket"="9014"                               <-- YMMV
-"L1L0sLT"="0"
-"LDWTime"="0"
-"LogDisconnectEvent"="0"
+; Turn on Large Send Offload
 "*LsoV2IPv4"="1"
+; The below effects IPv6 which I do not use.
 "*LsoV2IPv6"="0"
+; Latency tolerance reporting
 "LTROBFF"=dword:00000004
-"MonitorModeEnabled"="0"
-"MRRSize"="0"
-"*NetworkDirect"="1"
-"*NumRSSQueues"="8"
+; ARP offload is the ability to respond to an IPv4 ARP request without waking the computer.  I allow this.
 "*PMARPOffload"="1"
+;  NS offload is the ability to respond to a Neighbor Discovery Neighbor Solicitation request with a Neighbor Advertisement without waking the computer.  I allow this.
 "*PMNSOffload"="1"
-"PortAuthReceiveAuthorizationState"="1"
-"PortAuthReceiveControlState"="00000002"
-"PortAuthSendAuthorizationState"="1"
-"PortAuthSendControlState"=dword:00000002
-"PowerDownPll"="0"
+; Turn off power savings
 "PowerSavingMode"="0"
-"PPSW"="1"
+; "0"="Priority & VLAN Disabled" as I don't use VLANs
 "*PriorityVLANTag"="0"
+; I keep the number of buffers to a reasonable amount.  Some people go much higher
 "*ReceiveBuffers"="2048"
+; I don't use VLANs
 "RegVlanid"="0"
-"RIACP"="0"
-"RMPT"==dword:00000000
-"*Rss"="1"
-"*RscIPv4"="1"
-"*RscIPv6"="0"
-"*RssOnHostVPorts"="1"
-"*RssOrVmqPreference"="1"
-"RtHwCapability"=dword:0000000c
-"RtIdleTimeout"=dword:00000000
-"RxOptimizeThreshold"=dword:00000000
-"S0MgcPkt"="0"
-"S5NicKeepOverrideMacAddr"="0"
-"S5NicKeepOverrideMacAddrV2"="1"
-"S5WakeOnLan"="0"
-"*SpeedDuplex"="0"
-"*SRIOV"="1"
-"SwIML"=dword:00000000
-"SwIML100"=dword:00000000
-"SwIML100V2"=dword:00000000
-"SwIMLV2"=dword:00000000
-"SwParaMask"=dword:00000000
+; Allow waking up this PC from the S5 'shut down' state
+"S5WakeOnLan"="1"
+; "0"="Auto Negotiation"
+"SpeedDuplex"="0"
+; "3"="Rx & Tx Enabled"
 "*TCPChecksumOffloadIPv4"="3"
+; The below effects IPv6 which I do not use.
 "*TCPChecksumOffloadIPv6"="0"
-"TDBSize"="4294967295"
+; I keep the number of buffers to a reasonable amount.  Some people go much higher
 "*TransmitBuffers"="2048"
-"TxOptimizeThreshold"=dword:00000000
+; Allow UDP checksum calculation offload for IPv4
 "*UDPChecksumOffloadIPv4"="3"
+; The below effects IPv6 which I do not use.
 "*UDPChecksumOffloadIPv6"="0"
-"*UsoIPv4"="1"
-"*UsoIPv6"="0"
-"UCEM"=dword:00000000
+; The two bellow wakeups on Magic Packet and on Pattern
 "*WakeOnMagicPacket"="1"
 "*WakeOnPattern"="1"
+; Don't slow connection speed at shutdown
 "WolShutdownLinkSpeed"="2"
