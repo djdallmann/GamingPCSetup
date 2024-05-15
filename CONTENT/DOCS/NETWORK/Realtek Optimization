@@ -1,0 +1,59 @@
+; Turn off power savings
+"AdvancedEEE"="0"
+; Turn off power savings
+"ASPM"=dword:00000000
+"CLKREQ"=dword:00000001
+; Turn off power savings
+"*EEE"="0"
+; The below means that "If you ignore me telling you to not use EEE, then keep the speed limit at 2.5G"
+"EEEMaxSupportSpeed"="2500"
+; Turn off power savings
+"EnableGreenEthernet"="0"
+; There is no need for FC if you are using TCP/IP
+"*FlowControl"="0"
+; Don't allow the 500Mb/s mode
+"GigaLite"="0"
+; Block Interrupt Moderation to speed up processing
+"*InterruptModeration"="0"
+; 3="Rx & Tx Enabled"
+; Allow IP checksum calculation offload for IPv4
+"*IPChecksumOffloadIPv4"="3"
+; Jumbo packet setting.   1500 is normal MTU.  If you want to use 'Normal' then do "*JumboPacket"="1514"          
+"*JumboPacket"="9014"                               <-- YMMV
+; Turn on Large Send Offload
+"*LsoV2IPv4"="1"
+; The below effects IPv6 which I do not use.
+"*LsoV2IPv6"="0"
+; Latency tolerance reporting
+"LTROBFF"=dword:00000004
+; ARP offload is the ability to respond to an IPv4 ARP request without waking the computer.  I allow this.
+"*PMARPOffload"="1"
+;  NS offload is the ability to respond to a Neighbor Discovery Neighbor Solicitation request with a Neighbor Advertisement without waking the computer.  I allow this.
+"*PMNSOffload"="1"
+; Turn off power savings
+"PowerSavingMode"="0"
+; "0"="Priority & VLAN Disabled" as I don't use VLANs
+"*PriorityVLANTag"="0"
+; I keep the number of buffers to a reasonable amount.  Some people go much higher
+"*ReceiveBuffers"="2048"
+; I don't use VLANs
+"RegVlanid"="0"
+; Allow waking up this PC from the S5 'shut down' state
+"S5WakeOnLan"="1"
+; "0"="Auto Negotiation"
+"SpeedDuplex"="0"
+; "3"="Rx & Tx Enabled"
+"*TCPChecksumOffloadIPv4"="3"
+; The below effects IPv6 which I do not use.
+"*TCPChecksumOffloadIPv6"="0"
+; I keep the number of buffers to a reasonable amount.  Some people go much higher
+"*TransmitBuffers"="2048"
+; Allow UDP checksum calculation offload for IPv4
+"*UDPChecksumOffloadIPv4"="3"
+; The below effects IPv6 which I do not use.
+"*UDPChecksumOffloadIPv6"="0"
+; The two bellow wakeups on Magic Packet and on Pattern
+"*WakeOnMagicPacket"="1"
+"*WakeOnPattern"="1"
+; Don't slow connection speed at shutdown
+"WolShutdownLinkSpeed"="2"
