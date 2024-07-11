@@ -135,7 +135,7 @@
 
     [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
     "ExcludeWUDriversInQualityUpdate"=dword:00000001
-    "DoNotConnectToWindowsUpdateInternetLocations"=dword:00000000
+    "DoNotConnectToWindowsUpdateInternetLocations"=dword:00000001
     "DisableWindowsUpdateAccess"=dword:00000001
     "WUServer"=" "
     "WUStatusServer"=" "
