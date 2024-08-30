@@ -157,7 +157,7 @@ Windows Registry Editor Version 5.00
 "*RssMaxProcNumber"="4"
 "*RssMaxProcGroup"="0"
 ```
-   * These can be verified and adjusted with ```Get-NetworkAdapterRSS and Set-NetworkAdapterRSS *``` commands.
+   * These can be verified and adjusted with ```Get-NetAdapterRSS and Set-NetAdapterRSS *``` commands.
 
 #### What Went Wrong in the Driver Installation (.inf)?
 1. Let's look at the inf file "PRO2500\Winx64\NDIS68\e2f68.inf"
