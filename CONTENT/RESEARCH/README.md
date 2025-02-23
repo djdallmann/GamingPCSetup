@@ -39,6 +39,7 @@ If you do use this or redistribute this in any way, please give due credit.
 
 [Windows Power Settings](WINPOWER/README.md)
 - What are the differences between the Windows Power Plans and their hidden settings?
+- How can you determine if your application is switching Windows Game Mode on or off using Windows Performance Analyzer?
 
 [Windows Registry](WINREGISTRY/README.md)
 - Is there an easy way to see what registry keys are accessed or modified by every process or dll upon execution or during runtime?
