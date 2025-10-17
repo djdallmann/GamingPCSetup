@@ -11,8 +11,8 @@
    - This will help reduce the time spent scanning by Windows Defender as new files are downloaded and those used during gameplay (e.g. textures, sounds).
 
       ```
-      Add-MpPreference -ExclusionPath $env:LOCALAPPDATA"\Temp\NVIDIA Corporation\NV_Cache"
-      Add-MpPreference -ExclusionPath $env:PROGRAMDATA"\NVIDIA Corporation\NV_Cache"
+      Add-MpPreference -ExclusionPath $env:LOCALAPPDATA"\NVIDIA\DXCache"
+      Add-MpPreference -ExclusionPath $env:LOCALAPPDATA"\NVIDIA\GLCache"
       Add-MpPreference -ExclusionPath $env:LOCALAPPDATA"\AMD\DX9Cache"
       Add-MpPreference -ExclusionPath $env:LOCALAPPDATA"\AMD\DxCache"
       Add-MpPreference -ExclusionPath $env:LOCALAPPDATA"\AMD\DxcCache"
