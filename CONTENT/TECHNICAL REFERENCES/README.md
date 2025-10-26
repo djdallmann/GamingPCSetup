@@ -115,6 +115,8 @@ Performance Architect Intel Corporation
       * https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/driver-verifier
 
 ### Services
+   * Guidance on disabling system services on Windows IoT Enterprise (Applies to: Windows 11, Windows 10)
+      * https://learn.microsoft.com/en-us/windows/iot/iot-enterprise/optimize/services
    * Guidance on disabling system services on Windows Server 2016 with Desktop Experience, Microsoft, Microsoft Docs
       * https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server
    * Per-user services in Windows 10 and Windows Server
@@ -195,7 +197,7 @@ Performance Architect Intel Corporation
    * Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows, Microsoft - Support - Windows Support, Microsoft 2020
       * https://support.microsoft.com/en-us/help/822158/virus-scanning-recommendations-for-enterprise-computers
    * Soft Real-Time on Windows, Microsoft Learn, Microsoft 2023
-      * https://learn.microsoft.com/en-us/windows/iot/iot-enterprise/soft-real-time/soft-real-time
+      * https://learn.microsoft.com/en-us/windows//iot-enterprise/soft-real-time/soft-real-time
 
 ## Troubleshooting
 ### Windows Performance
