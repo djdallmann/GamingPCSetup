@@ -38,6 +38,7 @@ If you do use this or redistribute this in any way, please give due credit.
 - What information does the Windows HAL Event Provider capture when you change different bcdedit settings such as useplatformclock and useplatformtick in combination with the High Precision Event Timer (HPET) setting in the BIOS? What are the default values on/off vs undefined? Does the bcdedit tscsyncpolicy change the outcome in the event audit?
 
 [Windows Power Settings](WINPOWER/README.md)
+- How do Windows power plan schemes, overlays, and profiles influence each other?
 - What are the differences between the Windows Power Plans and their hidden settings?
 - How can you determine if your application is switching Windows Game Mode on or off using Windows Performance Analyzer?
 
